@@ -47,6 +47,29 @@
     <li><strong>Sample submission:</strong> You send samples following our preparation guidelines.</li>
     <li><strong>Analysis and report:</strong> We run the analyses, process data and deliver results.</li>
   </ol>
+  <div class="form-section">
+    <h2>Contact form</h2>
+    <form name="contact-en" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact-en" />
+
+      <label for="name-en">Name</label>
+      <input type="text" id="name-en" name="name" required />
+
+      <label for="email-en">Email</label>
+      <input type="email" id="email-en" name="email" required />
+
+      <label for="org-en">Organisation (optional)</label>
+      <input type="text" id="org-en" name="organisation" />
+
+      <label for="subject-en">Subject</label>
+      <input type="text" id="subject-en" name="subject" />
+
+      <label for="message-en">Message</label>
+      <textarea id="message-en" name="message" required></textarea>
+
+      <button type="submit" class="button">Send message</button>
+    </form>
+  </div>
 
   <p>We look forward to working with you.</p>
 </main>
