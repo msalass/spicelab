@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
-  <!-- New fonts -->
+  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <title>Contacto – SPICe Lab</title>
 </head>
 
 <body>
@@ -25,61 +27,42 @@
     </div>
 
     <span class="lang-switch">
-      <a href="/">EN</a> | ES
+      <a href="/contact/">EN</a> | ES
     </span>
   </nav>
 </header>
 
 <main>
-  <h1>Contáctanos</h1>
-
-  <p>
-    Si deseas conversar un proyecto, solicitar una cotización o explorar una colaboración,
-    por favor comunícate usando la información que aparece más abajo.
-  </p>
-
-  <h2>Correo electrónico</h2>
-  <p><strong>contacto@spicelab.com</strong> (provisorio — actualizar cuando compremos el dominio)</p>
-
-  <h2>Ubicación</h2>
-  <p>
-    Sur de Chile – Región de Los Ríos  
-    <br />
-    (La dirección exacta se agregará cuando las instalaciones estén completamente operativas)
-  </p>
-
-  <h2>Cómo comenzar un proyecto con SPICe Lab</h2>
-  <ol>
-    <li><strong>Conversación inicial:</strong> Cuéntanos tus objetivos, plazos y tipo de muestras.</li>
-    <li><strong>Propuesta de métodos:</strong> Detallamos enfoques analíticos, costos y requisitos.</li>
-    <li><strong>Envío de muestras:</strong> Envías las muestras siguiendo nuestras recomendaciones.</li>
-    <li><strong>Análisis e informe:</strong> Realizamos los análisis, procesamos los datos y entregamos los resultados.</li>
-  </ol>
-  <div class="form-section">
-    <h2>Formulario de contacto</h2>
-    <form name="contact-es" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact-es" />
-
-      <label for="name-es">Nombre</label>
-      <input type="text" id="name-es" name="nombre" required />
-
-      <label for="email-es">Correo electrónico</label>
-      <input type="email" id="email-es" name="correo" required />
-
-      <label for="org-es">Organización (opcional)</label>
-      <input type="text" id="org-es" name="organizacion" />
-
-      <label for="subject-es">Asunto</label>
-      <input type="text" id="subject-es" name="asunto" />
-
-      <label for="message-es">Mensaje</label>
-      <textarea id="message-es" name="mensaje" required></textarea>
-
-      <button type="submit" class="button">Enviar mensaje</button>
-    </form>
+  <div class="hero">
+    <h1>Contacto SPICe Lab</h1>
+    <p class="hero-subtitle">Estamos aquí para apoyar tus análisis geoquímicos.</p>
+    <p>
+      Si necesitas apoyo en diseño de proyectos, preparación de muestras, muestreo en terreno o interpretación de datos,
+      puedes escribirnos con confianza. Responderemos lo antes posible para ayudarte a definir el mejor camino para tu proyecto.
+    </p>
   </div>
 
-  <p>Será un gusto trabajar contigo.</p>
+  <h2>Envíanos un mensaje</h2>
+  <p>Incluye los detalles relevantes de tu consulta o proyecto para que podamos ayudarte mejor.</p>
+
+  <form name="contacto" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contacto" />
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label for="correo">Correo electrónico</label>
+    <input type="email" id="correo" name="correo" required />
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" required></textarea>
+
+    <button type="submit" class="button">Enviar mensaje</button>
+  </form>
+
+  <h2>Otros medios de contacto</h2>
+  <p>Email: <strong>msalassaavedra.e@gmail.com</strong></p>
+
 </main>
 
 <footer>
@@ -87,6 +70,6 @@
 </footer>
 
 <script src="/assets/js/main.js"></script>
+
 </body>
 </html>
-
