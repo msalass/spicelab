@@ -22,9 +22,32 @@ nav {
   margin: 0 auto;
   padding: 12px 20px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  flex-direction: column; /* mobile-first: stack items */
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Hamburger button (mobile-first visible) */
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+/* Navigation links: mobile-first hidden until .open */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.nav-links.open {
+  display: flex;
 }
 
 nav a {
@@ -45,8 +68,8 @@ nav a:hover {
 /* Main content wrapper */
 main {
   max-width: 960px;
-  margin: 32px auto;
-  padding: 24px 20px 32px;
+  margin: 16px auto;
+  padding: 20px 16px 24px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
@@ -54,14 +77,14 @@ main {
 
 /* Typography */
 h1 {
-  font-size: 28px;
+  font-size: 24px;
   margin-top: 0;
   margin-bottom: 16px;
   color: #111827;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 24px;
   margin-bottom: 8px;
   color: #111827;
@@ -178,33 +201,12 @@ footer {
   text-align: center;
 }
 
-/* Navigation links + hamburger (mobile-first) */
-.menu-toggle {
-  display: block;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 4px 8px;
-}
-
-.nav-links {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  margin-top: 8px;
-}
-
-.nav-links.open {
-  display: flex;
-}
-
 /* Desktop behavior */
 @media (min-width: 641px) {
   nav {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
   .menu-toggle {
@@ -216,28 +218,20 @@ footer {
     flex-direction: row;
     gap: 16px;
     flex-wrap: wrap;
-    margin-top: 0;
     width: auto;
-  }
-}
-
-/* Mobile optimization (spacing & font sizes) */
-@media (max-width: 640px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+    margin-top: 0;
   }
 
   main {
-    margin: 16px auto;
-    padding: 20px 16px 24px;
+    margin: 32px auto;
+    padding: 24px 20px 32px;
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
