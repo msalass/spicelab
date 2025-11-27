@@ -1,0 +1,17 @@
+# Fix trailing slash issues
+/es /es/ 301
+/about /about/ 301
+/services /services/ 301
+/projects /projects/ 301
+/samples /samples/ 301
+/contact /contact/ 301
+
+# Spanish equivalents
+/es/acerca-de /es/acerca-de/ 301
+/es/servicios /es/servicios/ 301
+/es/proyectos /es/proyectos/ 301
+/es/muestras /es/muestras/ 301
+/es/contacto /es/contacto/ 301
+
+# Fallback
+/* /404.html 404
