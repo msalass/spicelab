@@ -1,23 +1,17 @@
-/* ============================================================
-   FONT SYSTEM: Montserrat (headings) + Source Sans Pro (body)
-   ============================================================ */
-
+/* Basic reset */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Source Sans Pro', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f3f4f6; /* soft gray background */
-  color: #1f2937; /* charcoal text */
+  background-color: #f5f5f7; /* softer, more Apple-like */
+  color: #1d1d1f;
 }
 
-/* ============================================================
-   HEADER + NAVIGATION
-   ============================================================ */
-
+/* Layout */
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
@@ -26,239 +20,154 @@ header {
 nav {
   max-width: 960px;
   margin: 0 auto;
-  padding: 12px 20px;
+  padding: 14px 20px;
   display: flex;
-  flex-direction: column; /* mobile-first */
-  align-items: flex-start;
-  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-/* Hamburger */
-.menu-toggle {
-  display: block;
-  background: none;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 4px 10px;
-  color: #264653; /* deep ocean blue */
-  background-color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Navigation links: hidden on mobile until toggled */
 .nav-links {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  margin-top: 4px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.nav-links.open {
-  display: flex;
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 8px;
 }
 
 nav a {
   text-decoration: none;
-  color: #264653; /* deep blue */
+  color: #374151;
   font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
 }
 
 nav a:hover {
   text-decoration: underline;
-  color: #2a9d8f; /* ocean teal */
 }
 
 .lang-switch {
   font-size: 14px;
   color: #6b7280;
-  margin-left: auto;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* ============================================================
-   MAIN CONTENT CONTAINER
-   ============================================================ */
-
+/* Main content wrapper */
 main {
-  max-width: 960px;
-  margin: 16px auto;
-  padding: 20px 16px 24px;
+  max-width: 860px;           /* narrower column = easier reading */
+  margin: 40px auto 32px;     /* more space above */
+  padding: 32px 24px 36px;
   background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
-/* ============================================================
-   TYPOGRAPHY
-   ============================================================ */
-
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: -0.5px;
-  color: #264653;
-  margin-top: 0;
-}
-
+/* Typography */
 h1 {
-  font-size: 26px;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 30px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #111827;
 }
 
 h2 {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 500;
-  margin-top: 24px;
-  margin-bottom: 8px;
+  font-weight: 600;
+  margin-top: 32px;           /* more space above headings */
+  margin-bottom: 10px;
+  color: #111827;
 }
 
-h3 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-p,
-li,
-label,
-a,
-span {
-  font-family: 'Source Sans Pro', sans-serif;
-  line-height: 1.6;
+p {
+  font-family: "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: 15px;
-  color: #374151;
+  line-height: 1.7;           /* more line spacing */
+  margin-top: 0;
+  margin-bottom: 14px;        /* more space between paragraphs */
+  color: #1f2933;
 }
 
 ul {
   padding-left: 20px;
   margin-top: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 li {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  line-height: 1.7;
 }
 
-/* Section separators */
-section,
-.form-section {
-  border-top: 1px solid #e5ded0; /* sand tone */
-  padding-top: 10px;
-  margin-top: 20px;
-}
-
-/* ============================================================
-   HERO SECTIONS
-   ============================================================ */
-
-.hero {
-  margin-bottom: 24px;
-  padding: 18px 16px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #e9f5f3, #f8f3ed);
-  border: 1px solid #e5ded0; /* sand border */
-}
-
-.hero-subtitle {
-  font-size: 16px;
-  color: #4b5563;
-  margin-bottom: 8px;
-}
-
-/* ============================================================
-   BUTTONS
-   ============================================================ */
-
+/* CTA button style */
 .button {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 8px;
   border-radius: 999px;
-  background-color: #2a9d8f; /* teal */
+  background-color: #111827;
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
   border: none;
-  cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.1s ease;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.3px;
 }
 
 .button:hover {
-  background-color: #23877b;
-  transform: translateY(-1px);
+  background-color: #000000;
 }
 
-/* Secondary button */
-.button-secondary {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 8px;
-  border-radius: 999px;
-  background-color: transparent;
-  color: #264653;
-  text-decoration: none;
-  font-size: 14px;
-  border: 1px solid #264653;
-  cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+/* Hero section on the pages */
+.hero {
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.button-secondary:hover {
-  background-color: #264653;
-  color: #ffffff;
-  transform: translateY(-1px);
+.hero-subtitle {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 10px;
 }
 
-/* ============================================================
-   PROJECT / RESEARCH CARDS
-   ============================================================ */
-
+/* Project cards */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  margin-top: 12px;
+  gap: 18px;
+  margin-top: 14px;
 }
 
 .project-card {
+  border: 1px solid #e5e7eb;
   border-radius: 10px;
-  padding: 16px;
-  background-color: #fdfaf6; /* light sand */
-  border: 1px solid #e5ded0;
+  padding: 16px 18px;
+  background-color: #f9fafb;
 }
 
 .project-card h3 {
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #264653;
 }
 
-/* ============================================================
-   FORM STYLES
-   ============================================================ */
-
+/* Form styles */
 .form-section {
-  margin-top: 24px;
-  padding-top: 16px;
+  margin-top: 28px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
 }
 
 form label {
   display: block;
   font-size: 14px;
-  margin-top: 12px;
+  margin-top: 14px;
   margin-bottom: 4px;
 }
 
@@ -266,27 +175,25 @@ form input[type="text"],
 form input[type="email"],
 form textarea {
   width: 100%;
-  padding: 8px 10px;
-  border-radius: 6px;
+  padding: 9px 11px;
+  border-radius: 8px;
   border: 1px solid #d1d5db;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
-  background-color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
 }
 
 form textarea {
-  min-height: 120px;
+  min-height: 130px;
   resize: vertical;
 }
 
-form .button {
-  margin-top: 16px;
+form .button,
+button.button {
+  margin-top: 18px;
+  cursor: pointer;
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
-
+/* Footer */
 footer {
   max-width: 960px;
   margin: 0 auto 24px;
@@ -294,43 +201,52 @@ footer {
   font-size: 13px;
   color: #6b7280;
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* ============================================================
-   DESKTOP LAYOUT
-   ============================================================ */
+/* Sections helper (optional, for future use) */
+.section {
+  margin-top: 32px;
+  padding-top: 8px;
+  border-top: 1px solid #f3f4f6;
+}
 
-@media (min-width: 641px) {
+/* Mobile optimization */
+@media (max-width: 640px) {
   nav {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .menu-toggle {
-    display: none;
+    display: block;
+    align-self: flex-end;
   }
 
   .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .nav-links.open {
     display: flex;
-    flex-direction: row;
-    gap: 18px;
-    flex-wrap: wrap;
-    width: auto;
-    margin-top: 0;
   }
 
   main {
-    margin: 32px auto;
-    padding: 24px 20px 32px;
+    margin: 20px auto 16px;
+    padding: 24px 18px 28px;
+    border-radius: 0;         /* feels cleaner on small screens */
+    box-shadow: none;
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   h2 {
-    font-size: 22px;
+    font-size: 18px;
+    margin-top: 28px;
   }
 }
