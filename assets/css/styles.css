@@ -22,7 +22,7 @@ nav {
   margin: 0 auto;
   padding: 12px 20px;
   display: flex;
-  flex-direction: column; /* mobile-first: stack items */
+  flex-direction: column; /* mobile-first: stacked */
   align-items: flex-start;
   gap: 8px;
 }
