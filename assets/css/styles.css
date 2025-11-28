@@ -198,9 +198,12 @@ li {
   border-bottom: 1px solid var(--border-color);
   text-align: center;
   opacity: 0;
-  animation: fadeIn 0.6s ease-out;
-  animation-timeline: view();
-  animation-range: entry 20% cover 40%; /* Triggers when hero enters viewport */
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.hero.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .hero-subtitle {
   font-size: 21px;
@@ -209,20 +212,22 @@ li {
   font-weight: 400;
 }
 
-/* Section helper with staggered scroll-driven animation */
+/* Section helper with staggered animation */
 .section {
   margin-top: 64px;
   padding-top: 16px;
   border-top: 1px solid var(--border-color);
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.7s ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 10% cover 50%; /* Triggers on scroll into view */
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
-/* Staggering via delays isn't directly compatible with view timelines; for true staggering, consider JS. Here, sections will trigger independently as scrolled to. */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Staggering will be handled by JS observing each section independently as they enter view. */
 
-/* Project cards with scroll-triggered animations */
+/* Project cards */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider cards */
@@ -234,14 +239,14 @@ li {
   border-radius: 12px;
   padding: 24px;
   background-color: var(--card-bg);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.5s ease-out;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%; /* Triggers when card enters viewport */
 }
-/* For staggering cards, they will animate as each enters view; no need for nth-child delays. */
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .project-card:hover {
   box-shadow: 0 8px 24px var(--shadow-color); /* Deeper hover shadow */
   transform: translateY(-4px); /* Lift on hover */
@@ -259,9 +264,12 @@ li {
   padding-top: 16px;
   border-top: 1px solid var(--border-color);
   opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 10% cover 40%;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.form-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 form label {
   display: block;
@@ -312,19 +320,18 @@ footer {
   text-align: center;
   border-top: 1px solid var(--border-color);
   opacity: 0;
-  animation: fadeIn 0.5s ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 20%;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+footer.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Keyframes for animations */
+/* Keyframes for load-based animations (nav, headings, etc.) */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
