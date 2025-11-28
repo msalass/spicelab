@@ -197,8 +197,10 @@ li {
   padding-bottom: 24px;
   border-bottom: 1px solid var(--border-color);
   text-align: center;
-  animation: fadeIn 0.6s ease-out 0.2s forwards; /* Slight delay */
-  opacity: 0; /* Start hidden for animation */
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%; /* Triggers when hero enters viewport */
 }
 .hero-subtitle {
   font-size: 21px;
@@ -207,32 +209,20 @@ li {
   font-weight: 400;
 }
 
-/* Section helper with staggered animation */
+/* Section helper with staggered scroll-driven animation */
 .section {
   margin-top: 64px;
   padding-top: 16px;
   border-top: 1px solid var(--border-color);
   opacity: 0;
-  animation: fadeInUp 0.7s ease-out forwards; /* Use fadeInUp for sections */
+  transform: translateY(20px);
+  animation: fadeInUp 0.7s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%; /* Triggers on scroll into view */
 }
-.section:nth-of-type(1) {
-  animation-delay: 0.4s;
-}
-.section:nth-of-type(2) {
-  animation-delay: 0.6s;
-}
-.section:nth-of-type(3) {
-  animation-delay: 0.8s;
-}
-.section:nth-of-type(4) {
-  animation-delay: 1.0s;
-}
-.section:nth-of-type(5) {
-  animation-delay: 1.2s;
-}
-/* Add more nth-of-type as needed for additional sections */
+/* Staggering via delays isn't directly compatible with view timelines; for true staggering, consider JS. Here, sections will trigger independently as scrolled to. */
 
-/* Project cards */
+/* Project cards with scroll-triggered animations */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider cards */
@@ -245,14 +235,13 @@ li {
   padding: 24px;
   background-color: var(--card-bg);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  animation: fadeInUp 0.5s ease-out forwards; /* Fade and slight rise */
   opacity: 0;
-  transform: translateY(20px); /* Start below */
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%; /* Triggers when card enters viewport */
 }
-.project-card:nth-child(1) { animation-delay: 0.3s; }
-.project-card:nth-child(2) { animation-delay: 0.4s; }
-.project-card:nth-child(3) { animation-delay: 0.5s; }
-/* Add more for additional cards if needed */
+/* For staggering cards, they will animate as each enters view; no need for nth-child delays. */
 .project-card:hover {
   box-shadow: 0 8px 24px var(--shadow-color); /* Deeper hover shadow */
   transform: translateY(-4px); /* Lift on hover */
@@ -269,8 +258,10 @@ li {
   margin-top: 48px;
   padding-top: 16px;
   border-top: 1px solid var(--border-color);
-  animation: fadeIn 0.8s ease-out 0.6s forwards;
   opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
 }
 form label {
   display: block;
@@ -321,7 +312,9 @@ footer {
   text-align: center;
   border-top: 1px solid var(--border-color);
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 1.5s forwards; /* Delayed footer appear */
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 }
 
 /* Keyframes for animations */
