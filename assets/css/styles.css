@@ -7,8 +7,8 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f7; /* softer, more Apple-like */
-  color: #1d1d1f;
+  background-color: #f3f4f6;   /* back to original light grey */
+  color: #1f2933;              /* original text color */
 }
 
 /* Layout */
@@ -20,7 +20,7 @@ header {
 nav {
   max-width: 960px;
   margin: 0 auto;
-  padding: 14px 20px;
+  padding: 12px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +29,7 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
@@ -59,60 +59,66 @@ nav a:hover {
 
 /* Main content wrapper */
 main {
-  max-width: 860px;           /* narrower column = easier reading */
-  margin: 40px auto 32px;     /* more space above */
-  padding: 32px 24px 36px;
+  max-width: 860px;                 /* slightly narrower for easier reading */
+  margin: 32px auto;
+  padding: 28px 22px 32px;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
 }
 
 /* Typography */
 h1 {
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  font-size: 30px;
+  font-size: 32px;                  /* bigger heading */
   font-weight: 600;
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 32px;              /* big spacing after heading (~2cm feel) */
   color: #111827;
+  text-align: center;               /* centered */
 }
 
 h2 {
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  font-size: 20px;
+  font-size: 24px;                  /* bigger subheading */
   font-weight: 600;
-  margin-top: 32px;           /* more space above headings */
-  margin-bottom: 10px;
+  margin-top: 48px;                 /* clear separation from previous section */
+  margin-bottom: 24px;              /* big spacing before text */
   color: #111827;
+  text-align: center;               /* centered */
+}
+
+/* paragraphs and bullet points: same size */
+p,
+li {
+  font-family: "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #1f2933;
 }
 
 p {
-  font-family: "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.7;           /* more line spacing */
   margin-top: 0;
-  margin-bottom: 14px;        /* more space between paragraphs */
-  color: #1f2933;
+  margin-bottom: 14px;
 }
 
 ul {
   padding-left: 20px;
-  margin-top: 4px;
-  margin-bottom: 14px;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 li {
   margin-bottom: 6px;
-  line-height: 1.7;
 }
 
 /* CTA button style */
 .button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 18px;
   margin-top: 8px;
   border-radius: 999px;
-  background-color: #111827;
+  background-color: #1f2933;  /* original dark button */
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
@@ -120,13 +126,13 @@ li {
 }
 
 .button:hover {
-  background-color: #000000;
+  background-color: #111827;
 }
 
 /* Hero section on the pages */
 .hero {
-  margin-bottom: 28px;
-  padding-bottom: 18px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -136,18 +142,25 @@ li {
   margin-bottom: 10px;
 }
 
+/* Section helper (if used) */
+.section {
+  margin-top: 40px;
+  padding-top: 8px;
+  border-top: 1px solid #f3f4f6;
+}
+
 /* Project cards */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-  margin-top: 14px;
+  gap: 16px;
+  margin-top: 12px;
 }
 
 .project-card {
   border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 16px 18px;
+  border-radius: 8px;
+  padding: 16px;
   background-color: #f9fafb;
 }
 
@@ -159,15 +172,15 @@ li {
 
 /* Form styles */
 .form-section {
-  margin-top: 28px;
-  padding-top: 10px;
+  margin-top: 24px;
+  padding-top: 8px;
   border-top: 1px solid #e5e7eb;
 }
 
 form label {
   display: block;
   font-size: 14px;
-  margin-top: 14px;
+  margin-top: 12px;
   margin-bottom: 4px;
 }
 
@@ -175,21 +188,21 @@ form input[type="text"],
 form input[type="email"],
 form textarea {
   width: 100%;
-  padding: 9px 11px;
-  border-radius: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
   border: 1px solid #d1d5db;
   font-family: inherit;
   font-size: 14px;
 }
 
 form textarea {
-  min-height: 130px;
+  min-height: 120px;
   resize: vertical;
 }
 
-form .button,
-button.button {
-  margin-top: 18px;
+form .button {
+  margin-top: 16px;
+  border: none;
   cursor: pointer;
 }
 
@@ -201,13 +214,6 @@ footer {
   font-size: 13px;
   color: #6b7280;
   text-align: center;
-}
-
-/* Sections helper (optional, for future use) */
-.section {
-  margin-top: 32px;
-  padding-top: 8px;
-  border-top: 1px solid #f3f4f6;
 }
 
 /* Mobile optimization */
@@ -235,18 +241,21 @@ footer {
   }
 
   main {
-    margin: 20px auto 16px;
-    padding: 24px 18px 28px;
-    border-radius: 0;         /* feels cleaner on small screens */
+    max-width: 100%;
+    margin: 16px auto;
+    padding: 20px 16px 24px;
+    border-radius: 0;
     box-shadow: none;
   }
 
   h1 {
     font-size: 26px;
+    margin-bottom: 24px;
   }
 
   h2 {
-    font-size: 18px;
-    margin-top: 28px;
+    font-size: 20px;
+    margin-top: 32px;
+    margin-bottom: 20px;
   }
 }
