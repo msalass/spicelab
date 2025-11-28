@@ -144,14 +144,30 @@ li {
   font-weight: 400;
 }
 
-/* Section helper */
+/* Section helper with staggered animation */
 .section {
   margin-top: 64px;
   padding-top: 16px;
   border-top: 1px solid #f5f5f7;
-  animation: fadeIn 0.7s ease-out 0.4s forwards; /* Staggered fade */
   opacity: 0;
+  animation: fadeInUp 0.7s ease-out forwards; /* Use fadeInUp for sections */
 }
+.section:nth-of-type(1) {
+  animation-delay: 0.4s;
+}
+.section:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+.section:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+.section:nth-of-type(4) {
+  animation-delay: 1.0s;
+}
+.section:nth-of-type(5) {
+  animation-delay: 1.2s;
+}
+/* Add more nth-of-type as needed for additional sections */
 
 /* Project cards */
 .project-list {
@@ -170,6 +186,10 @@ li {
   opacity: 0;
   transform: translateY(20px); /* Start below */
 }
+.project-card:nth-child(1) { animation-delay: 0.3s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.5s; }
+/* Add more for additional cards if needed */
 .project-card:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Deeper hover shadow */
   transform: translateY(-4px); /* Lift on hover */
