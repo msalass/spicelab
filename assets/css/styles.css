@@ -18,6 +18,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: background-color 0.3s ease; /* Smooth header transition if needed */
 }
 nav {
   max-width: 1024px; /* Wider for desktop, like Apple */
@@ -45,10 +46,11 @@ nav a {
   text-decoration: none;
   color: #1c1c1e;
   font-size: 15px;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 nav a:hover {
   color: #0071e3; /* Apple blue accent */
+  transform: translateY(-1px); /* Subtle lift */
 }
 .lang-switch {
   font-size: 14px;
@@ -62,6 +64,7 @@ main {
   padding: 40px 32px;
   background-color: #ffffff;
   border-radius: 12px; /* Softer corners */
+  animation: fadeIn 0.5s ease-out forwards; /* Fade-in on load */
 }
 
 /* Typography */
@@ -117,12 +120,12 @@ li {
   text-decoration: none;
   font-size: 17px;
   font-weight: 400;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
   border: none;
 }
 .button:hover {
   background-color: #0066cc;
-  transform: translateY(-1px); /* Subtle lift */
+  transform: scale(1.05); /* Subtle scale-up */
 }
 
 /* Hero section */
@@ -131,6 +134,8 @@ li {
   padding-bottom: 24px;
   border-bottom: 1px solid #d2d2d7;
   text-align: center;
+  animation: fadeIn 0.6s ease-out 0.2s forwards; /* Slight delay */
+  opacity: 0; /* Start hidden for animation */
 }
 .hero-subtitle {
   font-size: 21px;
@@ -144,6 +149,8 @@ li {
   margin-top: 64px;
   padding-top: 16px;
   border-top: 1px solid #f5f5f7;
+  animation: fadeIn 0.7s ease-out 0.4s forwards; /* Staggered fade */
+  opacity: 0;
 }
 
 /* Project cards */
@@ -158,10 +165,14 @@ li {
   border-radius: 12px;
   padding: 24px;
   background-color: #f5f5f7;
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 0.5s ease-out forwards; /* Fade and slight rise */
+  opacity: 0;
+  transform: translateY(20px); /* Start below */
 }
 .project-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle hover shadow */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Deeper hover shadow */
+  transform: translateY(-4px); /* Lift on hover */
 }
 .project-card h3 {
   margin-top: 0;
@@ -175,6 +186,8 @@ li {
   margin-top: 48px;
   padding-top: 16px;
   border-top: 1px solid #d2d2d7;
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
+  opacity: 0;
 }
 form label {
   display: block;
@@ -193,11 +206,12 @@ form textarea {
   font-family: inherit;
   font-size: 17px;
   background-color: #ffffff;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 form input:focus,
 form textarea:focus {
   border-color: #0071e3;
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1); /* Subtle glow */
   outline: none;
 }
 form textarea {
@@ -222,6 +236,16 @@ footer {
   color: #6e6e73;
   text-align: center;
   border-top: 1px solid #d2d2d7;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Mobile optimization */
@@ -262,5 +286,13 @@ footer {
   }
   .project-list {
     grid-template-columns: 1fr; /* Stack cards on mobile */
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
