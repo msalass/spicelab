@@ -18,14 +18,14 @@
     <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
 
     <div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/team/">Team</a>
-  <a href="/services/">Services</a>
-  <a href="/projects/">Projects</a>
-  <a href="/samples/">Samples</a>
-  <a href="/contact/">Contact</a>
-</div>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/team/">Team</a>
+      <a href="/services/">Services</a>
+      <a href="/projects/">Projects</a>
+      <a href="/samples/">Samples</a>
+      <a href="/contact/">Contact</a>
+    </div>
 
     <span class="lang-switch">
       EN | <a href="/es/contacto/">ES</a>
@@ -36,33 +36,64 @@
 <main>
   <div class="hero">
     <h1>Contact SPICe Lab</h1>
-    <p class="hero-subtitle">We're here to help you plan and interpret geochemical analyses.</p>
+    <p class="hero-subtitle">We’re here to help you plan and interpret geochemical analyses.</p>
     <p>
-      Whether you need support with project design, sample preparation, field sampling, or data interpretation,
-      feel free to reach out. We will respond as soon as possible and help define the best way forward for your project.
+      Use the form below to tell us briefly who you are, what kind of project you have in mind, and how
+      you think isotopes or trace elements might help. We will reply as soon as possible to suggest next steps.
     </p>
   </div>
 
   <h2>Send us a message</h2>
-  <p>Please include relevant details about your project or inquiry so we can provide the most helpful response.</p>
+  <p>
+    The more context you can provide (type of samples, questions, timelines), the easier it is for us
+    to respond with something concrete.
+  </p>
 
-  <form name="contact" method="POST" data-netlify="true">
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="contact" />
+
+    <!-- Honeypot for spam bots -->
+    <p style="display:none;">
+      <label>Don’t fill this out if you’re human:
+        <input name="bot-field" />
+      </label>
+    </p>
 
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required />
 
+    <label for="org">Organisation / Institution (optional)</label>
+    <input type="text" id="org" name="organisation" />
+
     <label for="email">Email</label>
     <input type="email" id="email" name="email" required />
 
-    <label for="message">Message</label>
+    <label for="topic">Main topic</label>
+    <select id="topic" name="topic" required>
+      <option value="">Please choose an option</option>
+      <option value="consulting">Geochemical consulting / feasibility</option>
+      <option value="data-interpretation">Data interpretation</option>
+      <option value="sampling-design">Sampling design / field work</option>
+      <option value="sample-submission">Sample submission / logistics</option>
+      <option value="collaboration">Research collaboration</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="message">Project or question</label>
     <textarea id="message" name="message" required></textarea>
+
+    <label for="language">Preferred language for communication (optional)</label>
+    <select id="language" name="preferred_language">
+      <option value="">No preference</option>
+      <option value="english">English</option>
+      <option value="spanish">Spanish</option>
+    </select>
 
     <button type="submit" class="button">Send message</button>
   </form>
 
   <h2>Other ways to reach us</h2>
-  <p>Email: <strong>msalassaavedra.e@gmail.com</strong></p>
+  <p>Email: <strong>contact@spicelab.cl</strong></p>
 
 </main>
 
