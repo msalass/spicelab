@@ -61,6 +61,16 @@ nav {
   gap: 24px;
   flex-wrap: wrap;
 }
+.nav-links a {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideDown 0.5s ease-out forwards;
+}
+.nav-links a:nth-child(1) { animation-delay: 0.1s; }
+.nav-links a:nth-child(2) { animation-delay: 0.2s; }
+.nav-links a:nth-child(3) { animation-delay: 0.3s; }
+.nav-links a:nth-child(4) { animation-delay: 0.4s; }
+/* Add more for additional nav links */
 .menu-toggle {
   display: none;
   background: none;
@@ -117,6 +127,8 @@ h1 {
   color: var(--text-color);
   text-align: center;
   letter-spacing: -0.02em;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.1s forwards;
 }
 h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -127,6 +139,8 @@ h2 {
   color: var(--text-color);
   text-align: center;
   letter-spacing: -0.01em;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.3s forwards;
 }
 /* Paragraphs and bullet points */
 p,
@@ -134,7 +148,14 @@ li {
   font-size: 17px; /* Slightly larger for readability */
   line-height: 1.8;
   color: var(--text-color);
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: slideInLeft 0.5s ease-out forwards;
 }
+p:nth-of-type(1), li:nth-of-type(1) { animation-delay: 0.5s; }
+p:nth-of-type(2), li:nth-of-type(2) { animation-delay: 0.6s; }
+p:nth-of-type(3), li:nth-of-type(3) { animation-delay: 0.7s; }
+/* Add more for additional paragraphs/lists */
 p {
   margin-top: 0;
   margin-bottom: 24px; /* More space */
@@ -162,6 +183,8 @@ li {
   font-weight: 400;
   transition: background-color 0.2s ease, transform 0.2s ease;
   border: none;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.8s forwards;
 }
 .button:hover {
   background-color: var(--accent-hover);
@@ -297,6 +320,8 @@ footer {
   color: var(--subtext-color);
   text-align: center;
   border-top: 1px solid var(--border-color);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 1.5s forwards; /* Delayed footer appear */
 }
 
 /* Keyframes for animations */
@@ -307,6 +332,14 @@ footer {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 /* Mobile optimization */
