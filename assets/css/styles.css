@@ -172,10 +172,10 @@ li {
 
 /* CTA button style */
 .button {
-  display: block;                 /* center-able block */
-  margin: 24px auto 0 auto;       /* centered horizontally with space above */
-  text-align: center;             /* center text inside */
-  padding: 12px 24px;
+  display: inline-block;           /* keep inline-block so it doesn’t fill full width */
+  padding: 12px 24px;              /* your existing size */
+  margin: 24px auto 0 auto;        /* center horizontally, add space above */
+  text-align: center;              
   border-radius: 999px;
   background-color: var(--accent-color);
   color: #ffffff;
@@ -186,11 +186,19 @@ li {
   border: none;
   opacity: 0;
   animation: fadeIn 0.5s ease-out 0.8s forwards;
+  max-width: 280px;                /* optional max width so it doesn’t stretch too much on large screens */
+  width: auto;                     /* do not force full width */
 }
-.button:hover {
-  background-color: var(--accent-hover);
-  transform: scale(1.05); /* Subtle scale-up */
+
+/* Mobile adjustments if needed */
+@media (max-width: 640px) {
+  .button {
+    width: 100%;                  /* if you want full width on mobile, enable */
+    max-width: none;
+    margin: 16px auto 0 auto;
+  }
 }
+
 
 /* Hero section */
 .hero {
