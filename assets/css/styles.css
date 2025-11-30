@@ -172,9 +172,10 @@ li {
 
 /* CTA button style */
 .button {
-  display: inline-block;
+  display: block;                 /* center-able block */
+  margin: 24px auto 0 auto;       /* centered horizontally with space above */
+  text-align: center;             /* center text inside */
   padding: 12px 24px;
-  margin-top: 16px;
   border-radius: 999px;
   background-color: var(--accent-color);
   color: #ffffff;
@@ -303,8 +304,8 @@ form textarea {
 }
 form .button {
   margin-top: 24px;
-  width: 100%; /* Full-width on mobile */
-  max-width: 200px; /* Centered on desktop */
+  width: 100%;         /* Full-width on mobile */
+  max-width: 200px;    /* Slightly narrower on desktop */
   margin-left: auto;
   margin-right: auto;
   display: block;
