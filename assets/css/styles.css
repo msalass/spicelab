@@ -172,10 +172,10 @@ li {
 
 /* CTA button style */
 .button {
-  display: inline-block;           /* keep inline-block so it doesn’t fill full width */
-  padding: 12px 24px;              /* your existing size */
-  margin: 24px auto 0 auto;        /* center horizontally, add space above */
-  text-align: center;              
+  display: table;                 /* shrink to content, but still centerable */
+  margin: 24px auto 0 auto;       /* centered horizontally with space above */
+  text-align: center;
+  padding: 12px 24px;
   border-radius: 999px;
   background-color: var(--accent-color);
   color: #ffffff;
@@ -186,8 +186,6 @@ li {
   border: none;
   opacity: 0;
   animation: fadeIn 0.5s ease-out 0.8s forwards;
-  max-width: 280px;                /* optional max width so it doesn’t stretch too much on large screens */
-  width: auto;                     /* do not force full width */
 }
 
 /* Mobile adjustments if needed */
@@ -312,11 +310,7 @@ form textarea {
 }
 form .button {
   margin-top: 24px;
-  width: 100%;         /* Full-width on mobile */
-  max-width: 200px;    /* Slightly narrower on desktop */
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  /* inherit everything else from .button (centered, compact) */
 }
 
 /* Footer */
