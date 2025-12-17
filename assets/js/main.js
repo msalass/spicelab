@@ -57,7 +57,7 @@ window.addEventListener("scroll", () => {
   const rect = section.getBoundingClientRect();
   const windowHeight = window.innerHeight;
 
-  // Fade zone (tweakable)
+  // Define fade range
   const start = windowHeight * 0.8;
   const end = windowHeight * 0.3;
 
@@ -67,9 +67,12 @@ window.addEventListener("scroll", () => {
   const image = section.querySelector(".fade-image");
   const text = section.querySelector(".fade-text");
 
-  if (image && text) {
+  if (image) {
     image.style.opacity = 1 - clamped;
+  }
+  if (text) {
     text.style.opacity = clamped;
   }
 });
+
 
