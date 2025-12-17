@@ -32,16 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Add this inside the DOMContentLoaded event, after the existing observer setup
-const serviceSection = document.querySelector('.fade-in-text'); // Target the text div
-if (serviceSection) {
-  observer.observe(serviceSection); // Use your existing observer
+// Add observation for the services section
+const serviceText = document.querySelector('.fade-in-text');
+const serviceImage = document.querySelector('.fade-out-image');
+if (serviceText) {
+  observer.observe(serviceText); // Use your existing Intersection Observer
 }
 
-// Update the callback to handle fade classes (add this inside the existing callback function)
+// Update the callback function (add this inside the existing callback)
 if (entry.target.classList.contains('fade-in-text')) {
   entry.target.classList.add('visible'); // Fade in text
-  const image = entry.target.previousElementSibling; // The image before text
+  const image = entry.target.previousElementSibling; // Assuming image is right before text div
   if (image && image.classList.contains('fade-out-image')) {
     image.classList.add('hidden'); // Fade out image
   }
