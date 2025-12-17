@@ -152,39 +152,6 @@ ul {
 }
 
 /* =========================================================
-   SUPPORT SECTION (IMAGE → TEXT FADE)
-========================================================= */
-.support-section {
-  text-align: center;
-  margin: 120px 0;
-}
-
-/* Image */
-.support-section .fade-out-image {
-  display: block;
-  max-width: 320px;
-  width: 100%;
-  margin: 0 auto 48px;
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-/* Text */
-.support-section .fade-in-content {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-/* States */
-.support-section .fade-out-image.hidden {
-  opacity: 0;
-}
-
-.support-section .fade-in-content.visible {
-  opacity: 1;
-}
-
-/* =========================================================
    SECTION FADE (GENERIC)
 ========================================================= */
 .section,
