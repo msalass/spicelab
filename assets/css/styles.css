@@ -28,6 +28,7 @@
   --shadow-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Body and Global */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
@@ -38,7 +39,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme switch */
 }
 
-/* Layout */
+/* Header and Navigation */
 header {
   background-color: var(--header-bg);
   border-bottom: 1px solid var(--border-color);
@@ -47,6 +48,7 @@ header {
   z-index: 10;
   transition: background-color 0.3s ease; /* Smooth header transition */
 }
+
 nav {
   max-width: 1024px; /* Wider for desktop, like Apple */
   margin: 0 auto;
@@ -56,21 +58,25 @@ nav {
   justify-content: space-between;
   gap: 16px;
 }
+
 .nav-links {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
 }
+
 .nav-links a {
   opacity: 0;
   transform: translateY(-10px);
   animation: slideDown 0.5s ease-out forwards;
 }
+
 .nav-links a:nth-child(1) { animation-delay: 0.1s; }
 .nav-links a:nth-child(2) { animation-delay: 0.2s; }
 .nav-links a:nth-child(3) { animation-delay: 0.3s; }
 .nav-links a:nth-child(4) { animation-delay: 0.4s; }
 /* Add more for additional nav links */
+
 .menu-toggle {
   display: none;
   background: none;
@@ -81,16 +87,19 @@ nav {
   color: var(--text-color);
   transition: color 0.2s ease;
 }
+
 nav a {
   text-decoration: none;
   color: var(--text-color);
   font-size: 15px;
   transition: color 0.2s ease, transform 0.2s ease;
 }
+
 nav a:hover {
   color: var(--accent-color); /* Accent on hover */
   transform: translateY(-1px); /* Subtle lift */
 }
+
 .lang-switch {
   font-size: 14px;
   color: var(--subtext-color);
@@ -107,7 +116,7 @@ nav a:hover {
   transition: color 0.2s ease;
 }
 
-/* Main content wrapper */
+/* Main Content */
 main {
   max-width: 980px; /* Apple-inspired width for readability */
   margin: 48px auto;
@@ -130,6 +139,7 @@ h1 {
   opacity: 0;
   animation: fadeIn 0.6s ease-out 0.1s forwards;
 }
+
 h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 32px;
@@ -142,7 +152,7 @@ h2 {
   opacity: 0;
   animation: fadeIn 0.6s ease-out 0.3s forwards;
 }
-/* Paragraphs and bullet points */
+
 p,
 li {
   font-size: 17px; /* Slightly larger for readability */
@@ -152,30 +162,33 @@ li {
   transform: translateX(-10px);
   animation: slideInLeft 0.5s ease-out forwards;
 }
+
 p:nth-of-type(1), li:nth-of-type(1) { animation-delay: 0.5s; }
 p:nth-of-type(2), li:nth-of-type(2) { animation-delay: 0.6s; }
 p:nth-of-type(3), li:nth-of-type(3) { animation-delay: 0.7s; }
 /* Add more for additional paragraphs/lists */
+
 p {
   margin-top: 0;
   margin-bottom: 24px; /* More space */
 }
+
 ul {
   padding-left: 24px;
   margin-top: 0;
   margin-bottom: 24px;
   list-style-type: disc;
 }
+
 li {
   margin-bottom: 12px;
 }
 
 /* CTA button style */
 .button {
-  display: table;                 /* shrink to content, but still centerable */
-  margin: 24px auto 0 auto;       /* centered horizontally with space above */
-  text-align: center;
+  display: inline-block;
   padding: 12px 24px;
+  margin-top: 16px;
   border-radius: 999px;
   background-color: var(--accent-color);
   color: #ffffff;
@@ -188,15 +201,10 @@ li {
   animation: fadeIn 0.5s ease-out 0.8s forwards;
 }
 
-/* Mobile adjustments if needed */
-@media (max-width: 640px) {
-  .button {
-    width: 100%;                  /* if you want full width on mobile, enable */
-    max-width: none;
-    margin: 16px auto 0 auto;
-  }
+.button:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.05); /* Subtle scale-up */
 }
-
 
 /* Hero section */
 .hero {
@@ -208,10 +216,12 @@ li {
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .hero.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 .hero-subtitle {
   font-size: 21px;
   color: var(--subtext-color);
@@ -228,19 +238,20 @@ li {
   transform: translateY(20px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
+
 .section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-/* Staggering will be handled by JS observing each section independently as they enter view. */
 
-/* Project cards */
+/* Project cards (if used; remove if not needed) */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider cards */
   gap: 24px;
   margin-top: 24px;
 }
+
 .project-card {
   border: 1px solid var(--border-color);
   border-radius: 12px;
@@ -250,14 +261,17 @@ li {
   opacity: 0;
   transform: translateY(20px);
 }
+
 .project-card.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 .project-card:hover {
   box-shadow: 0 8px 24px var(--shadow-color); /* Deeper hover shadow */
   transform: translateY(-4px); /* Lift on hover */
 }
+
 .project-card h3 {
   margin-top: 0;
   margin-bottom: 12px;
@@ -265,7 +279,7 @@ li {
   color: var(--text-color);
 }
 
-/* Form styles */
+/* Form styles (if used; remove if not needed) */
 .form-section {
   margin-top: 48px;
   padding-top: 16px;
@@ -274,10 +288,12 @@ li {
   transform: translateY(20px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
 .form-section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 form label {
   display: block;
   font-size: 15px;
@@ -285,6 +301,7 @@ form label {
   margin-bottom: 8px;
   color: var(--text-color);
 }
+
 form input[type="text"],
 form input[type="email"],
 form textarea {
@@ -298,19 +315,26 @@ form textarea {
   color: var(--text-color);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
 form input:focus,
 form textarea:focus {
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1); /* Subtle glow */
   outline: none;
 }
+
 form textarea {
   min-height: 160px;
   resize: vertical;
 }
+
 form .button {
   margin-top: 24px;
-  /* inherit everything else from .button (centered, compact) */
+  width: 100%; /* Full-width on mobile */
+  max-width: 200px; /* Centered on desktop */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 /* Footer */
@@ -326,27 +350,35 @@ footer {
   transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
+
 footer.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Keyframes for load-based animations (nav, headings, etc.) */
+/* Keyframes for animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 @keyframes slideInLeft {
   from { opacity: 0; transform: translateX(-10px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
 /* Mobile optimization */
-@media (max-width: 768px) { /* Adjusted breakpoint for tablets */
+@media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -399,13 +431,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Logo in header */
+/* Logo and Images (cleaned and consolidated) */
 .logo {
-  height: 40px; /* Adjustable; Apple logos are compact */
+  height: 40px;
   width: auto;
   margin-right: 16px;
 }
-/* Horizontal logo fallback for mobile/small screens */
+
 @media (max-width: 768px) {
   .logo {
     content: url("/assets/images/horizontal-color.png"); /* Swap to horizontal version */
@@ -413,64 +445,60 @@ html {
   }
 }
 
-/* Profile photo (if adding team section; thumbnail style) */
+/* Profile photo thumbnail */
 .profile-thumbnail {
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Circular for personal touch, like Apple profiles */
+  border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 16px;
   display: block;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Footer icon (isotype) */
+/* Footer icon */
 .footer-icon {
   height: 30px;
   margin-bottom: 8px;
 }
 
-/* Dark mode logo swap (use positive version for better contrast on dark bg) */
+/* Dark mode logo swap */
 [data-theme="dark"] .logo {
   content: url("/assets/images/positivo-sin-fondo.png");
 }
+
 [data-theme="dark"] .footer-icon {
   content: url("/assets/images/isotipo-sin-fondo.png"); /* Or positive if needed */
 }
 
-/* Logo in header */
-.logo {
-  height: 40px;
-  width: auto;
-  margin-right: 16px;
-}
-
-/* Hero background and overlay image */
+/* Hero background and overlay (consolidated) */
 .hero-background {
   width: 100%;
-  height: 400px; /* Larger for impact */
+  height: 400px;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.8; /* Slight transparency for blend */
+  opacity: 0.8;
 }
+
 .hero-overlay-image {
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%; /* Scale to fit hero */
-  opacity: 0.5; /* Transparent overlay effect */
+  width: 50%;
+  opacity: 0.5;
 }
+
 .hero {
   position: relative;
-  padding-top: 150px; /* Space for images */
+  padding-top: 150px;
   text-align: center;
 }
 
-/* Section thumbnails (general) */
+/* Section thumbnails */
 .section-thumbnail {
   display: block;
   max-width: 400px;
@@ -479,27 +507,8 @@ html {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* Profile thumbnail (rounded for personal feel) */
-.profile-thumbnail {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-}
-
-/* Footer logo */
-.footer-logo {
-  height: 30px;
-  margin-bottom: 8px;
-  opacity: 0.9; /* Subtle transparency */
-}
-
-/* Mobile adjustments (e.g., use horizontal logo/image for small screens) */
+/* Mobile adjustments for images */
 @media (max-width: 768px) {
-  .logo {
-    content: url("/assets/images/horizontal-color.png"); /* Swap to horizontal for mobile */
-    height: 30px;
-  }
   .hero-background {
     height: 300px;
   }
