@@ -601,3 +601,48 @@ html {
     max-width: 150px; /* Slightly smaller on mobile */
   }
 }
+/* Support Section Wrapper */
+.support-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* Fade Effect for Image and Content */
+.fade-out-image {
+  display: block;
+  max-width: 80%; /* Bigger, matches text width */
+  width: 100%;
+  height: auto;
+  margin: 0 auto  -40px auto; /* Negative margin to overlap heading slightly for "over" effect */
+  opacity: 1; /* Starts visible */
+  transition: opacity 1.2s ease-out; /* Slower fade for gradual disappear */
+  z-index: 1; /* Above heading */
+  position: relative;
+}
+
+.fade-out-image.hidden {
+  opacity: 0; /* Fades out */
+}
+
+.fade-in-content {
+  opacity: 0; /* Starts hidden */
+  transform: translateY(40px); /* More offset for noticeable slide */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Slower for smooth appear */
+}
+
+.fade-in-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .fade-out-image {
+    max-width: 90%;
+    margin-bottom: -30px;
+  }
+  .fade-in-content {
+    transform: translateY(30px); /* Adjusted offset */
+  }
+}
