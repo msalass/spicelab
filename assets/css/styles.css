@@ -281,3 +281,15 @@ footer {
     margin-bottom: 32px;
   }
 }
+
+/* =========================================
+   OVERRIDE GLOBAL TEXT ANIMATIONS
+   FOR SCROLL-FADE SECTION
+========================================= */
+
+.scroll-fade p,
+.scroll-fade li {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
