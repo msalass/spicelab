@@ -437,3 +437,77 @@ html {
 [data-theme="dark"] .footer-icon {
   content: url("/assets/images/isotipo-sin-fondo.png"); /* Or positive if needed */
 }
+
+/* Logo in header */
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 16px;
+}
+
+/* Hero background and overlay image */
+.hero-background {
+  width: 100%;
+  height: 400px; /* Larger for impact */
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.8; /* Slight transparency for blend */
+}
+.hero-overlay-image {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Scale to fit hero */
+  opacity: 0.5; /* Transparent overlay effect */
+}
+.hero {
+  position: relative;
+  padding-top: 150px; /* Space for images */
+  text-align: center;
+}
+
+/* Section thumbnails (general) */
+.section-thumbnail {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Profile thumbnail (rounded for personal feel) */
+.profile-thumbnail {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Footer logo */
+.footer-logo {
+  height: 30px;
+  margin-bottom: 8px;
+  opacity: 0.9; /* Subtle transparency */
+}
+
+/* Mobile adjustments (e.g., use horizontal logo/image for small screens) */
+@media (max-width: 768px) {
+  .logo {
+    content: url("/assets/images/horizontal-color.png"); /* Swap to horizontal for mobile */
+    height: 30px;
+  }
+  .hero-background {
+    height: 300px;
+  }
+  .hero-overlay-image {
+    width: 70%;
+    opacity: 0.7;
+  }
+  .section-thumbnail {
+    max-width: 100%;
+  }
+}
