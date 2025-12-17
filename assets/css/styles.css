@@ -248,3 +248,36 @@ footer {
     transition: none !important;
   }
 }
+
+/* =========================================
+   APPLE-STYLE SCROLL CROSSFADE
+========================================= */
+
+.scroll-fade {
+  text-align: center;
+  margin: 120px 0;
+}
+
+/* Image (starts visible) */
+.scroll-fade .fade-image {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto 48px;
+  opacity: 1;
+  transition: opacity 0.1s linear;
+}
+
+/* Text (starts hidden) */
+.scroll-fade .fade-text {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .scroll-fade .fade-image {
+    max-width: 200px;
+    margin-bottom: 32px;
+  }
+}
