@@ -735,3 +735,39 @@ html {
     margin-top: -150px; /* Adjust for mobile image size */
   }
 }
+/* Support Section Wrapper */
+.support-section {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* Fade Effect for Image and Content */
+.fade-out-image {
+  display: block;
+  max-width: 80%; /* Bigger, matches text width */
+  height: auto;
+  margin: 0 auto 40px auto; /* Increased space below to prevent crowding */
+  opacity: 1; /* Starts visible */
+  transition: opacity 1.5s ease-out; /* Slower fade */
+}
+
+.fade-out-image.hidden {
+  opacity: 0;
+}
+
+.fade-in-content {
+  opacity: 0; /* Starts hidden */
+  transition: opacity 1.5s ease-out; /* Slower appear */
+}
+
+.fade-in-content.visible {
+  opacity: 1;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .fade-out-image {
+    max-width: 90%;
+    margin-bottom: 30px; /* Adjusted space */
+  }
+}
