@@ -569,3 +569,35 @@ html {
     max-width: 200px; /* Smaller on mobile */
   }
 }
+/* Fade Effect for Image and Text */
+.fade-out-image {
+  display: block;
+  max-width: 200px; /* Larger initial size; adjust if needed */
+  width: 100%;
+  height: auto;
+  margin: 0 auto 24px auto; /* Centered with space below */
+  opacity: 1; /* Starts visible */
+  transition: opacity 0.8s ease-out; /* Smooth fade out */
+}
+
+.fade-out-image.hidden {
+  opacity: 0; /* Fades out */
+}
+
+.fade-in-text {
+  opacity: 0; /* Starts hidden */
+  transform: translateY(20px); /* Slight offset for animation */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .fade-out-image {
+    max-width: 150px; /* Slightly smaller on mobile */
+  }
+}
