@@ -1,773 +1,250 @@
-/* Basic reset */
+/* =========================================================
+   RESET & VARIABLES
+========================================================= */
 * {
   box-sizing: border-box;
 }
 
-/* CSS Variables for Light/Dark Mode */
 :root {
-  --bg-color: #ffffff; /* Light mode background */
-  --text-color: #1c1c1e; /* Light mode text */
-  --header-bg: #f5f5f7; /* Light mode header */
-  --border-color: #d2d2d7; /* Light mode borders */
-  --accent-color: #0071e3; /* Apple blue */
+  --bg-color: #ffffff;
+  --text-color: #1c1c1e;
+  --subtext-color: #6e6e73;
+  --header-bg: #f5f5f7;
+  --border-color: #d2d2d7;
+  --accent-color: #0071e3;
   --accent-hover: #0066cc;
-  --subtext-color: #6e6e73; /* Subtle gray */
-  --card-bg: #f5f5f7; /* Card background */
-  --shadow-color: rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="dark"] {
-  --bg-color: #1c1c1e; /* Dark mode background */
-  --text-color: #f5f5f7; /* Dark mode text */
-  --header-bg: #2c2c2e; /* Dark mode header */
-  --border-color: #3a3a3c; /* Dark mode borders */
-  --accent-color: #0a84ff; /* Slightly brighter blue for dark */
+  --bg-color: #1c1c1e;
+  --text-color: #f5f5f7;
+  --subtext-color: #9e9e9e;
+  --header-bg: #2c2c2e;
+  --border-color: #3a3a3c;
+  --accent-color: #0a84ff;
   --accent-hover: #007aff;
-  --subtext-color: #9e9e9e; /* Lighter gray for subtext */
-  --card-bg: #2c2c2e; /* Dark card background */
-  --shadow-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Body and Global */
+/* =========================================================
+   GLOBAL
+========================================================= */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme switch */
 }
 
-/* Header and Navigation */
+/* =========================================================
+   HEADER & NAV
+========================================================= */
 header {
-  background-color: var(--header-bg);
-  border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 10;
-  transition: background-color 0.3s ease; /* Smooth header transition */
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav {
-  max-width: 1024px; /* Wider for desktop, like Apple */
+  max-width: 1024px;
   margin: 0 auto;
   padding: 16px 24px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  align-items: center;
 }
 
 .nav-links {
   display: flex;
   gap: 24px;
-  flex-wrap: wrap;
 }
 
 .nav-links a {
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: slideDown 0.5s ease-out forwards;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 15px;
 }
-
-.nav-links a:nth-child(1) { animation-delay: 0.1s; }
-.nav-links a:nth-child(2) { animation-delay: 0.2s; }
-.nav-links a:nth-child(3) { animation-delay: 0.3s; }
-.nav-links a:nth-child(4) { animation-delay: 0.4s; }
-/* Add more for additional nav links */
 
 .menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 28px;
-  cursor: pointer;
-  padding: 4px 8px;
-  color: var(--text-color);
-  transition: color 0.2s ease;
 }
 
-nav a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-size: 15px;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-nav a:hover {
-  color: var(--accent-color); /* Accent on hover */
-  transform: translateY(-1px); /* Subtle lift */
-}
-
-.lang-switch {
-  font-size: 14px;
-  color: var(--subtext-color);
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  color: var(--text-color);
-  margin-left: 16px;
-  transition: color 0.2s ease;
-}
-
-/* Main Content */
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
 main {
-  max-width: 980px; /* Apple-inspired width for readability */
-  margin: 48px auto;
-  padding: 40px 32px;
-  background-color: var(--bg-color);
-  border-radius: 12px; /* Softer corners */
-  animation: fadeIn 0.5s ease-out forwards; /* Fade-in on load */
+  max-width: 980px;
+  margin: 64px auto;
+  padding: 0 32px;
 }
 
-/* Typography */
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
 h1 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 48px; /* Larger for impact, like Apple heroes */
+  font-size: 48px;
   font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 40px;
-  color: var(--text-color);
   text-align: center;
-  letter-spacing: -0.02em;
-  opacity: 0;
-  animation: fadeIn 0.6s ease-out 0.1s forwards;
+  margin-bottom: 32px;
 }
 
 h2 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 32px;
   font-weight: 600;
-  margin-top: 64px; /* More separation */
-  margin-bottom: 32px;
-  color: var(--text-color);
   text-align: center;
-  letter-spacing: -0.01em;
-  opacity: 0;
-  animation: fadeIn 0.6s ease-out 0.3s forwards;
+  margin: 96px 0 32px;
 }
 
 p,
 li {
-  font-size: 17px; /* Slightly larger for readability */
+  font-size: 17px;
   line-height: 1.8;
-  color: var(--text-color);
-  opacity: 0;
-  transform: translateX(-10px);
-  animation: slideInLeft 0.5s ease-out forwards;
-}
-
-p:nth-of-type(1), li:nth-of-type(1) { animation-delay: 0.5s; }
-p:nth-of-type(2), li:nth-of-type(2) { animation-delay: 0.6s; }
-p:nth-of-type(3), li:nth-of-type(3) { animation-delay: 0.7s; }
-/* Add more for additional paragraphs/lists */
-
-p {
-  margin-top: 0;
-  margin-bottom: 24px; /* More space */
 }
 
 ul {
   padding-left: 24px;
-  margin-top: 0;
-  margin-bottom: 24px;
-  list-style-type: disc;
 }
 
-li {
-  margin-bottom: 12px;
-}
-
-/* CTA button style */
+/* =========================================================
+   BUTTON
+========================================================= */
 .button {
   display: inline-block;
-  padding: 12px 24px;
-  margin-top: 16px;
+  padding: 12px 28px;
   border-radius: 999px;
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
-  font-size: 17px;
-  font-weight: 400;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  border: none;
-  opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.8s forwards;
 }
 
 .button:hover {
   background-color: var(--accent-hover);
-  transform: scale(1.05); /* Subtle scale-up */
 }
 
-/* Hero section */
+/* =========================================================
+   HERO
+========================================================= */
 .hero {
-  margin-bottom: 48px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border-color);
   text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  margin-bottom: 80px;
 }
 
-.hero.visible {
-  opacity: 1;
-  transform: translateY(0);
+.hero-logo {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto 32px;
 }
 
 .hero-subtitle {
   font-size: 21px;
   color: var(--subtext-color);
-  margin-bottom: 16px;
-  font-weight: 400;
+  margin-bottom: 24px;
 }
 
-/* Section helper with staggered animation */
-.section {
-  margin-top: 64px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-color);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Project cards (if used; remove if not needed) */
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider cards */
-  gap: 24px;
-  margin-top: 24px;
-}
-
-.project-card {
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 24px;
-  background-color: var(--card-bg);
-  transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.5s ease-out;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.project-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.project-card:hover {
-  box-shadow: 0 8px 24px var(--shadow-color); /* Deeper hover shadow */
-  transform: translateY(-4px); /* Lift on hover */
-}
-
-.project-card h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 24px;
-  color: var(--text-color);
-}
-
-/* Form styles (if used; remove if not needed) */
-.form-section {
-  margin-top: 48px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-color);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.form-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-form label {
-  display: block;
-  font-size: 15px;
-  margin-top: 16px;
-  margin-bottom: 8px;
-  color: var(--text-color);
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  font-family: inherit;
-  font-size: 17px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-form input:focus,
-form textarea:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1); /* Subtle glow */
-  outline: none;
-}
-
-form textarea {
-  min-height: 160px;
-  resize: vertical;
-}
-
-form .button {
-  margin-top: 24px;
-  width: 100%; /* Full-width on mobile */
-  max-width: 200px; /* Centered on desktop */
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-/* Footer */
-footer {
-  max-width: 1024px;
-  margin: 0 auto 32px;
-  padding: 24px 24px;
-  font-size: 13px;
-  color: var(--subtext-color);
+/* =========================================================
+   SUPPORT SECTION (IMAGE → TEXT FADE)
+========================================================= */
+.support-section {
   text-align: center;
-  border-top: 1px solid var(--border-color);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  margin: 120px 0;
 }
 
+/* Image */
+.support-section .fade-out-image {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto 48px;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+/* Text */
+.support-section .fade-in-content {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* States */
+.support-section .fade-out-image.hidden {
+  opacity: 0;
+}
+
+.support-section .fade-in-content.visible {
+  opacity: 1;
+}
+
+/* =========================================================
+   SECTION FADE (GENERIC)
+========================================================= */
+.section,
+footer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible,
 footer.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Keyframes for animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  max-width: 1024px;
+  margin: 96px auto 32px;
+  padding: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--subtext-color);
+  border-top: 1px solid var(--border-color);
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-10px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-/* Mobile optimization */
+/* =========================================================
+   MOBILE
+========================================================= */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 20px;
-  }
-  .menu-toggle {
-    display: block;
-    align-self: flex-end;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    margin-top: 12px;
-  }
-  .nav-links.open {
-    display: flex;
-  }
   main {
-    max-width: 100%;
-    margin: 24px 16px;
-    padding: 32px 24px;
-    border-radius: 0;
+    padding: 0 20px;
   }
+
   h1 {
     font-size: 36px;
-    margin-bottom: 32px;
   }
+
   h2 {
     font-size: 28px;
-    margin-top: 48px;
-    margin-bottom: 24px;
+    margin-top: 72px;
   }
-  .project-list {
-    grid-template-columns: 1fr; /* Stack cards on mobile */
-  }
-}
 
-/* Respect reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-/* Smooth scrolling for enhanced navigation */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Logo and Images (cleaned and consolidated) */
-.logo {
-  height: 40px;
-  width: auto;
-  margin-right: 16px;
-}
-
-@media (max-width: 768px) {
-  .logo {
-    content: url("/assets/images/horizontal-color.png"); /* Swap to horizontal version */
-    height: 30px;
-  }
-}
-
-/* Profile photo thumbnail */
-.profile-thumbnail {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 16px;
-  display: block;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-/* Footer icon */
-.footer-icon {
-  height: 30px;
-  margin-bottom: 8px;
-}
-
-/* Dark mode logo swap */
-[data-theme="dark"] .logo {
-  content: url("/assets/images/positivo-sin-fondo.png");
-}
-
-[data-theme="dark"] .footer-icon {
-  content: url("/assets/images/isotipo-sin-fondo.png"); /* Or positive if needed */
-}
-
-/* Hero background and overlay (consolidated) */
-.hero-background {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.8;
-}
-
-.hero-overlay-image {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  opacity: 0.5;
-}
-
-.hero {
-  position: relative;
-  padding-top: 150px;
-  text-align: center;
-}
-
-/* Section thumbnails */
-.section-thumbnail {
-  display: block;
-  max-width: 400px;
-  margin: 0 auto 24px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-/* Mobile adjustments for images */
-@media (max-width: 768px) {
-  .hero-background {
-    height: 300px;
-  }
-  .hero-overlay-image {
-    width: 70%;
-    opacity: 0.7;
-  }
-  .section-thumbnail {
-    max-width: 100%;
-  }
-}
-/* Hero Logo Fix: Centered, scaled nicely with max-width cap */
-.hero-logo {
-  display: block; /* Ensures centering works */
-  width: 80%; /* Flexible scaling */
-  max-width: 800px; /* Prevents it from getting too huge on desktop */
-  height: auto; /* Maintains aspect ratio */
-  margin: 0 auto 24px auto; /* Centered with space below */
-  border-radius: 8px; /* Soft corners for premium feel */
-}
-
-/* Mobile Scaling */
-@media (max-width: 768px) {
   .hero-logo {
-    width: 90%; /* Slightly wider on small screens for visibility */
     max-width: 300px;
   }
-}
-/* Fade Effect for Image and Text */
-.fade-out-image {
-  display: block;
-  max-width: 300px; /* Larger size for visibility; adjust as needed */
-  width: 100%;
-  height: auto;
-  margin: 0 auto 24px auto; /* Centered */
-  opacity: 1; /* Starts visible */
-  transition: opacity 0.8s ease-out; /* Smooth fade out */
-}
 
-.fade-out-image.hidden {
-  opacity: 0; /* Fades out */
-}
-
-.fade-in-text {
-  opacity: 0; /* Starts hidden */
-  transform: translateY(20px); /* Slight offset for animation */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Mobile Adjustment */
-@media (max-width: 768px) {
-  .fade-out-image {
-    max-width: 200px; /* Smaller on mobile */
+  .support-section .fade-out-image {
+    max-width: 200px;
+    margin-bottom: 32px;
   }
 }
-/* Fade Effect for Image and Text */
-.fade-out-image {
-  display: block;
-  max-width: 200px; /* Larger initial size; adjust if needed */
-  width: 100%;
-  height: auto;
-  margin: 0 auto 24px auto; /* Centered with space below */
-  opacity: 1; /* Starts visible */
-  transition: opacity 0.8s ease-out; /* Smooth fade out */
-}
 
-.fade-out-image.hidden {
-  opacity: 0; /* Fades out */
-}
-
-.fade-in-text {
-  opacity: 0; /* Starts hidden */
-  transform: translateY(20px); /* Slight offset for animation */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Mobile Adjustment */
-@media (max-width: 768px) {
-  .fade-out-image {
-    max-width: 150px; /* Slightly smaller on mobile */
-  }
-}
-/* Support Section Wrapper */
-.support-section {
-  position: relative;
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-/* Fade Effect for Image and Content */
-.fade-out-image {
-  display: block;
-  max-width: 80%; /* Bigger, matches text width */
-  width: 100%;
-  height: auto;
-  margin: 0 auto  -40px auto; /* Negative margin to overlap heading slightly for "over" effect */
-  opacity: 1; /* Starts visible */
-  transition: opacity 1.2s ease-out; /* Slower fade for gradual disappear */
-  z-index: 1; /* Above heading */
-  position: relative;
-}
-
-.fade-out-image.hidden {
-  opacity: 0; /* Fades out */
-}
-
-.fade-in-content {
-  opacity: 0; /* Starts hidden */
-  transform: translateY(40px); /* More offset for noticeable slide */
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Slower for smooth appear */
-}
-
-.fade-in-content.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Mobile Adjustment */
-@media (max-width: 768px) {
-  .fade-out-image {
-    max-width: 90%;
-    margin-bottom: -30px;
-  }
-  .fade-in-content {
-    transform: translateY(30px); /* Adjusted offset */
-  }
-}
-/* Support Section Wrapper (for positioning) */
-.support-section {
-  position: relative;
-  text-align: center;
-  margin-bottom: 48px;
-  min-height: 300px; /* Reserve space for image/text swap */
-}
-
-/* Fade Effect for Image and Content */
-.fade-out-image {
-  display: block;
-  max-width: 100%; /* Full text width for bigger size */
-  height: auto;
-  margin: 0 auto;
-  opacity: 1; /* Starts visible */
-  transition: opacity 1.5s ease-out; /* Slower fade */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1; /* Above content initially */
-}
-
-.fade-out-image.hidden {
-  opacity: 0;
-}
-
-.fade-in-content {
-  opacity: 0; /* Starts hidden */
-  transition: opacity 1.5s ease-out; /* Slower appear */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-top: 150px; /* Offset to align where image was */
-  z-index: 0; /* Below image */
-}
-
-.fade-in-content.visible {
-  opacity: 1;
-  z-index: 2; /* Bring to front when visible */
-}
-
-/* Mobile Adjustment */
-@media (max-width: 768px) {
-  .fade-in-content {
-    padding-top: 100px; /* Adjust offset for mobile */
-  }
-}
-/* Support Section Wrapper */
-.support-section {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-/* Fade Effect for Image and Content */
-.fade-out-image {
-  display: block;
-  max-width: 80%; /* Bigger, matches text width */
-  height: auto;
-  margin: 0 auto 24px auto; /* Centered, space below for heading */
-  opacity: 1; /* Starts visible */
-  transition: opacity 1.5s ease-out; /* Slower fade */
-}
-
-.fade-out-image.hidden {
-  opacity: 0;
-}
-
-.fade-in-content {
-  opacity: 0; /* Starts hidden */
-  transition: opacity 1.5s ease-out; /* Slower appear */
-  margin-top: -200px; /* Negative margin to move up into image space after fade (adjust based on image height) */
-}
-
-.fade-in-content.visible {
-  opacity: 1;
-  margin-top: 0; /* Moves down to normal position after visible */
-}
-
-/* Mobile Adjustment */
-@media (max-width: 768px) {
-  .fade-out-image {
-    max-width: 90%;
-  }
-  .fade-in-content {
-    margin-top: -150px; /* Adjust for mobile image size */
-  }
-}
-/* Support Section Wrapper */
-.support-section {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-/* Fade Effect for Image and Content */
-.fade-out-image {
-  display: block;
-  max-width: 80%; /* Bigger, matches text width */
-  height: auto;
-  margin: 0 auto 40px auto; /* Increased space below to prevent crowding */
-  opacity: 1; /* Starts visible */
-  transition: opacity 1.5s ease-out; /* Slower fade */
-}
-
-.fade-out-image.hidden {
-  opacity: 0;
-}
-
-.fade-in-content {
-  opacity: 0; /* Starts hidden */
-  transition: opacity 1.5s ease-out; /* Slower appear */
-}
-
-.fade-in-content.visible {
-  opacity: 1;
-}
-
-/* Mobile Adjustment */
-@media (max-width: 768px) {
-  .fade-out-image {
-    max-width: 90%;
-    margin-bottom: 30px; /* Adjusted space */
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
   }
 }
