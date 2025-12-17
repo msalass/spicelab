@@ -646,3 +646,52 @@ html {
     transform: translateY(30px); /* Adjusted offset */
   }
 }
+/* Support Section Wrapper (for positioning) */
+.support-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 48px;
+  min-height: 300px; /* Reserve space for image/text swap */
+}
+
+/* Fade Effect for Image and Content */
+.fade-out-image {
+  display: block;
+  max-width: 100%; /* Full text width for bigger size */
+  height: auto;
+  margin: 0 auto;
+  opacity: 1; /* Starts visible */
+  transition: opacity 1.5s ease-out; /* Slower fade */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* Above content initially */
+}
+
+.fade-out-image.hidden {
+  opacity: 0;
+}
+
+.fade-in-content {
+  opacity: 0; /* Starts hidden */
+  transition: opacity 1.5s ease-out; /* Slower appear */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 150px; /* Offset to align where image was */
+  z-index: 0; /* Below image */
+}
+
+.fade-in-content.visible {
+  opacity: 1;
+  z-index: 2; /* Bring to front when visible */
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .fade-in-content {
+    padding-top: 100px; /* Adjust offset for mobile */
+  }
+}
