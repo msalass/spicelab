@@ -398,3 +398,42 @@ footer.visible {
 html {
   scroll-behavior: smooth;
 }
+
+/* Logo in header */
+.logo {
+  height: 40px; /* Adjustable; Apple logos are compact */
+  width: auto;
+  margin-right: 16px;
+}
+/* Horizontal logo fallback for mobile/small screens */
+@media (max-width: 768px) {
+  .logo {
+    content: url("/assets/images/horizontal-color.png"); /* Swap to horizontal version */
+    height: 30px;
+  }
+}
+
+/* Profile photo (if adding team section; thumbnail style) */
+.profile-thumbnail {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular for personal touch, like Apple profiles */
+  object-fit: cover;
+  margin: 0 auto 16px;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Footer icon (isotype) */
+.footer-icon {
+  height: 30px;
+  margin-bottom: 8px;
+}
+
+/* Dark mode logo swap (use positive version for better contrast on dark bg) */
+[data-theme="dark"] .logo {
+  content: url("/assets/images/positivo-sin-fondo.png");
+}
+[data-theme="dark"] .footer-icon {
+  content: url("/assets/images/isotipo-sin-fondo.png"); /* Or positive if needed */
+}
