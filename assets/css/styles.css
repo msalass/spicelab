@@ -695,3 +695,43 @@ html {
     padding-top: 100px; /* Adjust offset for mobile */
   }
 }
+/* Support Section Wrapper */
+.support-section {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* Fade Effect for Image and Content */
+.fade-out-image {
+  display: block;
+  max-width: 80%; /* Bigger, matches text width */
+  height: auto;
+  margin: 0 auto 24px auto; /* Centered, space below for heading */
+  opacity: 1; /* Starts visible */
+  transition: opacity 1.5s ease-out; /* Slower fade */
+}
+
+.fade-out-image.hidden {
+  opacity: 0;
+}
+
+.fade-in-content {
+  opacity: 0; /* Starts hidden */
+  transition: opacity 1.5s ease-out; /* Slower appear */
+  margin-top: -200px; /* Negative margin to move up into image space after fade (adjust based on image height) */
+}
+
+.fade-in-content.visible {
+  opacity: 1;
+  margin-top: 0; /* Moves down to normal position after visible */
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .fade-out-image {
+    max-width: 90%;
+  }
+  .fade-in-content {
+    margin-top: -150px; /* Adjust for mobile image size */
+  }
+}
