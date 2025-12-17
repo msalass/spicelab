@@ -8,26 +8,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Intersection Observer with adjusted options for delayed trigger
+  // Intersection Observer
   const options = {
-    root: null, // Viewport
-    rootMargin: '-100px', // Trigger when 100px from view bottom for scroll-down effect
-    threshold: 0.2 // Trigger when 20% visible
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
   };
 
   const callback = (entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (entry.target.classList.contains('fade-in-content')) {
-          entry.target.classList.add('visible'); // Fade in content (heading + text)
-          const image = entry.target.previousElementSibling; // Image before content div
-          if (image && image.classList.contains('fade-out-image')) {
-            image.classList.add('hidden'); // Fade out image
-          }
+      if (entry.target.classList.contains('fade-in-content')) {
+        const image = entry.target.previousElementSibling;
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible'); // Show text
+          if (image) image.classList.add('hidden'); // Hide image
         } else {
-          entry.target.classList.add('visible'); // For other elements
+          entry.target.classList.remove('visible'); // Hide text on scroll up
+          if (image) image.classList.remove('hidden'); // Show image on scroll up
         }
-        observer.unobserve(entry.target); // One-time
+      } else if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
       }
     });
   };
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // Observe the support section content
+  // Observe the support content (do not unobserve for reverse effect)
   const supportContent = document.querySelector('.fade-in-content');
   if (supportContent) {
     observer.observe(supportContent);
