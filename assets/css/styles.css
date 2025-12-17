@@ -524,7 +524,7 @@ html {
 .hero-logo {
   display: block; /* Ensures centering works */
   width: 80%; /* Flexible scaling */
-  max-width: 400px; /* Prevents it from getting too huge on desktop */
+  max-width: 600px; /* Prevents it from getting too huge on desktop */
   height: auto; /* Maintains aspect ratio */
   margin: 0 auto 24px auto; /* Centered with space below */
   border-radius: 8px; /* Soft corners for premium feel */
