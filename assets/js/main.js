@@ -45,3 +45,31 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(supportContent);
   }
 });
+
+/* =========================================
+   APPLE-STYLE SCROLL CROSSFADE
+========================================= */
+
+window.addEventListener("scroll", () => {
+  const section = document.querySelector(".scroll-fade");
+  if (!section) return;
+
+  const rect = section.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  // Fade zone (tweakable)
+  const start = windowHeight * 0.8;
+  const end = windowHeight * 0.3;
+
+  const progress = (start - rect.top) / (start - end);
+  const clamped = Math.min(Math.max(progress, 0), 1);
+
+  const image = section.querySelector(".fade-image");
+  const text = section.querySelector(".fade-text");
+
+  if (image && text) {
+    image.style.opacity = 1 - clamped;
+    text.style.opacity = clamped;
+  }
+});
+
