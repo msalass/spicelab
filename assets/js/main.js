@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile menu toggle (your original code)
+  // Mobile menu toggle
   var toggle = document.querySelector(".menu-toggle");
   var navLinks = document.querySelector(".nav-links");
   if (toggle && navLinks) {
@@ -8,40 +8,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Intersection Observer for scroll-triggered animations (existing + new for services section)
+  // Intersection Observer with adjusted options for delayed trigger
   const options = {
     root: null, // Viewport
-    rootMargin: '0px',
-    threshold: 0.1 // Trigger when 10% visible
+    rootMargin: '-100px', // Trigger when 100px from view bottom for scroll-down effect
+    threshold: 0.2 // Trigger when 20% visible
   };
 
   const callback = (entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        if (entry.target.classList.contains('fade-in-text')) {
-          entry.target.classList.add('visible'); // Fade in text
-          const image = entry.target.previousElementSibling; // Image before the text div
+        if (entry.target.classList.contains('fade-in-content')) {
+          entry.target.classList.add('visible'); // Fade in content (heading + text)
+          const image = entry.target.previousElementSibling; // Image before content div
           if (image && image.classList.contains('fade-out-image')) {
             image.classList.add('hidden'); // Fade out image
           }
         } else {
-          entry.target.classList.add('visible'); // For other elements like hero/section
+          entry.target.classList.add('visible'); // For other elements
         }
-        observer.unobserve(entry.target); // One-time trigger
+        observer.unobserve(entry.target); // One-time
       }
     });
   };
 
   const observer = new IntersectionObserver(callback, options);
 
-  // Observe existing elements (e.g., hero, sections, footer)
+  // Observe existing elements
   document.querySelectorAll('.hero, .section, .form-section, footer').forEach(el => {
     observer.observe(el);
   });
 
-  // NEW: Observe the services text div specifically
-  const serviceText = document.querySelector('.fade-in-text');
-  if (serviceText) {
-    observer.observe(serviceText);
+  // Observe the support section content
+  const supportContent = document.querySelector('.fade-in-content');
+  if (supportContent) {
+    observer.observe(supportContent);
   }
 });
