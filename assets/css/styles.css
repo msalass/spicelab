@@ -520,3 +520,20 @@ html {
     max-width: 100%;
   }
 }
+/* Hero Logo Image */
+.hero-logo {
+  display: block;
+  max-width: 300px; /* Constrained for desktop focus, like Apple logos */
+  width: 100%; /* Responsive scaling */
+  height: auto;
+  margin: 0 auto 24px auto; /* Centered with space below */
+  border-radius: 8px; /* Soft corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle elevation for premium feel */
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .hero-logo {
+    max-width: 200px; /* Smaller on mobile for balance */
+  }
+}
