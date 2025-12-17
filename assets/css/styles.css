@@ -520,20 +520,20 @@ html {
     max-width: 100%;
   }
 }
-/* Hero Logo Image */
+/* Hero Logo Fix: Centered, scaled nicely with max-width cap */
 .hero-logo {
-  display: block;
-  max-width: 300px; /* Constrained for desktop focus, like Apple logos */
-  width: 100%; /* Responsive scaling */
-  height: auto;
+  display: block; /* Ensures centering works */
+  width: 80%; /* Flexible scaling */
+  max-width: 400px; /* Prevents it from getting too huge on desktop */
+  height: auto; /* Maintains aspect ratio */
   margin: 0 auto 24px auto; /* Centered with space below */
-  border-radius: 8px; /* Soft corners */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle elevation for premium feel */
+  border-radius: 8px; /* Soft corners for premium feel */
 }
 
-/* Mobile Adjustment */
+/* Mobile Scaling */
 @media (max-width: 768px) {
   .hero-logo {
-    max-width: 200px; /* Smaller on mobile for balance */
+    width: 90%; /* Slightly wider on small screens for visibility */
+    max-width: 300px;
   }
 }
