@@ -217,7 +217,7 @@ footer {
 }
 
 /* =========================================
-   APPLE-STYLE SCROLL CROSSFADE
+   APPLE-STYLE SCROLL CROSSFADE (SINGLE TEXT)
 ========================================= */
 
 .scroll-fade {
@@ -228,35 +228,27 @@ footer {
 /* Image */
 .scroll-fade .fade-image {
   display: block;
-  max-width: 360px; /* Hero-like */
+  max-width: 360px;
   width: 100%;
   margin: 0 auto 48px;
   opacity: 1;
-  transform: scale(1); /* starting scale */
+  transform: scale(1);
   transition: opacity 0.15s linear, transform 0.15s linear;
   will-change: opacity, transform;
 }
 
-/* Text */
+/* Text (JS controls opacity) */
 .scroll-fade .fade-text {
   opacity: 0;
   transition: opacity 0.15s linear;
 }
 
-/* Prevent global text animation interference */
+/* Prevent interference */
 .scroll-fade p,
 .scroll-fade li {
   opacity: 1 !important;
   transform: none !important;
   animation: none !important;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .scroll-fade .fade-image {
-    max-width: 200px;
-    margin-bottom: 32px;
-  }
 }
 
 /* =========================================
@@ -269,31 +261,4 @@ footer {
   opacity: 1 !important;
   transform: none !important;
   animation: none !important;
-}
-
-/* =========================================
-   MULTI-STAGE TEXT (APPLE STYLE)
-========================================= */
-
-.scroll-fade .fade-text {
-  position: relative;
-  min-height: 260px; /* reserves space so layout never jumps */
-}
-
-/* Each stage */
-.scroll-fade .text-stage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: opacity 0.15s linear;
-}
-
-/* Safety override */
-.scroll-fade p,
-.scroll-fade li {
-  opacity: 1 !important;
-  animation: none !important;
-  transform: none !important;
 }
