@@ -270,3 +270,30 @@ footer {
   transform: none !important;
   animation: none !important;
 }
+
+/* =========================================
+   MULTI-STAGE TEXT (APPLE STYLE)
+========================================= */
+
+.scroll-fade .fade-text {
+  position: relative;
+  min-height: 260px; /* reserves space so layout never jumps */
+}
+
+/* Each stage */
+.scroll-fade .text-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.15s linear;
+}
+
+/* Safety override */
+.scroll-fade p,
+.scroll-fade li {
+  opacity: 1 !important;
+  animation: none !important;
+  transform: none !important;
+}
