@@ -1,55 +1,33 @@
-/* =========================================================
-   RESET & VARIABLES
-========================================================= */
-* {
-  box-sizing: border-box;
-}
+/* =========================
+   RESET & BASE
+========================= */
+* { box-sizing: border-box; }
 
-:root {
-  --bg-color: #ffffff;
-  --text-color: #1c1c1e;
-  --subtext-color: #6e6e73;
-  --header-bg: #f5f5f7;
-  --border-color: #d2d2d7;
-  --accent-color: #0071e3;
-  --accent-hover: #0066cc;
-}
-
-[data-theme="dark"] {
-  --bg-color: #1c1c1e;
-  --text-color: #f5f5f7;
-  --subtext-color: #9e9e9e;
-  --header-bg: #2c2c2e;
-  --border-color: #3a3a3c;
-  --accent-color: #0a84ff;
-  --accent-hover: #007aff;
-}
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  color: #1c1c1e;
   line-height: 1.6;
 }
 
-/* =========================================================
-   HEADER & NAV
-========================================================= */
+main {
+  max-width: 980px;
+  margin: 64px auto;
+  padding: 0 32px;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
 header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: var(--header-bg);
-  border-bottom: 1px solid var(--border-color);
+  background: #f5f5f7;
+  border-bottom: 1px solid #d2d2d7;
 }
 
 nav {
@@ -61,16 +39,8 @@ nav {
   align-items: center;
 }
 
-.nav-links {
-  display: flex;
-  gap: 24px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-size: 15px;
-}
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { text-decoration: none; color: #1c1c1e; font-size: 15px; }
 
 .menu-toggle {
   display: none;
@@ -79,64 +49,12 @@ nav {
   font-size: 28px;
 }
 
-/* =========================================================
-   MAIN LAYOUT
-========================================================= */
-main {
-  max-width: 980px;
-  margin: 64px auto;
-  padding: 0 32px;
-}
-
-/* =========================================================
-   TYPOGRAPHY
-========================================================= */
-h1 {
-  font-size: 48px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-h2 {
-  font-size: 32px;
-  font-weight: 600;
-  text-align: center;
-  margin: 96px 0 32px;
-}
-
-p,
-li {
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-ul {
-  padding-left: 24px;
-}
-
-/* =========================================================
-   BUTTON
-========================================================= */
-.button {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 999px;
-  background-color: var(--accent-color);
-  color: #fff;
-  text-decoration: none;
-}
-
-.button:hover {
-  background-color: var(--accent-hover);
-}
-
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 .hero {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 
 .hero-logo {
@@ -147,86 +65,40 @@ ul {
 
 .hero-subtitle {
   font-size: 21px;
-  color: var(--subtext-color);
+  color: #6e6e73;
   margin-bottom: 24px;
 }
 
-/* =========================================================
-   SECTION FADE (GENERIC)
-========================================================= */
-.section,
-footer {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+/* =========================
+   BUTTON
+========================= */
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: #0071e3;
+  color: #fff;
+  text-decoration: none;
 }
 
-.section.visible,
-footer.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1 { font-size: 48px; font-weight: 600; }
+h2 { font-size: 32px; font-weight: 600; margin: 96px 0 32px; text-align: center; }
+p, li { font-size: 17px; line-height: 1.8; }
+ul { padding-left: 24px; }
 
-/* =========================================================
-   FOOTER
-========================================================= */
-footer {
-  max-width: 1024px;
-  margin: 96px auto 32px;
-  padding: 24px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--subtext-color);
-  border-top: 1px solid var(--border-color);
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-@media (max-width: 768px) {
-  main {
-    padding: 0 20px;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
-
-  h2 {
-    font-size: 28px;
-    margin-top: 72px;
-  }
-
-  .hero-logo {
-    max-width: 300px;
-  }
-
-  .support-section .fade-out-image {
-    max-width: 200px;
-    margin-bottom: 32px;
-  }
-}
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-  }
-}
-
-/* =========================================
-   APPLE-STYLE SCROLL CROSSFADE (SINGLE TEXT)
-========================================= */
-
+/* =========================
+   APPLE-STYLE SCROLL CROSSFADE
+========================= */
 .scroll-fade {
   text-align: center;
-  margin: 120px 0;
+  margin: 140px 0;
 }
 
 /* Image */
-.scroll-fade .fade-image {
+.fade-image {
   display: block;
   max-width: 360px;
   width: 100%;
@@ -237,13 +109,21 @@ footer {
   will-change: opacity, transform;
 }
 
-/* Text (JS controls opacity) */
-.scroll-fade .fade-text {
+/* Text container reserves space (no layout jump) */
+.fade-text {
+  position: relative;
+  min-height: 260px;
+}
+
+/* Text stages */
+.text-stage {
+  position: absolute;
+  inset: 0;
   opacity: 0;
   transition: opacity 0.15s linear;
 }
 
-/* Prevent interference */
+/* Prevent any global animations interfering here */
 .scroll-fade p,
 .scroll-fade li {
   opacity: 1 !important;
@@ -251,14 +131,33 @@ footer {
   animation: none !important;
 }
 
-/* =========================================
-   OVERRIDE GLOBAL TEXT ANIMATIONS
-   FOR SCROLL-FADE SECTION
-========================================= */
+/* =========================
+   FOOTER
+========================= */
+footer {
+  max-width: 1024px;
+  margin: 120px auto 32px;
+  padding: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #6e6e73;
+  border-top: 1px solid #d2d2d7;
+}
 
-.scroll-fade p,
-.scroll-fade li {
-  opacity: 1 !important;
-  transform: none !important;
-  animation: none !important;
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  main { padding: 0 20px; }
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; margin-top: 72px; }
+  .hero-logo { max-width: 300px; }
+  .fade-image { max-width: 200px; margin-bottom: 32px; }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
 }
