@@ -225,20 +225,30 @@ footer {
   margin: 120px 0;
 }
 
-/* Image (starts visible) */
+/* Image */
 .scroll-fade .fade-image {
   display: block;
-  max-width: 600px;
+  max-width: 360px; /* Hero-like */
   width: 100%;
   margin: 0 auto 48px;
   opacity: 1;
-  transition: opacity 0.1s linear;
+  transform: scale(1); /* starting scale */
+  transition: opacity 0.15s linear, transform 0.15s linear;
+  will-change: opacity, transform;
 }
 
-/* Text (starts hidden) */
+/* Text */
 .scroll-fade .fade-text {
   opacity: 0;
-  transition: opacity 0.1s linear;
+  transition: opacity 0.15s linear;
+}
+
+/* Prevent global text animation interference */
+.scroll-fade p,
+.scroll-fade li {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
 }
 
 /* Mobile */
