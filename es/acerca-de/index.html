@@ -1,131 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Acerca de SPICe Lab | Centro de Isótopos del Pacífico Sur</title>
+    <meta name="description" content="SPICe Lab conecta la geoquímica avanzada con problemas reales en el sur de Chile. Expertos en isótopos, elementos traza y reconstrucción ambiental.">
+    <meta name="keywords" content="geoquímica Chile, isótopos, SPICe Lab, laboratorio geoquímica, investigación ambiental, elementos traza, sur de Chile">
+    <meta name="author" content="SPICe Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spicelab.cl/es/acerca-de/" />
 
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Acerca de SPICe Lab" />
+    <meta property="og:description" content="Un centro en desarrollo para conectar la geoquímica avanzada con la industria y el medio ambiente." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    <meta property="og:url" content="https://spicelab.cl/es/acerca-de/" />
+    <meta property="og:site_name" content="SPICe Lab" />
+    <meta property="og:locale" content="es_ES" />
 
-  <title>Acerca de SPICe Lab – Centro de Isótopos del Pacífico Sur</title>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Acerca de SPICe Lab" />
+    <meta name="twitter:description" content="Un centro en desarrollo para conectar la geoquímica avanzada con la industria y el medio ambiente." />
+    <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
+
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/pages/about.css" />
 </head>
-
 <body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrap">
+                <div class="logo-wrap">
+                    <a class="logo-link" href="/es/">
+                        <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icono">
+                    </a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="/es/">Inicio</a>
+                    <a href="/es/acerca-de/">Acerca de</a>
+                    <a href="/es/equipo/">Equipo</a>
+                    <a href="/es/servicios/">Servicios</a>
+                    <a href="/es/proyectos/">Proyectos</a>
+                    <a href="/es/muestras/">Muestras</a>
+                    <a href="/es/contacto/">Contacto</a>
+                </div>
+            </div>
 
-<header>
-  <nav>
-    <button class="menu-toggle" aria-label="Mostrar u ocultar menú">☰</button>
+            <span class="lang-switch-desktop">
+                <a href="/about/">EN</a> | ES
+            </span>
 
-    <div class="nav-links">
-  <a href="/es/">Inicio</a>
-  <a href="/es/acerca-de/">Acerca de</a>
-  <a href="/es/equipo/">Equipo</a>
-  <a href="/es/servicios/">Servicios</a>
-  <a href="/es/proyectos/">Proyectos</a>
-  <a href="/es/muestras/">Muestras</a>
-  <a href="/es/contacto/">Contacto</a>
-</div>
+            <div class="menu-button-wrap">
+                <span class="lang-switch-mobile">
+                    <a href="/about/">EN</a> | ES
+                </span>
 
-    <span class="lang-switch">
-      <a href="/about/">EN</a> | ES
-    </span>
-  </nav>
-</header>
+                <button id="mobile-menu-button" class="mobile-menu-button">
+                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
 
-<main>
-  <div class="hero">
-    <h1>Acerca de SPICe Lab</h1>
-    <p class="hero-subtitle">
-      Un centro en desarrollo de isótopos y elementos traza en el sur de Chile, pensado para conectar la geoquímica avanzada con problemas reales.
-    </p>
-    <p>
-      El Centro de Isótopos del Pacífico Sur (SPICe Lab) es una iniciativa en desarrollo para acercar
-      la experiencia en isótopos y elementos traza a los desafíos ambientales, agrícolas y de recursos
-      naturales del sur de Chile y la región del Pacífico Sur.
-    </p>
-  </div>
+        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+            <nav class="mobile-menu-nav">
+                <a href="/es/" class="menu-link">Inicio</a>
+                <a href="/es/acerca-de/" class="menu-link">Acerca de</a>
+                <a href="/es/equipo/" class="menu-link">Equipo</a>
+                <a href="/es/servicios/" class="menu-link">Servicios</a>
+                <a href="/es/proyectos/" class="menu-link">Proyectos</a>
+                <a href="/es/muestras/" class="menu-link">Muestras</a>
+                <a href="/es/contacto/" class="menu-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-  <h2>Misión</h2>
-  <p>
-    Nuestra misión es ayudar a investigadores, empresas e instituciones a utilizar isótopos y firmas
-    elementales como trazadores para entender cómo se comportan, interactúan y cambian los sistemas
-    naturales e industriales: desde el agua y los suelos hasta los carbonatos, los recursos minerales
-    y los materiales críticos.
-  </p>
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <span class="hero-label">Nuestra Identidad</span>
+                <h1>Acerca de SPICe Lab</h1>
+                <p class="hero-subtitle">
+                    Un centro en desarrollo de isótopos y elementos traza en el sur de Chile, pensado para conectar la geoquímica avanzada con problemas reales.
+                </p>
+                <p>
+                    El Centro de Isótopos del Pacífico Sur (SPICe Lab) es una iniciativa en desarrollo para acercar
+                    la experiencia en isótopos y elementos traza a los desafíos ambientales, agrícolas y de recursos
+                    naturales del sur de Chile y la región del Pacífico Sur.
+                </p>
+            </div>
+        </div>
 
-  <h2>Visión</h2>
-  <p>
-    SPICe Lab se desarrolla como un puente entre la geoquímica isotópica avanzada y la toma de decisiones
-    prácticas en agricultura, gestión ambiental y desarrollo de recursos. A largo plazo, buscamos consolidar
-    un centro regional en el sur de Chile que:
-  </p>
-  <ul>
-    <li>apoye trabajo geoquímico de alta calidad en la región del Pacífico Sur,</li>
-    <li>conecte academia, industria e instituciones públicas, y</li>
-    <li>forme a nuevos profesionales en enfoques basados en isótopos.</li>
-  </ul>
+        <section class="content-wrapper">
+            <div class="values-grid">
+                <div class="value-card">
+                    <h2 class="section-title">Misión</h2>
+                    <p>
+                        Nuestra misión es ayudar a investigadores, empresas e instituciones a utilizar isótopos y firmas
+                        elementales como trazadores para entender cómo se comportan, interactúan y cambian los sistemas
+                        naturales e industriales: desde el agua y los suelos hasta los carbonatos, los recursos minerales
+                        y los materiales críticos.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <h2 class="section-title">Visión</h2>
+                    <p>
+                        SPICe Lab se desarrolla como un puente entre la geoquímica isotópica avanzada y la toma de decisiones
+                        prácticas en agricultura, gestión ambiental y desarrollo de recursos. A largo plazo, buscamos consolidar
+                        un centro regional en el sur de Chile que:
+                    </p>
+                    <ul class="simple-list">
+                        <li>Apoye trabajo geoquímico de alta calidad en la región del Pacífico Sur.</li>
+                        <li>Conecte academia, industria e instituciones públicas.</li>
+                        <li>Forme a nuevos profesionales en enfoques basados en isótopos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <h2>Experiencia y fundamentos</h2>
-  <p>
-    SPICe Lab se construye sobre experiencia en:
-  </p>
-  <ul>
-    <li>geoquímica isotópica de sistemas de carbonatos y minerales,</li>
-    <li>geoquímica de elementos traza y tierras raras,</li>
-    <li>técnicas microanalíticas y de ablación láser, y</li>
-    <li>reconstrucción ambiental y paleoambiental mediante archivos geoquímicos.</li>
-  </ul>
-  <p>
-    Esta experiencia proviene de trabajo en ambientes de investigación internacionales y colaboraciones
-    con universidades y laboratorios de distintos países. SPICe Lab busca traducir ese bagaje en apoyo
-    aplicado para proyectos en Chile y la región.
-  </p>
+        <section class="section-bg-alt">
+            <div class="content-wrapper">
+                <h2 class="section-title text-center">Experiencia y fundamentos</h2>
+                <p class="section-intro">
+                    Esta experiencia proviene de trabajo en ambientes de investigación internacionales y colaboraciones
+                    con universidades y laboratorios de distintos países. SPICe Lab busca traducir ese bagaje en apoyo
+                    aplicado para proyectos en Chile y la región.
+                </p>
 
-  <h2>¿Por qué el sur de Chile?</h2>
-  <p>
-    El sur de Chile está marcado por:
-  </p>
-  <ul>
-    <li>cambios ambientales y climáticos acelerados,</li>
-    <li>actividad agrícola y forestal intensiva, y</li>
-    <li>un creciente interés en materiales críticos y recursos minerales.</li>
-  </ul>
-  <p>
-    Desarrollar SPICe Lab en esta región permite acercar las herramientas isotópicas y de elementos traza
-    a las preguntas locales, manteniendo la conexión con infraestructura analítica internacional.
-  </p>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-atom-icon lucide-atom"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/></svg>
+                        </div>
+                        <h3>Geoquímica Isotópica</h3>
+                        <p>Especialización en sistemas de carbonatos y minerales.</p>
+                    </div>
 
-  <h2>Etapa actual de desarrollo</h2>
-  <p>
-    SPICe Lab se encuentra en fase de desarrollo e instalación. Actualmente:
-  </p>
-  <ul>
-    <li>los servicios de consultoría, interpretación de datos y diseño de proyectos ya están disponibles,</li>
-    <li>la mayoría del trabajo analítico se realiza en laboratorios asociados en Chile y el extranjero, y</li>
-    <li>se avanza paso a paso en la planificación de futuras instalaciones locales.</li>
-  </ul>
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M6 6a.5.5 0 0 0-.468.324l-1.5 4a.5.5 0 0 0 .468.675h7a.5.5 0 0 0 .468-.675l-1.5-4A.5.5 0 0 0 10 6zm-.778 4l1.12-3h3.31l1.12 3h-5.56z" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M2.5 0a.5.5 0 0 0-.447.723l1.9 3.8c-.707 1.88-2.37 6.38-2.83 7.64a2 2 0 0 0-.123.689v.263c0 .402 0 .735.022 1.01c.023.281.072.539.196.782c.192.376.498.682.874.874c.243.124.501.173.782.196c.271.022.603.022 1.01.022h8.24c.402 0 .735 0 1.01-.022c.281-.023.54-.072.782-.196c.376-.192.682-.498.874-.874c.124-.243.173-.501.196-.782c.022-.271.022-.603.022-1.01v-.258q0-.361-.125-.698c-.568-1.53-2.83-7.64-2.83-7.64l1.9-3.8a.5.5 0 0 0-.447-.723h-11zM14 13H2v.1c0 .428 0 .719.019.944c.018.219.05.331.09.41c.096.188.249.341.437.437c.078.04.19.072.41.09c.225.019.516.019.944.019h8.2c.428 0 .719 0 .944-.019c.219-.018.331-.05.41-.09c.188-.096.341-.249.437-.437c.04-.078.072-.19.09-.41c.019-.225.019-.516.019-.944zm-2.81-9l1.5-3H3.31l1.5 3zm-8.97 8l2.62-7h6.31l2.62 7H2.17z" clip-rule="evenodd"/></svg>
+                        </div>
+                        <h3>Elementos Traza</h3>
+                        <p>Análisis de elementos traza y tierras raras para trazabilidad.</p>
+                    </div>
 
-  <h2>Colaboración y confidencialidad</h2>
-  <p>
-    SPICe Lab se desarrolla como un socio confiable tanto para proyectos académicos como comerciales.
-    Valoramos la colaboración, al mismo tiempo que respetamos plenamente la confidencialidad y la
-    propiedad de datos de los proyectos estratégicos.
-  </p>
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope-icon lucide-microscope"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
+                        </div>
+                        <h3>Microanálisis</h3>
+                        <p>Técnicas microanalíticas y de ablación láser de alta resolución.</p>
+                    </div>
 
-  <p>
-    Si deseas conversar un proyecto o explorar una colaboración, puedes contactarnos con confianza.
-  </p>
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3>Reconstrucción</h3>
+                        <p>Reconstrucción ambiental y paleoambiental mediante archivos geoquímicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <p>
-    <a href="/es/contacto/" class="button">Contactar</a>
-  </p>
-</main>
+        <section class="content-wrapper">
+            <div class="highlight-box">
+                <h2 class="section-title">¿Por qué el sur de Chile?</h2>
+                <div class="box-content">
+                    <p>El sur de Chile está marcado por:</p>
+                    <ul class="checklist">
+                        <li>Cambios ambientales y climáticos acelerados.</li>
+                        <li>Actividad agrícola y forestal intensiva.</li>
+                        <li>Un creciente interés en materiales críticos y recursos minerales.</li>
+                    </ul>
+                    <p class="mt-4">
+                        Desarrollar SPICe Lab en esta región permite acercar las herramientas isotópicas y de elementos traza
+                        a las preguntas locales, manteniendo la conexión con infraestructura analítica internacional.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-<footer>
-  <p>© 2025 South Pacific Isotope Centre — SPICe Lab</p>
-</footer>
+        <section class="section-bg-alt">
+            <div class="content-wrapper">
+                <h2 class="section-title text-center">Etapa actual de desarrollo</h2>
+                <p class="section-intro">SPICe Lab se encuentra en fase de desarrollo e instalación. Actualmente:</p>
+                
+                <div class="process-list">
+                    <div class="process-item">
+                        <div class="process-header">Consultoría</div>
+                        <p>Los servicios de consultoría, interpretación de datos y diseño de proyectos ya están disponibles.</p>
+                    </div>
+                    
+                    <div class="process-item">
+                        <div class="process-header">Red Internacional</div>
+                        <p>La mayoría del trabajo analítico se realiza en laboratorios asociados en Chile y el extranjero.</p>
+                    </div>
+                    
+                    <div class="process-item">
+                        <div class="process-header">Futuro</div>
+                        <p>Se avanza paso a paso en la planificación de futuras instalaciones locales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<script src="/assets/js/main.js"></script>
+        <section class="section-bg-dark" id="contacto">
+            <div class="content-wrapper text-center">
+                <h2 class="white-text section-title">Colaboración y confidencialidad</h2>
+                <p class="white-text-opacity" style="margin: 0 auto;">
+                    SPICe Lab se desarrolla como un socio confiable tanto para proyectos académicos como comerciales.
+                    Valoramos la colaboración, al mismo tiempo que respetamos plenamente la confidencialidad y la
+                    propiedad de datos de los proyectos estratégicos.
+                </p>
+                
+                <p class="white-text-opacity mt-4">
+                    Si deseas conversar un proyecto o explorar una colaboración, puedes contactarnos con confianza.
+                </p>
+                
+                <div class="mt-5">
+                    <a href="/es/contacto/" class="button button-primary button-large">Contactar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 South Pacific Isotope Centre — SPICe Lab</p>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

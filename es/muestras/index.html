@@ -1,144 +1,291 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <title>Muestras – SPICe Lab</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Envío de Muestras | SPICe Lab – Preparación y Coordinación Geoquímica</title>
+    <meta name="description" content="Guía completa para preparar, documentar y coordinar el envío de muestras para análisis geoquímicos. Apoyo en muestreo de aguas, suelos y minerales.">
+    <meta name="keywords" content="envío de muestras, análisis geoquímicos, preparación de muestras, muestreo de agua, geología, laboratorio isotópico, SPICe Lab">
+    <meta name="author" content="SPICe Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spicelab.cl/es/muestras/" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Envío de Muestras y Servicios Analíticos | SPICe Lab" />
+    <meta property="og:description" content="Cómo preparar, documentar y coordinar muestras para análisis geoquímicos con laboratorios internacionales." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    <meta property="og:url" content="https://spicelab.cl/es/muestras/" />
+    <meta property="og:site_name" content="SPICe Lab" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Envío de Muestras y Servicios Analíticos | SPICe Lab" />
+    <meta name="twitter:description" content="Cómo preparar, documentar y coordinar muestras para análisis geoquímicos con laboratorios internacionales." />
+    <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
+    
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/pages/samples.css" />
 </head>
-
 <body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrap">
+                <div class="logo-wrap">
+                    <a class="logo-link" href="/es/">
+                        <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icono">
+                    </a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="/es/">Inicio</a>
+                    <a href="/es/acerca-de/">Acerca de</a>
+                    <a href="/es/equipo/">Equipo</a>
+                    <a href="/es/servicios/">Servicios</a>
+                    <a href="/es/proyectos/">Proyectos</a>
+                    <a href="/es/muestras/">Muestras</a>
+                    <a href="/es/contacto/">Contacto</a>
+                </div>
+            </div>
 
-<header>
-  <nav>
-    <button class="menu-toggle" aria-label="Mostrar u ocultar menú">☰</button>
+            <span class="lang-switch-desktop">
+                <a href="/samples/">EN</a> | ES
+            </span>
 
-    <div class="nav-links">
-  <a href="/es/">Inicio</a>
-  <a href="/es/acerca-de/">Acerca de</a>
-  <a href="/es/equipo/">Equipo</a>
-  <a href="/es/servicios/">Servicios</a>
-  <a href="/es/proyectos/">Proyectos</a>
-  <a href="/es/muestras/">Muestras</a>
-  <a href="/es/contacto/">Contacto</a>
-</div>
+            <div class="menu-button-wrap">
+                <span class="lang-switch-mobile">
+                    <a href="/samples/">EN</a> | ES
+                </span>
 
-    <span class="lang-switch">
-      <a href="/samples/">EN</a> | ES
-    </span>
-  </nav>
-</header>
+                <button id="mobile-menu-button" class="mobile-menu-button">
+                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
 
-<main>
-  <div class="hero">
-    <h1>Envío de Muestras</h1>
-    <p class="hero-subtitle">
-      Cómo preparar, documentar y coordinar muestras para análisis geoquímicos.
-    </p>
-    <p>
-      SPICe Lab se encuentra actualmente en fase de desarrollo. Las mediciones analíticas se realizan a
-      través de laboratorios internacionales colaboradores, mientras SPICe Lab apoya la preparación,
-      documentación, coordinación e interpretación de resultados.
-    </p>
-  </div>
+        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+            <nav class="mobile-menu-nav">
+                <a href="/es/" class="menu-link">Inicio</a>
+                <a href="/es/acerca-de/" class="menu-link">Acerca de</a>
+                <a href="/es/equipo/" class="menu-link">Equipo</a>
+                <a href="/es/servicios/" class="menu-link">Servicios</a>
+                <a href="/es/proyectos/" class="menu-link">Proyectos</a>
+                <a href="/es/muestras/" class="menu-link">Muestras</a>
+                <a href="/es/contacto/" class="menu-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-  <h2>Antes de enviar muestras</h2>
-  <p>
-    Por favor contáctanos antes de preparar o enviar cualquier material. Cada proyecto requiere técnicas
-    específicas, y te ayudaremos a definir los análisis adecuados, laboratorios asociados y formatos de muestra.
-    Una coordinación temprana evita retrasos, costos innecesarios y pérdida de material.
-  </p>
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <span class="hero-label">Guía de Coordinación</span>
+                <h1>Envío de Muestras</h1>
+                <p class="hero-subtitle">
+                    Cómo preparar, documentar y coordinar muestras para análisis geoquímicos.
+                </p>
+                <p>
+                    SPICe Lab se encuentra actualmente en fase de desarrollo. Las mediciones analíticas se realizan a
+                    través de laboratorios internacionales colaboradores, mientras SPICe Lab apoya la preparación,
+                    documentación, coordinación e interpretación de resultados.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="button button-primary">Contactar</a>
+                    <a href="#guias" class="button button-secondary">Ver guías</a>
+                </div>
+            </div>
+        </div>
 
-  <p><a href="/es/contacto/" class="button">Contactar</a></p>
+        <section class="content-wrapper">
+            <h2 class="section-title">Antes de enviar muestras</h2>
+            <p>
+                Por favor contáctanos antes de preparar o enviar cualquier material. Cada proyecto requiere técnicas
+                específicas, y te ayudaremos a definir los análisis adecuados, laboratorios asociados y formatos de muestra.
+                Una coordinación temprana evita retrasos, costos innecesarios y pérdida de material.
+            </p>
+        </section>
 
-  <h2>Apoyo en muestreo en terreno</h2>
-  <p>
-    En muchos proyectos, la calidad de los datos geoquímicos depende directamente de cómo se realiza el
-    muestreo. SPICe Lab puede apoyar con el diseño de muestreo, protocolos de terreno y la recolección de
-    muestras en sitio cuando sea necesario. Esto asegura documentación adecuada, control de contaminación y
-    consistencia del conjunto de datos.
-  </p>
-  <p>
-    Se puede coordinar muestreo de aguas, suelos, sedimentos, carbonatos, materiales minerales y otros tipos
-    de muestras, según las necesidades y logística del proyecto.
-  </p>
+        <section class="section-bg-alt">
+            <div class="content-wrapper">
+                <h2 class="section-title">Apoyo en muestreo en terreno</h2>
+                <div class="text-columns">
+                    <p>
+                        En muchos proyectos, la calidad de los datos geoquímicos depende directamente de cómo se realiza el
+                        muestreo. SPICe Lab puede apoyar con el diseño de muestreo, protocolos de terreno y la recolección de
+                        muestras en sitio cuando sea necesario. Esto asegura documentación adecuada, control de contaminación y
+                        consistencia del conjunto de datos.
+                    </p>
+                    <p>
+                        Se puede coordinar muestreo de aguas, suelos, sedimentos, carbonatos, materiales minerales y otros tipos
+                        de muestras, según las necesidades y logística del proyecto.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <h2>Tipos de muestras que podemos trabajar</h2>
-  <p>SPICe Lab puede asistir con una variedad de materiales, incluyendo:</p>
-  <ul>
-    <li>muestras de agua (ríos, pozos, lluvia, lagos, salmueras)</li>
-    <li>muestras de suelo y sedimento</li>
-    <li>carbonatos (travertinos, espeleotemas, carbonatos marinos y continentales)</li>
-    <li>granos minerales y fragmentos de roca</li>
-    <li>materiales industriales (salmueras, residuos de proceso, polvos)</li>
-    <li>material biogeoquímico (tejidos vegetales, materia orgánica)</li>
-  </ul>
+        <section class="content-wrapper">
+            <h2 class="section-title text-center">Tipos de muestras que podemos trabajar</h2>
+            <p class="section-intro">SPICe Lab puede asistir con una variedad de materiales, incluyendo:</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    </div>
+                    <h3>Aguas</h3>
+                    <p>Muestras de agua (ríos, pozos, lluvia, lagos, salmueras).</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 12h4m11 0h5M3 20.01l.01-.011M6 16.01l.01-.011M9 20.01l.01-.011M12 16.01l.01-.011M15 20.01l.01-.011M18 16.01l.01-.011M21 20.01l.01-.011M9 13s.9-3.741 3-6"/><path d="m16.186 2.241l.374 3.89c.243 2.523-1.649 4.77-4.172 5.012c-2.475.238-4.718-1.571-4.956-4.047a4.503 4.503 0 0 1 4.05-4.914l4.147-.4a.51.51 0 0 1 .557.46"/></g></svg>
+                    </div>
+                    <h3>Suelos</h3>
+                    <p>Muestras de suelo y sedimento.</p>
+                </div>
 
-  <h2>Guías generales de preparación</h2>
-  <p>
-    Los requisitos específicos dependen de la técnica analítica y del laboratorio. Tras discutir tu proyecto,
-    entregaremos instrucciones detalladas. De forma general:
-  </p>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hexagon-icon lucide-hexagon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    </div>
+                    <h3>Carbonatos</h3>
+                    <p>Carbonatos (travertinos, espeleotemas, carbonatos marinos y continentales).</p>
+                </div>
 
-  <ul>
-    <li><strong>Aguas:</strong> botellas limpias; puede requerirse filtrado o acidificación.</li>
-    <li><strong>Suelos/sedimentos:</strong> secado al aire u horno; tamizado si corresponde; evitar contaminación metálica.</li>
-    <li><strong>Carbonatos:</strong> fragmentos limpios o polvos perforados; evitar pegamentos, epóxicos o herramientas metálicas.</li>
-    <li><strong>Minerales:</strong> granos seleccionados a mano o pequeños fragmentos en viales.</li>
-  </ul>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"></path></svg>
+                    </div>
+                    <h3>Minerales</h3>
+                    <p>Granos minerales y fragmentos de roca.</p>
+                </div>
 
-  <p>
-    Si se prefiere, SPICe Lab puede coordinar o realizar el muestreo en terreno para asegurar que las muestras
-    cumplan con los requisitos de la técnica analítica y del laboratorio asociado.
-  </p>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    </div>
+                    <h3>Materiales industriales</h3>
+                    <p>Materiales industriales (salmueras, residuos de proceso, polvos).</p>
+                </div>
 
-  <h2>Documentación requerida</h2>
-  <p>Toda entrega debe incluir una lista de muestras con:</p>
-  <ul>
-    <li>ID únicas por muestra</li>
-    <li>tipo de material</li>
-    <li>ubicación de muestreo</li>
-    <li>fecha de muestreo (si aplica)</li>
-    <li>análisis solicitados</li>
-    <li>observaciones relevantes</li>
-  </ul>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf-icon lucide-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                    </div>
+                    <h3>Biogeoquímica</h3>
+                    <p>Material biogeoquímico (tejidos vegetales, materia orgánica).</p>
+                </div>
+            </div>
+        </section>
 
-  <h2>Envío y logística</h2>
-  <p>
-    Una vez definido el plan analítico, coordinaremos el laboratorio de destino (Chile o internacional).
-    Los requisitos de envío dependen de:
-  </p>
-  <ul>
-    <li>tipo de muestra,</li>
-    <li>laboratorio de destino,</li>
-    <li>regulaciones de transporte.</li>
-  </ul>
+        <section class="section-bg-alt" id="guias">
+            <div class="content-wrapper">
+                <h2 class="section-title">Guías generales de preparación</h2>
+                <p>
+                    Los requisitos específicos dependen de la técnica analítica y del laboratorio. Tras discutir tu proyecto,
+                    entregaremos instrucciones detalladas. De forma general:
+                </p>
 
-  <p>Podemos apoyar en la documentación y embalaje para asegurar una llegada segura.</p>
+                <div class="process-list">
+                    <div class="process-item">
+                        <div class="process-header">Aguas</div>
+                        <p>Botellas limpias; puede requerirse filtrado o acidificación.</p>
+                    </div>
+                    
+                    <div class="process-item">
+                        <div class="process-header">Suelos/Sedimentos</div>
+                        <p>Secado al aire u horno; tamizado si corresponde; evitar contaminación metálica.</p>
+                    </div>
+                    
+                    <div class="process-item">
+                        <div class="process-header">Carbonatos</div>
+                        <p>Fragmentos limpios o polvos perforados; evitar pegamentos, epóxicos o herramientas metálicas.</p>
+                    </div>
 
-  <h2>Después del análisis</h2>
-  <p>
-    Una vez entregados los resultados, SPICe Lab apoya con:
-  </p>
-  <ul>
-    <li>verificación de calidad,</li>
-    <li>interpretación de datos,</li>
-    <li>visualización y reportes, y</li>
-    <li>integración con otros conjuntos de datos.</li>
-  </ul>
+                    <div class="process-item">
+                        <div class="process-header">Minerales</div>
+                        <p>Granos seleccionados a mano o pequeños fragmentos en viales.</p>
+                    </div>
+                </div>
 
-  <p><a href="/es/contacto/" class="button">Consultar sobre preparación</a></p>
+                <p class="mt-4">
+                    Si se prefiere, SPICe Lab puede coordinar o realizar el muestreo en terreno para asegurar que las muestras
+                    cumplan con los requisitos de la técnica analítica y del laboratorio asociado.
+                </p>
+            </div>
+        </section>
 
-</main>
+        <section class="content-wrapper">
+            <div class="checklist-container">
+                <h2 class="section-title">Documentación requerida</h2>
+                <p>Toda entrega debe incluir una lista de muestras con:</p>
+                
+                <ul class="checklist">
+                    <li>ID únicas por muestra</li>
+                    <li>Tipo de material</li>
+                    <li>Ubicación de muestreo</li>
+                    <li>Fecha de muestreo (si aplica)</li>
+                    <li>Análisis solicitados</li>
+                    <li>Observaciones relevantes</li>
+                </ul>
+            </div>
+        </section>
 
-<footer>
-  <p>© 2025 South Pacific Isotope Centre — SPICe Lab</p>
-</footer>
+        <section class="section-bg-dark" id="contacto">
+            <div class="content-wrapper">
+                <div class="info-grid">
+                    <div class="info-col">
+                        <h2 class="white-text">Envío y logística</h2>
+                        <p class="white-text-opacity">
+                            Una vez definido el plan analítico, coordinaremos el laboratorio de destino (Chile o internacional).
+                            Los requisitos de envío dependen de:
+                        </p>
+                        <ul class="dark-list">
+                            <li>Tipo de muestra</li>
+                            <li>Laboratorio de destino</li>
+                            <li>Regulaciones de transporte</li>
+                        </ul>
+                        <p class="white-text-opacity">Podemos apoyar en la documentación y embalaje para asegurar una llegada segura.</p>
+                    </div>
 
-<script src="/assets/js/main.js"></script>
+                    <div class="info-col">
+                        <h2 class="white-text">Después del análisis</h2>
+                        <p class="white-text-opacity">
+                            Una vez entregados los resultados, SPICe Lab apoya con:
+                        </p>
+                        <ul class="dark-list">
+                            <li>Verificación de calidad</li>
+                            <li>Interpretación de datos</li>
+                            <li>Visualización y reportes</li>
+                            <li>Integración con otros conjuntos de datos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="/es/contacto/" class="button button-primary button-large">Consultar sobre preparación</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 South Pacific Isotope Centre — SPICe Lab</p>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

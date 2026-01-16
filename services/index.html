@@ -1,141 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <title>Services & Capabilities – SPICe Lab</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Services and Capabilities | SPICe Lab – Geochemistry Consulting</title>
+    <meta name="description" content="Consulting, data interpretation and analytical strategy in isotope geochemistry. Support for critical materials, agriculture and environment.">
+    <meta name="keywords" content="geochemistry consulting, data analysis, stable isotopes, trace elements, geology laboratory, analytical services Chile">
+    <meta name="author" content="SPICe Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spicelab.cl/services/" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Geochemical Services and Consulting | SPICe Lab" />
+    <meta property="og:description" content="Transforming geochemical data into decisions. Project design and analytical coordination." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    <meta property="og:url" content="https://spicelab.cl/services/" />
+    <meta property="og:site_name" content="SPICe Lab" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Geochemical Services and Consulting | SPICe Lab" />
+    <meta name="twitter:description" content="Transforming geochemical data into decisions. Project design and analytical coordination." />
+    <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
+    
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/pages/services.css" />
 </head>
-
 <body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrap">
+                <div class="logo-wrap">
+                    <a class="logo-link" href="/">
+                        <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icon">
+                    </a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about/">About</a>
+                    <a href="/team/">Team</a>
+                    <a href="/services/">Services</a>
+                    <a href="/projects/">Projects</a>
+                    <a href="/samples/">Samples</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
 
-<header>
-  <nav>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <span class="lang-switch-desktop">
+                EN | <a href="/es/servicios/">ES</a>
+            </span>
 
-    <div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/team/">Team</a>
-  <a href="/services/">Services</a>
-  <a href="/projects/">Projects</a>
-  <a href="/samples/">Samples</a>
-  <a href="/contact/">Contact</a>
-</div>
+            <div class="menu-button-wrap">
+                <span class="lang-switch-mobile">
+                    EN | <a href="/es/servicios/">ES</a>
+                </span>
 
-    <span class="lang-switch">
-      EN | <a href="/es/servicios/">ES</a>
-    </span>
-  </nav>
-</header>
+                <button id="mobile-menu-button" class="mobile-menu-button">
+                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
 
-<main>
-  <div class="hero">
-    <h1>Services & Capabilities</h1>
-    <p class="hero-subtitle">
-      Consulting, interpretation and analytical strategy in isotope and trace-element geochemistry.
-    </p>
-    <p>
-      SPICe Lab supports researchers, companies and public institutions that need to turn geochemical data
-      into decisions. At this stage, our work is centred on consulting, data interpretation and project
-      design, with laboratory measurements carried out through partner institutions in Chile and abroad.
-    </p>
-  </div>
+        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+            <nav class="mobile-menu-nav">
+                <a href="/" class="menu-link">Home</a>
+                <a href="/about/" class="menu-link">About</a>
+                <a href="/team/" class="menu-link">Team</a>
+                <a href="/services/" class="menu-link">Services</a>
+                <a href="/projects/" class="menu-link">Projects</a>
+                <a href="/samples/" class="menu-link">Samples</a>
+                <a href="/contact/" class="menu-link">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <h2>What we can offer right now</h2>
-  <p>
-    The services below are available immediately and can be adapted to research, exploration or monitoring
-    contexts in environment, agriculture and mineral resources:
-  </p>
-  <ul>
-    <li><strong>Geochemical consulting</strong> to explore whether isotopes and trace elements can help answer your questions.</li>
-    <li><strong>Interpretation of isotopic and elemental data</strong> from waters, soils, carbonates and mineral systems.</li>
-    <li><strong>Project design and sampling strategy</strong> for field campaigns, monitoring networks and experimental studies.</li>
-    <li><strong>Review of laboratory reports and datasets</strong>, including cross-checks, uncertainty awareness and quality flags.</li>
-    <li><strong>Selection of analytical techniques</strong> (e.g. ICP-MS, MC-ICP-MS, LA-ICP-MS, stable isotopes) and where to run them.</li>
-    <li><strong>Data analysis, visualisation and reporting</strong> for articles, theses, internal reports or decision-making documents.</li>
-    <li><strong>Laser ablation and micro-analysis consulting</strong> on method development, mapping strategies and QA/QC approaches.</li>
-  </ul>
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <span class="hero-label">Comprehensive Solutions</span>
+                <h1>Services and Capabilities</h1>
+                <p class="hero-subtitle">
+                    Consulting, interpretation and analytical strategy in isotope and trace element geochemistry.
+                </p>
+                <p>
+                    SPICe Lab supports researchers, companies and public institutions that need to transform geochemical
+                    data into decisions. At this stage, our work focuses on consulting, data interpretation and project
+                    design, with laboratory measurements conducted through collaborating institutions in Chile and abroad.
+                </p>
+            </div>
+        </div>
 
-  <h2>Analytical measurements and partner laboratories</h2>
-  <p>
-    Most geochemical analyses associated with SPICe Lab projects are currently performed in established
-    international laboratories and collaborating facilities. Rather than duplicating existing infrastructure,
-    we focus on:
-  </p>
-  <ul>
-    <li>identifying the most suitable laboratory and analytical approach for your samples,</li>
-    <li>helping prepare and document samples correctly,</li>
-    <li>coordinating analytical runs where appropriate, and</li>
-    <li>interpreting the results in the context of your project.</li>
-  </ul>
-  <p>
-    As SPICe Lab’s own facilities are installed in southern Chile, in-house analytical capabilities will be
-    added to complement this network and better serve regional needs.
-  </p>
+        <section class="content-wrapper">
+            <h2 class="section-title text-center">What we can offer today</h2>
+            <p class="section-intro">
+                The services described below are available immediately and can be tailored to research, exploration or
+                monitoring contexts in environment, agriculture and mineral resources:
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <h3>Geochemistry Consulting</h3>
+                    <p>To assess whether isotopes and trace elements can help answer your questions.</p>
+                </div>
 
-  <h2>Key focus areas</h2>
-  <p>
-    SPICe Lab is being developed around several application areas where isotopes and elements are particularly
-    powerful tools:
-  </p>
-  <ul>
-    <li>
-      <strong>Critical materials (Li, REEs, strategic minerals)</strong> – geochemical fingerprinting, exploration
-      support and process monitoring in brines, ores and processing streams.
-    </li>
-    <li>
-      <strong>Agriculture and soils</strong> – nutrient cycles, soil–plant interactions, fertiliser use and land-use
-      impacts viewed through elemental and isotopic signatures.
-    </li>
-    <li>
-      <strong>Environmental isotopes</strong> – tracing water pathways, sources of contamination and the behaviour of
-      pollutants in catchments and aquifers.
-    </li>
-    <li>
-      <strong>Carbonates and mineral systems</strong> – using carbonate cements, speleothems and other minerals as
-      archives of environmental and diagenetic processes.
-    </li>
-    <li>
-      <strong>Laser ablation and micro-analysis</strong> – spatially resolved elemental data at the grain or crystal
-      scale to reveal growth histories and fluid–rock interaction.
-    </li>
-    <li>
-      <strong>U–Th geochronology (planned capability)</strong> – at present carried out in international laboratories,
-      with SPICe Lab providing support for sample selection, data evaluation and age interpretation.
-    </li>
-  </ul>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </div>
+                    <h3>Data Interpretation</h3>
+                    <p>Analysis of isotopic and elemental data from waters, soils, carbonates and mineral systems.</p>
+                </div>
 
-  <h2>How a typical engagement works</h2>
-  <p>
-    Every project is different, but most collaborations follow a structure similar to this:
-  </p>
-  <ul>
-    <li><strong>1. Initial conversation</strong> – we clarify your questions, data available and constraints.</li>
-    <li><strong>2. Review of background and datasets</strong> – existing information is compiled and assessed.</li>
-    <li><strong>3. Proposal and scope</strong> – you receive a clear outline of tasks, timelines and expected outcomes.</li>
-    <li><strong>4. Implementation</strong> – consulting, data analysis and coordination with analytical labs as agreed.</li>
-    <li><strong>5. Reporting and follow-up</strong> – results are presented in a format that you can use and revisit.</li>
-  </ul>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-icon lucide-layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
+                    </div>
+                    <h3>Project Design</h3>
+                    <p>Sampling strategies for field campaigns, monitoring networks and experimental studies.</p>
+                </div>
 
-  <h2>Discuss a project or idea</h2>
-  <p>
-    If you are considering a new project, have existing data that needs interpretation, or want to explore how
-    isotopes and trace elements could add value to your work, we would be glad to talk.
-  </p>
-  <p>
-    <a href="/contact/" class="button">Contact us about services</a>
-  </p>
-</main>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <h3>Report Review</h3>
+                    <p>Interpretation of laboratory reports, basic verification, emphasis on uncertainty and quality assessment.</p>
+                </div>
 
-<footer>
-  <p>© 2025 South Pacific Isotope Centre — SPICe Lab</p>
-</footer>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.5 19a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5M10 5l2-2m-4.5 7a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5m.5 6l8-8M5.5 21a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5m13-13a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5M12 21l2-2"/></svg>
+                    </div>
+                    <h3>Technique Selection</h3>
+                    <p>Guidance on techniques (ICP-MS, MC-ICP-MS, LA-ICP-MS) and recommendations on where to perform analyses.</p>
+                </div>
 
-<script src="/assets/js/main.js"></script>
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5.697M18 14v4h4m-4-7V7a2 2 0 0 0-2-2h-2"/><path d="M8 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2m6 13a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-6-7h4m-4 4h3"/></g></svg>
+                    </div>
+                    <h3>Data Reporting</h3>
+                    <p>Analysis, visualization and writing for papers, theses, internal reports or decision-making.</p>
+                </div>
+
+                <div class="service-card service-card-wide">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+                    </div>
+                    <h3>Microanalysis & Laser</h3>
+                    <p>Consulting on laser ablation, method development, mapping strategies and QA/QC approaches.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-bg-alt">
+            <div class="content-wrapper">
+                <div class="feature-box">
+                    <h2 class="section-title">Analytical measurements and partner laboratories</h2>
+                    <p>
+                        Most geochemical analyses associated with SPICe Lab projects are currently performed at established
+                        international laboratories and other collaborating facilities. Rather than duplicating infrastructure,
+                        we focus on:
+                    </p>
+                    
+                    <ul class="feature-list">
+                        <li>Identifying the most suitable laboratory and analytical approach for your samples.</li>
+                        <li>Assisting with proper sample preparation and documentation.</li>
+                        <li>Coordinating analytical runs when appropriate.</li>
+                        <li>Interpreting results in the specific context of your project.</li>
+                    </ul>
+
+                    <p class="note-text">
+                        As SPICe Lab's own facilities are established in southern Chile, internal analytical capabilities
+                        will be added to complement this network and address regional needs.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-wrapper">
+            <h2 class="section-title">Key focus areas</h2>
+            <p class="section-intro text-left">
+                SPICe Lab is developing around several application areas where isotopes and trace elements are
+                particularly powerful tools:
+            </p>
+
+            <div class="focus-grid">
+                <div class="focus-item">
+                    <div class="focus-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M256.977 22.395c-16.8 0-32.49 7.65-45.864 20.177c-13.372 12.53-24.82 29.98-34.363 51.117c-2 4.428-3.91 9.03-5.736 13.777a265 265 0 0 0-14.83-1.926c-5.77-.575-11.4-.932-16.87-1.06c-16.42-.39-31.427 1.275-44.58 5.262c-17.536 5.317-32.006 15.083-40.406 29.63c-8.4 14.55-9.62 31.964-5.457 49.81c4.165 17.845 13.552 36.484 27.087 55.318c2.84 3.95 5.874 7.912 9.076 11.873a264 264 0 0 0-9.064 11.86c-13.536 18.833-22.923 37.472-27.087 55.318s-2.943 35.26 5.457 49.807c8.4 14.55 22.87 24.315 40.406 29.63c17.537 5.318 38.373 6.507 61.45 4.202c4.838-.484 9.78-1.13 14.808-1.922a264 264 0 0 0 5.746 13.802c9.543 21.14 20.99 38.587 34.363 51.116s29.065 20.18 45.864 20.18s32.49-7.652 45.863-20.18c13.372-12.53 24.82-29.977 34.363-51.116a264 264 0 0 0 5.746-13.8c5.022.79 9.96 1.437 14.794 1.92c23.078 2.304 43.915 1.115 61.45-4.202c17.538-5.316 32.008-15.082 40.408-29.63c8.4-14.55 9.62-31.962 5.457-49.807c-4.165-17.845-13.553-36.484-27.087-55.318a266 266 0 0 0-9.065-11.86a263 263 0 0 0 9.076-11.872c13.535-18.834 22.922-37.473 27.086-55.318c4.164-17.846 2.943-35.26-5.457-49.81c-8.4-14.547-22.87-24.313-40.406-29.63c-13.152-3.987-28.16-5.652-44.578-5.263c-5.474.128-11.105.485-16.874 1.06c-4.84.484-9.787 1.133-14.817 1.925a265 265 0 0 0-5.737-13.776c-9.543-21.14-20.99-38.59-34.363-51.118s-29.065-20.177-45.863-20.177zm0 18.687c11.205 0 22.192 4.923 33.086 15.13c10.893 10.205 21.297 25.653 30.107 45.167a237 237 0 0 1 4.086 9.643c-21.417 4.762-44.1 12.068-67.285 21.83c-23.18-9.76-45.86-17.064-67.273-21.826c1.322-3.31 2.68-6.536 4.086-9.648c8.81-19.515 19.214-34.963 30.108-45.17c10.894-10.205 21.88-15.128 33.087-15.128zm-123.59 82.057q2.706-.027 5.498.036c4.96.11 10.117.43 15.443.963c3.406.34 6.887.775 10.424 1.288c-6.586 20.927-11.6 44.222-14.742 69.18c-20.048 15.2-37.718 31.194-52.55 47.363a237 237 0 0 1-6.327-8.378c-12.495-17.386-20.67-34.12-24.063-48.658s-2.16-26.513 3.442-36.217s15.36-16.757 29.644-21.088c9.375-2.843 20.6-4.375 33.23-4.49zm247.168 0c12.63.115 23.855 1.647 33.23 4.49c14.286 4.33 24.04 11.383 29.643 21.087c5.602 9.704 6.835 21.68 3.443 36.217c-3.39 14.537-11.57 31.272-24.063 48.658a238 238 0 0 1-6.325 8.38c-14.83-16.167-32.495-32.157-52.537-47.355c-3.14-24.962-8.16-48.26-14.746-69.19c3.533-.513 7.01-.95 10.413-1.288a200 200 0 0 1 15.444-.964a172 172 0 0 1 5.498-.037zm-49.92 5.64c4.97 15.438 9.085 32.472 12.156 50.7a508 508 0 0 0-30.446-19.035a508 508 0 0 0-31.69-16.843c17.32-6.455 34.127-11.407 49.98-14.82zm-147.317.003c15.85 3.414 32.655 8.366 49.97 14.82a509 509 0 0 0-31.69 16.842a509 509 0 0 0-30.434 19.024c3.07-18.223 7.184-35.253 12.154-50.687zm73.653 24.46c15.207 6.708 30.643 14.504 46.03 23.388c15.393 8.888 29.87 18.36 43.285 28.18c1.796 16.527 2.762 33.798 2.762 51.57c0 17.762-.963 35.026-2.758 51.546c-13.415 9.818-27.89 19.288-43.278 28.174c-15.39 8.885-30.83 16.684-46.04 23.392c-15.212-6.708-30.652-14.507-46.042-23.392c-15.385-8.883-29.854-18.35-43.264-28.164c-1.795-16.523-2.76-33.79-2.76-51.557c0-17.775.965-35.048 2.762-51.577c13.413-9.817 27.885-19.288 43.273-28.172c15.388-8.883 30.824-16.68 46.03-23.386zm1.264 28.116l-53.502 33.017l53.502 33.02l53.502-33.02l-53.502-33.018zm-110.76 39.134a509 509 0 0 0-1.257 35.885c0 12.198.43 24.172 1.258 35.864c-14.25-11.77-26.943-23.85-37.827-35.873c10.884-12.022 23.577-24.104 37.827-35.876zm219.005.01c14.243 11.77 26.933 23.847 37.813 35.867c-10.88 12.02-23.57 24.097-37.813 35.864a509 509 0 0 0 1.256-35.855c0-12.204-.43-24.18-1.257-35.876zm-173.8 8.394v65.198l56.19 34.677v-65.195zm131.058.034l-56.177 34.67v65.164l56.178-34.67zm-226.28 41.84c14.834 16.17 32.502 32.16 52.548 47.36c3.14 24.955 8.156 48.248 14.74 69.175c-3.53.51-7.006.947-10.406 1.287c-21.304 2.127-39.887.84-54.172-3.49c-14.286-4.33-24.04-11.386-29.643-21.09c-5.602-9.705-6.835-21.68-3.443-36.217s11.568-31.272 24.063-48.658a236 236 0 0 1 6.314-8.367zm319.024.003c2.207 2.8 4.32 5.59 6.313 8.364c12.494 17.385 20.67 34.12 24.062 48.657s2.162 26.512-3.44 36.217c-5.604 9.704-15.36 16.76-29.646 21.09c-14.284 4.33-32.864 5.617-54.168 3.49a239 239 0 0 1-10.395-1.285c6.585-20.932 11.6-44.23 14.74-69.19c20.04-15.196 37.706-31.182 52.535-47.345zm-73.687 62.483c-3.07 18.226-7.184 35.26-12.154 50.697c-15.854-3.413-32.663-8.368-49.984-14.822a510 510 0 0 0 31.7-16.848a509 509 0 0 0 30.44-19.027zm-171.635.01a508 508 0 0 0 30.424 19.017a510 510 0 0 0 31.7 16.848c-17.316 6.453-34.12 11.407-49.973 14.82c-4.97-15.434-9.08-32.464-12.15-50.685zm86.37.85l.68.42l.677-.42h-1.356zm-.56 45.767c23.19 9.76 45.874 17.065 67.294 21.826a237 237 0 0 1-4.094 9.67c-8.81 19.513-19.214 34.96-30.108 45.167c-10.893 10.206-21.88 15.13-33.085 15.13s-22.193-4.924-33.086-15.13s-21.297-25.654-30.107-45.168a239 239 0 0 1-4.095-9.67c21.416-4.762 44.098-12.066 67.283-21.825z"/></svg>
+                    </div>
+                    <div class="focus-content">
+                        <h4>Critical Materials</h4>
+                        <span class="focus-subtitle">Li, rare earths, strategic minerals</span>
+                        <p>Geochemical fingerprints, exploration support and process monitoring in brines, ores and process streams.</p>
+                    </div>
+                </div>
+
+                <div class="focus-item">
+                    <div class="focus-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 31-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .5-3.5 1.3-3.5 1.3 0-2 2-2.8 2-4.3"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 3.3-.6 0-1.8-1.3-2.8-2.2-3.4"/></svg>
+                    </div>
+                    <div class="focus-content">
+                        <h4>Agriculture & Soils</h4>
+                        <p>Nutrient cycles, soil–plant interactions, fertilizer use and land-use impacts observed through elemental and isotopic signatures.</p>
+                    </div>
+                </div>
+
+                <div class="focus-item">
+                    <div class="focus-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    </div>
+                    <div class="focus-content">
+                        <h4>Environmental Isotopes</h4>
+                        <p>Tracing water pathways, contamination sources and pollutant behavior in watersheds and aquifers.</p>
+                    </div>
+                </div>
+
+                <div class="focus-item">
+                    <div class="focus-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                    </div>
+                    <div class="focus-content">
+                        <h4>Carbonate Systems</h4>
+                        <p>Use of carbonate cements, speleothems and other minerals as archives of environmental and diagenetic processes.</p>
+                    </div>
+                </div>
+
+                <div class="focus-item">
+                    <div class="focus-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+                    </div>
+                    <div class="focus-content">
+                        <h4>Laser Ablation</h4>
+                        <p>Spatially resolved elemental data at grain or crystal scale to reveal growth histories and fluid–rock interaction.</p>
+                    </div>
+                </div>
+
+                <div class="focus-item">
+                    <div class="focus-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div class="focus-content">
+                        <h4>U–Th Geochronology</h4>
+                        <span class="focus-subtitle">Planned capability</span>
+                        <p>Currently performed at international laboratories, with SPICe Lab support in sample selection, data evaluation and age interpretation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-bg-alt">
+            <div class="content-wrapper">
+                <h2 class="section-title text-center">How a collaboration typically works</h2>
+                <p class="section-intro">Every project is different, but most collaborations follow a similar structure:</p>
+
+                <div class="workflow-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Initial Conversation</h4>
+                            <p>Your questions, available data and constraints are clarified.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Background Review</h4>
+                            <p>Existing information and previous datasets are compiled and evaluated.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Proposal & Scope</h4>
+                            <p>You receive a clear outline of tasks, timelines and expected outcomes.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Implementation</h4>
+                            <p>Consulting, data analysis and laboratory coordination, as agreed.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Reporting & Follow-up</h4>
+                            <p>Results are presented in a useful format and open to future revisits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-bg-dark" id="contact">
+            <div class="content-wrapper text-center">
+                <h2 class="white-text section-title">Let's talk about your project</h2>
+                <p class="white-text-opacity" style="max-width: 800px; margin: 0 auto;">
+                    If you're considering a new project, have existing data that requires interpretation, or want to explore
+                    how isotopes and trace elements can add value to your work, we would be delighted to talk.
+                </p>
+                <div class="mt-5">
+                    <a href="/contact/" class="button button-primary button-large">Contact about services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 South Pacific Isotope Centre — SPICe Lab</p>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

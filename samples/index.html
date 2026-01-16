@@ -1,147 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <title>Sample Submission – SPICe Lab</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Sample Submission | SPICe Lab – Geochemical Preparation & Coordination</title>
+    <meta name="description" content="Complete guide for preparing, documenting, and coordinating sample shipment for geochemical analyses. Support in water, soil, and mineral sampling.">
+    <meta name="keywords" content="sample submission, geochemical analysis, sample preparation, water sampling, geology, isotope laboratory, SPICe Lab">
+    <meta name="author" content="SPICe Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spicelab.cl/en/samples/" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Sample Submission & Analytical Services | SPICe Lab" />
+    <meta property="og:description" content="How to prepare, document, and coordinate samples for geochemical analyses with international laboratories." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    <meta property="og:url" content="https://spicelab.cl/en/samples/" />
+    <meta property="og:site_name" content="SPICe Lab" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sample Submission & Analytical Services | SPICe Lab" />
+    <meta name="twitter:description" content="How to prepare, document, and coordinate samples for geochemical analyses with international laboratories." />
+    <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
+    
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/pages/samples.css" />
 </head>
-
 <body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrap">
+                <div class="logo-wrap">
+                    <a class="logo-link" href="/">
+                        <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icon">
+                    </a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/team">Team</a>
+                    <a href="/services">Services</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/samples">Samples</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
 
-<header>
-  <nav>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <span class="lang-switch-desktop">
+                EN | <a href="/es/muestras/">ES</a>
+            </span>
 
-    <div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/team/">Team</a>
-  <a href="/services/">Services</a>
-  <a href="/projects/">Projects</a>
-  <a href="/samples/">Samples</a>
-  <a href="/contact/">Contact</a>
-</div>
+            <div class="menu-button-wrap">
+                <span class="lang-switch-mobile">
+                    EN | <a href="/es/muestras/">ES</a>
+                </span>
 
-    <span class="lang-switch">
-      EN | <a href="/es/muestras/">ES</a>
-    </span>
-  </nav>
-</header>
+                <button id="mobile-menu-button" class="mobile-menu-button">
+                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
 
-<main>
-  <div class="hero">
-    <h1>Sample Submission</h1>
-    <p class="hero-subtitle">
-      How to prepare, document and coordinate samples for geochemical analysis.
-    </p>
-    <p>
-      SPICe Lab is currently in the development stage. Analytical measurements are carried out through
-      collaborating international laboratories, while SPICe Lab assists with preparation, documentation,
-      coordination and interpretation of results.
-    </p>
-  </div>
+        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+            <nav class="mobile-menu-nav">
+                <a href="/" class="menu-link">Home</a>
+                <a href="/about" class="menu-link">About</a>
+                <a href="/team" class="menu-link">Team</a>
+                <a href="/services" class="menu-link">Services</a>
+                <a href="/projects" class="menu-link">Projects</a>
+                <a href="/samples" class="menu-link">Samples</a>
+                <a href="/contact" class="menu-link">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <h2>Before sending samples</h2>
-  <p>
-    Please contact us before preparing or shipping any material. Each project has different analytical
-    requirements, and we will help identify the appropriate techniques, partner laboratories and sample
-    formats. Early coordination avoids delays, unnecessary costs and sample loss.
-  </p>
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <span class="hero-label">Coordination Guide</span>
+                <h1>Sample Submission</h1>
+                <p class="hero-subtitle">
+                    How to prepare, document, and coordinate samples for geochemical analyses.
+                </p>
+                <p>
+                    SPICe Lab is currently in a development phase. Analytical measurements are conducted through
+                    collaborating international laboratories, while SPICe Lab supports preparation,
+                    documentation, coordination, and interpretation of results.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="button button-primary">Contact</a>
+                    <a href="#guides" class="button button-secondary">View guides</a>
+                </div>
+            </div>
+        </div>
 
-  <p><a href="/contact/" class="button">Contact us</a></p>
+        <section class="content-wrapper">
+            <h2 class="section-title">Before submitting samples</h2>
+            <p>
+                Please contact us before preparing or sending any material. Each project requires specific
+                techniques, and we will help you define the appropriate analyses, partner laboratories, and sample formats.
+                Early coordination avoids delays, unnecessary costs, and material loss.
+            </p>
+        </section>
 
-  <h2>Field sampling support</h2>
-  <p>
-    For many projects, the quality of geochemical data depends strongly on how samples are collected.
-    SPICe Lab can assist with sampling design, field protocols, and on-site sample collection when
-    required. This ensures proper documentation, contamination control and consistency across the dataset.
-  </p>
-  <p>
-    Field support can be coordinated for water, soils, sediments, carbonates, mineral materials and other
-    sample types, depending on project needs and logistics.
-  </p>
+        <section class="section-bg-alt">
+            <div class="content-wrapper">
+                <h2 class="section-title">Field sampling support</h2>
+                <div class="text-columns">
+                    <p>
+                        In many projects, the quality of geochemical data depends directly on how sampling is performed.
+                        SPICe Lab can support with sampling design, field protocols, and on-site sample collection when necessary.
+                        This ensures proper documentation, contamination control, and dataset consistency.
+                    </p>
+                    <p>
+                        We can coordinate sampling of waters, soils, sediments, carbonates, mineral materials, and other sample
+                        types, according to project needs and logistics.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <h2>Types of samples we can work with</h2>
-  <p>SPICe Lab can assist with a wide range of materials, including:</p>
-  <ul>
-    <li>water samples (streams, groundwater, rainfall, lakes, brines)</li>
-    <li>soil and sediment samples</li>
-    <li>carbonates (travertines, speleothems, marine and freshwater carbonates)</li>
-    <li>mineral grains and geological materials</li>
-    <li>industrial materials (e.g., brines, process residues, powders)</li>
-    <li>biogeochemical samples (plant material, organic matter)</li>
-  </ul>
+        <section class="content-wrapper">
+            <h2 class="section-title text-center">Sample types we can work with</h2>
+            <p class="section-intro">SPICe Lab can assist with a variety of materials, including:</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    </div>
+                    <h3>Waters</h3>
+                    <p>Water samples (rivers, wells, rain, lakes, brines).</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 12h4m11 0h5M3 20.01l.01-.011M6 16.01l.01-.011M9 20.01l.01-.011M12 16.01l.01-.011M15 20.01l.01-.011M18 16.01l.01-.011M21 20.01l.01-.011M9 13s.9-3.741 3-6"/><path d="m16.186 2.241l.374 3.89c.243 2.523-1.649 4.77-4.172 5.012c-2.475.238-4.718-1.571-4.956-4.047a4.503 4.503 0 0 1 4.05-4.914l4.147-.4a.51.51 0 0 1 .557.46"/></g></svg>
+                    </div>
+                    <h3>Soils</h3>
+                    <p>Soil and sediment samples.</p>
+                </div>
 
-  <h2>Sample preparation guidelines</h2>
-  <p>
-    Specific requirements depend on the analytical technique and the chosen laboratory. After discussing
-    your project, we will provide tailored instructions. General guidance includes:
-  </p>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hexagon-icon lucide-hexagon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    </div>
+                    <h3>Carbonates</h3>
+                    <p>Carbonates (travertines, speleothems, marine and continental carbonates).</p>
+                </div>
 
-  <ul>
-    <li><strong>Water samples:</strong> clean, acid-washed bottles; filtration or acidification may be recommended.</li>
-    <li><strong>Soils/sediments:</strong> air-dried or oven-dried; sieved if necessary; avoid metal contamination.</li>
-    <li><strong>Carbonates:</strong> small chips or drilled powders; avoid glue, epoxy or metal tools.</li>
-    <li><strong>Minerals:</strong> hand-picked grain separates or small fragments packaged in vials.</li>
-  </ul>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"></path></svg>
+                    </div>
+                    <h3>Minerals</h3>
+                    <p>Mineral grains and rock fragments.</p>
+                </div>
 
-  <p>
-    If preferred, SPICe Lab can coordinate or perform the collection of samples in the field to ensure
-    they meet the requirements of the analytical technique and partner laboratory.
-  </p>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    </div>
+                    <h3>Industrial materials</h3>
+                    <p>Industrial materials (brines, process residues, powders).</p>
+                </div>
 
-  <h2>Required documentation</h2>
-  <p>
-    Every batch of samples must be accompanied by a sample list including:
-  </p>
-  <ul>
-    <li>sample IDs (unique identifiers)</li>
-    <li>sample type and material</li>
-    <li>collection location (as detailed as needed)</li>
-    <li>collection date (if applicable)</li>
-    <li>requested analyses</li>
-    <li>relevant notes (preservation, special conditions, hazards)</li>
-  </ul>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf-icon lucide-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                    </div>
+                    <h3>Biogeochemistry</h3>
+                    <p>Biogeochemical material (plant tissues, organic matter).</p>
+                </div>
+            </div>
+        </section>
 
-  <h2>Shipping and logistics</h2>
-  <p>
-    Once the analytical plan is defined, we will coordinate where the samples should be sent (Chile or
-    international). Shipping requirements vary depending on:
-  </p>
-  <ul>
-    <li>sample type,</li>
-    <li>destination laboratory,</li>
-    <li>local and international regulations.</li>
-  </ul>
+        <section class="section-bg-alt" id="guides">
+            <div class="content-wrapper">
+                <h2 class="section-title">General preparation guidelines</h2>
+                <p>
+                    Specific requirements depend on the analytical technique and laboratory. After discussing your project,
+                    we will provide detailed instructions. Generally:
+                </p>
 
-  <p>
-    We can assist in preparing documentation and choosing appropriate packaging to ensure safe transit.
-  </p>
+                <div class="process-list">
+                    <div class="process-item">
+                        <div class="process-header">Waters</div>
+                        <p>Clean bottles; filtration or acidification may be required.</p>
+                    </div>
+                    
+                    <div class="process-item">
+                        <div class="process-header">Soils/Sediments</div>
+                        <p>Air-dried or oven-dried; sieving if applicable; avoid metal contamination.</p>
+                    </div>
+                    
+                    <div class="process-item">
+                        <div class="process-header">Carbonates</div>
+                        <p>Clean fragments or drilled powders; avoid glues, epoxies, or metallic tools.</p>
+                    </div>
 
-  <h2>After analysis</h2>
-  <p>
-    When results are delivered by the partner laboratory, SPICe Lab supports:
-  </p>
-  <ul>
-    <li>quality checks and verification,</li>
-    <li>data interpretation,</li>
-    <li>visualisation and reporting, and</li>
-    <li>integration with other datasets.</li>
-  </ul>
+                    <div class="process-item">
+                        <div class="process-header">Minerals</div>
+                        <p>Hand-picked grains or small fragments in vials.</p>
+                    </div>
+                </div>
 
-  <p><a href="/contact/" class="button">Ask about sample preparation</a></p>
+                <p class="mt-4">
+                    If preferred, SPICe Lab can coordinate or perform field sampling to ensure samples meet the analytical
+                    technique and partner laboratory requirements.
+                </p>
+            </div>
+        </section>
 
-</main>
+        <section class="content-wrapper">
+            <div class="checklist-container">
+                <h2 class="section-title">Required documentation</h2>
+                <p>Every shipment must include a sample list with:</p>
+                
+                <ul class="checklist">
+                    <li>Unique sample IDs</li>
+                    <li>Material type</li>
+                    <li>Sampling location</li>
+                    <li>Sampling date (if applicable)</li>
+                    <li>Requested analyses</li>
+                    <li>Relevant observations</li>
+                </ul>
+            </div>
+        </section>
 
-<footer>
-  <p>© 2025 South Pacific Isotope Centre — SPICe Lab</p>
-</footer>
+        <section class="section-bg-dark" id="contact">
+            <div class="content-wrapper">
+                <div class="info-grid">
+                    <div class="info-col">
+                        <h2 class="white-text">Shipping & logistics</h2>
+                        <p class="white-text-opacity">
+                            Once the analytical plan is defined, we will coordinate the destination laboratory (Chile or international).
+                            Shipping requirements depend on:
+                        </p>
+                        <ul class="dark-list">
+                            <li>Sample type</li>
+                            <li>Destination laboratory</li>
+                            <li>Transport regulations</li>
+                        </ul>
+                        <p class="white-text-opacity">We can support with documentation and packaging to ensure safe arrival.</p>
+                    </div>
 
-<script src="/assets/js/main.js"></script>
+                    <div class="info-col">
+                        <h2 class="white-text">After analysis</h2>
+                        <p class="white-text-opacity">
+                            Once results are delivered, SPICe Lab supports with:
+                        </p>
+                        <ul class="dark-list">
+                            <li>Quality verification</li>
+                            <li>Data interpretation</li>
+                            <li>Visualization and reporting</li>
+                            <li>Integration with other datasets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="/contact" class="button button-primary button-large">Inquire about preparation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 South Pacific Isotope Centre — SPICe Lab</p>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

@@ -1,92 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Equipo y Colaboradores | SPICe Lab</title>
+    <meta name="description" content="Conoce a Marcos Salas-Saavedra, PhD, y al equipo detrás de SPICe Lab. Expertos en geoquímica isotópica conectando ciencia avanzada con necesidades en Chile.">
+    <meta name="keywords" content="Marcos Salas-Saavedra, Geoquímica, PhD, Equipo SPICe Lab, Consultoría Científica, Isótopos, Chile, Investigación">
+    <meta name="author" content="SPICe Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spicelab.cl/es/equipo/">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Equipo | SPICe Lab">
+    <meta property="og:description" content="Conoce a las personas y la experiencia detrás de la investigación isotópica en SPICe Lab.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-color.png" />
+    <meta property="og:url" content="https://spicelab.cl/es/equipo/" />
+    <meta property="og:site_name" content="SPICe Lab" />
+    <meta property="og:locale" content="es_ES" />
 
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <title>Equipo – SPICe Lab</title>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Equipo | SPICe Lab" />
+    <meta name="twitter:description" content="Conoce a las personas y la experiencia detrás de la investigación isotópica en SPICe Lab." />
+    <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-color.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
+    
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/pages/team.css" />
 </head>
-
 <body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrap">
+                <div class="logo-wrap">
+                    <a class="logo-link" href="/es/">
+                        <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icono">
+                    </a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="/es/">Inicio</a>
+                    <a href="/es/acerca-de/">Acerca de</a>
+                    <a href="/es/equipo/" class="active">Equipo</a>
+                    <a href="/es/servicios/">Servicios</a>
+                    <a href="/es/proyectos/">Proyectos</a>
+                    <a href="/es/muestras/">Muestras</a>
+                    <a href="/es/contacto/">Contacto</a>
+                </div>
+            </div>
 
-<header>
-  <nav>
-    <button class="menu-toggle" aria-label="Mostrar u ocultar menú">☰</button>
+            <span class="lang-switch-desktop">
+                <a href="/team/">EN</a> | ES
+            </span>
 
-    <div class="nav-links">
-  <a href="/es/">Inicio</a>
-  <a href="/es/acerca-de/">Acerca de</a>
-  <a href="/es/equipo/">Equipo</a>
-  <a href="/es/servicios/">Servicios</a>
-  <a href="/es/proyectos/">Proyectos</a>
-  <a href="/es/muestras/">Muestras</a>
-  <a href="/es/contacto/">Contacto</a>
-</div>
+            <div class="menu-button-wrap">
+                <span class="lang-switch-mobile">
+                    <a href="/team/">EN</a> | ES
+                </span>
 
-    <span class="lang-switch">
-      <a href="/team/">EN</a> | ES
-    </span>
-  </nav>
-</header>
+                <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Abrir menú">
+                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
 
-<main>
-  <div class="hero">
-    <h1>Equipo</h1>
-    <p class="hero-subtitle">
-      Las personas y la experiencia detrás de SPICe Lab.
-    </p>
-    <p>
-      SPICe Lab se desarrolla como una iniciativa enfocada y flexible en geoquímica isotópica y de
-      elementos traza, con el objetivo de conectar capacidades analíticas avanzadas con preguntas
-      concretas en ambiente, agricultura y recursos en el sur de Chile y la región del Pacífico Sur.
-    </p>
-  </div>
+        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+            <nav class="mobile-menu-nav">
+                <a href="/es/" class="menu-link">Inicio</a>
+                <a href="/es/acerca-de/" class="menu-link">Acerca de</a>
+                <a href="/es/equipo/" class="menu-link active">Equipo</a>
+                <a href="/es/servicios/" class="menu-link">Servicios</a>
+                <a href="/es/proyectos/" class="menu-link">Proyectos</a>
+                <a href="/es/muestras/" class="menu-link">Muestras</a>
+                <a href="/es/contacto/" class="menu-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-  <h2>Fundador y Consultor Principal</h2>
-  <p><strong>Marcos Salas-Saavedra, PhD</strong><br>
-  Fundador y Consultor Principal, SPICe Lab</p>
-  <p>
-    Marcos es un geoquímico con experiencia en el uso de isótopos y elementos traza para entender
-    los sistemas biogeoquímicos de la Tierra. Completó su doctorado en Geoquímica en The University
-    of Queensland (Australia) y más tarde realizó un posdoctorado en Princeton University.
-  </p>
-  <p>
-    Ha trabajado con laboratorios analíticos avanzados en Australia, Estados Unidos y Chile,
-    colaborando con equipos de investigación diversos y aplicando herramientas geoquímicas a una
-    amplia gama de preguntas ambientales y geológicas.
-  </p>
-  <p>
-    A través de SPICe Lab, busca poner esta experiencia internacional en geoquímica isotópica al
-    servicio de proyectos de investigación, industria e instituciones públicas en el sur de Chile
-    y la región del Pacífico Sur.
-  </p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-label">Nuestros Expertos</span>
+                <h1>Equipo</h1>
+                <p class="hero-subtitle">
+                    Las personas y la experiencia detrás de SPICe Lab.
+                </p>
+                <p class="hero-desc">
+                    SPICe Lab se desarrolla como una iniciativa enfocada y flexible en geoquímica isotópica y de
+                    elementos traza, con el objetivo de conectar capacidades analíticas avanzadas con preguntas
+                    concretas en ambiente, agricultura y recursos en el sur de Chile y la región del Pacífico Sur.
+                </p>
+            </div>
+        </section>
 
-  <h2>Asesores científicos y colaboradores</h2>
-  <p>
-    SPICe Lab se construye con el apoyo de una red creciente de colegas, laboratorios e instituciones.
-    A medida que se confirmen asesores científicos formales y colaboradores externos, sus perfiles
-    se incorporarán aquí con su autorización.
-  </p>
-  <p>
-    La idea es mantener una estructura flexible, donde expertos específicos puedan participar según
-    las necesidades de cada proyecto, mientras SPICe Lab actúa como punto central de coordinación
-    e interpretación.
-  </p>
+        <section class="team-visual">
+            <div class="container">
+                <img 
+                    src="/assets/images/horizontal-color.png" 
+                    alt="Imagen corporativa SPICe Lab" 
+                    class="banner-img"
+                    width="431"
+                    height="179"
+                    loading="lazy" 
+                >
+            </div>
+        </section>
 
-  <p>
-    Si te interesa colaborar con SPICe Lab o explorar un posible rol de asesoría, eres bienvenido a
-    <a href="/es/contacto/">contactarnos</a>.
-  </p>
-</main>
+        <section class="founder-section">
+            <div class="container">
+                <article class="profile-card">
+                    <div class="profile-body">
+                        <div class="profile-intro">
+                            <div class="profile-titles">
+                                <h2 class="profile-label">Fundador y Consultor Principal</h2>
+                                
+                                <h3 class="profile-name">Marcos Salas-Saavedra, PhD</h3>
+                                <p class="profile-role">Fundador y Consultor Principal, SPICe Lab</p>
+                            </div>
+                            
+                            <img src="/assets/images/founder-small.jpeg" alt="Marcos Salas-Saavedra" class="profile-image" width="150" height="150">
+                        </div>
+                        
+                        <div class="profile-bio">
+                            <p>
+                                Marcos es un geoquímico con experiencia en el uso de isótopos y elementos traza para entender
+                                los sistemas biogeoquímicos de la Tierra. Completó su doctorado en Geoquímica en The University
+                                of Queensland (Australia) y más tarde realizó un posdoctorado en Princeton University.
+                            </p>
+                            <p>
+                                Ha trabajado con laboratorios analíticos avanzados en Australia, Estados Unidos y Chile,
+                                colaborando con equipos de investigación diversos y aplicando herramientas geoquímicas a una
+                                amplia gama de preguntas ambientales y geológicas.
+                            </p>
+                            <p>
+                                A través de SPICe Lab, busca poner esta experiencia internacional en geoquímica isotópica al
+                                servicio de proyectos de investigación, industria e instituciones públicas en el sur de Chile
+                                y la región del Pacífico Sur.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-<footer>
-  <p>© 2025 South Pacific Isotope Centre — SPICe Lab</p>
-</footer>
+        <section class="collaborators-section">
+            <div class="container text-center">
+                <h2 class="section-title">Asesores científicos y colaboradores</h2>
+                <div class="collaborators-content">
+                    <p>
+                        SPICe Lab se construye con el apoyo de una red creciente de colegas, laboratorios e instituciones.
+                        A medida que se confirmen asesores científicos formales y colaboradores externos, sus perfiles
+                        se incorporarán aquí con su autorización.
+                    </p>
+                    <p>
+                        La idea es mantener una estructura flexible, donde expertos específicos puedan participar según
+                        las necesidades de cada proyecto, mientras SPICe Lab actúa como punto central de coordinación
+                        e interpretación.
+                    </p>
+                    
+                    <div class="cta-box">
+                        <p>
+                            ¿Te interesa colaborar con SPICe Lab o explorar un posible rol de asesoría?
+                        </p>
+                        <a href="/es/contacto/" class="button button-secondary">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<script src="/assets/js/main.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 South Pacific Isotope Centre — SPICe Lab</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

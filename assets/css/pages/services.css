@@ -1,0 +1,341 @@
+/* ===== SECCIONES PRINCIPALES ===== */
+.hero {
+    background: radial-gradient(circle at 50% 0%, #f5f5f7 0%, #ffffff 70%);
+    padding: 70px 7%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.hero-content {
+    margin: 0 auto;
+}
+
+.hero-label {
+    display: inline-block;
+    background: #e1f0ff;
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+.hero-subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.hero p:not(.hero-subtitle) {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+section {
+    padding: 70px 7%;
+}
+
+.section-bg-alt {
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    margin-bottom: 24px;
+    font-size: 2.2rem;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+}
+
+.section-intro {
+    margin: 0 auto 56px;
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-card-wide {
+    grid-column: span 3;
+    align-items: center;
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.icon-box {
+    width: 56px;
+    height: 56px;
+    background-color: #f0f7ff;
+    color: var(--primary);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.icon-box svg {
+    width: 28px;
+    height: 28px;
+}
+
+.feature-box {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 50px;
+    box-shadow: var(--shadow);
+    border-left: 6px solid var(--primary);
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    color: var(--text-main);
+    font-size: 1.05rem;
+}
+
+.feature-list li::before {
+    content: "•";
+    color: var(--primary);
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-right: 12px;
+    margin-top: -3px;
+}
+
+.note-text {
+    font-style: italic;
+    color: var(--text-secondary);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 20px;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.focus-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.focus-icon {
+    min-width: 48px;
+    height: 48px;
+    background-color: #f5f5f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+}
+
+.focus-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.focus-content h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.15rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.focus-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.focus-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.workflow-steps {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.workflow-steps::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e5e5ea;
+    z-index: 0;
+}
+
+.step-item {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.step-item:last-child {
+    margin-bottom: 0;
+    z-index: 10;
+    background: var(--bg-light);
+}
+
+.step-number {
+    width: 42px;
+    height: 42px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 8px var(--bg-light);
+}
+
+.step-content {
+    padding-top: 8px;
+}
+
+.step-content h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.step-content p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* --- CTA Dark Section --- */
+.section-bg-dark {
+    background-color: #000000;
+    padding: 70px 7%;
+}
+
+.white-text { 
+    color: var(--white); 
+}
+
+.white-text-opacity {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* --- Footer --- */
+footer {
+    border: none;
+}
+
+/* --- UTILIDADES --- */
+.content-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.mt-5 { margin-top: 48px; }
+
+
+/* --- Animaciones y Transiciones --- */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(0, 113, 227, 0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .service-card-wide {
+        grid-column: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .workflow-steps::before {
+        left: 15px;
+    }
+    
+    .service-card-wide {
+        grid-column: auto;
+    }
+    
+    .feature-box {
+        padding: 40px 30px;
+    }
+}

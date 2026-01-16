@@ -1,0 +1,22 @@
+/* -- Variables -- */
+:root {
+    --primary: #0071e3;        /* Azul estilo Apple/Tech */
+    --primary-dark: #006EDB;
+    --text-main: #1d1d1f;      /* Negro suave */
+    --text-secondary: #6e6e73; /* Gris texto */
+    --bg-light: #f5f5f7;       /* Gris muy claro para fondos */
+    --white: #ffffff;
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Source Sans Pro', sans-serif;
+    
+    --header-height: 60px;
+    --max-width: 1080px;
+    --radius: 12px;
+    --radius-lg: 20px;
+
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    --transition: all 0.3s ease;
+}

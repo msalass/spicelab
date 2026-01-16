@@ -1,0 +1,48 @@
+/* -- Reset y estilos base -- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, var(--font-body), Arial, sans-serif;
+    color: #1c1c1e;
+    line-height: 1.6;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-top: 0;
+    color: #111;
+}
+
+p, li {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+ul {
+    padding-left: 24px;
+}

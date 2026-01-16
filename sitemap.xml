@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>https://YOUR-DOMAIN/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/about/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/services/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/projects/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/samples/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/contact/</loc></url>
+  <url><loc>https://spicelab.cl/</loc></url>
+  <url><loc>https://spicelab.cl/about/</loc></url>
+  <url><loc>https://spicelab.cl/services/</loc></url>
+  <url><loc>https://spicelab.cl/projects/</loc></url>
+  <url><loc>https://spicelab.cl/samples/</loc></url>
+  <url><loc>https://spicelab.cl/contact/</loc></url>
 
-  <url><loc>https://YOUR-DOMAIN/es/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/es/acerca-de/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/es/servicios/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/es/proyectos/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/es/muestras/</loc></url>
-  <url><loc>https://YOUR-DOMAIN/es/contacto/</loc></url>
+  <url><loc>https://spicelab.cl/es/</loc></url>
+  <url><loc>https://spicelab.cl/es/acerca-de/</loc></url>
+  <url><loc>https://spicelab.cl/es/servicios/</loc></url>
+  <url><loc>https://spicelab.cl/es/proyectos/</loc></url>
+  <url><loc>https://spicelab.cl/es/muestras/</loc></url>
+  <url><loc>https://spicelab.cl/es/contacto/</loc></url>
 
 </urlset>

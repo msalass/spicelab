@@ -1,135 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <title>Contact – SPICe Lab</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Contact SPICe Lab – South Pacific Isotope Centre | Inquiries and Projects</title>
+    <meta name="description" content="Contact us for inquiries about geochemical analyses, sample preparation, project design, and specialized laboratory services. Response within 48 business hours.">
+    <meta name="keywords" content="contact SPICe Lab, geochemistry inquiries, isotopic analyses, sample preparation, project design, specialized laboratory, scientific consulting, field sampling">
+    <meta name="author" content="SPICe Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spicelab.cl/en/contact" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Contact SPICe Lab – Inquiries About Geochemical Analyses and Projects" />
+    <meta property="og:description" content="Need support with geochemical analyses, sample preparation, or project design? Send us your inquiry. We'll respond within 48 business hours." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    <meta property="og:url" content="https://spicelab.cl/en/contact" />
+    <meta property="og:site_name" content="SPICe Lab" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact SPICe Lab – Inquiries About Geochemical Analyses" />
+    <meta name="twitter:description" content="Contact form for inquiries about laboratory services, isotopic analyses, and geochemical project design. Hours: Mon-Fri 9:00-18:00." />
+    <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
+    
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/pages/contact.css" />
 </head>
 
 <body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrap">
+                <div class="logo-wrap">
+                    <a class="logo-link" href="/">
+                        <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icon">
+                    </a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/team">Team</a>
+                    <a href="/services">Services</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/samples">Samples</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
 
-<header>
-  <nav>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <span class="lang-switch-desktop">
+                EN | <a href="/es/contacto/">ES</a>
+            </span>
 
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/team/">Team</a>
-      <a href="/services/">Services</a>
-      <a href="/projects/">Projects</a>
-      <a href="/samples/">Samples</a>
-      <a href="/contact/">Contact</a>
-    </div>
+            <div class="menu-button-wrap">
+                <span class="lang-switch-mobile">
+                    EN | <a href="/es/contacto/">ES</a>
+                </span>
 
-    <span class="lang-switch">
-      EN | <a href="/es/contacto/">ES</a>
-    </span>
-  </nav>
-</header>
+                <button id="mobile-menu-button" class="mobile-menu-button">
+                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
 
-<main>
-  <div class="hero">
-    <h1>Contact SPICe Lab</h1>
-    <p class="hero-subtitle">We’re here to help you plan and interpret geochemical analyses.</p>
-    <p>
-      Use the form below to tell us briefly who you are, what kind of project you have in mind, and how
-      you think isotopes or trace elements might help. We will reply as soon as possible to suggest next steps.
-    </p>
-  </div>
+        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+            <nav class="mobile-menu-nav">
+                <a href="/" class="menu-link">Home</a>
+                <a href="/about" class="menu-link">About</a>
+                <a href="/team" class="menu-link">Team</a>
+                <a href="/services" class="menu-link">Services</a>
+                <a href="/projects" class="menu-link">Projects</a>
+                <a href="/samples" class="menu-link">Samples</a>
+                <a href="/contact" class="menu-link">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <h2>Send us a message</h2>
-  <p>
-    The more context you can provide (type of samples, questions, timelines), the easier it is for us
-    to respond with something concrete.
-  </p>
+    <main class="contact-page">
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <span class="contact-hero-label">Support and Consultations</span>
+                <h1>Contact SPICe Lab</h1>
+                <p class="contact-subtitle">We're here to support your geochemical analyses.</p>
+                <div class="contact-intro">
+                    <p>
+                        If you need support with project design, sample preparation, field sampling, or data interpretation,
+                        feel free to write to us. We'll respond as soon as possible to help you define the best path for your project.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact" />
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-form-section">
+                    <h2>Send us a message</h2>
+                    <p class="form-intro">Include relevant details about your inquiry or project so we can assist you better.</p>
 
-    <!-- Honeypot for spam bots -->
-    <p style="display:none;">
-      <label>Don’t fill this out if you’re human:
-        <input name="bot-field" />
-      </label>
-    </p>
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+                        <input type="hidden" name="form-name" value="contact" />
 
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required />
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name" />
+                        </div>
 
-    <label for="org">Organisation / Institution (optional)</label>
-    <input type="text" id="org" name="organisation" />
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com" />
+                        </div>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Describe your inquiry or project..." rows="6"></textarea>
+                        </div>
 
-    <label for="topic">Main topic</label>
-    <select id="topic" name="topic" required>
-      <option value="">Please choose an option</option>
-      <option value="consulting">Geochemical consulting / feasibility</option>
-      <option value="data-interpretation">Data interpretation</option>
-      <option value="sampling-design">Sampling design / field work</option>
-      <option value="sample-submission">Sample submission / logistics</option>
-      <option value="collaboration">Research collaboration</option>
-      <option value="other">Other</option>
-    </select>
+                        <button type="submit" class="button button-primary">Send message</button>
+                    </form>
+                </div>
 
-    <label for="message">Project or question</label>
-    <textarea id="message" name="message" required></textarea>
+                <div class="contact-info-section">
+                    <h2>Other contact methods</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <a href="mailto:contact@spicelab.cl"rel="noopener noreferrer" target="_blank"><strong>contact@spicelab.cl</strong></a>
+                        </div>
 
-    <label for="language">Preferred language for communication (optional)</label>
-    <select id="language" name="preferred_language">
-      <option value="">No preference</option>
-      <option value="english">English</option>
-      <option value="spanish">Spanish</option>
-    </select>
+                        <div class="contact-item">
+                            <h3>Response time</h3>
+                            <p>We'll respond within 48 business hours.</p>
+                        </div>
 
-    <button type="submit" class="button">Send message</button>
-  </form>
+                        <div class="contact-item">
+                            <h3>Business hours</h3>
+                            <p>Monday to Friday<br>9:00 AM - 6:00 PM</p>
+                        </div>
 
- <h2>Other ways to reach us</h2>
+                        <div class="contact-item">
+                            <h3>LinkedIn</h3>
+                            <p>
+                                <a href="https://www.linkedin.com/company/south-pacific-isotope-centre/?viewAsMember=true" target="_blank">
+                                    South Pacific Isotope Centre
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<p>You can also contact SPICe Lab through the following channels:</p>
+    <footer>
+        <p>&copy; 2025 South Pacific Isotope Centre — SPICe Lab</p>
+    </footer>
 
-<ul>
-  <li><strong>Email (primary):</strong>
-    <a href="mailto:contact@spicelab.cl">contact@spicelab.cl</a>
-  </li>
-
-  <li><strong>LinkedIn:</strong>
-    <a href="https://www.linkedin.com/company/south-pacific-isotope-centre/" target="_blank" rel="noopener">
-      SPICe Lab – Official LinkedIn Page
-    </a>
-  </li>
-
-  <li><strong>Location:</strong>
-    Southern Chile — Los Ríos Region (Lanco–Valdivia area).
-    <em>Serving clients across Chile and internationally.</em>
-  </li>
-
-  <li><strong>Company name:</strong>
-    South Pacific Isotope Centre SpA
-  </li>
-
-  <li><strong>Office hours:</strong>
-    Monday–Friday, 09:00–17:00 (CLT)
-  </li>
-</ul>
-
-<p>You may contact us in English or Spanish.</p>
-
-</main>
-
-<footer>
-  <p>© 2025 South Pacific Isotope Centre — SPICe Lab</p>
-</footer>
-
-<script src="/assets/js/main.js"></script>
-
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

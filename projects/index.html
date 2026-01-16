@@ -1,92 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-
-  <!-- New fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-<header>
-  <nav>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-
-    <div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/team/">Team</a>
-  <a href="/services/">Services</a>
-  <a href="/projects/">Projects</a>
-  <a href="/samples/">Samples</a>
-  <a href="/contact/">Contact</a>
-</div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <span class="lang-switch">
-      EN | <a href="/es/">ES</a>
-    </span>
-  </nav>
-</header>
+    <!-- SEO Meta Tags -->
+    <title>Research Projects and Analytical Services | SPICe Lab</title>
+    <meta name="description" content="Discover SPICe Lab's research lines: paleoclimate reconstruction with corals, isotope hydrology for sustainable agriculture, and lithium geochemistry in the South Pacific.">
+    <meta name="keywords" content="Isotopes, Geochemistry, Corals, Lithium, Sustainable Agriculture, Trace Elements, Chile, Research, U-Th Dating, Hydrology">
+    <meta name="author" content="SPICe Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spicelab.cl/projects/">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Research Projects | SPICe Lab">
+    <meta property="og:description" content="Advanced isotope and trace element research applied to climate, agriculture, and critical resources.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    <meta property="og:url" content="https://spicelab.cl/projects/" />
+    <meta property="og:site_name" content="SPICe Lab" />
+    <meta property="og:locale" content="en_US" />
 
-<main>
-  <h1>Projects & Research Highlights</h1>
-  <p>
-    This page showcases selected projects and research lines where SPICe Lab contributes
-    isotope and trace-element data. You can adapt and expand these examples as new
-    collaborations and results emerge.
-  </p>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Research Projects | SPICe Lab" />
+    <meta name="twitter:description" content="Advanced isotope and trace element research applied to climate, agriculture, and critical resources." />
+    <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
+    
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/pages/projects.css" />
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrap">
+                <div class="logo-wrap">
+                    <a class="logo-link" href="/">
+                        <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icon">
+                    </a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about/">About</a>
+                    <a href="/team/">Team</a>
+                    <a href="/services/">Services</a>
+                    <a href="/projects/" class="active">Projects</a>
+                    <a href="/samples/">Samples</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
 
-  <div class="project-list">
-    <div class="project-card">
-      <h3>Reconstructing past sea-level and climate with corals</h3>
-      <p>
-        High-precision U–Th dating and trace-element analyses of fossil corals are used to
-        reconstruct sea-level change and climate variability during key intervals of the
-        Quaternary.
-      </p>
-      <p>
-        <strong>Methods:</strong> U–Th geochronology, LA-ICP-MS trace elements, age–depth models.
-      </p>
-    </div>
+            <span class="lang-switch-desktop">
+                EN | <a href="/es/proyectos/">ES</a>
+            </span>
 
-    <div class="project-card">
-      <h3>Isotopic tools for sustainable agriculture</h3>
-      <p>
-        Environmental isotopes and trace elements are applied to understand water and nutrient
-        pathways in agricultural catchments, supporting better management practices.
-      </p>
-      <p>
-        <strong>Methods:</strong> isotopes in water and soils, trace-element geochemistry.
-      </p>
-    </div>
+            <div class="menu-button-wrap">
+                <span class="lang-switch-mobile">
+                    EN | <a href="/es/proyectos/">ES</a>
+                </span>
 
-    <div class="project-card">
-      <h3>Lithium and critical raw materials in the South Pacific region</h3>
-      <p>
-        Geochemical characterisation of brines, rocks and process streams supports exploration
-        and monitoring of lithium and other critical resources.
-      </p>
-      <p>
-        <strong>Methods:</strong> solution and solid-phase analyses, QA/QC protocols.
-      </p>
-    </div>
-  </div>
+                <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Open menu">
+                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
 
-  <h2>Future projects</h2>
-  <p>
-    As SPICe Lab grows, this section can include more detailed project pages, links to
-    publications and summaries for non-specialist audiences.
-  </p>
-</main>
+        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+            <nav class="mobile-menu-nav">
+                <a href="/" class="menu-link">Home</a>
+                <a href="/about/" class="menu-link">About</a>
+                <a href="/team/" class="menu-link">Team</a>
+                <a href="/services/" class="menu-link">Services</a>
+                <a href="/projects/" class="menu-link active">Projects</a>
+                <a href="/samples/" class="menu-link">Samples</a>
+                <a href="/contact/" class="menu-link">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<footer>
-  <p>© 2025 South Pacific Isotope Centre — SPICe Lab</p>
-</footer>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-label">Case Studies</span>
+                <h1>Projects and Research Lines</h1>
+                <p class="section-intro">
+                    This page presents projects and lines of work where SPICe Lab contributes with
+                    isotopic and trace element data. You can adapt and expand these examples as new
+                    collaborations and results emerge.
+                </p>
+            </div>
+        </section>
 
-<script src="/assets/js/main.js"></script>
+        <section class="projects-section">
+            <div class="container">
+                <div class="project-list">
+                    <article class="project-card">
+                        <h2>Sea Level and Climate Reconstruction with Corals</h2>
+                        <p>
+                            High-precision U–Th dating and trace element analysis of fossil corals are
+                            used to reconstruct sea-level changes and climate variability during key
+                            Quaternary intervals.
+                        </p>
+                        <div class="project-meta">
+                            <strong>Methods:</strong> U–Th geochronology, trace elements by LA-ICP-MS, age-depth modeling.
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h2>Isotopic Tools for Sustainable Agriculture</h2>
+                        <p>
+                            Environmental isotopes and trace elements are applied to understand water and
+                            nutrient pathways in agricultural basins, supporting improved management practices.
+                        </p>
+                        <div class="project-meta">
+                            <strong>Methods:</strong> Water and soil isotopes, trace element geochemistry.
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h2>Lithium and Critical Resources in the South Pacific Region</h2>
+                        <p>
+                            Geochemical characterization of brines, rocks, and process streams supports the
+                            exploration and monitoring of lithium and other critical resources.
+                        </p>
+                        <div class="project-meta">
+                            <strong>Methods:</strong> Solution and solid-phase analysis, quality control protocols.
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="future-projects">
+            <div class="container text-center">
+                <h2 class="section-title">Future Projects</h2>
+                <p class="section-intro">
+                    As SPICe Lab grows, this section will include detailed project pages, 
+                    links to publications, and outreach summaries.
+                </p>
+                <a href="/contact/" class="button button-primary">Contact us to collaborate</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 South Pacific Isotope Centre — SPICe Lab</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
-

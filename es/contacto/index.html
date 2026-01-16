@@ -1,76 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <title>Contacto – SPICe Lab</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Contacto SPICe Lab – Centro de Isótopos del Pacífico Sur | Consultas y Proyectos</title>
+    <meta name="description" content="Contáctanos para consultas sobre análisis geoquímicos, preparación de muestras, diseño de proyectos y servicios de laboratorio especializado. Respuesta en 48 horas hábiles.">
+    <meta name="keywords" content="contacto SPICe Lab, consultas geoquímica, análisis isotópicos, preparación de muestras, diseño de proyectos, laboratorio especializado, consultoría científica, muestreo en terreno">
+    <meta name="author" content="SPICe Lab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://spicelab.cl/es/contacto" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Contacto SPICe Lab – Consultas sobre Análisis Geoquímicos y Proyectos" />
+    <meta property="og:description" content="¿Necesitas apoyo en análisis geoquímicos, preparación de muestras o diseño de proyectos? Envíanos tu consulta. Te responderemos en 48 horas hábiles." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    <meta property="og:url" content="https://spicelab.cl/es/contacto" />
+    <meta property="og:site_name" content="SPICe Lab" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contacto SPICe Lab – Consultas sobre Análisis Geoquímicos" />
+    <meta name="twitter:description" content="Formulario de contacto para consultas sobre servicios de laboratorio, análisis isotópicos y diseño de proyectos geoquímicos. Horario L-V 9:00-18:00 hrs." />
+    <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
+    
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/pages/contact.css" />
 </head>
-
 <body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrap">
+                <div class="logo-wrap">
+                    <a class="logo-link" href="/es/">
+                        <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icono">
+                    </a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="/es/">Inicio</a>
+                    <a href="/es/acerca-de/">Acerca de</a>
+                    <a href="/es/equipo/">Equipo</a>
+                    <a href="/es/servicios/">Servicios</a>
+                    <a href="/es/proyectos/">Proyectos</a>
+                    <a href="/es/muestras/">Muestras</a>
+                    <a href="/es/contacto/">Contacto</a>
+                </div>
+            </div>
 
-<header>
-  <nav>
-    <button class="menu-toggle" aria-label="Mostrar u ocultar menú">☰</button>
+            <span class="lang-switch-desktop">
+                <a href="/contact/">EN</a> | ES
+            </span>
 
-    <div class="nav-links">
-  <a href="/es/">Inicio</a>
-  <a href="/es/acerca-de/">Acerca de</a>
-  <a href="/es/equipo/">Equipo</a>
-  <a href="/es/servicios/">Servicios</a>
-  <a href="/es/proyectos/">Proyectos</a>
-  <a href="/es/muestras/">Muestras</a>
-  <a href="/es/contacto/">Contacto</a>
-</div>
+            <div class="menu-button-wrap">
+                <span class="lang-switch-mobile">
+                    <a href="/contact/">EN</a> | ES
+                </span>
 
-    <span class="lang-switch">
-      <a href="/contact/">EN</a> | ES
-    </span>
-  </nav>
-</header>
+                <button id="mobile-menu-button" class="mobile-menu-button">
+                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
 
-<main>
-  <div class="hero">
-    <h1>Contacto SPICe Lab</h1>
-    <p class="hero-subtitle">Estamos aquí para apoyar tus análisis geoquímicos.</p>
-    <p>
-      Si necesitas apoyo en diseño de proyectos, preparación de muestras, muestreo en terreno o interpretación de datos,
-      puedes escribirnos con confianza. Responderemos lo antes posible para ayudarte a definir el mejor camino para tu proyecto.
-    </p>
-  </div>
+        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+            <nav class="mobile-menu-nav">
+                <a href="/es/" class="menu-link">Inicio</a>
+                <a href="/es/acerca-de/" class="menu-link">Acerca de</a>
+                <a href="/es/equipo/" class="menu-link">Equipo</a>
+                <a href="/es/servicios/" class="menu-link">Servicios</a>
+                <a href="/es/proyectos/" class="menu-link">Proyectos</a>
+                <a href="/es/muestras/" class="menu-link">Muestras</a>
+                <a href="/es/contacto/" class="menu-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-  <h2>Envíanos un mensaje</h2>
-  <p>Incluye los detalles relevantes de tu consulta o proyecto para que podamos ayudarte mejor.</p>
+    <main class="contact-page">
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <span class="contact-hero-label">Soporte y Consultas</span>
+                <h1>Contacto SPICe Lab</h1>
+                <p class="contact-subtitle">Estamos aquí para apoyar tus análisis geoquímicos.</p>
+                <div class="contact-intro">
+                    <p>
+                        Si necesitas apoyo en diseño de proyectos, preparación de muestras, muestreo en terreno o interpretación de datos,
+                        puedes escribirnos con confianza. Responderemos lo antes posible para ayudarte a definir el mejor camino para tu proyecto.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <form name="contacto" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="contacto" />
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-form-section">
+                    <h2>Envíanos un mensaje</h2>
+                    <p class="form-intro">Incluye los detalles relevantes de tu consulta o proyecto para que podamos ayudarte mejor.</p>
 
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" required />
+                    <form name="contacto" method="POST" data-netlify="true" class="contact-form">
+                        <input type="hidden" name="form-name" value="contacto" />
 
-    <label for="correo">Correo electrónico</label>
-    <input type="email" id="correo" name="correo" required />
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+                        </div>
 
-    <label for="mensaje">Mensaje</label>
-    <textarea id="mensaje" name="mensaje" required></textarea>
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" required placeholder="tu@email.com" />
+                        </div>
 
-    <button type="submit" class="button">Enviar mensaje</button>
-  </form>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" required placeholder="Describe tu consulta o proyecto..." rows="6"></textarea>
+                        </div>
 
-  <h2>Otros medios de contacto</h2>
-  <p>Email: <strong>msalassaavedra.e@gmail.com</strong></p>
+                        <button type="submit" class="button button-primary">Enviar mensaje</button>
+                    </form>
+                </div>
 
-</main>
+                <div class="contact-info-section">
+                    <h2>Otros medios de contacto</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <a href="mailto:contact@spicelab.cl"rel="noopener noreferrer" target="_blank"><strong>contact@spicelab.cl</strong></a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>Respuesta</h3>
+                            <p>Te responderemos en un plazo máximo de 48 horas hábiles.</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>Horario de atención</h3>
+                            <p>Lunes a Viernes<br>9:00 - 18:00 hrs</p>
+                        </div>
 
-<footer>
-  <p>© 2025 South Pacific Isotope Centre — SPICe Lab</p>
-</footer>
+                        
+                        <div class="contact-item">
+                            <h3>LinkedIn</h3>
+                            <p>
+                                <a href="https://www.linkedin.com/company/south-pacific-isotope-centre/?viewAsMember=true" target="_blank">
+                                    Centro de Isótopos del Pacífico Sur
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<script src="/assets/js/main.js"></script>
+    <footer>
+        <p>&copy; 2025 South Pacific Isotope Centre — SPICe Lab</p>
+    </footer>
 
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
