@@ -392,6 +392,22 @@
   window.addEventListener('resize', () => {
     ScrollTrigger.refresh();
   });
+    <!-- n8n Chat widget (Victor) -->
+<script type="module">
+  import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat";
+
+  createChat({
+    webhookUrl: "https://spicelabcl.app.n8n.cloud/webhook/fef5c5fe-490a-432f-b7f0-fece3061c4f7/chat",
+    mode: "window",
+    title: "Victor – SPICe Lab Assistant",
+    initialMessages: [
+      "Hello 👋",
+      "My name is Victor, the AI assistant of SPICe Lab. How can I help you today?"
+    ],
+    inputPlaceholder: "Ask about SPICe Lab services, samples, or projects…",
+    showFooter: false
+  });
 </script>
+    
 </body>
 </html>
