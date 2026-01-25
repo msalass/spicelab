@@ -33,6 +33,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/pages/home.css" />
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -395,16 +399,6 @@
         window.addEventListener('resize', () => {
             ScrollTrigger.refresh();
         });
-    </script>
-
-    <!-- n8n Chat widget (Victor) -->
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-    <script type="module">
-      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
-
-      createChat({
-        webhookUrl: 'https://spicelabcl.app.n8n.cloud/webhook/fef5c5fe-490a-432f-b7f0-fece3061c4f7/chat',
-      });
     </script>
 </body>
 </html>
