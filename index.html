@@ -36,9 +36,6 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/index.css" />
     <link rel="stylesheet" href="/assets/css/pages/home.css" />
-    
-    <!-- n8n Chat Widget Styles -->
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -353,41 +350,6 @@
     </footer>
 
     <script src="/assets/js/main.js"></script>
-
-    <!-- n8n Chat Widget -->
-    <script type="module">
-        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-        try {
-            createChat({
-                webhookUrl: 'https://spicelabcl.app.n8n.cloud/webhook/fef5c5fe-490a-432f-b7f0-fece3061c4f7/chat',
-                mode: 'window',
-                chatInputKey: 'chatInput',
-                chatSessionKey: 'sessionId',
-                defaultLanguage: 'en',
-                showWelcomeScreen: true,
-                metadata: {
-                    sessionId: 'session-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9)
-                },
-                initialMessages: [
-                    'Hello! I\'m Victor, SPICe Lab\'s AI assistant.',
-                    'How can I help you today?'
-                ],
-                i18n: {
-                    en: {
-                        title: 'Victor - SPICe Lab',
-                        subtitle: 'Geochemistry Assistant',
-                        footer: '',
-                        getStarted: 'New Conversation',
-                        inputPlaceholder: 'Type your message...',
-                    }
-                }
-            });
-            console.log('Chat widget initialized successfully');
-        } catch (error) {
-            console.error('Error initializing chat widget:', error);
-        }
-    </script>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
