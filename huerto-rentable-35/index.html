@@ -389,12 +389,35 @@
           Completa este formulario y te contactaremos dentro de 24 horas hábiles.
         </p>
 
-        <div class="hr35-form-card">
-          <div class="hr35-form-placeholder">
-            <p><strong>Formulario de postulación (placeholder)</strong></p>
-            <p>Aquí puedes incrustar Tally, Typeform o conectar un formulario HTML real.</p>
-            <p><em>Ejemplo recomendado:</em> Tally embebido con preguntas de pre-calificación.</p>
-          </div>
+        <iframe
+  data-tally-src="https://tally.so/r/9q1kvp"
+  loading="lazy"
+  width="100%"
+  height="700"
+  frameborder="0"
+  marginheight="0"
+  marginwidth="0"
+  title="Postulación Programa Huerto Rentable 35">
+</iframe>
+
+<script>
+  var d = document, w = "https://tally.so/widgets/embed.js", v = function() {
+    if (typeof Tally !== "undefined") { Tally.loadEmbeds(); }
+    else {
+      d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
+        e.src = e.dataset.tallySrc;
+      });
+    }
+  };
+  if (typeof Tally !== "undefined") v();
+  else if (d.querySelector('script[src="' + w + '"]') == null) {
+    var s = d.createElement("script");
+    s.src = w;
+    s.onload = v;
+    s.onerror = v;
+    d.body.appendChild(s);
+  }
+</script>
         </div>
       </div>
     </section>
@@ -412,7 +435,7 @@
 
         <div class="hero-buttons">
           <a href="#postular" class="button primary">Postular ahora</a>
-          <a href="https://wa.me/56900000000?text=Hola%20SPICe%20Lab,%20quiero%20postular%20al%20Programa%20Huerto%20Rentable%2035" class="button secondary" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+          <a href="https://wa.me/56971540665?text=Hola%20SPICe%20Lab,%20quiero%20postular%20al%20Programa%20Huerto%20Rentable%2035" class="button secondary" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
         </div>
       </div>
     </section>
