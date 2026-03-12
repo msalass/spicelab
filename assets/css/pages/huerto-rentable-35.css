@@ -231,3 +231,48 @@
     font-size: 0.95rem;
   }
 }
+/* ===== MEJORA 1: HERO CON IMAGEN ===== */
+
+.hr35-hero-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hr35-hero-text {
+  min-width: 0;
+}
+
+.hr35-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hr35-hero-image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 900px) {
+  .hr35-hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hr35-hero-visual {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .hr35-hero-image {
+    max-width: 100%;
+  }
+}
