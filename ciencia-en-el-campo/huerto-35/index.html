@@ -39,55 +39,69 @@
 <body>
   <header>
     <nav class="main-nav">
-      <div class="nav-wrap">
-        <div class="logo-wrap">
-          <a class="logo-link" href="/es/">
-            <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icono">
-          </a>
-        </div>
-                
-                <div class="nav-links">
-                    <a href="/">Inicio</a>
-                    <a href="/acerca-de/">Acerca de</a>
-                    <a href="/equipo/">Equipo</a>
-                    <a href="/servicios/">Servicios</a>
-                    <a href="/huerto-rentable-35/">Ciencia Aplicada al Campo</a>
-                    <a href="/proyectos/">Proyectos</a>
-                    <a href="/muestras/">Muestras</a>
-                    <a href="/contacto/">Contacto</a>
-                </div>
+        <div class="nav-wrap">
+            <div class="logo-wrap">
+                <a class="logo-link" href="/">
+                    <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icono">
+                </a>
             </div>
 
-            <span class="lang-switch-desktop">
+            <div class="nav-links">
+                <a href="/">Inicio</a>
+                <a href="/acerca-de/">Acerca de</a>
+                <a href="/equipo/">Equipo</a>
+                <a href="/servicios/">Servicios</a>
+
+                <!-- Dropdown Ciencia Aplicada al Campo -->
+                <div class="nav-dropdown">
+                    <a href="/ciencia-en-el-campo/" class="nav-dropdown-toggle">Ciencia Aplicada al Campo</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="/ciencia-en-el-campo/servicios-ag/">Servicios Agrícolas</a>
+                        <a href="/ciencia-en-el-campo/huerto-35/">Huerto Rentable 35</a>
+                    </div>
+                </div>
+
+                <a href="/proyectos/">Proyectos</a>
+                <a href="/muestras/">Muestras</a>
+                <a href="/contacto/">Contacto</a>
+            </div>
+        </div>
+
+        <span class="lang-switch-desktop">
+            ES | <a href="/en/">EN</a>
+        </span>
+
+        <div class="menu-button-wrap">
+            <span class="lang-switch-mobile">
                 ES | <a href="/en/">EN</a>
             </span>
 
-            <div class="menu-button-wrap">
-                <span class="lang-switch-mobile">
-                    ES | <a href="/en/">EN</a>
-                </span>
-
-                <button id="mobile-menu-button" class="mobile-menu-button">
-                    <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
-
-        <div id="mobile-menu" class="mobile-menu-container max-h-0">
-            <nav class="mobile-menu-nav">
-                <a href="/" class="menu-link">Inicio</a>
-                <a href="/acerca-de/" class="menu-link">Acerca de</a>
-                <a href="/equipo/" class="menu-link">Equipo</a>
-                <a href="/servicios/" class="menu-link">Servicios</a>
-                <a href="/huerto-rentable-35/" class="menu-link">Ciencia Aplicada al Campo</a>
-                <a href="/proyectos/" class="menu-link">Proyectos</a>
-                <a href="/muestras/" class="menu-link">Muestras</a>
-                <a href="/contacto/" class="menu-link">Contacto</a>
-            </nav>
+            <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Abrir menú">
+                <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
-  </header>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="mobile-menu-container">
+        <nav class="mobile-menu-nav">
+            <a href="/" class="menu-link">Inicio</a>
+            <a href="/acerca-de/" class="menu-link">Acerca de</a>
+            <a href="/equipo/" class="menu-link">Equipo</a>
+            <a href="/servicios/" class="menu-link">Servicios</a>
+
+            <a href="/ciencia-en-el-campo/" class="menu-link">Ciencia Aplicada al Campo</a>
+            <a href="/ciencia-en-el-campo/servicios-ag/" class="menu-link menu-sublink">Servicios Agrícolas</a>
+            <a href="/ciencia-en-el-campo/huerto-35/" class="menu-link menu-sublink">Huerto Rentable 35</a>
+
+            <a href="/proyectos/" class="menu-link">Proyectos</a>
+            <a href="/muestras/" class="menu-link">Muestras</a>
+            <a href="/contacto/" class="menu-link">Contacto</a>
+        </nav>
+    </div>
+</header>
 
   <main>
     <!-- HERO -->
