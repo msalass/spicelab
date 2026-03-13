@@ -12,10 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenuButton.addEventListener("click", function () {
       isMenuOpen = !isMenuOpen;
 
-      // Mostrar / ocultar menú
       mobileMenu.classList.toggle("is-open");
 
-      // Cambiar icono hamburguesa <-> X
       if (menuIcon) {
         if (isMenuOpen) {
           menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12");
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Cerrar menú al hacer click en un link
     const menuLinks = document.querySelectorAll(".menu-link");
     menuLinks.forEach((link) => {
       link.addEventListener("click", function () {
