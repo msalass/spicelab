@@ -9,14 +9,14 @@
     <meta name="keywords" content="ciencia aplicada al campo, huerto rentable, invernadero, pequeños productores, agricultura aplicada, SPICe Lab, Chile">
     <meta name="author" content="SPICe Lab" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://spicelab.cl/ciencia-aplicada-campo/" />
+    <link rel="canonical" href="https://spicelab.cl/ciencia-en-el-campo/" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Ciencia Aplicada al Campo | SPICe Lab" />
     <meta property="og:description" content="Programas prácticos para transformar pequeños espacios en sistemas productivos más rentables, ordenados y sostenibles." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
-    <meta property="og:url" content="https://spicelab.cl/ciencia-aplicada-campo/" />
+    <meta property="og:url" content="https://spicelab.cl/ciencia-en-el-campo/" />
     <meta property="og:site_name" content="SPICe Lab" />
     <meta property="og:locale" content="es_ES" />
 
@@ -46,8 +46,16 @@
                     <a href="/acerca-de/">Acerca de</a>
                     <a href="/equipo/">Equipo</a>
                     <a href="/servicios/">Servicios</a>
-                    <a href="/servicios agricolas/">Servicios Ag</a>
-                    <a href="/huerto-rentable-35/">Ciencia Aplicada al Campo</a>
+
+                    <!-- Dropdown Ciencia Aplicada al Campo -->
+                    <div class="nav-dropdown">
+                        <a href="/ciencia-en-el-campo/" class="nav-dropdown-toggle">Ciencia Aplicada al Campo</a>
+                        <div class="nav-dropdown-menu">
+                            <a href="/ciencia-en-el-campo/servicios-ag/">Servicios Agrícolas</a>
+                            <a href="/ciencia-en-el-campo/huerto-35/">Huerto Rentable 35</a>
+                        </div>
+                    </div>
+
                     <a href="/proyectos/">Proyectos</a>
                     <a href="/muestras/">Muestras</a>
                     <a href="/contacto/">Contacto</a>
@@ -63,7 +71,7 @@
                     ES | <a href="/en/">EN</a>
                 </span>
 
-                <button id="mobile-menu-button" class="mobile-menu-button">
+                <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Abrir menú">
                     <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -71,14 +79,18 @@
             </div>
         </nav>
 
-        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="mobile-menu-container">
             <nav class="mobile-menu-nav">
                 <a href="/" class="menu-link">Inicio</a>
                 <a href="/acerca-de/" class="menu-link">Acerca de</a>
                 <a href="/equipo/" class="menu-link">Equipo</a>
                 <a href="/servicios/" class="menu-link">Servicios</a>
-                <a href="/servicios agricolas/" class="menu-link">Servicios Ag</a>
-                <a href="/huerto-rentable-35/" class="menu-link">Ciencia Aplicada al Campo</a>
+
+                <a href="/ciencia-en-el-campo/" class="menu-link">Ciencia Aplicada al Campo</a>
+                <a href="/ciencia-en-el-campo/servicios-ag/" class="menu-link menu-sublink">Servicios Agrícolas</a>
+                <a href="/ciencia-en-el-campo/huerto-35/" class="menu-link menu-sublink">Huerto Rentable 35</a>
+
                 <a href="/proyectos/" class="menu-link">Proyectos</a>
                 <a href="/muestras/" class="menu-link">Muestras</a>
                 <a href="/contacto/" class="menu-link">Contacto</a>
@@ -163,7 +175,7 @@
                         </div>
 
                         <div class="campo-card-actions">
-                            <a href="/huerto-rentable-35/" class="button campo-primary">Ver Huerto Rentable 35</a>
+                            <a href="/ciencia-en-el-campo/huerto-35/" class="button campo-primary">Ver Huerto Rentable 35</a>
                         </div>
                     </article>
 
@@ -266,7 +278,7 @@
                     Podemos ayudarte a evaluar tu espacio, tus objetivos y cuál de estos programas tiene más sentido para tu etapa actual.
                 </p>
                 <div class="campo-hero-actions campo-center-actions">
-                    <a href="/huerto-rentable-35/" class="button campo-primary">Ver Huerto Rentable 35</a>
+                    <a href="/ciencia-en-el-campo/huerto-35/" class="button campo-primary">Ver Huerto Rentable 35</a>
                     <a href="/contacto/" class="button campo-secondary campo-secondary-dark">Contactar a SPICe Lab</a>
                 </div>
             </div>
