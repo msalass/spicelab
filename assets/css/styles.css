@@ -309,3 +309,11 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* Active nav item */
+.nav-links a.active,
+.nav-dropdown-toggle.active,
+.mobile-menu-nav a.active {
+  color: #0071e3;
+  font-weight: 600;
+}
