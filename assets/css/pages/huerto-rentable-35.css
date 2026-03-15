@@ -816,10 +816,10 @@ main {
   background: #fff;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
   transition:
-    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.65s ease,
-    filter 0.65s ease,
-    box-shadow 0.65s ease;
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1s ease,
+    filter 1s ease,
+    box-shadow 1s ease;
   opacity: 0;
   pointer-events: none;
 }
