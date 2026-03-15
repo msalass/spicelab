@@ -1024,12 +1024,13 @@ main {
 }
 
 .hr35-hero-kicker-centered {
-  max-width: 760px;
-  margin: 0 auto 1rem;
-  color: #7a2e1f;
-  font-size: 1.05rem;
-  font-weight: 700;
-  line-height: 1.55;
+  max-width: 820px;
+  margin: 0 auto 1.15rem;
+  color: #111111;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
 }
 
 .hr35-hero-title-centered {
@@ -1124,3 +1125,4 @@ main {
     max-width: 100%;
   }
 }
+
