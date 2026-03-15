@@ -176,6 +176,47 @@
       </div>
     </section>
 
+    <!-- GALERÍA / CARRUSEL -->
+<section class="hr35-section hr35-gallery-section">
+  <div class="hr35-container">
+    <h2 class="section-title">Mira el tipo de implementación que buscamos</h2>
+    <p class="section-intro">
+      Un sistema pensado para comenzar con orden, funcionalidad y una base real para producir mejor.
+    </p>
+
+    <div class="hr35-carousel" aria-label="Galería visual del Programa Huerto Rentable 35">
+      <button class="hr35-carousel-btn prev" type="button" aria-label="Imagen anterior">‹</button>
+
+      <div class="hr35-carousel-track-wrap">
+        <div class="hr35-carousel-track">
+          <div class="hr35-carousel-slide">
+            <img src="/assets/images/hr35-01.jpeg" alt="Vista de invernadero y espacio productivo 1">
+          </div>
+          <div class="hr35-carousel-slide">
+            <img src="/assets/images/hr35-02.jpeg" alt="Vista de invernadero y espacio productivo 2">
+          </div>
+          <div class="hr35-carousel-slide">
+            <img src="/assets/images/hr35-03.jpeg" alt="Vista de invernadero y espacio productivo 3">
+          </div>
+          <div class="hr35-carousel-slide">
+            <img src="/assets/images/hr35-04.jpeg" alt="Vista de invernadero y espacio productivo 4">
+          </div>
+          <div class="hr35-carousel-slide">
+            <img src="/assets/images/hr35-05.jpeg" alt="Vista de invernadero y espacio productivo 5">
+          </div>
+          <div class="hr35-carousel-slide">
+            <img src="/assets/images/hr35-06.jpeg" alt="Vista de invernadero y espacio productivo 6">
+          </div>
+        </div>
+      </div>
+
+      <button class="hr35-carousel-btn next" type="button" aria-label="Siguiente imagen">›</button>
+    </div>
+
+    <div class="hr35-carousel-dots" aria-label="Navegación del carrusel"></div>
+  </div>
+</section>
+    
     <!-- PARA QUIÉN ES -->
     <section class="clients-section hr35-section">
       <div class="clients-content">
@@ -395,7 +436,7 @@
       </div>
     </section>
 
-    <!-- FORMULARIO -->
+        <!-- FORMULARIO -->
     <section id="postular" class="hr35-section hr35-form-section">
       <div class="hr35-container">
         <h2 class="section-title">Postula al Programa Huerto Rentable 35</h2>
@@ -404,35 +445,34 @@
         </p>
 
         <iframe
-  data-tally-src="https://tally.so/r/9q1kvp"
-  loading="lazy"
-  width="100%"
-  height="700"
-  frameborder="0"
-  marginheight="0"
-  marginwidth="0"
-  title="Postulación Programa Huerto Rentable 35">
-</iframe>
+          data-tally-src="https://tally.so/r/9q1kvp"
+          loading="lazy"
+          width="100%"
+          height="700"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Postulación Programa Huerto Rentable 35">
+        </iframe>
 
-<script>
-  var d = document, w = "https://tally.so/widgets/embed.js", v = function() {
-    if (typeof Tally !== "undefined") { Tally.loadEmbeds(); }
-    else {
-      d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
-        e.src = e.dataset.tallySrc;
-      });
-    }
-  };
-  if (typeof Tally !== "undefined") v();
-  else if (d.querySelector('script[src="' + w + '"]') == null) {
-    var s = d.createElement("script");
-    s.src = w;
-    s.onload = v;
-    s.onerror = v;
-    d.body.appendChild(s);
-  }
-</script>
-        </div>
+        <script>
+          var d = document, w = "https://tally.so/widgets/embed.js", v = function() {
+            if (typeof Tally !== "undefined") { Tally.loadEmbeds(); }
+            else {
+              d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
+                e.src = e.dataset.tallySrc;
+              });
+            }
+          };
+          if (typeof Tally !== "undefined") v();
+          else if (d.querySelector('script[src="' + w + '"]') == null) {
+            var s = d.createElement("script");
+            s.src = w;
+            s.onload = v;
+            s.onerror = v;
+            d.body.appendChild(s);
+          }
+        </script>
       </div>
     </section>
 
@@ -460,5 +500,115 @@
   </footer>
 
   <script src="/assets/js/main.js"></script>
+
+<script>
+  (function () {
+    const carousel = document.querySelector(".hr35-carousel");
+    if (!carousel) return;
+
+    const track = carousel.querySelector(".hr35-carousel-track");
+    const slides = Array.from(track.querySelectorAll(".hr35-carousel-slide"));
+    const prevBtn = carousel.querySelector(".hr35-carousel-btn.prev");
+    const nextBtn = carousel.querySelector(".hr35-carousel-btn.next");
+    const dotsWrap = document.querySelector(".hr35-carousel-dots");
+
+    let current = 0;
+    let autoplay;
+
+    function normalize(index) {
+      return (index + slides.length) % slides.length;
+    }
+
+    function buildDots() {
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.className = "hr35-carousel-dot";
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Ir a imagen " + (i + 1));
+        dot.addEventListener("click", () => {
+          current = i;
+          render();
+          restartAutoplay();
+        });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function render() {
+      slides.forEach((slide, i) => {
+        slide.className = "hr35-carousel-slide is-hidden";
+
+        if (i === current) slide.className = "hr35-carousel-slide is-active";
+        else if (i === normalize(current - 1)) slide.className = "hr35-carousel-slide is-prev";
+        else if (i === normalize(current + 1)) slide.className = "hr35-carousel-slide is-next";
+        else if (i === normalize(current - 2)) slide.className = "hr35-carousel-slide is-prev-2";
+        else if (i === normalize(current + 2)) slide.className = "hr35-carousel-slide is-next-2";
+      });
+
+      const dots = Array.from(dotsWrap.querySelectorAll(".hr35-carousel-dot"));
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === current);
+      });
+    }
+
+    function next() {
+      current = normalize(current + 1);
+      render();
+    }
+
+    function prev() {
+      current = normalize(current - 1);
+      render();
+    }
+
+    function startAutoplay() {
+      autoplay = setInterval(next, 3500);
+    }
+
+    function stopAutoplay() {
+      clearInterval(autoplay);
+    }
+
+    function restartAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    prevBtn.addEventListener("click", () => {
+      prev();
+      restartAutoplay();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      next();
+      restartAutoplay();
+    });
+
+    carousel.addEventListener("mouseenter", stopAutoplay);
+    carousel.addEventListener("mouseleave", startAutoplay);
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+
+    carousel.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].clientX;
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) next();
+        else prev();
+        restartAutoplay();
+      }
+    }, { passive: true });
+
+    buildDots();
+    render();
+    startAutoplay();
+  })();
+</script>
 </body>
 </html>
