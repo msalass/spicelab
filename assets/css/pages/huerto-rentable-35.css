@@ -1255,3 +1255,600 @@ main {
     font-size: 0.92rem;
   }
 }
+/* =========================================================
+   HR35 COMPACT PATCH
+   Pegar al FINAL de /assets/css/pages/huerto-rentable-35.css
+   Objetivo: compactar la landing sin romper el estilo
+========================================================= */
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+
+.hr35-section {
+  padding: 3.6rem 1.5rem;
+}
+
+.clients-section,
+.cards-scroll-container,
+.focus-areas,
+.process-section,
+.cta-section.hr35-pricing,
+.hr35-guarantee-section,
+.hr35-faq-section,
+.hr35-form-section,
+.cta-section.hr35-section:not(.hr35-pricing) {
+  padding-top: 3.6rem;
+  padding-bottom: 3.6rem;
+}
+
+/* =========================
+   HERO MÁS COMPACTO
+========================= */
+
+.hr35-hero,
+.hr35-hero-centered {
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
+}
+
+.badge {
+  margin-bottom: 0.75rem;
+}
+
+.hr35-hero-kicker-centered {
+  margin-bottom: 0.85rem;
+}
+
+.hr35-hero-title-centered {
+  margin-bottom: 0.9rem;
+  line-height: 1.08;
+}
+
+.hr35-hero-subtitle-centered {
+  margin-bottom: 1.35rem;
+}
+
+.hr35-hero-visual-centered {
+  margin-bottom: 1.35rem;
+}
+
+.hr35-hero-image {
+  max-width: 660px;
+}
+
+.hr35-hero-focus-centered {
+  margin: 1.15rem auto 0.35rem;
+  gap: 0.55rem;
+}
+
+.hr35-focus-item {
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+.hero-buttons {
+  margin-top: 1.15rem;
+  gap: 0.75rem;
+}
+
+.hr35-microtrust {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  gap: 0.35rem 0.6rem;
+}
+
+.hr35-offer-strip {
+  margin-top: 0.8rem;
+}
+
+.hr35-offer-pill {
+  padding: 0.75rem 0.9rem;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+/* =========================
+   TITULOS Y TEXTOS
+========================= */
+
+.hr35-section .section-title,
+.hr35-pricing .section-title,
+.hr35-guarantee-section .section-title,
+.hr35-faq-section .section-title,
+.hr35-form-section .section-title {
+  margin: 0 0 0.75rem 0;
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  line-height: 1.12;
+}
+
+.hr35-section .section-intro,
+.hr35-pricing .section-intro,
+.hr35-guarantee-section .section-intro,
+.hr35-faq-section .section-intro,
+.hr35-form-section .section-intro {
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 760px;
+}
+
+/* =========================
+   PRECIO MÁS CERRADO
+========================= */
+
+.hr35-price-box {
+  margin: 1.35rem auto 1.15rem;
+  padding: 1.2rem;
+}
+
+.hr35-price {
+  font-size: clamp(1.45rem, 2.8vw, 2.1rem);
+}
+
+.hr35-price-note {
+  margin-top: 0.55rem;
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.hr35-price-urgency {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.hr35-stack {
+  gap: 0.55rem;
+  margin: 1.2rem auto 1.15rem;
+}
+
+.hr35-stack-item {
+  padding: 0.7rem 0.85rem;
+  font-size: 0.94rem;
+}
+
+.hr35-pricing .cta-text {
+  margin-top: 0.95rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   CARDS / QUE INCLUYE
+========================= */
+
+.cards-grid {
+  gap: 1.1rem;
+}
+
+.hr35-cards-content .card,
+.cards-grid .card {
+  padding: 1.35rem;
+  border-radius: 20px;
+}
+
+.card-title {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+.card-text {
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+/* =========================
+   BONUS ANTES DEL FORMULARIO
+========================= */
+
+.hr35-bonus-lead-section {
+  padding-top: 0.75rem;
+  padding-bottom: 2.4rem;
+}
+
+.hr35-bonus-lead-card {
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 18px;
+}
+
+.hr35-bonus-lead-media img {
+  max-width: 180px;
+}
+
+.hr35-bonus-lead-content .section-title {
+  margin-bottom: 0.7rem;
+  text-align: left;
+}
+
+.hr35-bonus-lead-content .section-intro {
+  margin: 0 0 0.85rem 0;
+  text-align: left;
+}
+
+.hr35-bonus-points {
+  gap: 0.45rem;
+  margin: 0.8rem 0 1rem;
+}
+
+.hr35-bonus-point {
+  font-size: 0.94rem;
+}
+
+.hr35-bonus-urgency {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =========================
+   FORMULARIO MÁS ARRIBA Y LIMPIO
+========================= */
+
+.hr35-form-section {
+  padding-top: 2.8rem;
+  padding-bottom: 3.6rem;
+}
+
+.hr35-form-section .section-intro {
+  margin-bottom: 1.35rem;
+}
+
+.hr35-form-section iframe {
+  border-radius: 18px;
+  min-height: 640px;
+}
+
+/* =========================
+   PARA QUIÉN / BONOS / FAQ
+========================= */
+
+.clients-grid,
+.focus-grid,
+.hr35-faq-grid {
+  gap: 1.1rem;
+}
+
+.client-category,
+.focus-card {
+  padding: 1.5rem;
+}
+
+.hr35-faq-item {
+  padding: 1.2rem;
+}
+
+.category-header h3,
+.focus-title,
+.hr35-faq-item h3 {
+  margin-bottom: 0.55rem;
+  font-size: 1.02rem;
+}
+
+.client-category p,
+.focus-text,
+.hr35-faq-item p {
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+/* =========================
+   PROCESO
+========================= */
+
+.timeline-steps {
+  gap: 0.9rem;
+}
+
+.step-card {
+  padding: 1.15rem 1.2rem;
+  gap: 1rem;
+  grid-template-columns: 64px 1fr;
+  border-radius: 18px;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  font-size: 0.92rem;
+  box-shadow: 0 0 0 6px rgba(0, 113, 227, 0.08);
+}
+
+.step-content {
+  padding-top: 0.15rem;
+}
+
+.step-content h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+}
+
+.step-content p {
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+/* =========================
+   GARANTÍA
+========================= */
+
+.hr35-guarantee-card {
+  padding: 1.5rem;
+  border-radius: 18px;
+}
+
+.hr35-guarantee-card h3 {
+  margin-bottom: 0.65rem;
+  font-size: 1.1rem;
+}
+
+.hr35-guarantee-card p {
+  line-height: 1.6;
+  font-size: 0.96rem;
+}
+
+/* =========================
+   GALERÍA MÁS COMPACTA
+========================= */
+
+.hr35-gallery-section {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+
+.hr35-carousel {
+  margin-top: 1.25rem;
+}
+
+.hr35-carousel-track-wrap {
+  padding: 14px 0;
+}
+
+.hr35-carousel-track {
+  height: 360px;
+}
+
+.hr35-carousel-slide {
+  width: min(58vw, 500px);
+  height: 290px;
+  border-radius: 20px;
+}
+
+.hr35-carousel-dots {
+  margin-top: 12px;
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+
+.cta-section.hr35-section:not(.hr35-pricing) .cta-text {
+  margin-top: 0.65rem;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.cta-section.hr35-section:not(.hr35-pricing) .hero-buttons {
+  margin-top: 1.1rem;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .hr35-section,
+  .clients-section,
+  .cards-scroll-container,
+  .focus-areas,
+  .process-section,
+  .cta-section.hr35-pricing,
+  .hr35-guarantee-section,
+  .hr35-faq-section,
+  .hr35-form-section,
+  .cta-section.hr35-section:not(.hr35-pricing),
+  .hr35-hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hr35-section,
+  .clients-section,
+  .cards-scroll-container,
+  .focus-areas,
+  .process-section,
+  .cta-section.hr35-pricing,
+  .hr35-guarantee-section,
+  .hr35-faq-section,
+  .hr35-form-section,
+  .cta-section.hr35-section:not(.hr35-pricing) {
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .hr35-hero,
+  .hr35-hero-centered {
+    padding-top: 2.8rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .hr35-hero-title-centered {
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.9rem, 8vw, 2.7rem);
+  }
+
+  .hr35-hero-kicker-centered {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .hr35-hero-subtitle-centered {
+    margin-bottom: 1rem;
+    font-size: 0.98rem;
+  }
+
+  .hr35-hero-visual-centered {
+    margin-bottom: 1rem;
+  }
+
+  .hr35-hero-image {
+    max-width: 100%;
+    border-radius: 18px;
+  }
+
+  .hr35-hero-focus-centered {
+    margin-top: 0.9rem;
+    gap: 0.45rem;
+  }
+
+  .hr35-focus-item {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.92rem;
+  }
+
+  .hero-buttons {
+    margin-top: 1rem;
+    gap: 0.6rem;
+  }
+
+  .button.primary,
+  .button.secondary {
+    min-height: 46px;
+    padding: 0.8rem 1.1rem;
+  }
+
+  .hr35-microtrust {
+    margin-top: 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  .hr35-offer-pill {
+    border-radius: 16px;
+    padding: 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .hr35-section .section-title,
+  .hr35-pricing .section-title,
+  .hr35-guarantee-section .section-title,
+  .hr35-faq-section .section-title,
+  .hr35-form-section .section-title {
+    font-size: clamp(1.55rem, 7vw, 2.1rem);
+  }
+
+  .hr35-section .section-intro,
+  .hr35-pricing .section-intro,
+  .hr35-guarantee-section .section-intro,
+  .hr35-faq-section .section-intro,
+  .hr35-form-section .section-intro {
+    margin-bottom: 1.4rem;
+    font-size: 0.95rem;
+  }
+
+  .hr35-bonus-lead-section {
+    padding-top: 0.4rem;
+    padding-bottom: 2rem;
+  }
+
+  .hr35-bonus-lead-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  .hr35-bonus-lead-content,
+  .hr35-bonus-lead-content .section-title,
+  .hr35-bonus-lead-content .section-intro {
+    text-align: center;
+  }
+
+  .hr35-bonus-lead-media img {
+    max-width: 150px;
+  }
+
+  .hr35-form-section {
+    padding-top: 2.2rem;
+  }
+
+  .hr35-form-section iframe {
+    min-height: 700px;
+  }
+
+  .step-card {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    padding: 1rem;
+  }
+
+  .step-number {
+    width: 44px;
+    height: 44px;
+  }
+
+  .hr35-carousel-track {
+    height: 300px;
+  }
+
+  .hr35-carousel-slide {
+    width: 88vw;
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hr35-section,
+  .clients-section,
+  .cards-scroll-container,
+  .focus-areas,
+  .process-section,
+  .cta-section.hr35-pricing,
+  .hr35-guarantee-section,
+  .hr35-faq-section,
+  .hr35-form-section,
+  .cta-section.hr35-section:not(.hr35-pricing) {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .hr35-hero,
+  .hr35-hero-centered {
+    padding-top: 2.4rem;
+    padding-bottom: 2rem;
+  }
+
+  .hr35-hero-title-centered {
+    font-size: clamp(1.75rem, 9vw, 2.3rem);
+    line-height: 1.1;
+  }
+
+  .hr35-hero-subtitle-centered,
+  .content-text,
+  .cta-section.hr35-section:not(.hr35-pricing) .cta-text,
+  .hr35-pricing .cta-text,
+  .hr35-section .section-intro {
+    font-size: 0.93rem;
+  }
+
+  .client-category,
+  .focus-card,
+  .cards-grid .card,
+  .hr35-faq-item,
+  .hr35-guarantee-card {
+    padding: 1.1rem;
+  }
+
+  .hr35-price-box {
+    padding: 1rem;
+  }
+
+  .hr35-stack-item {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .hr35-form-section iframe {
+    min-height: 760px;
+  }
+}
