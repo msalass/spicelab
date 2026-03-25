@@ -1125,4 +1125,133 @@ main {
     max-width: 100%;
   }
 }
+/* =========================
+   HUERTO 35 – Oferta / Bonus / Escasez
+========================= */
 
+.hr35-offer-strip {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hr35-offer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  background: rgba(31, 94, 255, 0.08);
+  border: 1px solid rgba(31, 94, 255, 0.18);
+  border-radius: 999px;
+  color: #1f2a44;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 780px;
+}
+
+.hr35-offer-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.hr35-price-urgency {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1f2a44;
+}
+
+/* Bonus antes del formulario */
+.hr35-bonus-lead-section {
+  padding-top: 0;
+}
+
+.hr35-bonus-lead-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: #f7f7f4;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.03);
+}
+
+.hr35-bonus-lead-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hr35-bonus-lead-media img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.hr35-bonus-lead-content {
+  text-align: left;
+}
+
+.hr35-bonus-lead-content .section-title {
+  margin-bottom: 1rem;
+}
+
+.hr35-bonus-lead-content .section-intro {
+  margin-bottom: 1rem;
+}
+
+.hr35-bonus-points {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.hr35-bonus-point {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #1f2a44;
+}
+
+.hr35-bonus-urgency {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1f2a44;
+}
+
+@media (max-width: 860px) {
+  .hr35-bonus-lead-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .hr35-bonus-lead-content {
+    text-align: center;
+  }
+
+  .hr35-offer-pill {
+    border-radius: 18px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hr35-bonus-lead-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hr35-bonus-lead-media img {
+    max-width: 170px;
+  }
+
+  .hr35-offer-pill {
+    font-size: 0.92rem;
+  }
+}
