@@ -1,0 +1,107 @@
+.thank-you-page {
+  padding: 2rem 1.5rem 4rem;
+}
+
+.thank-you-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.thank-you-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+}
+
+.thank-you-card h1 {
+  margin-bottom: 0.75rem;
+}
+
+.thank-you-card .hero-subtitle {
+  margin-bottom: 1rem;
+}
+
+.thank-you-card p {
+  max-width: 720px;
+  margin: 0 auto 1rem;
+  line-height: 1.7;
+}
+
+.thank-you-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thank-you-actions .button {
+  min-width: 220px;
+}
+
+.bonus-card {
+  background: #f7f7f4;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+}
+
+.bonus-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5c6b3d;
+  margin-bottom: 0.75rem;
+}
+
+.bonus-card h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #111111;
+}
+
+.bonus-card p {
+  max-width: 680px;
+  margin: 0 auto 1rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.bonus-actions {
+  margin-top: 1.75rem;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bonus-actions .button {
+  min-width: 220px;
+}
+
+@media (max-width: 640px) {
+  .thank-you-card,
+  .bonus-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .thank-you-actions,
+  .bonus-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .thank-you-actions .button,
+  .bonus-actions .button {
+    width: 100%;
+    min-width: unset;
+  }
+}
