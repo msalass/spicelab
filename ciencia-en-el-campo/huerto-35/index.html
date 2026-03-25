@@ -657,6 +657,15 @@
       buildDots();
       render();
       startAutoplay();
+            document.querySelectorAll(".hr35-collapse").forEach((detail) => {
+        detail.addEventListener("toggle", () => {
+          if (detail.open && detail.querySelector(".hr35-carousel")) {
+            setTimeout(() => {
+              render();
+            }, 80);
+          }
+        });
+      });
     })();
   </script>
 </body>
