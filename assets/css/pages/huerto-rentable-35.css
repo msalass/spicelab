@@ -1852,3 +1852,96 @@ main {
     min-height: 760px;
   }
 }
+/* =========================================================
+   HR35 COLLAPSIBLE / ADS-FIRST PATCH
+   Pegar al FINAL del CSS
+========================================================= */
+
+/* Formulario más premium */
+.hr35-form-card {
+  max-width: 960px;
+  margin: 1.4rem auto 0;
+  padding: 0.9rem;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.94);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.hr35-form-card iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+/* Bloque de secciones colapsables */
+.hr35-collapsible-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8faf9 100%);
+  padding-top: 2.8rem;
+  padding-bottom: 3.4rem;
+}
+
+.hr35-collapse {
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.03);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.hr35-collapse:last-child {
+  margin-bottom: 0;
+}
+
+.hr35-collapse-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1.15rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  user-select: none;
+}
+
+.hr35-collapse-summary::-webkit-details-marker {
+  display: none;
+}
+
+.hr35-collapse-summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--primary);
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.hr35-collapse[open] .hr35-collapse-summary::after {
+  content: "−";
+}
+
+.hr35-collapse[open] .hr35-collapse-summary {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.hr35-collapse-content {
+  padding: 1rem 1.15rem 1.15rem;
+}
+
+.hr35-collapse-intro {
+  margin-bottom: 1rem !important;
+  text-align: center;
+}
+
+/* Ajustes internos cuando están colapsados */
+.hr35-collapsible-section .clients-grid,
+.hr35-collapsible-section .focus-grid,
+.hr35-collapsible-section .hr35-f
