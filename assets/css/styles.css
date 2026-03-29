@@ -317,3 +317,8 @@ footer {
   color: #0071e3;
   font-weight: 600;
 }
+.hr35-strike {
+  text-decoration: line-through;
+  opacity: 0.65;
+  margin-right: 0.25rem;
+}
