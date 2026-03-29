@@ -1945,3 +1945,10 @@ main {
 .hr35-collapsible-section .clients-grid,
 .hr35-collapsible-section .focus-grid,
 .hr35-collapsible-section .hr35-f
+
+.hr35-strike {
+  text-decoration: line-through;
+  opacity: 0.55;
+  font-weight: 500;
+  margin-right: 0.28rem;
+}
