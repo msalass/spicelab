@@ -331,3 +331,10 @@
     border-radius: 24px;
   }
 }
+
+.hr35-strike {
+  text-decoration: line-through;
+  opacity: 0.55;
+  font-weight: 500;
+  margin-right: 0.28rem;
+}
