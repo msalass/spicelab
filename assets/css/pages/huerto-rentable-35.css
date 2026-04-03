@@ -1909,6 +1909,7 @@ main {
   justify-content: space-between;
   gap: 1rem;
   user-select: none;
+  text-decoration: none !important;
 }
 
 .hr35-collapse-summary::-webkit-details-marker {
@@ -1934,17 +1935,39 @@ main {
 
 .hr35-collapse-content {
   padding: 1rem 1.15rem 1.15rem;
+  text-decoration: none !important;
 }
 
 .hr35-collapse-intro {
   margin-bottom: 1rem !important;
   text-align: center;
+  text-decoration: none !important;
 }
 
 /* Ajustes internos cuando están colapsados */
 .hr35-collapsible-section .clients-grid,
 .hr35-collapsible-section .focus-grid,
-.hr35-collapsible-section .hr35-f
+.hr35-collapsible-section .hr35-faq-grid {
+  gap: 1rem;
+}
+
+.hr35-collapsible-section .client-category,
+.hr35-collapsible-section .focus-card,
+.hr35-collapsible-section .hr35-faq-item {
+  padding: 1.2rem;
+}
+
+.hr35-collapsible-section .section-title,
+.hr35-collapsible-section .section-intro,
+.hr35-collapse-summary,
+.hr35-collapse-content,
+.hr35-collapse-content h3,
+.hr35-collapse-content p,
+.hr35-collapse-content li,
+.hr35-collapse-content span,
+.hr35-collapse-content div {
+  text-decoration: none !important;
+}
 
 .hr35-strike {
   text-decoration: line-through;
