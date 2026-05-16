@@ -13,5 +13,13 @@
 /es/muestras /es/muestras/ 301
 /es/contacto /es/contacto/ 301
 
+# ✅ FIX: /nosotros was linked in nav and returning 404
+/nosotros /acerca-de/ 301
+/nosotros/ /acerca-de/ 301
+
+# ✅ FIX: broken /es/ paths used in old CTAs
+/es/servicios/ /servicios/ 301
+/es/contacto/ /contacto/ 301
+
 # Fallback
 /* /404.html 404
