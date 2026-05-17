@@ -2,28 +2,41 @@
 <html lang="en">
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PP99D648');</script>
-<!-- End Google Tag Manager -->
-  
-  <meta charset="UTF-8" />
-  <title>Message sent – SPICe Lab</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-</head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PP99D648');</script>
+  <!-- End Google Tag Manager -->
 
+  <!-- ✅ FIX: Google Ads gtag added for conversion tracking on thank-you page -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18018765001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18018765001');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message sent – SPICe Lab</title>
+  <!-- ✅ FIX: noindex — confirmation pages should not be indexed by Google -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
+  <!-- ✅ FIX: uses same CSS as rest of site instead of missing styles.css -->
+  <link rel="stylesheet" href="/assets/css/index.css" />
+</head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP99D648"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<main>
-  <h1>Thank you!</h1>
-  <p>Your message has been sent successfully. We will get back to you shortly.</p>
-  <p><a href="/" class="button">Return to Home</a></p>
-</main>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP99D648" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <main style="max-width:600px; margin:80px auto; padding:0 24px; text-align:center;">
+    <img src="/assets/images/isotipo-sin-fondo.png" width="48" height="48" alt="SPICe Lab" style="margin-bottom:24px;" />
+    <h1>Thank you!</h1>
+    <p style="color:#6b7280; margin:12px 0 32px;">Your message has been sent successfully. We'll respond within 12 business hours.</p>
+    <a href="/en/" class="button button-primary">Return to Home</a>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
