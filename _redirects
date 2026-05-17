@@ -1,25 +1,43 @@
-# Fix trailing slash issues
-/es /es/ 301
-/about /about/ 301
-/services /services/ 301
-/projects /projects/ 301
-/samples /samples/ 301
-/contact /contact/ 301
+# ═══════════════════════════════════════════════
+# ENGLISH PAGE REDIRECTS
+# Old paths without /en/ prefix → correct /en/ paths
+# ═══════════════════════════════════════════════
+/about/        /en/about/                            301
+/about         /en/about/                            301
+/services/     /en/services/                         301
+/services      /en/services/                         301
+/projects/     /en/projects/                         301
+/projects      /en/projects/                         301
+/samples/      /en/samples/                          301
+/samples       /en/samples/                          301
+/contact/      /en/contact/                          301
+/contact       /en/contact/                          301
+/team/         /en/team/                             301
+/team          /en/team/                             301
 
-# Spanish equivalents
-/es/acerca-de /es/acerca-de/ 301
-/es/servicios /es/servicios/ 301
-/es/proyectos /es/proyectos/ 301
-/es/muestras /es/muestras/ 301
-/es/contacto /es/contacto/ 301
+# ═══════════════════════════════════════════════
+# SPANISH FIXES
+# ═══════════════════════════════════════════════
 
-# ✅ FIX: /nosotros was linked in nav and returning 404
-/nosotros /acerca-de/ 301
-/nosotros/ /acerca-de/ 301
+# /nosotros was linked in nav and returned 404
+/nosotros      /acerca-de/                           301
+/nosotros/     /acerca-de/                           301
 
-# ✅ FIX: broken /es/ paths used in old CTAs
-/es/servicios/ /servicios/ 301
-/es/contacto/ /contacto/ 301
+# /ciencia-en-el-campo/ parent nav link was returning 404
+/ciencia-en-el-campo/  /ciencia-en-el-campo/servicios-ag/  301
 
-# Fallback
-/* /404.html 404
+# Old broken /es/ CTA paths
+/es/servicios/ /servicios/                           301
+/es/contacto/  /contacto/                            301
+
+# ═══════════════════════════════════════════════
+# LEGACY /es/ REDIRECTS
+# In case any old links still exist
+# ═══════════════════════════════════════════════
+/es/           /                                     301
+/es/acerca-de/ /acerca-de/                           301
+/es/servicios/ /servicios/                           301
+/es/proyectos/ /proyectos/                           301
+/es/muestras/  /muestras/                            301
+/es/contacto/  /contacto/                            301
+/es/equipo/    /equipo/                              301
