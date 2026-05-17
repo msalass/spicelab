@@ -10,62 +10,84 @@
       })(window,document,'script','dataLayer','GTM-PP99D648');
     </script>
     <!-- End Google Tag Manager -->
-    
+
+    <!-- ✅ FIX: Google Ads gtag was missing -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18018765001"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18018765001');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Contact SPICe Lab – South Pacific Isotope Centre | Inquiries and Projects</title>
-    <meta name="description" content="Contact us for inquiries about geochemical analyses, sample preparation, project design, and specialized laboratory services. Response within 48 business hours.">
-    <meta name="keywords" content="contact SPICe Lab, geochemistry inquiries, isotopic analyses, sample preparation, project design, specialized laboratory, scientific consulting, field sampling">
+
+    <title>Research Projects and Analytical Services | SPICe Lab</title>
+    <meta name="description" content="Discover SPICe Lab's research lines: paleoclimate reconstruction with corals, isotope hydrology for sustainable agriculture, and lithium geochemistry in the South Pacific.">
+    <meta name="keywords" content="Isotopes, Geochemistry, Corals, Lithium, Sustainable Agriculture, Trace Elements, Chile, Research, U-Th Dating, Hydrology">
     <meta name="author" content="SPICe Lab">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://spicelab.cl/en/contact/" />
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Contact SPICe Lab – Inquiries About Geochemical Analyses and Projects" />
-    <meta property="og:description" content="Need support with geochemical analyses, sample preparation, or project design? Send us your inquiry. We'll respond within 48 business hours." />
-    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://spicelab.cl/en/projects/" />
+
+    <!-- ✅ NEW: hreflang -->
+    <link rel="alternate" hreflang="en" href="https://spicelab.cl/en/projects/" />
+    <link rel="alternate" hreflang="es" href="https://spicelab.cl/proyectos/" />
+    <link rel="alternate" hreflang="x-default" href="https://spicelab.cl/proyectos/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Research Projects | SPICe Lab">
+    <meta property="og:description" content="Advanced isotope and trace element research applied to climate, agriculture, and critical resources.">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
-    <meta property="og:url" content="https://spicelab.cl/en/contact/" />
+    <meta property="og:url" content="https://spicelab.cl/en/projects/" />
     <meta property="og:site_name" content="SPICe Lab" />
     <meta property="og:locale" content="en_US" />
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact SPICe Lab – Inquiries About Geochemical Analyses" />
-    <meta name="twitter:description" content="Contact form for inquiries about laboratory services, isotopic analyses, and geochemical project design. Hours: Mon-Fri 9:00-18:00." />
+    <meta name="twitter:title" content="Research Projects | SPICe Lab" />
+    <meta name="twitter:description" content="Advanced isotope and trace element research applied to climate, agriculture, and critical resources." />
     <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
-    
-    <!-- Favicon -->
+
     <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
-    
-    <!-- Preconnect for Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="/assets/css/pages/contact.css" />
-</head>
+    <link rel="stylesheet" href="/assets/css/pages/projects.css" />
 
+    <!-- ✅ NEW: JSON-LD schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "SPICe Lab Research Projects",
+      "url": "https://spicelab.cl/en/projects/",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "ResearchProject", "name": "Sea Level and Climate Reconstruction with Corals", "description": "High-precision U-Th dating and trace element analysis of fossil corals to reconstruct sea-level changes and climate variability during key Quaternary intervals." } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "ResearchProject", "name": "Isotopic Tools for Sustainable Agriculture", "description": "Environmental isotopes and trace elements applied to understand water and nutrient pathways in agricultural basins." } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "ResearchProject", "name": "Lithium and Critical Resources in the South Pacific Region", "description": "Geochemical characterization of brines, rocks, and process streams supporting exploration and monitoring of lithium and other critical resources." } }
+      ]
+    }
+    </script>
+
+    <style>
+    .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: #25D366; color: #fff; border-radius: 50px; padding: 12px 20px 12px 14px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 16px rgba(37,211,102,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .whatsapp-float:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.45); color: #fff; text-decoration: none; }
+    @media (max-width: 600px) { .whatsapp-float span.wa-label { display: none; } .whatsapp-float { padding: 14px; border-radius: 50%; } }
+    </style>
+</head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP99D648"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP99D648" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header>
         <nav class="main-nav">
             <div class="nav-wrap">
                 <div class="logo-wrap">
-                    <a class="logo-link" href="/">
+                    <a class="logo-link" href="/en/">
                         <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icon">
                     </a>
                 </div>
-                
                 <div class="nav-links">
                     <a href="/en/">Home</a>
                     <a href="/en/about/">About</a>
@@ -77,16 +99,9 @@
                     <a href="/en/contact/">Contact</a>
                 </div>
             </div>
-
-            <span class="lang-switch-desktop">
-                <a href="/">ES</a> | EN
-            </span>
-
+            <span class="lang-switch-desktop"><a href="/proyectos/">ES</a> | EN</span>
             <div class="menu-button-wrap">
-                <span class="lang-switch-mobile">
-                    <a href="/">ES</a> | EN
-                </span>
-
+                <span class="lang-switch-mobile"><a href="/proyectos/">ES</a> | EN</span>
                 <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Open menu">
                     <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -94,8 +109,7 @@
                 </button>
             </div>
         </nav>
-
-        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+        <div id="mobile-menu" class="mobile-menu-container">
             <nav class="mobile-menu-nav">
                 <a href="/en/" class="menu-link">Home</a>
                 <a href="/en/about/" class="menu-link">About</a>
@@ -109,84 +123,78 @@
         </div>
     </header>
 
-    <main class="contact-page">
-        <section class="contact-hero">
-            <div class="contact-hero-content">
-                <span class="contact-hero-label">Support and Consultations</span>
-                <h1>Contact SPICe Lab</h1>
-                <p class="contact-subtitle">We're here to support your geochemical analyses.</p>
-                <div class="contact-intro">
-                    <p>
-                        If you need support with project design, sample preparation, field sampling, or data interpretation,
-                        feel free to write to us. We'll respond as soon as possible to help you define the best path for your project.
-                    </p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-label">Case Studies</span>
+                <h1>Projects and Research Lines</h1>
+                <p class="section-intro">
+                    This page presents projects and lines of work where SPICe Lab contributes with
+                    isotopic and trace element data. You can adapt and expand these examples as new
+                    collaborations and results emerge.
+                </p>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <div class="container">
+                <div class="project-list">
+                    <article class="project-card">
+                        <h2>Sea Level and Climate Reconstruction with Corals</h2>
+                        <p>
+                            High-precision U–Th dating and trace element analysis of fossil corals are
+                            used to reconstruct sea-level changes and climate variability during key
+                            Quaternary intervals.
+                        </p>
+                        <div class="project-meta">
+                            <strong>Methods:</strong> U–Th geochronology, trace elements by LA-ICP-MS, age-depth modeling.
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h2>Isotopic Tools for Sustainable Agriculture</h2>
+                        <p>
+                            Environmental isotopes and trace elements are applied to understand water and
+                            nutrient pathways in agricultural basins, supporting improved management practices.
+                        </p>
+                        <div class="project-meta">
+                            <strong>Methods:</strong> Water and soil isotopes, trace element geochemistry.
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h2>Lithium and Critical Resources in the South Pacific Region</h2>
+                        <p>
+                            Geochemical characterization of brines, rocks, and process streams supports the
+                            exploration and monitoring of lithium and other critical resources.
+                        </p>
+                        <div class="project-meta">
+                            <strong>Methods:</strong> Solution and solid-phase analysis, quality control protocols.
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="contact-section">
-            <div class="contact-container">
-                <div class="contact-form-section">
-                    <h2>Send us a message</h2>
-                    <p class="form-intro">Include relevant details about your inquiry or project so we can assist you better.</p>
-
-                    <form name="contact" method="POST" data-netlify="true" class="contact-form">
-                        <input type="hidden" name="form-name" value="contact" />
-
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required placeholder="Your full name" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" id="email" name="email" required placeholder="your@email.com" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required placeholder="Describe your inquiry or project..." rows="6"></textarea>
-                        </div>
-
-                        <button type="submit" class="button button-primary">Send message</button>
-                    </form>
-                </div>
-
-                <div class="contact-info-section">
-                    <h2>Other contact methods</h2>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <h3>Email</h3>
-                            <a href="mailto:contact@spicelab.cl" rel="noopener noreferrer" target="_blank"><strong>contact@spicelab.cl</strong></a>
-                        </div>
-
-                        <div class="contact-item">
-                            <h3>Response time</h3>
-                            <p>We'll respond within 48 business hours.</p>
-                        </div>
-
-                        <div class="contact-item">
-                            <h3>Business hours</h3>
-                            <p>Monday to Friday<br>9:00 AM - 6:00 PM</p>
-                        </div>
-
-                        <div class="contact-item">
-                            <h3>LinkedIn</h3>
-                            <p>
-                                <a href="https://www.linkedin.com/company/south-pacific-isotope-centre/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
-                                    South Pacific Isotope Centre
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <section class="future-projects">
+            <div class="container text-center">
+                <h2 class="section-title">Future Projects</h2>
+                <p class="section-intro">
+                    As SPICe Lab grows, this section will include detailed project pages,
+                    links to publications, and outreach summaries.
+                </p>
+                <a href="/en/contact/" class="button button-primary">Contact us to collaborate</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 South Pacific Isotope Centre — SPICe Lab</p>
-    </footer>
+    <footer><div class="footer-content"><p>&copy; 2026 South Pacific Isotope Centre — SPICe Lab</p></div></footer>
+
+    <a href="https://wa.me/56971540665?text=Hello%20SPICe%20Lab%2C%20I%20would%20like%20to%20inquire%20about%20your%20research%20projects."
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      <span class="wa-label">WhatsApp</span>
+    </a>
 
     <script src="/assets/js/main.js"></script>
 </body>
