@@ -11,60 +11,91 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    <!-- ✅ FIX: Google Ads gtag was missing -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18018765001"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18018765001');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Team & Collaborators | SPICe Lab</title>
-    <meta name="description" content="Meet Marcos Salas-Saavedra, PhD, and the team behind SPICe Lab. Experts in isotope geochemistry connecting advanced science with needs in Chile.">
-    <meta name="keywords" content="Marcos Salas-Saavedra, Geochemistry, PhD, SPICe Lab Team, Scientific Consulting, Isotopes, Chile, Research">
+
+    <title>Dr. Marcos Salas-Saavedra | Team SPICe Lab | Geochemistry Chile</title>
+    <meta name="description" content="Founder of SPICe Lab: Dr. Marcos Salas-Saavedra, PhD University of Queensland, Postdoc Princeton University. Expert in applied isotope geochemistry in Chile.">
+    <meta name="keywords" content="Marcos Salas-Saavedra, PhD geochemistry, Princeton, University of Queensland, SPICe Lab, isotopes Chile, geochemistry consulting">
     <meta name="author" content="SPICe Lab">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://spicelab.cl/en/team/" />
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Team | SPICe Lab">
-    <meta property="og:description" content="Meet the people and expertise behind isotope research at SPICe Lab.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-color.png" />
+
+    <!-- ✅ NEW: hreflang -->
+    <link rel="alternate" hreflang="en" href="https://spicelab.cl/en/team/" />
+    <link rel="alternate" hreflang="es" href="https://spicelab.cl/equipo/" />
+    <link rel="alternate" hreflang="x-default" href="https://spicelab.cl/equipo/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dr. Marcos Salas-Saavedra | Team SPICe Lab" />
+    <meta property="og:description" content="PhD University of Queensland · Postdoc Princeton University. Founder of SPICe Lab, isotope geochemistry centre in Chile." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:image" content="https://spicelab.cl/assets/images/founder-small.jpeg" />
     <meta property="og:url" content="https://spicelab.cl/en/team/" />
     <meta property="og:site_name" content="SPICe Lab" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Team | SPICe Lab" />
-    <meta name="twitter:description" content="Meet the people and expertise behind isotope research at SPICe Lab." />
-    <meta name="twitter:image" content="https://spicelab.cl/assets/images/horizontal-color.png" />
-    
-    <!-- Favicon -->
+    <meta name="twitter:title" content="Dr. Marcos Salas-Saavedra | Team SPICe Lab" />
+    <meta name="twitter:description" content="PhD University of Queensland · Postdoc Princeton University. Founder of SPICe Lab." />
+    <meta name="twitter:image" content="https://spicelab.cl/assets/images/founder-small.jpeg" />
+
     <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png">
-    
-    <!-- Preconnect for Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/index.css" />
     <link rel="stylesheet" href="/assets/css/pages/team.css" />
+
+    <!-- ✅ NEW: Person JSON-LD schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marcos Salas-Saavedra",
+      "honorificPrefix": "Dr.",
+      "jobTitle": "Founder & Scientific Director",
+      "worksFor": { "@type": "Organization", "name": "SPICe Lab", "url": "https://spicelab.cl" },
+      "url": "https://spicelab.cl/en/team/",
+      "image": "https://spicelab.cl/assets/images/founder-small.jpeg",
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of Queensland" },
+        { "@type": "CollegeOrUniversity", "name": "Princeton University" }
+      ],
+      "knowsAbout": ["Isotope Geochemistry","U-Th Geochronology","Laser Ablation ICP-MS","Paleoclimate Proxies","Carbonate Systems"]
+    }
+    </script>
+
+    <style>
+    .credential-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+    .credential-pill { display: inline-flex; align-items: center; gap: 6px; background: #f0f7f9; border: 1px solid #c8e4ea; color: #0d6e8a; font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 20px; white-space: nowrap; }
+    .expertise-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .expertise-tag { background: #f3f4f6; color: #374151; font-size: 11px; padding: 4px 10px; border-radius: 4px; border: 1px solid #e5e7eb; }
+    .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: #25D366; color: #fff; border-radius: 50px; padding: 12px 20px 12px 14px; text-decoration: none; font-size: 14px; font-weight: 600; box-shadow: 0 4px 16px rgba(37,211,102,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .whatsapp-float:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.45); color: #fff; text-decoration: none; }
+    @media (max-width: 600px) { .whatsapp-float span.wa-label { display: none; } .whatsapp-float { padding: 14px; border-radius: 50%; } }
+    </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP99D648"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP99D648" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header>
         <nav class="main-nav">
             <div class="nav-wrap">
                 <div class="logo-wrap">
-                    <a class="logo-link" href="/">
+                    <a class="logo-link" href="/en/">
                         <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icon">
                     </a>
                 </div>
-                
                 <div class="nav-links">
                     <a href="/en/">Home</a>
                     <a href="/en/about/">About</a>
@@ -76,16 +107,9 @@
                     <a href="/en/contact/">Contact</a>
                 </div>
             </div>
-
-            <span class="lang-switch-desktop">
-                <a href="/">ES</a> | EN
-            </span>
-
+            <span class="lang-switch-desktop"><a href="/equipo/">ES</a> | EN</span>
             <div class="menu-button-wrap">
-                <span class="lang-switch-mobile">
-                    <a href="/">ES</a> | EN
-                </span>
-
+                <span class="lang-switch-mobile"><a href="/equipo/">ES</a> | EN</span>
                 <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Open menu">
                     <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -93,8 +117,7 @@
                 </button>
             </div>
         </nav>
-
-        <div id="mobile-menu" class="mobile-menu-container max-h-0">
+        <div id="mobile-menu" class="mobile-menu-container">
             <nav class="mobile-menu-nav">
                 <a href="/en/" class="menu-link">Home</a>
                 <a href="/en/about/" class="menu-link">About</a>
@@ -112,28 +135,20 @@
         <section class="hero">
             <div class="hero-content">
                 <span class="hero-label">Our Experts</span>
-                <h1>Team</h1>
-                <p class="hero-subtitle">
-                    The people and expertise behind SPICe Lab.
-                </p>
+                <h1>Team SPICe Lab</h1>
+                <p class="hero-subtitle">World-class isotope science applied to Chile's challenges.</p>
                 <p class="hero-desc">
-                    SPICe Lab operates as a focused, flexible initiative in isotope and trace element geochemistry, 
-                    aiming to connect advanced analytical capabilities with concrete questions in environment, 
-                    agriculture, and resources across southern Chile and the South Pacific region.
+                    SPICe Lab is led by a geochemist with doctoral training in Australia and postdoctoral
+                    experience at Princeton University — a trajectory normally only available in large
+                    international laboratories, now applied directly in southern Chile.
                 </p>
             </div>
         </section>
 
         <section class="team-visual">
             <div class="container">
-                <img 
-                    src="/assets/images/horizontal-color.png" 
-                    alt="SPICe Lab corporate image" 
-                    class="banner-img"
-                    width="431"
-                    height="179"
-                    loading="lazy" 
-                >
+                <img src="/assets/images/horizontal-color.png" alt="SPICe Lab – South Pacific Isotope Centre"
+                    class="banner-img" width="431" height="179" loading="lazy">
             </div>
         </section>
 
@@ -143,31 +158,60 @@
                     <div class="profile-body">
                         <div class="profile-intro">
                             <div class="profile-titles">
-                                <h2 class="profile-label">Founder & Principal Consultant</h2>
-                                
-                                <h3 class="profile-name">Marcos Salas-Saavedra, PhD</h3>
-                                <p class="profile-role">Founder & Principal Consultant, SPICe Lab</p>
+                                <h2 class="profile-label">Founder & Scientific Director</h2>
+                                <h3 class="profile-name">Dr. Marcos Salas-Saavedra</h3>
+                                <p class="profile-role">Founder & Scientific Director, SPICe Lab</p>
+
+                                <!-- ✅ NEW: credential pills -->
+                                <div class="credential-pills">
+                                    <span class="credential-pill">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                                        PhD · University of Queensland
+                                    </span>
+                                    <span class="credential-pill">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                                        Postdoc · Princeton University
+                                    </span>
+                                    <span class="credential-pill">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                        18+ years experience
+                                    </span>
+                                </div>
                             </div>
-                            
-                            <img src="/assets/images/founder-small.jpeg" alt="Marcos Salas-Saavedra" class="profile-image" width="150" height="150">
+                            <img src="/assets/images/founder-small.jpeg" alt="Dr. Marcos Salas-Saavedra, founder of SPICe Lab" class="profile-image" width="150" height="150">
                         </div>
-                        
+
                         <div class="profile-bio">
                             <p>
-                                Marcos is a geochemist with experience using isotopes and trace elements to understand
-                                Earth's biogeochemical systems. He completed his PhD in Geochemistry at The University
-                                of Queensland (Australia) and later conducted postdoctoral research at Princeton University.
+                                Marcos is a geochemist with nearly two decades of experience using isotopes and trace
+                                elements applied to Earth's biogeochemical systems. He completed his <strong>PhD in
+                                Geochemistry at The University of Queensland</strong> (Australia) and conducted postdoctoral
+                                research at the <strong>Niespolo Lab at Princeton University</strong>, working on U-Th
+                                geochronology of carbonates and high-resolution paleoclimate proxies.
                             </p>
                             <p>
-                                He has worked with advanced analytical laboratories in Australia, the United States, and Chile,
-                                collaborating with diverse research teams and applying geochemical tools to a wide
-                                range of environmental and geological questions.
+                                He has operated advanced analytical equipment — LA-ICP-MS, MC-ICP-MS, LIBS, and SEM —
+                                in laboratories across Australia, the United States, and Chile, and has presented his
+                                research at leading international conferences including the AGU Fall Meeting.
                             </p>
                             <p>
-                                Through SPICe Lab, he aims to bring this international experience in isotope geochemistry to
-                                serve research projects, industry, and public institutions in southern Chile
-                                and the South Pacific region.
+                                Through SPICe Lab, he brings this international trajectory to directly serve research
+                                projects, mining, agriculture, and institutions in Chile and the South Pacific. The
+                                differentiator is not just access to advanced techniques — it's the interpretation
+                                that connects data with real decisions.
                             </p>
+
+                            <!-- ✅ NEW: expertise tags -->
+                            <div class="expertise-tags">
+                                <span class="expertise-tag">U-Th Isotopes</span>
+                                <span class="expertise-tag">LA-ICP-MS</span>
+                                <span class="expertise-tag">MC-ICP-MS</span>
+                                <span class="expertise-tag">Paleoclimate Proxies</span>
+                                <span class="expertise-tag">Carbonates</span>
+                                <span class="expertise-tag">Geochronology</span>
+                                <span class="expertise-tag">Environmental Geochemistry</span>
+                                <span class="expertise-tag">Lithium & Critical Minerals</span>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -180,18 +224,15 @@
                 <div class="collaborators-content">
                     <p>
                         SPICe Lab is built with the support of a growing network of colleagues, laboratories, and institutions.
-                        As formal scientific advisors and external collaborators are confirmed, their profiles will be added 
+                        As formal scientific advisors and external collaborators are confirmed, their profiles will be added
                         here with their authorization.
                     </p>
                     <p>
-                        The idea is to maintain a flexible structure, where specific experts can participate according to 
+                        The idea is to maintain a flexible structure, where specific experts can participate according to
                         each project's needs, while SPICe Lab serves as the central coordination and interpretation point.
                     </p>
-                    
                     <div class="cta-box">
-                        <p>
-                            Interested in collaborating with SPICe Lab or exploring a potential advisory role?
-                        </p>
+                        <p>Interested in collaborating with SPICe Lab or exploring a potential advisory role?</p>
                         <a href="/en/contact/" class="button button-secondary">Contact Us</a>
                     </div>
                 </div>
@@ -199,11 +240,13 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 South Pacific Isotope Centre — SPICe Lab</p>
-        </div>
-    </footer>
+    <footer><div class="footer-content"><p>&copy; 2026 South Pacific Isotope Centre — SPICe Lab</p></div></footer>
+
+    <a href="https://wa.me/56971540665?text=Hello%20SPICe%20Lab%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      <span class="wa-label">WhatsApp</span>
+    </a>
 
     <script src="/assets/js/main.js"></script>
 </body>
