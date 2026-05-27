@@ -401,48 +401,77 @@
     </section>
 
     <section id="postular" class="hr35-section hr35-form-section">
-      <div class="hr35-container">
-        <h2 class="section-title">Inscríbete al Programa Huerto Rentable 35</h2>
-        <p class="section-intro">
-          Completa este formulario y te contactaremos dentro de 24 horas hábiles para coordinar el pago ($990.000 CLP por transferencia bancaria) y la instalación. Este es un programa con inversión — no es gratuito ni subsidiado.
-        </p>
-        <div class="hr35-form-card">
-          <iframe
-            data-tally-src="https://tally.so/r/9q1kvp"
-            loading="lazy"
-            width="100%"
-            height="700"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            title="Inscripción Programa Huerto Rentable 35">
-          </iframe>
-        </div>
-        <script>
-          var d = document,
-              w = "https://tally.so/widgets/embed.js",
-              v = function() {
-                if (typeof Tally !== "undefined") {
-                  Tally.loadEmbeds();
-                } else {
-                  d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
-                    e.src = e.dataset.tallySrc;
-                  });
-                }
-              };
-          if (typeof Tally !== "undefined") {
-            v();
-          } else if (d.querySelector('script[src="' + w + '"]') == null) {
-            var s = d.createElement("script");
-            s.src = w;
-            s.onload = v;
-            s.onerror = v;
-            d.body.appendChild(s);
+  <div class="hr35-container">
+    <h2 class="section-title">Inscríbete al Programa Huerto Rentable 35</h2>
+    <p class="section-intro">
+      Completa este formulario y te contactaremos dentro de 24 horas hábiles para coordinar el pago ($990.000 CLP por transferencia bancaria) y la instalación. Este es un programa con inversión — no es gratuito ni subsidiado.
+    </p>
+    <div class="hr35-form-card">
+      <iframe
+        data-tally-src="https://tally.so/r/9q1kvp"
+        loading="lazy"
+        width="100%"
+        height="700"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Inscripción Programa Huerto Rentable 35">
+      </iframe>
+    </div>
+    <script>
+      // ----- GCLID capture: read from URL or sessionStorage, append to Tally src -----
+      (function() {
+        function getURLParam(name) {
+          var match = window.location.search.match(new RegExp('[?&]' + name + '=([^&]+)'));
+          return match ? decodeURIComponent(match[1]) : null;
+        }
+        // Capture Google Ads click identifiers from URL and persist in sessionStorage
+        ['gclid', 'gbraid', 'wbraid'].forEach(function(param) {
+          var val = getURLParam(param);
+          if (val) {
+            try { sessionStorage.setItem(param, val); } catch(e) {}
           }
-        </script>
-      </div>
-    </section>
+        });
+      })();
 
+      // Helper to build the Tally URL with the gclid appended (if present)
+      function buildTallySrcWithGclid(baseSrc) {
+        var gclid = null;
+        try { gclid = sessionStorage.getItem('gclid'); } catch(e) {}
+        if (!gclid) return baseSrc;
+        var separator = baseSrc.indexOf('?') === -1 ? '?' : '&';
+        return baseSrc + separator + 'gclid=' + encodeURIComponent(gclid);
+      }
+      // ----- End GCLID capture -----
+
+      var d = document,
+          w = "https://tally.so/widgets/embed.js",
+          v = function() {
+            if (typeof Tally !== "undefined") {
+              // Modify the data-tally-src to include gclid BEFORE Tally loads the embed
+              d.querySelectorAll("iframe[data-tally-src]").forEach(function(e) {
+                e.dataset.tallySrc = buildTallySrcWithGclid(e.dataset.tallySrc);
+              });
+              Tally.loadEmbeds();
+            } else {
+              d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
+                e.src = buildTallySrcWithGclid(e.dataset.tallySrc);
+              });
+            }
+          };
+      if (typeof Tally !== "undefined") {
+        v();
+      } else if (d.querySelector('script[src="' + w + '"]') == null) {
+        var s = d.createElement("script");
+        s.src = w;
+        s.onload = v;
+        s.onerror = v;
+        d.body.appendChild(s);
+      }
+    </script>
+  </div>
+</section>
+    
     <section class="cta-section hr35-section">
       <div class="cta-content">
         <h2 class="section-title">No estás comprando solo un invernadero</h2>
