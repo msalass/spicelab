@@ -473,20 +473,32 @@
 </section>
     
     <section class="cta-section hr35-section">
-      <div class="cta-content">
-        <h2 class="section-title">No estás comprando solo un invernadero</h2>
-        <p class="cta-text">
-          Estás entrando a una implementación guiada para construir una unidad productiva más ordenada, más clara y mejor preparada para producir.
-        </p>
-        <p class="cta-text">
-          Si quieres acceder a este precio de lanzamiento, los cupos son limitados y no estarán disponibles en este valor más adelante.
-        </p>
-        <div class="hero-buttons">
-          <a href="#postular" class="button primary">Inscribirme ahora</a>
-          <a href="https://wa.me/56971540665?text=Hola%20SPICe%20Lab,%20quiero%20inscribirme%20al%20Programa%20Huerto%20Rentable%2035" class="button secondary" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
-        </div>
-      </div>
-    </section>
+  <div class="cta-content">
+    <h2 class="section-title">No estás comprando solo un invernadero</h2>
+    <p class="cta-text">
+      Estás entrando a una implementación guiada para construir una unidad productiva más ordenada, más clara y mejor preparada para producir.
+    </p>
+    <p class="cta-text">
+      Si quieres acceder a este precio de lanzamiento, los cupos son limitados y no estarán disponibles en este valor más adelante.
+    </p>
+    <div class="hero-buttons">
+      <a href="#postular" class="button primary">Inscribirme ahora</a>
+      <a href="#" class="button secondary" id="wa-cta-btn" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    var p1 = "569715";
+    var p2 = "40665";
+    var msg = encodeURIComponent("Hola SPICe Lab, quiero inscribirme al Programa Huerto Rentable 35");
+    var btn = document.getElementById("wa-cta-btn");
+    if (btn) {
+      btn.href = "https://wa.me/" + p1 + p2 + "?text=" + msg;
+    }
+  })();
+</script>
   </main>
 
   <footer>
