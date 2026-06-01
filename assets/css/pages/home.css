@@ -529,7 +529,7 @@
 }
 #intro.gone { display: none; }
 #intro .intro-logo {
-    width: min(460px, 72vw);
+    width: min(580px, 96vw);
     height: auto;
     opacity: 0;
     transform: scale(0.65);
