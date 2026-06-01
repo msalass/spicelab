@@ -529,11 +529,11 @@
 }
 #intro.gone { display: none; }
 #intro .intro-logo {
-    width: min(330px, 58vw);
+    width: min(460px, 72vw);
     height: auto;
     opacity: 0;
-    transform: scale(0.84);
-    animation: introIn 1.15s cubic-bezier(0.2, 0.7, 0.2, 1) 0.12s forwards;
+    transform: scale(0.65);
+    animation: introIn 1.3s cubic-bezier(0.2, 0.7, 0.2, 1) 0.12s forwards;
 }
 @keyframes introIn { to { opacity: 1; transform: scale(1); } }
 #intro .intro-cue {
