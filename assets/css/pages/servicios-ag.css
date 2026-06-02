@@ -1,10 +1,13 @@
 /* =========================
    PAGE: SERVICIOS AGRÍCOLAS
+   SPICe Lab brand redesign
 ========================= */
 
-/* Hero */
+/* ===== HERO ===== */
 .campo-hero {
-  padding: 72px 0 32px;
+  background: linear-gradient(160deg, #1a2e1a 0%, #1e3520 100%);
+  padding: 90px 7% 72px;
+  border-bottom: 1px solid rgba(168, 168, 148, 0.1);
 }
 
 .campo-hero-content {
@@ -13,15 +16,19 @@
   text-align: center;
 }
 
+/* ===== BADGES ===== */
 .campo-badge {
   display: inline-block;
   padding: 6px 14px;
   border-radius: 999px;
-  background: #eef4ff;
-  color: #0b57d0;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  background: rgba(168, 168, 148, 0.15);
+  color: var(--sage);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(168, 168, 148, 0.25);
   margin-bottom: 18px;
 }
 
@@ -30,22 +37,37 @@
 }
 
 .campo-badge-dark {
-  background: #1c1c1e;
-  color: #ffffff;
+  background: rgba(255, 251, 220, 0.1);
+  color: var(--cream);
+  border-color: rgba(255, 251, 220, 0.2);
+}
+
+.campo-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .campo-subtitle {
   max-width: 760px;
   margin: 0 auto 20px;
-  font-size: 22px;
-  line-height: 1.5;
-  color: #4a4a4f;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: #7db87d;
+  font-weight: 500;
 }
 
 .campo-intro {
   max-width: 760px;
-  margin: 0 auto 16px;
-  color: #5f5f64;
+  margin: 0 auto 14px;
+  color: rgba(255, 251, 220, 0.65);
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 .campo-hero-actions {
@@ -61,34 +83,146 @@
   justify-content: center;
 }
 
-/* Buttons variants */
+/* ===== BOTONES ===== */
 .campo-primary {
-  background: #0071e3;
-  color: #fff;
+  background: var(--teal);
+  color: var(--cream);
+  border: none;
+}
+
+.campo-primary:hover {
+  background: #27607a;
+  color: var(--cream);
 }
 
 .campo-secondary {
-  background: #f5f5f7;
-  color: #1c1c1e;
-  border: 1px solid #d2d2d7;
+  background: rgba(255, 251, 220, 0.08);
+  color: var(--cream);
+  border: 1px solid rgba(255, 251, 220, 0.25);
+}
+
+.campo-secondary:hover {
+  background: rgba(255, 251, 220, 0.14);
+  color: var(--cream);
 }
 
 .campo-secondary-dark {
-  background: #ffffff;
-  color: #1c1c1e;
-  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255, 251, 220, 0.1);
+  color: var(--cream);
+  border: 1px solid rgba(255, 251, 220, 0.3);
 }
 
-/* Sections */
+.campo-secondary-dark:hover {
+  background: rgba(255, 251, 220, 0.18);
+}
+
+/* ===== NEXT STEPS STRIP ===== */
+.next-steps-strip {
+  background: rgba(49, 114, 134, 0.12);
+  border: 1px solid rgba(49, 114, 134, 0.25);
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin: 28px auto 0;
+  max-width: 760px;
+  text-align: left;
+}
+
+.next-steps-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sage);
+  margin-bottom: 12px;
+}
+
+.next-steps-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.next-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: rgba(255, 251, 220, 0.8);
+  flex: 1;
+  min-width: 130px;
+}
+
+.next-step-num {
+  background: var(--teal);
+  color: var(--cream);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.next-step-arrow {
+  color: rgba(168, 168, 148, 0.4);
+  font-size: 16px;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+/* ===== FOUNDER TRUST ===== */
+.founder-trust {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(49, 114, 134, 0.1);
+  border: 1px solid rgba(49, 114, 134, 0.22);
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin: 24px auto 0;
+  max-width: 760px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.founder-trust-text {
+  font-size: 0.85rem;
+  color: rgba(255, 251, 220, 0.7);
+  flex: 1;
+  min-width: 200px;
+  line-height: 1.5;
+}
+
+.founder-trust-text strong {
+  color: var(--teal);
+}
+
+.founder-trust-text a {
+  color: var(--sage);
+  margin-left: 4px;
+  text-decoration: none;
+}
+
+.founder-trust-text a:hover {
+  color: var(--cream);
+}
+
+/* ===== SECCIONES ===== */
 .campo-section {
-  padding: 72px 0;
+  padding: 80px 7%;
 }
 
 .campo-alt {
-  background: #f8f9fb;
-  border-radius: 28px;
-  padding-left: 24px;
-  padding-right: 24px;
+  background: var(--cream);
+  border-radius: 0;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .campo-wrapper {
@@ -101,18 +235,47 @@
 }
 
 .campo-section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: -0.02em;
   margin-top: 0;
   margin-bottom: 14px;
+  line-height: 1.2;
 }
 
 .campo-section-intro {
   text-align: center;
   max-width: 720px;
   margin: 0 auto 40px;
-  color: #6e6e73;
+  color: #5a6478;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-/* Program cards */
+/* ===== PILLS ===== */
+.campo-pill {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(49, 114, 134, 0.1);
+  color: var(--teal);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(49, 114, 134, 0.2);
+}
+
+.campo-pill-dark {
+  background: rgba(25, 31, 57, 0.06);
+  color: var(--navy);
+  border-color: rgba(25, 31, 57, 0.12);
+}
+
+/* ===== TARJETAS DE PROGRAMAS ===== */
 .campo-program-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -122,15 +285,15 @@
 
 .campo-program-card {
   background: #ffffff;
-  border: 1px solid #e5e5ea;
-  border-radius: 28px;
+  border: 1px solid rgba(25, 31, 57, 0.09);
+  border-radius: 20px;
   padding: 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 20px rgba(25, 31, 57, 0.05);
 }
 
 .campo-program-card.featured {
-  border: 1px solid rgba(0, 113, 227, 0.18);
-  box-shadow: 0 18px 40px rgba(0, 113, 227, 0.08);
+  border-color: rgba(49, 114, 134, 0.25);
+  box-shadow: 0 8px 32px rgba(49, 114, 134, 0.1);
 }
 
 .campo-program-head {
@@ -138,105 +301,172 @@
 }
 
 .campo-program-head h3 {
+  font-family: var(--font-heading);
   margin: 10px 0 10px;
-  font-size: 30px;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
   line-height: 1.2;
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .campo-card-subtitle {
   margin: 0;
-  font-size: 16px;
-  color: #6e6e73;
+  font-size: 0.98rem;
+  color: #5a6478;
+  font-style: italic;
 }
 
-.campo-pill {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: #eef4ff;
-  color: #0b57d0;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+.campo-program-card > p {
+  color: #4a5568;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* ===== TIMELINE PILL ===== */
+.timeline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(168, 168, 148, 0.12);
+  border: 1px solid rgba(168, 168, 148, 0.3);
+  color: #5a5a40;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
   letter-spacing: 0.03em;
 }
 
-.campo-pill-dark {
-  background: #f1f1f3;
-  color: #1c1c1e;
-}
-
+/* ===== LIST BLOCK ===== */
 .campo-list-block {
-  margin-top: 22px;
+  margin-top: 20px;
   padding: 18px 20px;
-  background: #f8f9fb;
-  border-radius: 18px;
-  border: 1px solid #ececf0;
+  background: rgba(25, 31, 57, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(25, 31, 57, 0.07);
 }
 
 .campo-list-block h4 {
-  margin: 0 0 10px;
-  font-size: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 12px;
 }
 
 .campo-list-block ul {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
 .campo-list-block li {
   margin-bottom: 8px;
+  color: #4a5568;
+  font-size: 0.93rem;
+  line-height: 1.55;
 }
 
+/* ===== PRICE BOX ===== */
 .campo-price-box {
-  margin-top: 26px;
+  margin-top: 24px;
   padding: 18px 20px;
-  border-radius: 18px;
-  background: #f5faff;
-  border: 1px solid rgba(0, 113, 227, 0.12);
+  border-radius: 12px;
+  background: rgba(49, 114, 134, 0.06);
+  border: 1px solid rgba(49, 114, 134, 0.15);
 }
 
 .campo-price-box-simple {
-  background: #f7f7f8;
-  border-color: #e5e5ea;
+  background: rgba(25, 31, 57, 0.03);
+  border-color: rgba(25, 31, 57, 0.08);
 }
 
 .campo-price-current {
-  font-size: 18px;
-  color: #1c1c1e;
+  font-size: 1.05rem;
+  color: var(--navy);
+  font-weight: 500;
 }
 
 .campo-price-current strong {
-  font-size: 24px;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--navy);
 }
 
 .campo-price-old {
-  margin-top: 6px;
-  font-size: 15px;
-  color: #8e8e93;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #9ca3af;
   text-decoration: line-through;
+}
+
+/* ===== PAYMENT METHODS ===== */
+.payment-methods {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.payment-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.payment-badge {
+  background: rgba(25, 31, 57, 0.05);
+  border: 1px solid rgba(25, 31, 57, 0.1);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--navy);
+  padding: 3px 8px;
 }
 
 .campo-card-actions {
   margin-top: 24px;
 }
 
-/* Note box */
+/* ===== NOTE BOX ===== */
 .campo-note-box {
   background: #ffffff;
-  border: 1px solid #e5e5ea;
-  border-radius: 28px;
-  padding: 32px;
+  border: 1px solid rgba(25, 31, 57, 0.09);
+  border-radius: 20px;
+  padding: 36px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 20px rgba(25, 31, 57, 0.05);
 }
 
 .campo-note-box h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: -0.02em;
   margin-top: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
-/* Compare */
+.campo-note-box p {
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 640px;
+  margin: 0 auto 14px;
+}
+
+/* ===== COMPARE GRID ===== */
 .campo-compare-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -246,44 +476,84 @@
 
 .campo-compare-card {
   background: #ffffff;
-  border: 1px solid #e5e5ea;
-  border-radius: 24px;
+  border: 1px solid rgba(25, 31, 57, 0.09);
+  border-radius: 16px;
   padding: 28px;
   text-align: left;
+  box-shadow: 0 2px 12px rgba(25, 31, 57, 0.04);
 }
 
 .campo-compare-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--navy);
+  font-weight: 600;
   margin-top: 0;
   margin-bottom: 12px;
+  letter-spacing: -0.01em;
 }
 
-/* CTA */
+.campo-compare-card p {
+  color: #5a6478;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ===== CTA ===== */
 .campo-cta {
-  margin-top: 24px;
-  margin-bottom: 40px;
-  padding: 72px 24px;
-  background: linear-gradient(180deg, #0b57d0 0%, #0a4bb4 100%);
-  border-radius: 32px;
-  color: #ffffff;
+  margin: 0 7% 48px;
+  padding: 72px 7%;
+  background: var(--navy);
+  border-radius: 24px;
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.campo-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 50%, rgba(49, 114, 134, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 24px;
 }
 
 .campo-cta h2 {
-  color: #ffffff;
+  font-family: var(--font-heading);
+  color: var(--cream);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
   margin-top: 12px;
   margin-bottom: 18px;
+  position: relative;
 }
 
 .campo-cta p {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 251, 220, 0.75);
+  font-size: 1rem;
+  line-height: 1.75;
+  position: relative;
 }
 
-.text-center {
-  text-align: center;
+/* ===== UTILIDADES ===== */
+.text-center { text-align: center; }
+
+.hr35-strike {
+  text-decoration: line-through;
+  opacity: 0.55;
+  font-weight: 500;
+  margin-right: 0.28rem;
 }
 
-/* Responsive */
+/* ===== FOOTER ===== */
+footer { border: none; }
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .campo-program-grid,
   .campo-compare-grid {
@@ -299,21 +569,22 @@
 
 @media (max-width: 768px) {
   .campo-hero {
-    padding-top: 48px;
+    padding: 70px 6% 56px;
   }
 
   .campo-section {
-    padding: 48px 0;
+    padding: 60px 6%;
   }
 
   .campo-alt {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 22px;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
-  .campo-subtitle {
-    font-size: 19px;
+  .campo-cta {
+    margin: 0 4% 40px;
+    padding: 48px 6%;
+    border-radius: 18px;
   }
 
   .campo-hero-actions {
@@ -325,16 +596,15 @@
     width: 100%;
     text-align: center;
   }
-
-  .campo-cta {
-    padding: 48px 18px;
-    border-radius: 24px;
-  }
 }
 
-.hr35-strike {
-  text-decoration: line-through;
-  opacity: 0.55;
-  font-weight: 500;
-  margin-right: 0.28rem;
+@media (max-width: 600px) {
+  .next-steps-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .next-step-arrow { display: none; }
+  .next-step { min-width: unset; }
 }
