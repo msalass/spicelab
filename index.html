@@ -122,6 +122,9 @@ gtag('config', 'AW-18018765001');
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<div id="intro"><img class="intro-logo" src="/assets/images/vertical-color.svg" alt="SPICe Lab — South Pacific Isotope Centre"><div class="intro-cue">Scroll <span>↓</span></div>
+</div>
+
 <header>
   <nav class="main-nav">
     <div class="nav-wrap">
@@ -504,6 +507,24 @@ cardsTl
 window.addEventListener('resize', () => {
   ScrollTrigger.refresh();
 });
+</script>
+<script>
+(function () {
+  var intro = document.getElementById("intro");
+  if (!intro) return;
+  var done = false;
+  function tick() {
+    if (done) return;
+    var p = Math.min(window.scrollY / (window.innerHeight * 0.6), 1);
+    intro.style.opacity = String(1 - p);
+    intro.style.transform = "translateY(" + (-p * 46) + "px) scale(" + (1 - p * 0.05) + ")";
+    if (p >= 1) { intro.classList.add("gone"); done = true; }
+  }
+  window.addEventListener("scroll", tick, { passive: true });
+  intro.addEventListener("click", function () {
+    window.scrollTo({ top: Math.round(window.innerHeight * 0.7), behavior: "smooth" });
+  });
+}());
 </script>
 </body>
 </html>
