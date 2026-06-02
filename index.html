@@ -64,8 +64,6 @@ gtag('config', 'AW-18018765001');
 <link rel="stylesheet" href="/assets/css/pages/home.css" />
 
 <!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <!-- ✅ FIX 3: JSON-LD Organization + LocalBusiness schema -->
 <script type="application/ld+json">
@@ -243,14 +241,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <section class="cards-scroll-container">
-    <div class="cards-sticky-view">
-      <!-- Logo que se achica -->
-      <div class="scrolling-logo-box">
-        <img src="/assets/images/horizontal-positivo.png" class="logo-to-shrink" alt="SPICe Lab">
-      </div>
-      <!-- Contenido de las tarjetas -->
-      <div class="cards-content anim-cards-content">
+  <section class="cards-section">
+      <div class="cards-content">
         <h2 class="section-title">¿Qué podemos apoyar hoy?</h2>
         <p class="section-intro">
           Mientras las instalaciones analíticas propias de SPICe Lab se encuentran en desarrollo, ya ofrecemos
@@ -466,48 +458,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </a>
 
 <script src="/assets/js/main.js"></script>
-<script>
-gsap.registerPlugin(ScrollTrigger);
-
-const header = document.querySelector('header');
-const headerHeight = header ? header.offsetHeight : 80;
-
-gsap.set(".anim-cards-content", { opacity: 0, y: 100 });
-gsap.set(".card", { opacity: 0, y: 60 });
-
-const cardsTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".cards-scroll-container",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1.5,
-    markers: false
-  }
-});
-
-cardsTl
-  .to(".logo-to-shrink", {
-    scale: 0.18,
-    y: `calc(-50vh + ${headerHeight + 50}px)`,
-    opacity: 0,
-    ease: "power2.inOut"
-  }, 0)
-  .to(".anim-cards-content", {
-    opacity: 1,
-    y: 0,
-    ease: "power2.out"
-  }, 0.25)
-  .to(".card", {
-    opacity: 1,
-    y: 0,
-    stagger: 0.08,
-    ease: "back.out(1.2)"
-  }, 0.4);
-
-window.addEventListener('resize', () => {
-  ScrollTrigger.refresh();
-});
-</script>
 <script>
 (function () {
   var intro = document.getElementById("intro");
