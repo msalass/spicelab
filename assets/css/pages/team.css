@@ -1,47 +1,64 @@
-/* ===== SECCIONES PRINCIPALES ===== */
-.hero {
-    background: radial-gradient(circle at 50% 0%, #f5f5f7 0%, #ffffff 70%);
-    background-color: var(--white);
-    padding: 70px 7% 40px;
-    text-align: center;
-}
+/* ===== TEAM.CSS — SPICe Lab brand redesign ===== */
 
-.hero-label {
-    background: #e1f0ff;
-    border-radius: 99px;
-    color: var(--primary);
-    display: inline-block;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    margin-bottom: 16px;
-    padding: 6px 12px;
-    text-transform: uppercase;
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(160deg, var(--navy) 0%, #243055 100%);
+    padding: 90px 7% 70px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .hero-content {
     margin: 0 auto;
+    max-width: 760px;
+}
+
+.hero-label {
+    display: inline-block;
+    background: rgba(49, 114, 134, 0.25);
+    color: var(--sage);
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: 1px solid rgba(168, 168, 148, 0.2);
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
-    color: var(--primary);
     font-family: var(--font-heading);
     font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: 24px;
+    color: var(--teal);
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 .hero-desc {
-    color: var(--text-main);
-    font-size: 1.125rem;
-    line-height: 1.7;
-    margin-top: 24px;
+    font-size: 1.05rem;
+    color: rgba(255, 251, 220, 0.7);
+    line-height: 1.75;
+    margin-top: 16px;
 }
 
+/* ===== BANNER / LOGO VISUAL ===== */
 .team-visual {
-    background-color: var(--white);
-    padding: 0 7% 60px;
+    background-color: var(--cream);
+    padding: 48px 7%;
+    text-align: center;
 }
 
 .container {
@@ -49,36 +66,42 @@
 }
 
 .banner-img {
-    border-radius: var(--radius-lg);
+    border-radius: 12px;
     display: block;
     height: auto;
     margin: 0 auto;
-    max-width: 431px;
-    transition: var(--transition);
+    max-width: 360px;
     width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.banner-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 32px rgba(25, 31, 57, 0.12);
+}
+
+/* ===== PERFIL DEL FUNDADOR ===== */
 .founder-section {
-    background-color: var(--white);
-    padding: 0 7% 80px;
+    background-color: #fff;
+    padding: 60px 7% 80px;
 }
 
 .profile-card {
-    background-color: var(--bg-light);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: var(--radius-lg);
+    background-color: var(--cream);
+    border: 1px solid rgba(25, 31, 57, 0.07);
+    border-radius: 16px;
     margin: 0 auto;
     padding: 40px;
 }
 
 .profile-intro {
     align-items: flex-start;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(25, 31, 57, 0.1);
     display: flex;
     gap: 32px;
     justify-content: space-between;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
 }
 
 .profile-titles {
@@ -86,102 +109,255 @@
 }
 
 .profile-label {
-    color: var(--primary);
-    font-family: var(--font-heading);
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 12px;
-    opacity: 0.9;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .profile-name {
-    color: var(--text-main);
-    font-size: 2.2rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--navy);
     line-height: 1.1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 6px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .profile-role {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
+    color: #5a6478;
+    font-size: 1rem;
     font-style: italic;
-    margin: 0;
+    margin: 0 0 4px;
 }
 
 .profile-image {
-    background-color: #ddd;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(25, 31, 57, 0.12);
     flex-shrink: 0;
     height: 150px;
     object-fit: cover;
     width: 150px;
+    border: 3px solid rgba(49, 114, 134, 0.2);
 }
 
+/* ===== CREDENTIAL PILLS ===== */
+.credential-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0 4px;
+}
+
+.credential-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(49, 114, 134, 0.08);
+    border: 1px solid rgba(49, 114, 134, 0.2);
+    color: var(--teal);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+}
+
+.credential-pill svg {
+    flex-shrink: 0;
+}
+
+/* ===== BIO ===== */
 .profile-bio p {
-    color: var(--text-main);
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.75;
     margin-bottom: 16px;
 }
 
-.profile-bio p:last-child {
+.profile-bio p:last-of-type {
     margin-bottom: 0;
 }
 
+/* ===== EXPERTISE TAGS ===== */
+.expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.expertise-tag {
+    background: rgba(25, 31, 57, 0.06);
+    color: var(--navy);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(25, 31, 57, 0.1);
+    letter-spacing: 0.03em;
+}
+
+/* ===== PUBLICACIONES ===== */
+.publications-section {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(25, 31, 57, 0.1);
+}
+
+.publications-section h4 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--teal);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.pub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pub-list li {
+    font-size: 0.9rem;
+    color: #5a6478;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(25, 31, 57, 0.06);
+    line-height: 1.5;
+}
+
+.pub-list li:last-child {
+    border-bottom: none;
+}
+
+.pub-year {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--teal);
+    margin-right: 8px;
+    font-size: 0.82rem;
+}
+
+.scholar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--teal);
+    text-decoration: none;
+    margin-top: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.2s ease;
+}
+
+.scholar-link:hover {
+    color: var(--navy);
+    text-decoration: none;
+}
+
+/* ===== COLABORADORES ===== */
 .collaborators-section {
-    background-color: var(--white);
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 70px 7%;
+    background-color: var(--cream);
+    border-top: 1px solid rgba(25, 31, 57, 0.08);
+    padding: 80px 7%;
 }
 
 .collaborators-content {
     margin: 0 auto;
+    max-width: 700px;
 }
 
-.text-center {
-    text-align: center;
+.collaborators-content p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.75;
+    margin-bottom: 16px;
 }
 
+.section-title {
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* ===== CTA BOX ===== */
 .cta-box {
-    background-color: #000000;
-    border-radius: var(--radius);
+    background-color: var(--navy);
+    border-radius: 14px;
     margin-top: 48px;
-    padding: 32px;
+    padding: 36px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 50%, rgba(49, 114, 134, 0.2) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .cta-box p {
-    color: rgba(255, 255, 255, 0.95);
-    font-weight: 500;
+    color: rgba(255, 251, 220, 0.85);
+    font-size: 1rem;
+    line-height: 1.6;
     margin-bottom: 24px;
+    position: relative;
 }
 
 .cta-box .button {
-    background: var(--white);
+    background: var(--teal);
     border: none;
-    color: var(--primary);
-}
-
-/* --- Animaciones y Transiciones --- */
-.banner-img:hover {
-    box-shadow: var(--shadow-lg);
-    transform: scale(1.02);
+    color: var(--cream);
+    position: relative;
 }
 
 .cta-box .button:hover {
-    background: var(--primary);
-    color: var(--white);
+    background: #27607a;
+    color: var(--cream);
+}
+
+/* ===== UTILIDADES ===== */
+.text-center { text-align: center; }
+
+/* ===== FOOTER ===== */
+footer {
+    border: none;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+    .hero {
+        padding: 70px 6% 60px;
+    }
+
     .profile-card {
         padding: 24px;
     }
 
     .profile-name {
         font-size: 1.75rem;
+    }
+
+    .founder-section {
+        padding: 48px 6% 60px;
     }
 }
 
@@ -194,15 +370,15 @@
     }
 
     .profile-image {
-        height: 160px;
-        width: 160px;
+        height: 140px;
+        width: 140px;
     }
 
-    .profile-label {
-        margin-bottom: 8px;
+    .credential-pills {
+        justify-content: center;
     }
 
-    .profile-name {
-        font-size: 1.8rem;
+    .expertise-tags {
+        justify-content: center;
     }
 }
