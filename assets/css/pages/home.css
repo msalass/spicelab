@@ -10,22 +10,21 @@
     overflow: hidden;
     /*
      * FASE 4 — FOTO DE FONDO
-     * Cuando tengas la imagen, reemplaza la línea de background-color
-     * por el bloque comentado debajo, ajustando la ruta.
-     *
-     * background-image:
-     *     linear-gradient(
-     *         160deg,
-     *         rgba(25, 31, 57, 0.88) 0%,
-     *         rgba(25, 31, 57, 0.72) 55%,
-     *         rgba(49, 114, 134, 0.55) 100%
-     *     ),
-     *     url('/assets/images/hero-foto.jpg');
-     * background-size: cover;
-     * background-position: center 30%;
-     * background-repeat: no-repeat;
+     * Para volver al fondo navy sólido (sin foto), reemplaza por:
+     * background: linear-gradient(160deg, var(--navy) 0%, color-mix(in srgb, var(--navy) 80%, var(--teal)) 100%);
      */
-    background: linear-gradient(160deg, var(--navy) 0%, color-mix(in srgb, var(--navy) 80%, var(--teal)) 100%);
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(25, 31, 57, 0.82) 0%,
+            rgba(25, 31, 57, 0.65) 40%,
+            rgba(25, 31, 57, 0.55) 65%,
+            rgba(25, 31, 57, 0.72) 100%
+        ),
+        url('/assets/images/hero-foto.webp');
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
     padding: 110px 7% 90px;
 }
 
