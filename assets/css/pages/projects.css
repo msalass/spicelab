@@ -1,39 +1,54 @@
-/* ===== SECCIONES PRINCIPALES ===== */
-.hero {
-    background: radial-gradient(circle at 50% 0%, #f5f5f7 0%, #ffffff 70%);
-    background-color: var(--white);
-    padding: 70px 7%;
-}
+/* ===== PROJECTS.CSS — SPICe Lab brand redesign ===== */
 
-.hero-label {
-    display: inline-block;
-    background: #e1f0ff;
-    color: var(--primary);
-    padding: 6px 12px;
-    border-radius: 99px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(160deg, var(--navy) 0%, #243055 100%);
+    padding: 90px 7% 80px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .hero-content {
     text-align: center;
     margin: 0 auto;
+    max-width: 760px;
+}
+
+.hero-label {
+    display: inline-block;
+    background: rgba(49, 114, 134, 0.25);
+    color: var(--sage);
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: 1px solid rgba(168, 168, 148, 0.2);
 }
 
 .hero-content h1 {
-    color: var(--text-main);
-    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .hero-content .section-intro {
+    font-size: 1.05rem;
+    color: rgba(255, 251, 220, 0.7);
+    line-height: 1.75;
     margin-bottom: 0;
 }
+
+/* ===== TARJETAS DE PROYECTOS ===== */
 .projects-section {
-    background-color: var(--white);
-    padding: 0 7% 80px;
+    background-color: #fff;
+    padding: 72px 7% 80px;
 }
 
 .container {
@@ -43,16 +58,15 @@
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-    margin-top: 40px;
+    gap: 28px;
 }
 
 .project-card {
-    background-color: var(--white);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: var(--radius-lg);
+    background-color: #fff;
+    border: 1px solid rgba(25, 31, 57, 0.08);
+    border-radius: 14px;
     padding: 32px;
-    transition: var(--transition);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,66 +74,120 @@
     overflow: hidden;
 }
 
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal), rgba(49, 114, 134, 0.3));
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: transparent;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(25, 31, 57, 0.1);
+    border-color: rgba(49, 114, 134, 0.2);
+}
+
+.project-card:hover::before {
+    opacity: 1;
 }
 
 .project-card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
-    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: var(--navy);
     line-height: 1.3;
+    letter-spacing: -0.01em;
 }
 
 .project-card p {
-    color: var(--text-secondary);
-    font-size: 1rem;
+    color: #5a6478;
+    font-size: 0.98rem;
+    line-height: 1.7;
     margin-bottom: 24px;
+    flex-grow: 1;
 }
 
 .project-meta {
     margin-top: auto;
-    padding-top: 20px;
-    border-top: 1px solid var(--bg-light);
-    font-size: 0.9rem;
-    color: var(--text-main);
-    line-height: 1.5;
+    padding-top: 18px;
+    border-top: 1px solid rgba(25, 31, 57, 0.08);
+    font-size: 0.88rem;
+    color: #5a6478;
+    line-height: 1.6;
 }
 
 .project-meta strong {
-    color: var(--primary-dark);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--teal);
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 4px;
 }
 
+/* ===== PROYECTOS FUTUROS ===== */
 .future-projects {
-    background-color: var(--bg-light);
-    padding: 70px 7%;
+    background-color: var(--cream);
+    padding: 80px 7%;
     text-align: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(25, 31, 57, 0.07);
 }
 
 .future-projects .section-intro {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* --- UTILIDADES --- */
-.text-center {
-    text-align: center;
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--navy);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.section-intro {
+    font-size: 1.05rem;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+/* ===== UTILIDADES ===== */
+.text-center { text-align: center; }
+
+/* ===== FOOTER ===== */
+footer {
+    border: none;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero {
-        padding: 50px 24px;
+        padding: 70px 6% 60px;
     }
 
     .projects-section {
-        padding: 0 24px 60px;
+        padding: 56px 6% 64px;
     }
 
     .project-card {
         padding: 24px;
+    }
+
+    .future-projects {
+        padding: 60px 6%;
     }
 }
