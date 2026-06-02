@@ -590,19 +590,15 @@ main {
 ========================= */
 
 .cta-section.hr35-pricing {
-  background: var(--navy);
-  color: var(--cream);
+  background: var(--cream);
+  color: var(--navy);
   padding: 3.6rem 1.5rem;
   position: relative;
   overflow: hidden;
 }
 
 .cta-section.hr35-pricing::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 60% 50%, rgba(49, 114, 134, 0.2) 0%, transparent 70%);
-  pointer-events: none;
+  display: none;
 }
 
 .hr35-pricing .cta-content {
@@ -612,36 +608,37 @@ main {
 }
 
 .hr35-pricing .badge {
-  background: rgba(168, 168, 148, 0.15);
-  color: var(--sage);
-  border-color: rgba(168, 168, 148, 0.25);
+  background: rgba(49, 114, 134, 0.1);
+  color: var(--teal);
+  border-color: rgba(49, 114, 134, 0.2);
 }
 
 .hr35-pricing .section-title {
-  color: var(--cream);
+  color: var(--navy);
 }
 
 .hr35-pricing .cta-text {
   max-width: 760px;
   margin: 0.95rem auto 0;
-  color: rgba(255, 251, 220, 0.75);
+  color: #4a5568;
   font-size: 0.98rem;
   line-height: 1.7;
 }
 
 .hr35-price-box {
   margin: 1.35rem auto 1.15rem;
-  padding: 1.2rem;
+  padding: 1.4rem;
   border-radius: 16px;
-  border: 1px solid rgba(255, 251, 220, 0.12);
-  background: rgba(255, 251, 220, 0.06);
+  border: 1px solid rgba(25, 31, 57, 0.1);
+  background: #fff;
   max-width: 720px;
+  box-shadow: 0 4px 20px rgba(25, 31, 57, 0.07);
 }
 
 .hr35-anchor {
   margin: 0 0 0.5rem 0;
   font-size: 1rem;
-  color: rgba(255, 251, 220, 0.7);
+  color: #6b7280;
 }
 
 .hr35-anchor strong {
@@ -654,17 +651,17 @@ main {
   font-family: var(--font-heading);
   font-size: clamp(1.45rem, 2.8vw, 2.1rem);
   font-weight: 700;
-  color: var(--cream);
+  color: var(--navy);
 }
 
 .hr35-price strong {
-  color: var(--cream);
+  color: var(--navy);
 }
 
 .hr35-price-note {
   margin-top: 0.55rem;
   font-size: 0.94rem;
-  color: rgba(255, 251, 220, 0.65);
+  color: #6b7280;
   line-height: 1.5;
 }
 
@@ -679,9 +676,9 @@ main {
 .hr35-stack-item {
   padding: 0.7rem 0.85rem;
   border-radius: 12px;
-  background: rgba(255, 251, 220, 0.06);
-  border: 1px solid rgba(255, 251, 220, 0.1);
-  color: rgba(255, 251, 220, 0.85);
+  background: rgba(25, 31, 57, 0.04);
+  border: 1px solid rgba(25, 31, 57, 0.08);
+  color: var(--navy);
   font-size: 0.94rem;
 }
 
@@ -701,7 +698,7 @@ main {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255, 251, 220, 0.5);
+  color: var(--sage);
   margin: 0 0 18px;
 }
 
@@ -770,6 +767,11 @@ main {
   margin: 0;
   padding-top: 12px;
   border-top: 1px solid rgba(255, 251, 220, 0.08);
+}
+
+/* Sección cupos — fondo navy */
+.hr35-section:has(.hr35-cupos-wrap) {
+  background: var(--navy);
 }
 
 /* =========================
@@ -882,7 +884,7 @@ main {
 ========================= */
 
 .cta-section.hr35-section:not(.hr35-pricing) {
-  background: var(--navy);
+  background: var(--teal);
   color: var(--cream);
   padding: 3.6rem 1.5rem;
   position: relative;
@@ -893,7 +895,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 60% 50%, rgba(49, 114, 134, 0.2) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 60% 50%, rgba(255, 251, 220, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -908,21 +910,32 @@ main {
 }
 
 .cta-section.hr35-section:not(.hr35-pricing) .cta-text {
-  color: rgba(255, 251, 220, 0.75);
+  color: rgba(255, 251, 220, 0.85);
   max-width: 760px;
   margin: 0.65rem auto 0;
   line-height: 1.7;
   font-size: 0.98rem;
 }
 
+.cta-section.hr35-section:not(.hr35-pricing) .button.primary {
+  background: var(--cream);
+  color: var(--teal);
+  border-color: var(--cream);
+}
+
+.cta-section.hr35-section:not(.hr35-pricing) .button.primary:hover {
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(25, 31, 57, 0.15);
+}
+
 .cta-section.hr35-section:not(.hr35-pricing) .button.secondary {
-  background: rgba(255, 251, 220, 0.08);
+  background: rgba(255, 251, 220, 0.12);
   color: var(--cream);
-  border: 1px solid rgba(255, 251, 220, 0.2);
+  border: 1px solid rgba(255, 251, 220, 0.3);
 }
 
 .cta-section.hr35-section:not(.hr35-pricing) .button.secondary:hover {
-  background: rgba(255, 251, 220, 0.14);
+  background: rgba(255, 251, 220, 0.2);
 }
 
 .cta-section.hr35-section:not(.hr35-pricing) .hero-buttons {
