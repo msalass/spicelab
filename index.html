@@ -21,7 +21,6 @@ gtag('config', 'AW-18018765001');
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ✅ FIX 1: Title shortened to ~55 chars, primary keyword moved to front -->
 <title>Consultoría Geoquímica e Isotópica en Chile | SPICe Lab</title>
 
 <!-- SEO Meta Tags -->
@@ -30,13 +29,13 @@ gtag('config', 'AW-18018765001');
 <meta name="author" content="Dr. Marcos Salas-Saavedra, SPICe Lab">
 <meta name="robots" content="index, follow">
 
-<!-- ✅ FIX 2: hreflang tags for ES/EN -->
+<!-- hreflang -->
 <link rel="canonical" href="https://spicelab.cl/" />
 <link rel="alternate" hreflang="es" href="https://spicelab.cl/" />
 <link rel="alternate" hreflang="en" href="https://spicelab.cl/en/" />
 <link rel="alternate" hreflang="x-default" href="https://spicelab.cl/" />
 
-<!-- Open Graph / Social Media Meta Tags -->
+<!-- Open Graph -->
 <meta property="og:title" content="Consultoría Geoquímica e Isotópica en Chile | SPICe Lab">
 <meta property="og:description" content="Consultoría geoquímica e isotópica para minería, agricultura e investigación en Chile. Análisis de precisión con rigor internacional.">
 <meta property="og:type" content="website">
@@ -63,9 +62,7 @@ gtag('config', 'AW-18018765001');
 <link rel="stylesheet" href="/assets/css/index.css" />
 <link rel="stylesheet" href="/assets/css/pages/home.css" />
 
-<!-- Scripts -->
-
-<!-- ✅ FIX 3: JSON-LD Organization + LocalBusiness schema -->
+<!-- JSON-LD Organization + LocalBusiness schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -111,124 +108,6 @@ gtag('config', 'AW-18018765001');
 }
 </script>
 
-<!-- ✅ FIX 4: WhatsApp floating button styles -->
-<style>
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #25D366;
-  color: #fff;
-  border-radius: 50px;
-  padding: 12px 20px 12px 14px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.whatsapp-float:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37,211,102,0.45);
-  color: #fff;
-  text-decoration: none;
-}
-.whatsapp-float svg {
-  flex-shrink: 0;
-}
-@media (max-width: 600px) {
-  .whatsapp-float span.wa-label {
-    display: none;
-  }
-  .whatsapp-float {
-    padding: 14px;
-    border-radius: 50%;
-  }
-}
-
-/* ✅ FIX 5: Founder credential strip in hero */
-.founder-credential {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #6b7280;
-  margin-top: 6px;
-  margin-bottom: 4px;
-  flex-wrap: wrap;
-}
-.founder-credential strong {
-  color: #374151;
-  font-weight: 600;
-}
-.founder-credential .cred-sep {
-  color: #d1d5db;
-}
-
-/* ✅ FIX 6: "Qué pasa después" process steps */
-.next-steps-strip {
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 18px 24px;
-  margin-top: 20px;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-.next-step {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #374151;
-  flex: 1;
-  min-width: 150px;
-}
-.next-step-num {
-  background: #0d6e8a;
-  color: #fff;
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-.next-step-arrow {
-  color: #d1d5db;
-  font-size: 18px;
-  padding: 0 6px;
-  flex-shrink: 0;
-}
-.next-steps-label {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #9ca3af;
-  margin-bottom: 10px;
-  width: 100%;
-}
-@media (max-width: 600px) {
-  .next-steps-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .next-step-arrow { display: none; }
-}
-</style>
-
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -255,7 +134,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/acerca-de/">Acerca de</a>
         <a href="/equipo/">Equipo</a>
         <a href="/servicios/">Servicios</a>
-        <!-- Dropdown Ciencia Aplicada al Campo -->
         <div class="nav-dropdown">
           <a href="/ciencia-en-el-campo/servicios-ag/" class="nav-dropdown-toggle">Ciencia Aplicada al Campo</a>
           <div class="nav-dropdown-menu">
@@ -306,7 +184,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="badge">Geoquímica Aplicada</span>
       <h1>Centro de Isótopos del Pacífico Sur (SPICe Lab)</h1>
 
-      <!-- ✅ FIX 5: Founder credentials surfaced in hero -->
       <p class="founder-credential">
         <strong>Dr. Marcos Salas-Saavedra</strong>
         <span class="cred-sep">·</span>
@@ -315,7 +192,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Postdoc, Princeton University
       </p>
 
-      <!-- ✅ FIX 7: Improved subtitle — specific and action-oriented -->
       <p class="hero-subtitle">
         Usamos isótopos y elementos como trazadores para resolver desafíos ambientales,
         agrícolas y de recursos geológicos — con rigor de clase mundial, desde Chile.
@@ -333,7 +209,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </p>
       </div>
 
-      <!-- ✅ FIX 6: "Qué pasa después" — removes uncertainty before contact -->
       <div class="next-steps-strip">
         <span class="next-steps-label">¿Qué pasa después de contactarnos?</span>
         <div class="next-step">
@@ -352,7 +227,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- ✅ FIX 8: CTAs rewritten + broken /es/ paths fixed -->
       <div class="hero-buttons">
         <a href="/servicios/" class="button primary">Ver nuestros servicios</a>
         <a href="/contacto/" class="button secondary">Solicitar diagnóstico gratuito · Sin compromiso</a>
@@ -553,7 +427,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="cta-text">
         Conversemos sobre tus necesidades y diseñemos el enfoque geoquímico adecuado para tu proyecto.
       </p>
-      <!-- ✅ FIX 8: CTA path fixed + text rewritten -->
       <a href="/contacto/" class="button primary">Solicitar diagnóstico gratuito</a>
     </div>
   </section>
@@ -563,7 +436,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>&copy; 2025 South Pacific Isotope Centre — SPICe Lab</p>
 </footer>
 
-<!-- ✅ FIX 4: WhatsApp floating button -->
+<!-- WhatsApp floating button -->
 <a href="https://wa.me/56971540665?text=Hola%20SPICe%20Lab%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20sus%20servicios."
    class="whatsapp-float"
    target="_blank"
