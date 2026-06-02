@@ -124,9 +124,9 @@ main {
 .hr35-hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(160deg, #1a2e1a 0%, #1e3520 100%);
+  background: linear-gradient(160deg, var(--navy) 0%, #243055 100%);
   padding: 3.5rem 1.5rem 3rem;
-  border-bottom: 1px solid rgba(168, 168, 148, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .hr35-hero::after {
