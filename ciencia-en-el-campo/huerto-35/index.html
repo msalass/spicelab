@@ -27,6 +27,13 @@
   <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload del hero (elemento LCP): empieza a descargar de inmediato -->
+  <link rel="preload" as="image" href="/assets/images/antes-despues-huerto35.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- Fuentes cargadas aquí en el <head> (descubiertas temprano y en paralelo), en vez del @import tardío de index.css -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+
   <link rel="stylesheet" href="/assets/css/index.css" />
   <link rel="stylesheet" href="/assets/css/pages/huerto-rentable-35.css" />
 
