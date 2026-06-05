@@ -1368,3 +1368,30 @@ main {
     padding: 1.1rem;
   }
 }
+/* ===== GALERÍA DE INSTALACIONES (grilla) ===== */
+.hr35-galeria { background: #ffffff; }
+.hr35-galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+.hr35-galeria-item {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(25, 31, 57, 0.08);
+  background: var(--cream);
+}
+.hr35-galeria-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.hr35-galeria-item:hover img { transform: scale(1.04); }
+
+@media (max-width: 760px) {
+  .hr35-galeria-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+}
