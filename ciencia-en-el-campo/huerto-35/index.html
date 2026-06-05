@@ -145,13 +145,45 @@
   }
 
   /* ✅ Hero subtitle — larger, centered */
-  .hr35-hero-subtitle-centered {
+  .hr35-hero .hr35-hero-subtitle-centered {
     font-size: 1.35rem !important;
     line-height: 1.65 !important;
     text-align: center !important;
     max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* ✅ Alerta de cupos — animación elegante (acelerada por GPU) */
+  .hr35-cupos-alerta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.6rem auto 0.9rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(49, 114, 134, 0.5);
+    border-radius: 999px;
+    background: rgba(49, 114, 134, 0.14);
+    color: #fffbdc;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    animation: hr35-breathe 2.8s ease-in-out infinite;
+  }
+  .hr35-cupos-alerta-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #317286;
+    flex-shrink: 0;
+    animation: hr35-dot 2.8s ease-in-out infinite;
+  }
+  @keyframes hr35-breathe { 0%,100% { transform: scale(1); opacity: .95; } 50% { transform: scale(1.04); opacity: 1; } }
+  @keyframes hr35-dot     { 0%,100% { transform: scale(1); opacity: .6; }  50% { transform: scale(1.3); opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .hr35-cupos-alerta, .hr35-cupos-alerta-dot { animation: none; }
   }
   </style>
 </head>
@@ -235,8 +267,10 @@
           <a href="#postular" class="button primary">Quiero mi Huerto Rentable</a>
         </div>
 
+        <p class="hr35-cupos-alerta"><span class="hr35-cupos-alerta-dot"></span>Solo quedan 2 de 15 cupos</p>
+
         <div class="hr35-microtrust hr35-microtrust-centered">
-          <span><strong>Solo 2 cupos</strong> a precio de lanzamiento</span>
+          <span>Precio de lanzamiento</span>
           <span>•</span>
           <span>La Araucanía, Los Ríos y Los Lagos</span>
         </div>
@@ -400,7 +434,7 @@
 
             <p class="hr35-cupos-count">13 <span>de 15 cupos ocupados</span></p>
 
-            <p class="hr35-cupos-alerta"><span class="hr35-cupos-alerta-dot"></span>Solo quedan 2 cupos</p>
+            <p class="hr35-cupos-alerta"><span class="hr35-cupos-alerta-dot"></span>Solo quedan 2 de 15 cupos</p>
 
             <p class="hr35-cupos-available">✓ 2 cupos disponibles a precio de lanzamiento</p>
 
