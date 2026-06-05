@@ -64,8 +64,6 @@ gtag('config', 'AW-18018765001');
 <link rel="stylesheet" href="/assets/css/pages/home.css" />
 
 <!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <!-- ✅ FIX 3: JSON-LD Organization + LocalBusiness schema -->
 <script type="application/ld+json">
@@ -114,122 +112,6 @@ gtag('config', 'AW-18018765001');
 </script>
 
 <!-- ✅ FIX 4: WhatsApp floating button styles -->
-<style>
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #25D366;
-  color: #fff;
-  border-radius: 50px;
-  padding: 12px 20px 12px 14px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.whatsapp-float:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37,211,102,0.45);
-  color: #fff;
-  text-decoration: none;
-}
-.whatsapp-float svg {
-  flex-shrink: 0;
-}
-@media (max-width: 600px) {
-  .whatsapp-float span.wa-label {
-    display: none;
-  }
-  .whatsapp-float {
-    padding: 14px;
-    border-radius: 50%;
-  }
-}
-
-/* ✅ FIX 5: Founder credential strip in hero */
-.founder-credential {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #6b7280;
-  margin-top: 6px;
-  margin-bottom: 4px;
-  flex-wrap: wrap;
-}
-.founder-credential strong {
-  color: #374151;
-  font-weight: 600;
-}
-.founder-credential .cred-sep {
-  color: #d1d5db;
-}
-
-/* ✅ FIX 6: "Qué pasa después" process steps */
-.next-steps-strip {
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 18px 24px;
-  margin-top: 20px;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-.next-step {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #374151;
-  flex: 1;
-  min-width: 150px;
-}
-.next-step-num {
-  background: #0d6e8a;
-  color: #fff;
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-.next-step-arrow {
-  color: #d1d5db;
-  font-size: 18px;
-  padding: 0 6px;
-  flex-shrink: 0;
-}
-.next-steps-label {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #9ca3af;
-  margin-bottom: 10px;
-  width: 100%;
-}
-@media (max-width: 600px) {
-  .next-steps-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .next-step-arrow { display: none; }
-}
-</style>
 
 </head>
 <body>
@@ -237,6 +119,9 @@ gtag('config', 'AW-18018765001');
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP99D648"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<div id="intro"><img class="intro-logo" src="/assets/images/vertical-color.svg" alt="SPICe Lab — South Pacific Isotope Centre"><div class="intro-cue">Scroll <span>↓</span></div>
+</div>
 
 <header>
   <nav class="main-nav">
@@ -356,14 +241,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <section class="cards-scroll-container">
-    <div class="cards-sticky-view">
-      <!-- Logo que se achica -->
-      <div class="scrolling-logo-box">
-        <img src="/assets/images/horizontal-positivo.png" class="logo-to-shrink" alt="SPICe Lab">
-      </div>
-      <!-- Contenido de las tarjetas -->
-      <div class="cards-content anim-cards-content">
+  <section class="cards-section">
+      <div class="cards-content">
         <h2 class="section-title">¿Qué podemos apoyar hoy?</h2>
         <p class="section-intro">
           Mientras las instalaciones analíticas propias de SPICe Lab se encuentran en desarrollo, ya ofrecemos
@@ -567,7 +446,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <!-- ✅ FIX 4: WhatsApp floating button -->
-<a href="https://wa.me/56971540665?text=Hola%20SPICe%20Lab%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20sus%20servicios."
+<a href="https://wa.me/56XXXXXXXXX?text=Hola%20SPICe%20Lab%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20sus%20servicios."
    class="whatsapp-float"
    target="_blank"
    rel="noopener noreferrer"
@@ -580,46 +459,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="/assets/js/main.js"></script>
 <script>
-gsap.registerPlugin(ScrollTrigger);
-
-const header = document.querySelector('header');
-const headerHeight = header ? header.offsetHeight : 80;
-
-gsap.set(".anim-cards-content", { opacity: 0, y: 100 });
-gsap.set(".card", { opacity: 0, y: 60 });
-
-const cardsTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".cards-scroll-container",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1.5,
-    markers: false
+(function () {
+  var intro = document.getElementById("intro");
+  if (!intro) return;
+  var done = false;
+  function tick() {
+    if (done) return;
+    var p = Math.min(window.scrollY / (window.innerHeight * 0.6), 1);
+    intro.style.opacity = String(1 - p);
+    intro.style.transform = "translateY(" + (-p * 46) + "px) scale(" + (1 - p * 0.05) + ")";
+    if (p >= 1) { intro.classList.add("gone"); done = true; }
   }
-});
-
-cardsTl
-  .to(".logo-to-shrink", {
-    scale: 0.18,
-    y: `calc(-50vh + ${headerHeight + 50}px)`,
-    opacity: 0,
-    ease: "power2.inOut"
-  }, 0)
-  .to(".anim-cards-content", {
-    opacity: 1,
-    y: 0,
-    ease: "power2.out"
-  }, 0.25)
-  .to(".card", {
-    opacity: 1,
-    y: 0,
-    stagger: 0.08,
-    ease: "back.out(1.2)"
-  }, 0.4);
-
-window.addEventListener('resize', () => {
-  ScrollTrigger.refresh();
-});
+  window.addEventListener("scroll", tick, { passive: true });
+  intro.addEventListener("click", function () {
+    window.scrollTo({ top: Math.round(window.innerHeight * 0.7), behavior: "smooth" });
+  });
+}());
 </script>
 </body>
 </html>

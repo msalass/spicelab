@@ -14,7 +14,14 @@
   </script>
   <!-- End Google Tag Manager -->
 
-  <!-- ✅ FIX: title more specific for search + conversion -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18018765001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18018765001');
+  </script>
+
   <title>Huerto Rentable 35 y 75 | Programas Agrícolas SPICe Lab Chile</title>
   <meta name="description" content="Programas Huerto Rentable de SPICe Lab: invernadero instalado + acompañamiento técnico real. Desde $990.000 CLP. Pago por Webpay o transferencia. Sur de Chile.">
   <meta name="keywords" content="huerto rentable, invernadero Chile, programa agrícola, pequeños productores, SPICe Lab, ciencia aplicada al campo, huerto 35, huerto 75">
@@ -22,21 +29,17 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://spicelab.cl/ciencia-en-el-campo/servicios-ag/" />
 
-  <!-- ✅ NEW: hreflang tags -->
   <link rel="alternate" hreflang="es" href="https://spicelab.cl/ciencia-en-el-campo/servicios-ag/" />
   <link rel="alternate" hreflang="x-default" href="https://spicelab.cl/ciencia-en-el-campo/servicios-ag/" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Huerto Rentable 35 y 75 | Programas Agrícolas SPICe Lab" />
   <meta property="og:description" content="Invernadero instalado + acompañamiento técnico real. Desde $990.000 CLP. Pago por Webpay o transferencia. Sur de Chile." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://spicelab.cl/assets/images/horizontal-positivo.png" />
   <meta property="og:url" content="https://spicelab.cl/ciencia-en-el-campo/servicios-ag/" />
   <meta property="og:site_name" content="SPICe Lab" />
-  <!-- ✅ FIX: locale corrected to es_CL -->
   <meta property="og:locale" content="es_CL" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Huerto Rentable 35 y 75 | Programas Agrícolas SPICe Lab" />
   <meta name="twitter:description" content="Invernadero instalado + acompañamiento técnico real. Desde $990.000 CLP. Sur de Chile." />
@@ -46,7 +49,6 @@
   <link rel="stylesheet" href="/assets/css/index.css" />
   <link rel="stylesheet" href="/assets/css/pages/servicios-ag.css" />
 
-  <!-- ✅ NEW: Service JSON-LD schema for both programs -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -94,165 +96,13 @@
     ]
   }
   </script>
-
-  <!-- ✅ Extra styles for new elements -->
-  <style>
-  /* Payment methods badge */
-  .payment-methods {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-  }
-  .payment-label {
-    font-size: 11px;
-    color: #6b7280;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-  .payment-badge {
-    background: #f3f4f6;
-    border: 1px solid #e5e7eb;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #374151;
-    padding: 3px 8px;
-  }
-
-  /* Timeline pill */
-  .timeline-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: #fef3c7;
-    border: 1px solid #fcd34d;
-    color: #92400e;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 20px;
-    margin-bottom: 12px;
-  }
-
-  /* Qué pasa después strip */
-  .next-steps-strip {
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    padding: 16px 22px;
-    margin: 24px 0 0;
-  }
-  .next-steps-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #9ca3af;
-    margin-bottom: 10px;
-  }
-  .next-steps-row {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-  .next-step {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 13px;
-    color: #374151;
-    flex: 1;
-    min-width: 130px;
-  }
-  .next-step-num {
-    background: #0d6e8a;
-    color: #fff;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-  .next-step-arrow {
-    color: #d1d5db;
-    font-size: 16px;
-    padding: 0 4px;
-    flex-shrink: 0;
-  }
-  @media (max-width: 600px) {
-    .next-steps-row { flex-direction: column; align-items: flex-start; gap: 8px; }
-    .next-step-arrow { display: none; }
-    .next-step { min-width: unset; }
-  }
-
-  /* Founder trust badge */
-  .founder-trust {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #f0f7f9;
-    border: 1px solid #c8e4ea;
-    border-radius: 8px;
-    padding: 10px 16px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-  }
-  .founder-trust-text {
-    font-size: 12px;
-    color: #374151;
-    flex: 1;
-    min-width: 180px;
-  }
-  .founder-trust-text strong { color: #0d6e8a; }
-
-  /* WhatsApp button */
-  .whatsapp-float {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #25D366;
-    color: #fff;
-    border-radius: 50px;
-    padding: 12px 20px 12px 14px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    box-shadow: 0 4px 16px rgba(37,211,102,0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .whatsapp-float:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37,211,102,0.45);
-    color: #fff;
-    text-decoration: none;
-  }
-  @media (max-width: 600px) {
-    .whatsapp-float span.wa-label { display: none; }
-    .whatsapp-float { padding: 14px; border-radius: 50%; }
-  }
-  </style>
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP99D648"
       height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <header>
     <nav class="main-nav">
@@ -321,7 +171,6 @@
           Nuestros programas combinan infraestructura, instalación, criterio técnico y acompañamiento, para que puedas avanzar con una base sólida y evitar errores costosos desde el inicio.
         </p>
 
-        <!-- ✅ NEW: Qué pasa después strip -->
         <div class="next-steps-strip">
           <div class="next-steps-label">¿Qué pasa después de contactarnos?</div>
           <div class="next-steps-row">
@@ -344,16 +193,14 @@
 
         <div class="campo-hero-actions">
           <a href="#programas" class="button campo-primary">Ver programas</a>
-          <!-- ✅ FIX: CTA rewritten -->
           <a href="/contacto/" class="button campo-secondary">Consulta sin compromiso</a>
         </div>
 
-        <!-- ✅ NEW: founder trust badge -->
         <div class="founder-trust">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d6e8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           <p class="founder-trust-text">
             Programas diseñados por <strong>Dr. Marcos Salas-Saavedra</strong> — PhD University of Queensland · Postdoc Princeton University.
-            <a href="/equipo/" style="color:#0d6e8a;margin-left:4px;">Conocer al equipo →</a>
+            <a href="/equipo/">Conocer al equipo →</a>
           </p>
         </div>
       </div>
@@ -376,7 +223,6 @@
               <p class="campo-card-subtitle">La forma más inteligente y accesible de comenzar bien</p>
             </div>
 
-            <!-- ✅ NEW: timeline pill -->
             <div class="timeline-pill">
               ⏱ Instalación en 2–3 semanas desde la confirmación
             </div>
@@ -402,7 +248,6 @@
             </div>
 
             <div class="campo-list-block">
-              <!-- ✅ IMPROVED: deliverables list more specific -->
               <h4>Esto incluye:</h4>
               <ul>
                 <li>Invernadero base de 35 m² instalado en terreno</li>
@@ -417,7 +262,6 @@
             <div class="campo-price-box">
               <div class="campo-price-current">Hoy: <strong>$990.000 CLP</strong></div>
               <div class="campo-price-old">$1.690.000 CLP</div>
-              <!-- ✅ NEW: payment methods -->
               <div class="payment-methods">
                 <span class="payment-label">Pago:</span>
                 <span class="payment-badge">Webpay</span>
@@ -426,7 +270,6 @@
             </div>
 
             <div class="campo-card-actions">
-              <!-- ✅ FIX: CTA rewritten -->
               <a href="/ciencia-en-el-campo/huerto-35/" class="button campo-primary">Ver detalles y postular</a>
             </div>
           </article>
@@ -439,7 +282,6 @@
               <p class="campo-card-subtitle">Una unidad más grande, más robusta y con mayor potencial productivo</p>
             </div>
 
-            <!-- ✅ NEW: timeline pill -->
             <div class="timeline-pill">
               ⏱ Instalación en 3–4 semanas desde la confirmación
             </div>
@@ -465,7 +307,6 @@
             </div>
 
             <div class="campo-list-block">
-              <!-- ✅ IMPROVED: deliverables list more specific -->
               <h4>Esto incluye:</h4>
               <ul>
                 <li>Invernadero de 75 m² instalado en terreno</li>
@@ -479,7 +320,6 @@
 
             <div class="campo-price-box campo-price-box-simple">
               <div class="campo-price-current">Valor del programa: <strong>$1.990.000 CLP</strong></div>
-              <!-- ✅ NEW: payment methods -->
               <div class="payment-methods">
                 <span class="payment-label">Pago:</span>
                 <span class="payment-badge">Webpay</span>
@@ -488,7 +328,6 @@
             </div>
 
             <div class="campo-card-actions">
-              <!-- ✅ FIX: CTA rewritten -->
               <a href="/contacto/" class="button campo-secondary">Consultar por Huerto Rentable 75</a>
             </div>
           </article>
@@ -539,7 +378,6 @@
         </p>
         <div class="campo-hero-actions campo-center-actions">
           <a href="/ciencia-en-el-campo/huerto-35/" class="button campo-primary">Ver detalles Huerto Rentable 35</a>
-          <!-- ✅ FIX: CTA rewritten -->
           <a href="/contacto/" class="button campo-secondary campo-secondary-dark">Solicitar orientación gratuita</a>
         </div>
       </div>
@@ -550,7 +388,6 @@
     <p>&copy; 2026 South Pacific Isotope Centre — SPICe Lab</p>
   </footer>
 
-  <!-- ✅ NEW: WhatsApp floating button -->
   <a href="https://wa.me/56971540665?text=Hola%20SPICe%20Lab%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20los%20programas%20Huerto%20Rentable."
      class="whatsapp-float"
      target="_blank"
@@ -561,255 +398,6 @@
     </svg>
     <span class="wa-label">WhatsApp</span>
   </a>
-
-  <script src="/assets/js/main.js"></script>
-</body>
-</html>          <a href="/">Inicio</a>
-          <a href="/acerca-de/">Acerca de</a>
-          <a href="/equipo/">Equipo</a>
-          <a href="/servicios/">Servicios</a>
-
-          <!-- Dropdown Ciencia Aplicada al Campo -->
-          <div class="nav-dropdown">
-            <a href="/ciencia-en-el-campo/servicios-ag/" class="nav-dropdown-toggle">Ciencia Aplicada al Campo</a>
-            <div class="nav-dropdown-menu">
-              <a href="/ciencia-en-el-campo/servicios-ag/">Servicios Agrícolas</a>
-              <a href="/ciencia-en-el-campo/huerto-35/">Huerto Rentable 35</a>
-            </div>
-          </div>
-
-          <a href="/proyectos/">Proyectos</a>
-          <a href="/muestras/">Muestras</a>
-          <a href="/contacto/">Contacto</a>
-        </div>
-      </div>
-
-      <span class="lang-switch-desktop">
-        ES | <a href="/en/">EN</a>
-      </span>
-
-      <div class="menu-button-wrap">
-        <span class="lang-switch-mobile">
-          ES | <a href="/en/">EN</a>
-        </span>
-
-        <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Abrir menú">
-          <svg class="menu-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-    </nav>
-
-    <!-- MOBILE MENU -->
-    <div id="mobile-menu" class="mobile-menu-container">
-      <nav class="mobile-menu-nav">
-        <a href="/" class="menu-link">Inicio</a>
-        <a href="/acerca-de/" class="menu-link">Acerca de</a>
-        <a href="/equipo/" class="menu-link">Equipo</a>
-        <a href="/servicios/" class="menu-link">Servicios</a>
-
-        <a href="/ciencia-en-el-campo/servicios-ag/" class="menu-link">Ciencia Aplicada al Campo</a>
-        <a href="/ciencia-en-el-campo/servicios-ag/" class="menu-link menu-sublink">Servicios Agrícolas</a>
-        <a href="/ciencia-en-el-campo/huerto-35/" class="menu-link menu-sublink">Huerto Rentable 35</a>
-
-        <a href="/proyectos/" class="menu-link">Proyectos</a>
-        <a href="/muestras/" class="menu-link">Muestras</a>
-        <a href="/contacto/" class="menu-link">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="campo-hero">
-      <div class="campo-hero-content">
-        <span class="campo-badge">Agricultura aplicada</span>
-        <h1>Ciencia Aplicada al Campo</h1>
-        <p class="campo-subtitle">
-          Programas reales para transformar pequeños espacios en sistemas productivos con implementación, acompañamiento y visión de largo plazo.
-        </p>
-        <p class="campo-intro">
-          Diseñamos e implementamos programas prácticos para personas y familias que quieren producir mejor, aprender más rápido y construir un sistema agrícola más rentable, ordenado y sostenible.
-        </p>
-        <p class="campo-intro">
-          Nuestros programas combinan infraestructura, instalación, criterio técnico y acompañamiento, para que puedas avanzar con una base sólida y evitar errores costosos desde el inicio.
-        </p>
-
-        <div class="campo-hero-actions">
-          <a href="#programas" class="button campo-primary">Ver programas</a>
-          <a href="/contacto/" class="button campo-secondary">Hablar con nosotros</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROGRAMAS -->
-    <section class="campo-section" id="programas">
-      <div class="campo-wrapper">
-        <h2 class="campo-section-title">Nuestros Programas</h2>
-        <p class="campo-section-intro">
-          Dos puntos de entrada claros para distintos niveles de espacio, inversión y proyección productiva.
-        </p>
-
-        <div class="campo-program-grid">
-          <!-- PROGRAMA 35 -->
-          <article class="campo-program-card featured">
-            <div class="campo-program-head">
-              <span class="campo-pill">Programa de entrada</span>
-              <h3>Huerto Rentable 35</h3>
-              <p class="campo-card-subtitle">La forma más inteligente y accesible de comenzar bien</p>
-            </div>
-
-            <p>
-              Huerto Rentable 35 es nuestro programa de entrada, diseñado para pequeños productores, familias rurales y personas que quieren implementar una primera unidad intensiva de producción con acompañamiento real en terreno.
-            </p>
-            <p>
-              Es ideal para quienes quieren comenzar con una base seria, reducir errores y dar el primer paso con una estructura funcional, bien instalada y orientada a resultados.
-            </p>
-            <p>
-              Este programa incluye una unidad base de producción, instalación inicial y acompañamiento técnico de partida, para que no tengas que improvisar ni aprender todo a prueba y error.
-            </p>
-
-            <div class="campo-list-block">
-              <h4>Ideal para ti si:</h4>
-              <ul>
-                <li>quieres comenzar con un sistema real, no improvisado</li>
-                <li>tienes un espacio disponible y quieres activarlo pronto</li>
-                <li>buscas una entrada accesible al modelo</li>
-                <li>quieres aprender haciendo, con acompañamiento</li>
-              </ul>
-            </div>
-
-            <div class="campo-list-block">
-              <h4>Incluye:</h4>
-              <ul>
-                <li>Invernadero base de 35 metros cuadrados instalado</li>
-                <li>Implementación inicial en terreno</li>
-                <li>Acompañamiento técnico de partida</li>
-                <li>Guía de organización del sistema</li>
-                <li>Bonos de apoyo para la primera etapa</li>
-              </ul>
-            </div>
-
-            <div class="campo-price-box">
-              <div class="campo-price-current">Hoy: <strong>$990.000 CLP</strong></div>
-              <div class="campo-price-old">$1.690.000 CLP</div>
-            </div>
-
-            <div class="campo-card-actions">
-              <a href="/ciencia-en-el-campo/huerto-35/" class="button campo-primary">Ver Huerto Rentable 35</a>
-            </div>
-          </article>
-
-          <!-- PROGRAMA 75 -->
-          <article class="campo-program-card">
-            <div class="campo-program-head">
-              <span class="campo-pill campo-pill-dark">Programa avanzado</span>
-              <h3>Huerto Rentable 75</h3>
-              <p class="campo-card-subtitle">Una unidad más grande, más robusta y con mayor potencial productivo</p>
-            </div>
-
-            <p>
-              Huerto Rentable 75 es nuestro programa avanzado, diseñado para personas, familias o pequeños productores que quieren partir con una unidad más seria, con mayor capacidad de producción y una mejor base para construir un sistema más rentable y sostenible en el tiempo.
-            </p>
-            <p>
-              Este programa incorpora un invernadero de mayor tamaño y una implementación más robusta, pensada para quienes quieren producir con más intención comercial, aprovechar mejor su espacio y avanzar con una visión más clara de continuidad.
-            </p>
-            <p>
-              Aquí ya no se trata solo de comenzar, sino de construir una unidad productiva con mayor escala, mejor potencial de cosecha y una base más fuerte para ordenar el trabajo, aumentar la capacidad y proyectar crecimiento.
-            </p>
-
-            <div class="campo-list-block">
-              <h4>Ideal para ti si:</h4>
-              <ul>
-                <li>quieres una unidad de producción más grande desde el inicio</li>
-                <li>tienes mayor espacio disponible y quieres aprovecharlo mejor</li>
-                <li>buscas una base más sólida para producir con intención comercial</li>
-                <li>quieres una implementación más seria, con mayor capacidad y proyección</li>
-              </ul>
-            </div>
-
-            <div class="campo-list-block">
-              <h4>Incluye:</h4>
-              <ul>
-                <li>Invernadero de 75 metros cuadrados</li>
-                <li>Implementación inicial en terreno</li>
-                <li>Acompañamiento técnico según el alcance del programa</li>
-                <li>Diseño y organización más robusta del sistema</li>
-                <li>Mayor capacidad productiva y mejor potencial de continuidad</li>
-              </ul>
-            </div>
-
-            <div class="campo-price-box campo-price-box-simple">
-              <div class="campo-price-current">Valor del programa: <strong>$1.990.000 CLP</strong></div>
-            </div>
-
-            <div class="campo-card-actions">
-              <a href="/contacto/" class="button campo-secondary">Consultar por Huerto Rentable 75</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- IMPORTANTE -->
-    <section class="campo-section campo-alt">
-      <div class="campo-wrapper campo-narrow">
-        <div class="campo-note-box">
-          <span class="campo-badge campo-badge-inline">Importante</span>
-          <h2>No vendemos solo un invernadero</h2>
-          <p>
-            La diferencia entre nuestros programas no es únicamente el tamaño de la estructura. También cambia la capacidad productiva, el potencial comercial y el tipo de implementación recomendado según tu espacio, tus objetivos y el nivel de compromiso que quieras asumir.
-          </p>
-          <p>
-            Por eso cada programa está diseñado como una solución de implementación, no como una simple venta de infraestructura.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CUAL ELEGIR -->
-    <section class="campo-section">
-      <div class="campo-wrapper campo-narrow">
-        <h2 class="campo-section-title">¿Cuál programa elegir?</h2>
-
-        <div class="campo-compare-grid">
-          <div class="campo-compare-card">
-            <h3>Huerto Rentable 35</h3>
-            <p>
-              Si quieres comenzar con una primera unidad real, con una inversión más accesible y una base sólida para partir bien.
-            </p>
-          </div>
-
-          <div class="campo-compare-card">
-            <h3>Huerto Rentable 75</h3>
-            <p>
-              Si quieres partir con una unidad más grande, más robusta y con mayor capacidad productiva desde el inicio.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="campo-cta">
-      <div class="campo-wrapper campo-narrow text-center">
-        <span class="campo-badge campo-badge-dark">Siguiente paso</span>
-        <h2>Conversemos sobre el programa que mejor encaja contigo</h2>
-        <p>
-          Podemos ayudarte a evaluar tu espacio, tus objetivos y cuál de estos programas tiene más sentido para tu etapa actual.
-        </p>
-        <div class="campo-hero-actions campo-center-actions">
-          <a href="/ciencia-en-el-campo/huerto-35/" class="button campo-primary">Ver Huerto Rentable 35</a>
-          <a href="/contacto/" class="button campo-secondary campo-secondary-dark">Contactar a SPICe Lab</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 South Pacific Isotope Centre — SPICe Lab</p>
-  </footer>
 
   <script src="/assets/js/main.js"></script>
 </body>

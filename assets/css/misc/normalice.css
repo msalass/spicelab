@@ -9,7 +9,7 @@ html {
 
 body {
     margin: 0;
-    font-family: -apple-system, var(--font-body), Arial, sans-serif;
+    font-family: var(--font-body), -apple-system, BlinkMacSystemFont, Arial, sans-serif;
     color: #1c1c1e;
     line-height: 1.6;
 }

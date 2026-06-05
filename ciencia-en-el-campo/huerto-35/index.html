@@ -27,6 +27,13 @@
   <link rel="icon" href="/assets/images/isotipo-sin-fondo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload del hero (elemento LCP): empieza a descargar de inmediato -->
+  <link rel="preload" as="image" href="/assets/images/antes-despues-huerto35.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- Fuentes cargadas aquí en el <head> (descubiertas temprano y en paralelo), en vez del @import tardío de index.css -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+
   <link rel="stylesheet" href="/assets/css/index.css" />
   <link rel="stylesheet" href="/assets/css/pages/huerto-rentable-35.css" />
 
@@ -95,7 +102,7 @@
   .hr35-cupos-bar-fill {
     background: #0d1b2a;
     height: 100%;
-    width: 40%; /* 6 of 15 taken */
+    width: 87%; /* 13 of 15 taken */
     border-radius: 99px;
   }
   .hr35-cupos-count {
@@ -138,13 +145,45 @@
   }
 
   /* ✅ Hero subtitle — larger, centered */
-  .hr35-hero-subtitle-centered {
+  .hr35-hero .hr35-hero-subtitle-centered {
     font-size: 1.35rem !important;
     line-height: 1.65 !important;
     text-align: center !important;
     max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* ✅ Alerta de cupos — animación elegante (acelerada por GPU) */
+  .hr35-cupos-alerta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.6rem auto 0.9rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(49, 114, 134, 0.5);
+    border-radius: 999px;
+    background: rgba(49, 114, 134, 0.14);
+    color: #fffbdc;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    animation: hr35-breathe 1.8s ease-in-out infinite;
+  }
+  .hr35-cupos-alerta-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #317286;
+    flex-shrink: 0;
+    animation: hr35-dot 1.8s ease-in-out infinite;
+  }
+  @keyframes hr35-breathe { 0%,100% { transform: scale(1); opacity: .95; } 50% { transform: scale(1.04); opacity: 1; } }
+  @keyframes hr35-dot     { 0%,100% { transform: scale(1); opacity: .6; }  50% { transform: scale(1.3); opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .hr35-cupos-alerta, .hr35-cupos-alerta-dot { animation: none; }
   }
   </style>
 </head>
@@ -160,7 +199,7 @@
       <div class="nav-wrap">
         <div class="logo-wrap">
           <a class="logo-link" href="/">
-            <img src="/assets/images/isotipo-sin-fondo.png" width="28" height="28" alt="SPICe Lab Icono" />
+            <img src="/assets/images/isotipo-sin-fondo.webp" width="28" height="28" alt="SPICe Lab Icono" />
           </a>
         </div>
         <div class="nav-links">
@@ -209,53 +248,31 @@
   <main>
     <section class="hero hr35-hero hr35-hero-centered">
       <div class="hero-content hr35-hero-content-centered">
-        <span class="badge">Agricultura Aplicada</span>
-
-        <p class="hr35-hero-kicker hr35-hero-kicker-centered">
-          La maleza no debería seguir robándote tiempo, energía y control sobre tu huerto.
-        </p>
-
         <h1 class="hr35-hero-title-centered">
-          Comienza un <span class="hr35-highlight">huerto más ordenado, más controlado y más productivo</span> desde el primer paso.
+          Comienza un <span class="hr35-highlight">huerto más ordenado, controlado y productivo</span> — instalado en tu terreno.
         </h1>
 
         <p class="hero-subtitle hr35-hero-subtitle-centered">
-          <strong>Huerto Rentable 35</strong> te ayuda a dejar de improvisar con una base real:
-          <strong>invernadero instalado</strong>, implementación inicial y acompañamiento técnico para arrancar mejor.
+          Te entregamos el invernadero instalado, la implementación inicial y el acompañamiento técnico. Tú te enfocas en producir.
         </p>
 
         <div class="hr35-hero-visual hr35-hero-visual-centered">
-          <img src="/assets/images/antes-despues-huerto35.jpg" alt="Antes y después — terreno vacío transformado en huerto productivo con invernadero Huerto Rentable 35" class="hr35-hero-image" />
-        </div>
-
-        <div class="hr35-hero-focus hr35-hero-focus-centered">
-          <div class="hr35-focus-item">✔ Invernadero base de 35 m² instalado</div>
-          <div class="hr35-focus-item">✔ Acompañamiento técnico de partida</div>
-          <!-- ✅ Updated to 8 cupos -->
-          <div class="hr35-focus-item">
-            ✔ Precio de lanzamiento: <strong>$990.000 CLP</strong>
-            <span class="hr35-mini-note">(solo <strong>8 cupos</strong>)</span>
-          </div>
+          <picture style="display:contents">
+            <source srcset="/assets/images/antes-despues-huerto35.webp" type="image/webp" />
+            <img src="/assets/images/antes-despues-huerto35.jpg" width="2400" height="900" fetchpriority="high" decoding="async" alt="Antes y después — terreno vacío transformado en huerto productivo con invernadero Huerto Rentable 35" class="hr35-hero-image" />
+          </picture>
         </div>
 
         <div class="hero-buttons hero-buttons-centered">
-          <a href="#postular" class="button primary">Inscribirme al programa</a>
+          <a href="#postular" class="button primary">Quiero mi Huerto Rentable</a>
         </div>
 
-        <!-- ✅ Updated to 8 cupos -->
+        <p class="hr35-cupos-alerta"><span class="hr35-cupos-alerta-dot"></span>Solo quedan 2 de 15 cupos</p>
+
         <div class="hr35-microtrust hr35-microtrust-centered">
-          <span><strong>Solo 8 cupos</strong> disponibles · precio de lanzamiento</span>
+          <span>Precio de lanzamiento</span>
           <span>•</span>
-          <span>Acompañamiento técnico en terreno</span>
-          <span>•</span>
-          <span>Regiones: La Araucanía, Los Ríos y Los Lagos</span>
-        </div>
-
-        <div class="hr35-offer-strip">
-          <div class="hr35-offer-pill">
-            <span class="hr35-offer-icon">🎁</span>
-            <span>Inscríbete hoy y recibe una <strong>guía digital gratuita</strong> para ayudarte a comenzar con más claridad.</span>
-          </div>
+          <span>La Araucanía, Los Ríos y Los Lagos</span>
         </div>
       </div>
     </section>
@@ -295,36 +312,37 @@
           </div>
         </details>
 
+
+
         <details class="hr35-collapse">
-          <summary class="hr35-collapse-summary">Ver fotografías</summary>
+          <summary class="hr35-collapse-summary">Ver seminarios incluidos</summary>
           <div class="hr35-collapse-content">
-            <div class="hr35-carousel">
-              <button class="hr35-carousel-btn prev" type="button" aria-label="Imagen anterior">‹</button>
-              <div class="hr35-carousel-track-wrap">
-                <div class="hr35-carousel-track">
-                  <div class="hr35-carousel-slide">
-                    <img src="/assets/images/hr35-01.jpeg" alt="Invernadero Huerto Rentable 35 instalado en terreno 1" />
-                  </div>
-                  <div class="hr35-carousel-slide">
-                    <img src="/assets/images/hr35-02.jpeg" alt="Invernadero Huerto Rentable 35 instalado en terreno 2" />
-                  </div>
-                  <div class="hr35-carousel-slide">
-                    <img src="/assets/images/hr35-03.jpeg" alt="Vista de invernadero y espacio productivo 3" />
-                  </div>
-                  <div class="hr35-carousel-slide">
-                    <img src="/assets/images/hr35-04.jpeg" alt="Vista de invernadero y espacio productivo 4" />
-                  </div>
-                  <div class="hr35-carousel-slide">
-                    <img src="/assets/images/hr35-05.jpeg" alt="Vista de invernadero y espacio productivo 5" />
-                  </div>
-                  <div class="hr35-carousel-slide">
-                    <img src="/assets/images/hr35-06.jpeg" alt="Vista de invernadero y espacio productivo 6" />
-                  </div>
-                </div>
+            <div class="focus-grid">
+              <div class="focus-card">
+                <h3 class="focus-title">1 · Presentación y diseño de tu huerto</h3>
+                <p class="focus-text">Propuesta inicial y diseño preliminar de tu huerto.</p>
               </div>
-              <button class="hr35-carousel-btn next" type="button" aria-label="Siguiente imagen">›</button>
+              <div class="focus-card">
+                <h3 class="focus-title">2 · Salud del suelo y agricultura regenerativa</h3>
+                <p class="focus-text">Por qué un suelo vivo es la base de un huerto productivo.</p>
+              </div>
+              <div class="focus-card">
+                <h3 class="focus-title">3 · El clima y el uso correcto del invernadero</h3>
+                <p class="focus-text">Cómo leer el clima de tu zona y sacarle el máximo provecho a la cubierta.</p>
+              </div>
+              <div class="focus-card">
+                <h3 class="focus-title">4 · Pesticidas y fertilizantes orgánicos</h3>
+                <p class="focus-text">Qué usar, cómo prepararlos y cuándo aplicarlos.</p>
+              </div>
+              <div class="focus-card">
+                <h3 class="focus-title">5 · Planificación y sucesión de cultivos</h3>
+                <p class="focus-text">Herramientas para ahorrar tiempo y optimizar el trabajo del huerto (farm optimization).</p>
+              </div>
+              <div class="focus-card">
+                <h3 class="focus-title">6 · Monetización de tu huerto</h3>
+                <p class="focus-text">Ejemplos exitosos de market gardening en EE.UU., Canadá, Australia y Chile.</p>
+              </div>
             </div>
-            <div class="hr35-carousel-dots" aria-label="Navegación del carrusel"></div>
           </div>
         </details>
 
@@ -354,6 +372,33 @@
       </div>
     </section>
 
+    <!-- GALERÍA: instalaciones reales -->
+    <section class="hr35-section hr35-galeria">
+      <div class="hr35-container">
+        <span class="badge">Instalaciones reales</span>
+        <h2 class="section-title">Invernaderos que construimos nosotros, en terreno</h2>
+        <p class="section-intro">
+          Cada Huerto Rentable lo instala nuestro equipo de principio a fin: desde el armado de la estructura hasta la cobertura final. Estas son instalaciones reales en Loncopangue y Peulla.
+        </p>
+        <div class="hr35-galeria-grid">
+          <figure class="hr35-galeria-item"><img src="/assets/images/peulla-2.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Terreno preparado e inicio de la instalación del invernadero en Peulla" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/loncopangue-2.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Preparación y doblado de los arcos de acero de la estructura" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/loncopangue-3.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Montaje de los arcos del invernadero sobre el terreno" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/loncopangue-4.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Instalación de la estructura por nuestro equipo en terreno" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/loncopangue-6.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Ensamblaje de arcos y largueros del invernadero" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/loncopangue-1.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Estructura del invernadero Huerto Rentable montada en terreno" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/peulla-4.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Vista interior de la estructura de arcos del invernadero en Peulla" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/peulla-5.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Escala del invernadero: una persona de pie dentro de la estructura" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/loncopangue-5.webp" width="1200" height="669" loading="lazy" decoding="async" alt="Colocación de la cobertura de polietileno UV del invernadero" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/peulla-6.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Instalación de la cobertura y la puerta del invernadero en Peulla" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/peulla-1.webp" width="1168" height="880" loading="lazy" decoding="async" alt="Invernadero Huerto Rentable terminado en Peulla, entre montañas" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/peulla-3.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Invernadero instalado y operativo en Peulla, sur de Chile" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/peulla-7.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Invernadero Huerto Rentable terminado, vista de la entrada" /></figure>
+          <figure class="hr35-galeria-item"><img src="/assets/images/peulla-8.webp" width="1200" height="678" loading="lazy" decoding="async" alt="Interior del invernadero terminado con cubierta de polietileno" /></figure>
+        </div>
+      </div>
+    </section>
+
     <!-- ✅ SPOT COUNTER — sits directly above the form -->
     <section class="hr35-section">
       <div class="hr35-container">
@@ -363,7 +408,7 @@
             <p class="hr35-cupos-label">Disponibilidad · Precio de lanzamiento</p>
 
             <div class="hr35-cupos-dots">
-              <!-- 7 taken -->
+              <!-- 13 taken -->
               <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
               <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
               <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
@@ -371,28 +416,31 @@
               <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
               <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
               <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
-              <!-- 8 available -->
-              <span class="hr35-cupo-dot available" title="Cupo disponible"></span>
-              <span class="hr35-cupo-dot available" title="Cupo disponible"></span>
-              <span class="hr35-cupo-dot available" title="Cupo disponible"></span>
-              <span class="hr35-cupo-dot available" title="Cupo disponible"></span>
-              <span class="hr35-cupo-dot available" title="Cupo disponible"></span>
-              <span class="hr35-cupo-dot available" title="Cupo disponible"></span>
+              <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
+              <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
+              <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
+              <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
+              <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
+              <span class="hr35-cupo-dot taken"    title="Cupo ocupado"></span>
+              <!-- 2 available -->
               <span class="hr35-cupo-dot available" title="Cupo disponible"></span>
               <span class="hr35-cupo-dot available" title="Cupo disponible"></span>
             </div>
 
-            <!-- Progress bar: 7/15 = 46% -->
+            <!-- Progress bar: 13/15 = 87% -->
             <div class="hr35-cupos-bar-wrap">
               <div class="hr35-cupos-bar-fill"></div>
             </div>
 
-            <p class="hr35-cupos-count">7 <span>de 15 cupos ocupados</span></p>
-            <p class="hr35-cupos-available">✓ 8 cupos disponibles a precio de lanzamiento</p>
+            <p class="hr35-cupos-count">13 <span>de 15 cupos ocupados</span></p>
+
+            <p class="hr35-cupos-alerta"><span class="hr35-cupos-alerta-dot"></span>Solo quedan 2 de 15 cupos</p>
+
+            <p class="hr35-cupos-available">✓ 2 cupos disponibles a precio de lanzamiento</p>
 
             <p class="hr35-cupos-note">
-              Estamos en la primera etapa del programa. El primer invernadero ya está instalado y operativo.
-              Los cupos restantes están disponibles a precio de lanzamiento mientras se completa esta etapa.
+              Estamos cerrando la primera etapa del programa. Los primeros invernaderos ya están instalados y operativos.
+              Quedan solo <strong>2 cupos</strong> a precio de lanzamiento antes de cerrar esta etapa.
             </p>
 
           </div>
@@ -404,7 +452,7 @@
   <div class="hr35-container">
     <h2 class="section-title">Inscríbete al Programa Huerto Rentable 35</h2>
     <p class="section-intro">
-      Completa este formulario y te contactaremos dentro de 24 horas hábiles para coordinar el pago ($990.000 CLP por transferencia bancaria) y la instalación. Este es un programa con inversión — no es gratuito ni subsidiado.
+      Completa este formulario y te contactaremos dentro de 24 horas hábiles para coordinar el pago ($990.000 CLP por transferencia bancaria) y la instalación. Este es un programa con inversión — no es gratuito ni subsidiado. Al inscribirte recibes además una <strong>guía digital gratuita</strong> para comenzar con más claridad.
     </p>
     <div class="hr35-form-card">
       <iframe
@@ -506,59 +554,6 @@
   </footer>
 
   <script src="/assets/js/main.js"></script>
-  <script>
-    (function () {
-      const carousel = document.querySelector(".hr35-carousel");
-      if (!carousel) return;
-      const track = carousel.querySelector(".hr35-carousel-track");
-      const slides = Array.from(track.querySelectorAll(".hr35-carousel-slide"));
-      const prevBtn = carousel.querySelector(".hr35-carousel-btn.prev");
-      const nextBtn = carousel.querySelector(".hr35-carousel-btn.next");
-      const dotsWrap = document.querySelector(".hr35-carousel-dots");
-      let current = 0, autoplay;
-      function normalize(i) { return (i + slides.length) % slides.length; }
-      function buildDots() {
-        slides.forEach((_, i) => {
-          const dot = document.createElement("button");
-          dot.className = "hr35-carousel-dot"; dot.type = "button";
-          dot.setAttribute("aria-label", "Ir a imagen " + (i + 1));
-          dot.addEventListener("click", () => { current = i; render(); restartAutoplay(); });
-          dotsWrap.appendChild(dot);
-        });
-      }
-      function render() {
-        slides.forEach((slide, i) => {
-          slide.className = "hr35-carousel-slide is-hidden";
-          if (i === current) slide.className = "hr35-carousel-slide is-active";
-          else if (i === normalize(current - 1)) slide.className = "hr35-carousel-slide is-prev";
-          else if (i === normalize(current + 1)) slide.className = "hr35-carousel-slide is-next";
-          else if (i === normalize(current - 2)) slide.className = "hr35-carousel-slide is-prev-2";
-          else if (i === normalize(current + 2)) slide.className = "hr35-carousel-slide is-next-2";
-        });
-        Array.from(dotsWrap.querySelectorAll(".hr35-carousel-dot")).forEach((d, i) => d.classList.toggle("is-active", i === current));
-      }
-      function next() { current = normalize(current + 1); render(); }
-      function prev() { current = normalize(current - 1); render(); }
-      function startAutoplay() { autoplay = setInterval(next, 6000); }
-      function stopAutoplay() { clearInterval(autoplay); }
-      function restartAutoplay() { stopAutoplay(); startAutoplay(); }
-      prevBtn.addEventListener("click", () => { prev(); restartAutoplay(); });
-      nextBtn.addEventListener("click", () => { next(); restartAutoplay(); });
-      carousel.addEventListener("mouseenter", stopAutoplay);
-      carousel.addEventListener("mouseleave", startAutoplay);
-      let touchStartX = 0;
-      carousel.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
-      carousel.addEventListener("touchend", (e) => {
-        const diff = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) { diff > 0 ? next() : prev(); restartAutoplay(); }
-      }, { passive: true });
-      document.querySelectorAll(".hr35-collapse").forEach((detail) => {
-        detail.addEventListener("toggle", () => {
-          if (detail.open && detail.querySelector(".hr35-carousel")) setTimeout(() => render(), 80);
-        });
-      });
-      buildDots(); render(); startAutoplay();
-    })();
-  </script>
+
 </body>
 </html>

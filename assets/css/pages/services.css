@@ -1,83 +1,141 @@
-/* ===== SECCIONES PRINCIPALES ===== */
+/* ===== SERVICES.CSS — SPICe Lab brand redesign ===== */
+
+/* ===== HERO PRINCIPAL ===== */
 .hero {
-    background: radial-gradient(circle at 50% 0%, #f5f5f7 0%, #ffffff 70%);
-    padding: 70px 7%;
+    background: linear-gradient(160deg, var(--navy) 0%, #243055 100%);
+    padding: 90px 7% 80px;
     text-align: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .hero-content {
     margin: 0 auto;
+    max-width: 780px;
 }
 
 .hero-label {
     display: inline-block;
-    background: #e1f0ff;
-    color: var(--primary);
-    padding: 6px 12px;
+    background: rgba(49, 114, 134, 0.25);
+    color: var(--sage);
+    padding: 6px 14px;
     border-radius: 99px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 16px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.12em;
+    border: 1px solid rgba(168, 168, 148, 0.2);
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    margin-bottom: 24px;
-    color: var(--text-main);
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
     font-family: var(--font-heading);
     font-size: 1.2rem;
-    color: var(--primary);
-    margin-bottom: 24px;
-    font-weight: 600;
-    line-height: 1.4;
+    color: var(--teal);
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 .hero p:not(.hero-subtitle) {
-    font-size: 1.125rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
+    font-size: 1.05rem;
+    color: rgba(255, 251, 220, 0.7);
+    line-height: 1.7;
 }
 
-section {
+/* ===== HERO AGRÍCOLA ===== */
+.agri-hero {
+    background: linear-gradient(160deg, #1a2e1a 0%, #1e3520 100%);
+    border-bottom: 1px solid rgba(168, 168, 148, 0.12);
     padding: 70px 7%;
 }
 
+.agri-hero .hero-content {
+    max-width: 760px;
+}
+
+.agri-hero .hero-label {
+    background: rgba(168, 168, 148, 0.15);
+    color: var(--sage);
+    border-color: rgba(168, 168, 148, 0.25);
+}
+
+.agri-hero h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.agri-hero .hero-subtitle {
+    color: #7db87d;
+}
+
+.agri-hero p:not(.hero-subtitle) {
+    color: rgba(255, 251, 220, 0.65);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+/* ===== LAYOUT GENERAL ===== */
+section {
+    padding: 80px 7%;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
 .section-bg-alt {
-    background-color: var(--bg-light);
+    background-color: var(--cream);
 }
 
 .section-title {
-    margin-bottom: 24px;
-    font-size: 2.2rem;
-    color: var(--text-main);
-    letter-spacing: -0.01em;
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .section-intro {
-    margin: 0 auto 56px;
-    font-size: 1.125rem;
-    color: var(--text-secondary);
+    margin: 0 auto 52px;
+    font-size: 1.05rem;
+    color: #4a5568;
+    line-height: 1.7;
 }
 
+/* ===== TARJETAS DE SERVICIOS ===== */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 20px;
 }
 
 .service-card {
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    padding: 32px;
-    transition: var(--transition);
-    border: 1px solid rgba(0,0,0,0.04);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border: 1px solid rgba(25, 31, 57, 0.08);
+    box-shadow: 0 2px 12px rgba(25, 31, 57, 0.04);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -90,130 +148,162 @@ section {
 }
 
 .service-card h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: var(--text-main);
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--navy);
+    letter-spacing: -0.01em;
 }
 
 .service-card p {
     font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.5;
+    color: #5a6478;
+    line-height: 1.6;
     margin: 0;
 }
 
 .icon-box {
-    width: 56px;
-    height: 56px;
-    background-color: #f0f7ff;
-    color: var(--primary);
-    border-radius: 16px;
+    width: 52px;
+    height: 52px;
+    background-color: rgba(49, 114, 134, 0.08);
+    color: var(--teal);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(49, 114, 134, 0.12);
 }
 
 .icon-box svg {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
 }
 
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(25, 31, 57, 0.1);
+    border-color: rgba(49, 114, 134, 0.2);
+}
+
+/* ===== FEATURE BOX (laboratorios asociados) ===== */
 .feature-box {
-    background-color: var(--white);
-    border-radius: var(--radius-lg);
-    padding: 50px;
-    box-shadow: var(--shadow);
-    border-left: 6px solid var(--primary);
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 48px;
+    box-shadow: 0 4px 24px rgba(25, 31, 57, 0.07);
+    border-left: 5px solid var(--teal);
+}
+
+.feature-box h2 {
+    margin-bottom: 16px;
+}
+
+.feature-box > p:first-of-type {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
 }
 
 .feature-list {
     list-style: none;
     padding: 0;
-    margin: 32px 0;
+    margin: 28px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
 }
 
 .feature-list li {
     display: flex;
     align-items: flex-start;
-    color: var(--text-main);
-    font-size: 1.05rem;
+    color: var(--navy);
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .feature-list li::before {
-    content: "•";
-    color: var(--primary);
-    font-size: 1.5rem;
-    line-height: 1;
+    content: "—";
+    color: var(--teal);
+    font-weight: 600;
     margin-right: 12px;
-    margin-top: -3px;
+    flex-shrink: 0;
+    margin-top: 1px;
 }
 
 .note-text {
     font-style: italic;
-    color: var(--text-secondary);
-    border-top: 1px solid rgba(0,0,0,0.05);
+    color: #6b7280;
+    border-top: 1px solid rgba(25, 31, 57, 0.08);
     padding-top: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
+/* ===== ÁREAS CLAVE DE ENFOQUE ===== */
 .focus-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 36px;
 }
 
 .focus-item {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     align-items: flex-start;
 }
 
 .focus-icon {
-    min-width: 48px;
-    height: 48px;
-    background-color: #f5f5f7;
+    min-width: 46px;
+    height: 46px;
+    background-color: rgba(49, 114, 134, 0.08);
+    border: 1px solid rgba(49, 114, 134, 0.14);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-main);
+    color: var(--teal);
+    flex-shrink: 0;
 }
 
 .focus-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
 }
 
 .focus-content h4 {
     margin: 0 0 4px 0;
-    font-size: 1.15rem;
-    color: var(--text-main);
-    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--navy);
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .focus-subtitle {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--primary);
-    font-weight: 600;
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--teal);
+    font-weight: 500;
     margin-bottom: 8px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.08em;
 }
 
 .focus-content p {
     margin: 0;
     font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
+    color: #5a6478;
+    line-height: 1.65;
 }
 
+/* ===== FLUJO DE COLABORACIÓN ===== */
 .workflow-steps {
-    max-width: 800px;
+    max-width: 740px;
     margin: 0 auto;
     position: relative;
 }
@@ -225,36 +315,37 @@ section {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #e5e5ea;
+    background: linear-gradient(to bottom, var(--teal), rgba(49, 114, 134, 0.1));
     z-index: 0;
 }
 
 .step-item {
     display: flex;
     gap: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     position: relative;
     z-index: 1;
 }
 
 .step-item:last-child {
     margin-bottom: 0;
-    z-index: 10;
-    background: var(--bg-light);
 }
 
 .step-number {
     width: 42px;
     height: 42px;
-    background-color: var(--primary);
-    color: white;
-    font-weight: 700;
+    background-color: var(--navy);
+    color: var(--cream);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 600;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    box-shadow: 0 0 0 8px var(--bg-light);
+    box-shadow: 0 0 0 6px var(--cream);
+    border: 2px solid var(--teal);
 }
 
 .step-content {
@@ -262,53 +353,54 @@ section {
 }
 
 .step-content h4 {
-    margin: 0 0 8px 0;
-    font-size: 1.1rem;
-    color: var(--text-main);
+    margin: 0 0 6px 0;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--navy);
+    font-weight: 600;
 }
 
 .step-content p {
     margin: 0;
-    color: var(--text-secondary);
+    color: #5a6478;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-/* --- CTA Dark Section --- */
+/* ===== CTA OSCURO ===== */
 .section-bg-dark {
-    background-color: #000000;
-    padding: 70px 7%;
+    background-color: var(--navy);
+    padding: 80px 7%;
+    position: relative;
+    overflow: hidden;
 }
 
-.white-text { 
-    color: var(--white); 
+.section-bg-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 50%, rgba(49, 114, 134, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.white-text {
+    color: var(--cream);
 }
 
 .white-text-opacity {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
-    line-height: 1.7;
+    color: rgba(255, 251, 220, 0.7);
+    font-size: 1.05rem;
+    line-height: 1.75;
 }
 
-/* --- Footer --- */
+/* ===== UTILIDADES ===== */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.mt-5        { margin-top: 48px; }
+
+/* ===== FOOTER ===== */
 footer {
     border: none;
-}
-
-/* --- UTILIDADES --- */
-.content-wrapper {
-    margin: 0 auto;
-    width: 100%;
-}
-
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.mt-5 { margin-top: 48px; }
-
-
-/* --- Animaciones y Transiciones --- */
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(0, 113, 227, 0.1);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -316,26 +408,35 @@ footer {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .service-card-wide {
         grid-column: unset;
     }
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 70px 6% 60px;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
-    .workflow-steps::before {
-        left: 15px;
-    }
-    
+
     .service-card-wide {
         grid-column: auto;
     }
-    
+
     .feature-box {
-        padding: 40px 30px;
+        padding: 32px 24px;
+    }
+
+    .workflow-steps::before {
+        left: 15px;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
     }
 }
