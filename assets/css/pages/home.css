@@ -808,11 +808,7 @@
   .agro-section { padding: 60px 5%; }
 }
 
-/* SPICe Agro en el nav */
-.nav-agro { color: #cb9831 !important; font-weight: 600; }
-.menu-agro { color: #cb9831 !important; font-weight: 600; }
-.nav-dropdown-menu--agro a { color: var(--navy) !important; }
-.nav-dropdown-menu--agro a:hover { color: #cb9831 !important; }
+/* SPICe Agro en el nav: movido a partials/header.css para aplicar en todas las páginas */
 
 /* ===== FOOTER ampliado ===== */
 footer {

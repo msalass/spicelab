@@ -103,6 +103,12 @@ header {
     background: #f5f5f7;
 }
 
+/* SPICe Agro en el nav — ocre en TODAS las páginas (antes vivía en home.css, por eso solo se veía en el home) */
+.nav-agro { color: #cb9831 !important; font-weight: 600; }
+.menu-agro { color: #cb9831 !important; font-weight: 600; }
+.nav-dropdown-menu--agro a { color: var(--navy) !important; }
+.nav-dropdown-menu--agro a:hover { color: #cb9831 !important; }
+
 /* Mostrar dropdown al pasar mouse */
 .nav-dropdown:hover .nav-dropdown-menu {
     display: block;
