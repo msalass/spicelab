@@ -19,7 +19,7 @@
 /nosotros/     /acerca-de/                          301
 
 # /ciencia-en-el-campo/ parent nav link returned 404
-/ciencia-en-el-campo/  /ciencia-en-el-campo/servicios-ag/  301
+/ciencia-en-el-campo/  https://agro.spicelab.cl/  301
 
 # LEGACY /es/ REDIRECTS
 /es/           /                                    301
@@ -29,3 +29,19 @@
 /es/muestras/  /muestras/                           301
 /es/contacto/  /contacto/                           301
 /es/equipo/    /equipo/                             301
+
+# SPICE AGRO — tráfico del sitio principal al subdominio
+/ciencia-en-el-campo/servicios-ag/   https://agro.spicelab.cl/              301
+/ciencia-en-el-campo/servicios-ag    https://agro.spicelab.cl/              301
+/ciencia-en-el-campo/huerto-35/      https://agro.spicelab.cl/huerto-rentable.html   301
+/ciencia-en-el-campo/huerto-35       https://agro.spicelab.cl/huerto-rentable.html   301
+/huerto-rentable-35/                 https://agro.spicelab.cl/huerto-rentable-35.html  301
+/huerto-rentable-35                  https://agro.spicelab.cl/huerto-rentable-35.html  301
+
+# Paginas auxiliares HR35 migradas a SPICe Agro (Etapa 3B)
+/ciencia-en-el-campo/huerto-35-informacion-importante/   https://agro.spicelab.cl/huerto-rentable-35-info.html   301
+/ciencia-en-el-campo/huerto-35-informacion-importante    https://agro.spicelab.cl/huerto-rentable-35-info.html   301
+/ciencia-en-el-campo/huerto-35-privacidad/   https://agro.spicelab.cl/privacidad.html   301
+/ciencia-en-el-campo/huerto-35-privacidad    https://agro.spicelab.cl/privacidad.html   301
+/gracias-huerto-35/   https://agro.spicelab.cl/gracias-hr35.html   301
+/gracias-huerto-35    https://agro.spicelab.cl/gracias-hr35.html   301

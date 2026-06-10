@@ -723,3 +723,117 @@
         border-radius: 50%;
     }
 }
+/* ===== SPICe Agro — sección portal ===== */
+.agro-section {
+  background: linear-gradient(160deg, #fdf9f0, var(--cream) 70%);
+  padding: 80px 7%;
+  border-top: 1px solid rgba(203,152,49,.18);
+  border-bottom: 1px solid rgba(203,152,49,.18);
+}
+.agro-content { max-width: 960px; margin: 0 auto; }
+.agro-header {
+  display: flex; align-items: center; gap: 18px;
+  margin-bottom: 20px;
+}
+.agro-header-text { display: flex; flex-direction: column; gap: 2px; }
+.agro-kicker {
+  font-family: var(--font-mono); font-size: 0.68rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--teal);
+}
+.agro-title {
+  font-family: var(--font-heading); font-weight: 600;
+  font-size: 1.8rem; letter-spacing: -0.02em;
+  color: var(--navy); line-height: 1;
+}
+.agro-title-span { color: #cb9831; font-style: italic; }
+.agro-tag {
+  font-family: var(--font-mono); font-size: 0.68rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: #8a7040;
+}
+.agro-desc {
+  font-size: 1.06rem; color: #4a4f60; line-height: 1.7;
+  max-width: 64ch; margin-bottom: 36px;
+}
+.agro-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-bottom: 32px;
+}
+.agro-card {
+  background: #fff;
+  border: 1px solid rgba(25,31,57,.09);
+  border-radius: 10px; padding: 22px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.agro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -22px rgba(25,31,57,.35);
+}
+.agro-card--soon { opacity: .8; }
+.agro-card-icon {
+  width: 40px; height: 40px; border-radius: 8px;
+  background: rgba(203,152,49,.1);
+  border: 1px solid rgba(203,152,49,.22);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px; color: #a07825;
+}
+.agro-card h3 {
+  font-family: var(--font-heading); font-size: 1.06rem;
+  font-weight: 600; color: var(--navy); margin-bottom: 6px;
+}
+.agro-card p { font-size: .92rem; color: #555b6b; margin-bottom: 12px; }
+.agro-card-link {
+  font-family: var(--font-mono); font-size: .72rem;
+  letter-spacing: .08em; color: var(--teal); font-weight: 600;
+}
+.agro-card-link:hover { color: #cb9831; }
+.agro-soon-badge {
+  display: inline-block; font-family: var(--font-mono);
+  font-size: .6rem; letter-spacing: .12em; text-transform: uppercase;
+  background: rgba(203,152,49,.14); color: #a07825;
+  padding: .25rem .6rem; border-radius: 99px;
+  margin-bottom: 8px;
+}
+.agro-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-body); font-weight: 600; font-size: .94rem;
+  padding: 12px 24px; border-radius: 99px;
+  background: #cb9831; color: #10142a;
+  transition: background .2s ease, transform .15s ease;
+}
+.agro-cta:hover { background: #d9a128; transform: translateY(-1px); }
+@media (max-width: 740px) {
+  .agro-cards { grid-template-columns: 1fr; }
+  .agro-section { padding: 60px 5%; }
+}
+
+/* SPICe Agro en el nav: movido a partials/header.css para aplicar en todas las páginas */
+
+/* ===== FOOTER ampliado ===== */
+footer {
+  background: var(--navy);
+  color: rgba(255,251,220,.55);
+  padding: 36px 7%;
+}
+.footer-content {
+  max-width: 1080px; margin: 0 auto;
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.footer-name {
+  font-family: var(--font-heading); font-size: 1.12rem;
+  font-weight: 600; color: var(--cream); margin-bottom: 4px;
+}
+.footer-legal { font-size: .78rem; font-family: var(--font-mono); letter-spacing: .03em; }
+.footer-links {
+  display: flex; gap: 22px; flex-wrap: wrap;
+  font-size: .88rem;
+}
+.footer-links a { color: rgba(255,251,220,.62); transition: color .18s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-agro-link { color: #cb9831 !important; font-weight: 600; }
+.footer-agro-link:hover { color: #d9a128 !important; }
+@media (max-width: 600px) {
+  .footer-content { flex-direction: column; align-items: flex-start; }
+}
