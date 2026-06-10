@@ -29,3 +29,11 @@
 /es/muestras/  /muestras/                           301
 /es/contacto/  /contacto/                           301
 /es/equipo/    /equipo/                             301
+
+# SPICE AGRO — tráfico del sitio principal al subdominio
+/ciencia-en-el-campo/servicios-ag/   https://agro.spicelab.cl/              301
+/ciencia-en-el-campo/servicios-ag    https://agro.spicelab.cl/              301
+/ciencia-en-el-campo/huerto-35/      https://agro.spicelab.cl/#huerto       301
+/ciencia-en-el-campo/huerto-35       https://agro.spicelab.cl/#huerto       301
+/huerto-rentable-35/                 https://agro.spicelab.cl/#huerto       301
+/huerto-rentable-35                  https://agro.spicelab.cl/#huerto       301
