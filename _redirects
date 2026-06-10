@@ -19,7 +19,7 @@
 /nosotros/     /acerca-de/                          301
 
 # /ciencia-en-el-campo/ parent nav link returned 404
-/ciencia-en-el-campo/  /ciencia-en-el-campo/servicios-ag/  301
+/ciencia-en-el-campo/  https://agro.spicelab.cl/  301
 
 # LEGACY /es/ REDIRECTS
 /es/           /                                    301
@@ -33,7 +33,7 @@
 # SPICE AGRO — tráfico del sitio principal al subdominio
 /ciencia-en-el-campo/servicios-ag/   https://agro.spicelab.cl/              301
 /ciencia-en-el-campo/servicios-ag    https://agro.spicelab.cl/              301
-/ciencia-en-el-campo/huerto-35/      https://agro.spicelab.cl/#huerto       301
-/ciencia-en-el-campo/huerto-35       https://agro.spicelab.cl/#huerto       301
-/huerto-rentable-35/                 https://agro.spicelab.cl/#huerto       301
-/huerto-rentable-35                  https://agro.spicelab.cl/#huerto       301
+/ciencia-en-el-campo/huerto-35/      https://agro.spicelab.cl/huerto-rentable.html   301
+/ciencia-en-el-campo/huerto-35       https://agro.spicelab.cl/huerto-rentable.html   301
+/huerto-rentable-35/                 https://agro.spicelab.cl/huerto-rentable-35.html  301
+/huerto-rentable-35                  https://agro.spicelab.cl/huerto-rentable-35.html  301
