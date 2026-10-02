@@ -357,3 +357,28 @@ test("upstream 429 → JSON rate_limited con WhatsApp", async (t) => {
     delete process.env.GROQ_API_KEY;
   }
 });
+
+test("Groq 429 en el modelo principal → reintenta una vez con GROQ_FALLBACK_MODEL", async (t) => {
+  const models = [];
+  t.mock.method(globalThis, "fetch", async (url, opts) => {
+    const m = JSON.parse(opts.body).model;
+    models.push(m);
+    if (m === "openai/gpt-oss-120b") return { ok: false, status: 429, text: async () => "{}" };
+    return { ok: true, status: 200, text: async () => JSON.stringify({ choices: [{ message: { content: "Hola. https://wa.me/56971540665" } }] }) };
+  });
+  process.env.GROQ_API_KEY = "fake-groq-key";
+  I._resetRate();
+  try {
+    const res = await chat.handler({
+      httpMethod: "POST",
+      headers: { origin: "https://spicelab.cl", "x-forwarded-for": "10.0.0.11" },
+      body: JSON.stringify({ messages: [{ role: "user", content: "hola" }] }),
+    });
+    assert.equal(res.statusCode, 200);
+  } finally {
+    delete process.env.GROQ_API_KEY;
+  }
+  assert.deepEqual(models, ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]);
+  assert.equal(I.resolveProvider({ GROQ_API_KEY: "x", GROQ_FALLBACK_MODEL: "none" }).fallbackModel, "");
+  assert.equal(I.resolveProvider({ OPENAI_API_KEY: "x" }).fallbackModel, undefined);
+});

@@ -239,6 +239,8 @@
     "@keyframes spice-d{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-2px)}}",
     ".chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 14px 10px;}",
     ".chips[hidden],.typing[hidden]{display:none !important;}",
+    // Closed panel must not keep its full-screen box on mobile (it would swallow taps meant for the launcher).
+    ".panel[hidden]{display:none !important;}",
     ".chips button{border:1px solid #317286;background:#e7e7dd;color:#191f39;border-radius:999px;padding:7px 12px;font:500 13px/1.3 'Hanken Grotesk',system-ui,sans-serif;cursor:pointer;text-align:left;}",
     ".chips button:hover{background:#317286;color:#fffbdc;}",
     "form{display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:#191f39;flex-shrink:0;}",

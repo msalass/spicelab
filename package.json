@@ -9,6 +9,6 @@
   "scripts": {
     "sync": "node scripts/sync-knowledge.js",
     "check": "node --check netlify/functions/chat.js && node --check scripts/sync-knowledge.js && node --check spice-widget.js && node scripts/sync-knowledge.js --check",
-    "test": "node --test test/**/*.js"
+    "test": "node --test test/*.test.js"
   }
 }

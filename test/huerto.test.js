@@ -123,7 +123,8 @@ for (const r of HUERTO_BLOCK) {
     assert.notEqual(v, null);
     const out = I.guardReply(r, "es", "huerto");
     // price/share → resumen de membresía; tarjeta → mensaje de código/clientes SPICe
-    assert.equal(out.reply, v === "card" ? I.SAFE_CODE_REPLY.es : I.SAFE_HUERTO_REPLY.es);
+    const want = v === "card" ? I.SAFE_CODE_REPLY.es : v === "share" ? I.SAFE_MISSION_REPLY.es : I.SAFE_HUERTO_REPLY.es;
+    assert.equal(out.reply, want);
   });
 }
 
@@ -337,4 +338,96 @@ test("repairLinks: subdominio inventado y otro número de WhatsApp se corrigen",
   assert.equal(out.guarded, "link");
   const ok = I.guardReply("Ver https://agro.spicelab.cl/ y https://spicelab.cl/contacto/ y https://wa.me/56971540665", "es", "agro");
   assert.equal(ok.guarded, null);
+});
+
+// ---------- ronda final (2 oct 2026) ----------
+
+const LAB_EN_EXACT =
+  "We don't have our own lab; we work with collaborating laboratories, and isotope analyses are done at the University of Queensland.";
+
+test("frase EN de laboratorio textual en knowledge y prompts (todos los sitios)", () => {
+  const sp = fs.readFileSync(path.join(ROOT, "knowledge", "spicelab.md"), "utf8");
+  assert.ok(sp.includes(LAB_EN_EXACT));
+  assert.ok(md.includes(LAB_EN_EXACT));
+  assert.equal(I.LAB_EN, LAB_EN_EXACT);
+  for (const site of ["spicelab", "agro", "huerto"]) {
+    for (const lang of ["es", "en"]) {
+      const p = I.buildSystemPrompt(lang, site);
+      assert.ok(p.includes(LAB_EN_EXACT), site + "/" + lang);
+      assert.ok(p.includes(LAB_ES), site + "/" + lang);
+      assert.match(p, /VERBATIM/);
+    }
+  }
+});
+
+test("suelos volcánicos: knowledge dice alófano/allophane y no lo llama alúmina", () => {
+  const sp = fs.readFileSync(path.join(ROOT, "knowledge", "spicelab.md"), "utf8");
+  assert.match(sp, /alófano/);
+  assert.match(sp, /allophane/);
+  // el knowledge ya no menciona «alúmina» en absoluto (el modelo la repetía al negarla)
+  assert.ok(!/al[uú]mina/i.test(sp));
+  assert.ok(!/alófano\s*\(?\s*(?:=|o|or)\s*alúmina/i.test(sp));
+  const p = I.buildSystemPrompt("es", "agro");
+  assert.match(p, /«alófano» \(EN: allophane\)/);
+  assert.match(p, /Never write the word «alúmina»\/alumina at all/);
+});
+
+test("misión de Huerto: redacción aprobada ES/EN, junto a Be Well Center, sin proporciones", () => {
+  assert.ok(md.includes("«educación en agricultura regenerativa en países en desarrollo» a través de Be Well Center"));
+  assert.ok(md.includes('"regenerative-agriculture education in developing countries" through Be Well Center'));
+  assert.ok(md.includes("una escuela en Bangladesh que forma personas en agricultura regenerativa y salud integral"));
+  assert.ok(!/51\s?%|m[aá]s de la mitad|more than half/i.test(md.replace(/«más de la mitad», \"more than half\", 51%/g, "")));
+  assert.match(md, /Chile, Argentina, Brasil, México, Colombia, Perú, Uruguay, Ecuador, Paraguay y Bolivia/);
+  for (const lang of ["es", "en"]) {
+    const h = I.buildSystemPrompt(lang, "huerto");
+    assert.ok(h.includes("regenerative-agriculture education in developing countries"));
+    assert.ok(h.includes("educación en agricultura regenerativa en países en desarrollo"));
+    assert.ok(h.includes("Be Well Center, a school in Bangladesh"));
+  }
+});
+
+test("guard huerto: proporciones de la misión se bloquean; la misión aprobada pasa", () => {
+  for (const r of ["Más de la mitad de lo que pagas va a Be Well Center.", "More than half of what you pay goes to Bangladesh.", "El 51% va a la escuela."]) {
+    assert.equal(I.guardViolation(r, "huerto"), "share", r);
+    assert.equal(I.guardReply(r, "es", "huerto").reply, I.SAFE_MISSION_REPLY.es);
+  }
+  for (const r of [I.MISSION_ES, I.MISSION_EN, I.SAFE_MISSION_REPLY.es, I.SAFE_MISSION_REPLY.en]) {
+    assert.equal(I.guardViolation(r, "huerto"), null, r);
+  }
+});
+
+test("salida: tidyReply quita «(no alúmina)» y guiones no separables", () => {
+  assert.equal(I.tidyReply("arcilla llamada **alófano** (no “alúmina”), que fija P"), "arcilla llamada **alófano**, que fija P");
+  assert.equal(I.tidyReply("regenerative\u2011agriculture education"), "regenerative-agriculture education");
+});
+
+test("guard: HR35/HR55 y 35 m² no son precios; un monto real sí", () => {
+  assert.equal(I.guardViolation("Para conocer el costo de un HR35, escríbenos. El HR35 es un invernadero de 35 m².", "agro"), null);
+  assert.equal(I.guardViolation("El HR55 cuesta 3.500.000 pesos", "agro"), "price");
+});
+
+test("prompts: idioma único, línea de precio EN, prueba de Huerto con tarjeta en spicelab/agro, isótopos", () => {
+  for (const site of ["spicelab", "agro"]) {
+    const p = I.buildSystemPrompt("en", site);
+    assert.match(p, /Pricing is discussed directly for each project/);
+    assert.match(p, /the only trial is the Huerto app's: 7 days free WITH a card/);
+    assert.equal(I.guardViolation(p, site), null);
+  }
+  const h = I.buildSystemPrompt("en", "huerto");
+  assert.match(h, /never add a translation or a second-language version/);
+  assert.match(h, /does NOT date water/);
+  assert.match(h, /evaporation ENRICHES the remaining water in 18O/);
+});
+
+test("frase de laboratorio en el idioma del visitante: se corrige ES→EN y EN→ES", () => {
+  const es = I.LAB_ES || "No tenemos laboratorio propio; trabajamos con laboratorios colaboradores, y los análisis isotópicos se hacen en la University of Queensland.";
+  const en = "We don't have our own lab; we work with collaborating laboratories, and isotope analyses are done at the University of Queensland.";
+  assert.equal(I.fixLabLanguage(es + " Pricing...", "en"), en + " Pricing...");
+  assert.equal(I.fixLabLanguage("x " + en, "es"), "x " + es);
+  assert.equal(I.fixLabLanguage("x " + es, "es"), "x " + es);
+});
+
+test("agro: el prompt dice que SPICe Agro hace el muestreo (no el agricultor)", () => {
+  assert.match(I.buildSystemPrompt("es", "agro"), /vamos a tu campo/);
+  assert.ok(!/vamos a tu campo»: the SPICe Agro team/.test(I.buildSystemPrompt("es", "spicelab")));
 });
