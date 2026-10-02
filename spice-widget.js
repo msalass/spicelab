@@ -204,7 +204,7 @@
     ".foot a{color:#fffbdc;text-decoration:underline;text-underline-offset:2px;}",
     ".foot{margin:0;padding:0 12px 8px;background:#191f39;color:#a8a894;font:400 10px/1.3 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.02em;}",
     "@media (max-width:640px){",
-    ".panel{top:max(8px, env(safe-area-inset-top));left:8px;right:8px;bottom:max(8px, env(safe-area-inset-bottom));width:auto;height:auto;max-height:none;border-radius:16px;}",
+    ".panel{top:max(8px, env(safe-area-inset-top));left:8px;right:8px;bottom:calc(var(--spice-bottom,24px) + env(safe-area-inset-bottom,0px));width:auto;height:auto;max-height:none;border-radius:16px;}",
     ".launcher{bottom:calc(var(--spice-bottom,24px) + env(safe-area-inset-bottom,0px));right:calc(var(--spice-right,24px) + env(safe-area-inset-right,0px));}",
     "}",
     "@media (prefers-reduced-motion:reduce){",
