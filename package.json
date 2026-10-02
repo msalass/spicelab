@@ -1,0 +1,14 @@
+{
+  "name": "spicelab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SPICe Lab site (spicelab.cl) with the embedded SPICe chat widget.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-knowledge.js",
+    "check": "node --check netlify/functions/chat.js && node --check scripts/sync-knowledge.js && node --check spice-widget.js && node scripts/sync-knowledge.js --check",
+    "test": "node --test test/**/*.js"
+  }
+}
