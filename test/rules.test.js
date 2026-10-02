@@ -5,6 +5,13 @@ const assert = require("node:assert/strict");
 const fs = require("fs");
 const path = require("path");
 
+// Offline: never use real keys from the box environment.
+delete process.env.GROQ_API_KEY;
+delete process.env.OPENAI_API_KEY;
+delete process.env.GROQ_MODEL;
+delete process.env.OPENAI_MODEL;
+delete process.env.OPENAI_BASE_URL;
+
 const ROOT = path.join(__dirname, "..");
 const chat = require("../netlify/functions/chat.js");
 const I = chat._internal;
@@ -89,7 +96,7 @@ test("todo wa.me del paquete apunta exactamente a wa.me/56971540665", () => {
       if (m[1] !== "56971540665") bad.push(path.relative(ROOT, f) + ": wa.me/" + m[1]);
     }
     if (/56X{3,}/i.test(txt)) bad.push(path.relative(ROOT, f) + ": placeholder 56XXXX");
-    if (CARD_RE.test(txt) && !/test\//.test(f) && !/chat\.js$/.test(f) && !/README|BRIEF/.test(f)) {
+    if (CARD_RE.test(txt) && !/test\//.test(f) && !/chat\.js$/.test(f) && !/live-test\.js$/.test(f) && !/README|BRIEF/.test(f)) {
       bad.push(path.relative(ROOT, f) + ": frase de tarjeta");
     }
   }
@@ -100,7 +107,7 @@ test("widget: WhatsApp en bienvenida, errores y footer (ES y EN)", () => {
   const w = fs.readFileSync(path.join(ROOT, "spice-widget.js"), "utf8");
   assert.ok(w.includes('var WA = "https://wa.me/56971540665"'));
   const welcomes = w.match(/welcome:\s*\n?\s*"[^"]*"/g);
-  assert.equal(welcomes.length, 2);
+  assert.equal(welcomes.length, 4); // es, en, es.huerto, en.huerto
   for (const s of welcomes) assert.ok(s.includes("https://wa.me/56971540665"), s);
   const errs = w.match(/err(Key|Net|Rate|Generic):\s*\n?\s*"[^"]*"/g);
   assert.equal(errs.length, 8);
@@ -231,7 +238,7 @@ test("sin OPENAI_API_KEY → 503 JSON missing_api_key con WhatsApp", async (t) =
   assert.equal(res.headers["Access-Control-Allow-Origin"], "https://agro.spicelab.cl");
   const body = JSON.parse(res.body);
   assert.equal(body.error, "missing_api_key");
-  assert.match(body.message, /OPENAI_API_KEY/);
+  assert.match(body.message, /GROQ_API_KEY/);
   assert.match(body.message, /https:\/\/wa\.me\/56971540665/);
   assert.equal(calls.length, 0);
 });
@@ -281,4 +288,72 @@ test("handler (fetch mock, EN): respuesta limpia pasa intacta", async (t) => {
   assert.equal(res.statusCode, 200);
   assert.equal(JSON.parse(res.body).reply, clean);
   assert.equal(res.headers["Access-Control-Allow-Origin"], "https://www.agro.spicelab.cl");
+});
+
+// ---------- provider / key precedence (fake keys only) ----------
+
+test("resolveProvider: OPENAI_API_KEY gana sobre GROQ_API_KEY", () => {
+  const p = I.resolveProvider({ OPENAI_API_KEY: "fake-openai", GROQ_API_KEY: "fake-groq" });
+  assert.equal(p.provider, "openai");
+  assert.equal(p.apiKey, "fake-openai");
+  assert.equal(p.baseUrl, "https://api.openai.com/v1");
+});
+
+test("resolveProvider: solo GROQ_API_KEY → base Groq y openai/gpt-oss-120b", () => {
+  const p = I.resolveProvider({ GROQ_API_KEY: "fake-groq" });
+  assert.equal(p.provider, "groq");
+  assert.equal(p.baseUrl, "https://api.groq.com/openai/v1");
+  assert.equal(p.model, "openai/gpt-oss-120b");
+  assert.equal(I.resolveProvider({ GROQ_API_KEY: "fake-groq", GROQ_MODEL: "otro" }).model, "otro");
+  assert.equal(I.resolveProvider({}), null);
+  assert.equal(I.resolveProvider({ GROQ_API_KEY: "  " }), null);
+});
+
+test("handler con GROQ_API_KEY (fetch mock) llama a Groq con Bearer", async (t) => {
+  const seen = [];
+  t.mock.method(globalThis, "fetch", async (url, opts) => {
+    seen.push({ url, auth: opts.headers.Authorization, model: JSON.parse(opts.body).model });
+    return { ok: true, status: 200, text: async () => JSON.stringify({ choices: [{ message: { content: "Hola" } }] }) };
+  });
+  process.env.GROQ_API_KEY = "fake-groq-key";
+  I._resetRate();
+  try {
+    const res = await chat.handler({
+      httpMethod: "POST",
+      headers: { origin: "https://spicelab.cl", "x-forwarded-for": "10.0.0.7" },
+      body: JSON.stringify({ messages: [{ role: "user", content: "hola" }] }),
+    });
+    assert.equal(res.statusCode, 200);
+  } finally {
+    delete process.env.GROQ_API_KEY;
+  }
+  assert.equal(seen[0].url, "https://api.groq.com/openai/v1/chat/completions");
+  assert.equal(seen[0].auth, "Bearer fake-groq-key");
+  assert.equal(seen[0].model, "openai/gpt-oss-120b");
+});
+
+test("requestBody: gpt-oss usa reasoning_effort low; otros modelos no", () => {
+  const a = I.requestBody("openai/gpt-oss-120b", []);
+  assert.equal(a.reasoning_effort, "low");
+  assert.ok(a.max_tokens > 700);
+  assert.equal(I.requestBody("qwen/qwen3.8-27b", []).reasoning_effort, undefined);
+});
+
+test("upstream 429 → JSON rate_limited con WhatsApp", async (t) => {
+  t.mock.method(globalThis, "fetch", async () => ({ ok: false, status: 429, text: async () => "{}" }));
+  process.env.GROQ_API_KEY = "fake-groq-key";
+  I._resetRate();
+  try {
+    const res = await chat.handler({
+      httpMethod: "POST",
+      headers: { origin: "https://agro.spicelab.cl", "x-forwarded-for": "10.0.0.8" },
+      body: JSON.stringify({ messages: [{ role: "user", content: "hola" }] }),
+    });
+    assert.equal(res.statusCode, 429);
+    const b = JSON.parse(res.body);
+    assert.equal(b.error, "rate_limited");
+    assert.match(b.message, /wa\.me\/56971540665/);
+  } finally {
+    delete process.env.GROQ_API_KEY;
+  }
 });

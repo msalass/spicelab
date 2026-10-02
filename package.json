@@ -2,7 +2,7 @@
   "name": "spicelab",
   "version": "1.0.0",
   "private": true,
-  "description": "SPICe Lab site (spicelab.cl) with the embedded SPICe chat widget.",
+  "description": "SPICe Lab site (spicelab.cl) with the embedded SPICe chat widget. Groq via GROQ_API_KEY in Netlify; never commit a key.",
   "engines": {
     "node": ">=18"
   },

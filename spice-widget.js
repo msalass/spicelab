@@ -4,7 +4,10 @@
  *   data-endpoint  URL of the function. Default: relative "/.netlify/functions/chat"
  *                  (same Netlify site). Use an absolute URL to call a function hosted
  *                  on another site, e.g. https://spicelab.cl/.netlify/functions/chat
- *   data-site      Base for relative links in replies (default https://spicelab.cl)
+ *   data-site      spicelab | agro | huerto (or a hostname/URL). Default: from
+ *                  location.hostname. Picks welcome text/chips and the base for
+ *                  relative links. Sent to the function only as a hint: the server
+ *                  decides the site from the Origin header.
  *   data-lang      es | en
  *   data-right / data-bottom   force launcher position (CSS lengths)
  * Works with or without a .whatsapp-float button on the host page.
@@ -16,7 +19,7 @@
 
   var LOGO = "https://spicelab.cl/assets/images/isotipo-sin-fondo.png";
   var WA = "https://wa.me/56971540665";
-  var STORE = "spice-chat-v2";
+  var STORE = "spice-chat-v3";
 
   var script =
     document.currentScript ||
@@ -25,7 +28,25 @@
   var ENDPOINT =
     (script && script.getAttribute("data-endpoint")) ||
     "/.netlify/functions/chat";
-  var SITE = ((script && script.getAttribute("data-site")) || "https://spicelab.cl").replace(/\/+$/, "");
+  var SITE_BASE = {
+    spicelab: "https://spicelab.cl",
+    agro: "https://agro.spicelab.cl",
+    huerto: "https://huerto.spicelab.cl",
+  };
+  function siteFrom(v) {
+    var x = String(v || "").trim().toLowerCase();
+    if (SITE_BASE[x]) return x;
+    x = x.replace(/^https?:\/\//, "").replace(/[\/:].*$/, "").replace(/^www\./, "");
+    if (x === "agro.spicelab.cl") return "agro";
+    if (x === "huerto.spicelab.cl") return "huerto";
+    if (x === "spicelab.cl") return "spicelab";
+    return "";
+  }
+  var SITE_ID =
+    siteFrom(script && script.getAttribute("data-site")) ||
+    siteFrom(location.hostname) ||
+    "spicelab";
+  var SITE = SITE_BASE[SITE_ID];
   var forcedLang = script && script.getAttribute("data-lang");
   var forcedRight = script && script.getAttribute("data-right");
   var forcedBottom = script && script.getAttribute("data-bottom");
@@ -43,6 +64,16 @@
         "¿Cómo envío muestras?",
         "¿Qué es un trazador isotópico?",
       ],
+      huerto: {
+        sub: "Ayuda con Huerto",
+        welcome:
+          "Hola, soy SPICe. Te ayudo con Huerto, la bitácora de tu huerto en el teléfono. Para crear tu cuenta: https://huerto.spicelab.cl/login · ¿Dudas? Escríbenos por WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+        chips: [
+          "¿Cuánto cuesta Huerto?",
+          "¿Cómo funciona la prueba de 7 días?",
+          "¿Cómo la instalo en el teléfono?",
+        ],
+      },
       placeholder: "Escribe tu consulta…",
       send: "Enviar",
       langBtn: "EN",
@@ -69,6 +100,16 @@
         "How do I send samples?",
         "What is an isotopic tracer?",
       ],
+      huerto: {
+        sub: "Huerto help",
+        welcome:
+          "Hi, I’m SPICe. I can help with Huerto, your garden logbook on your phone. Create your account: https://huerto.spicelab.cl/login · Questions? Message us on WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+        chips: [
+          "How much is Huerto?",
+          "How does the 7-day trial work?",
+          "How do I install it on my phone?",
+        ],
+      },
       placeholder: "Write your question…",
       send: "Send",
       langBtn: "ES",
@@ -132,7 +173,13 @@
   }
 
   function t() {
-    return I[lang] || I.es;
+    var base = I[lang] || I.es;
+    var over = base[SITE_ID];
+    if (!over) return base;
+    var out = {};
+    for (var k in base) out[k] = base[k];
+    for (var j in over) out[j] = over[j];
+    return out;
   }
 
   function loadFonts() {
@@ -488,7 +535,7 @@
       var res = await fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: messages, lang: lang }),
+        body: JSON.stringify({ messages: messages, lang: lang, site: SITE_ID }),
       });
       var data = {};
       try {
