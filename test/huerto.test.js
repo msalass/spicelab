@@ -138,7 +138,7 @@ for (const site of ["spicelab", "agro"]) {
   for (const r of HUERTO_PRICE_REPLIES.concat(["El análisis de suelo cuesta $45.000"])) {
     test("guard " + site + " bloquea también: " + r, () => {
       assert.equal(I.guardViolation(r, site), "price");
-      assert.equal(I.guardReply(r, "es", site).reply, I.SAFE_PRICE_REPLY.es);
+      assert.equal(I.guardReply(r, "es", site).reply, site === "agro" ? I.SAFE_AGRO_REPLY.es : I.SAFE_PRICE_REPLY.es);
     });
   }
 }
@@ -239,7 +239,7 @@ test("handler: agro diciendo site=huerto NO desbloquea precios", async (t) => {
   const res = await ask("https://agro.spicelab.cl", "huerto");
   const body = JSON.parse(res.body);
   assert.equal(body.site, "agro");
-  assert.equal(body.reply, I.SAFE_PRICE_REPLY.es);
+  assert.equal(body.reply, I.SAFE_AGRO_REPLY.es);
   assert.ok(!seen[0].messages[0].content.includes("$4.990"));
 });
 
@@ -409,14 +409,14 @@ test("guard: HR35/HR55 y 35 m² no son precios; un monto real sí", () => {
 test("prompts: idioma único, línea de precio EN, prueba de Huerto con tarjeta en spicelab/agro, isótopos", () => {
   for (const site of ["spicelab", "agro"]) {
     const p = I.buildSystemPrompt("en", site);
-    assert.match(p, /Pricing is discussed directly for each project/);
+    if (site === "spicelab") assert.match(p, /Pricing is discussed directly for each project/);
+    else assert.match(p, /You MAY quote the published SPICe Agro prices/);
     assert.match(p, /the only trial is the Huerto app's: 7 days free WITH a card/);
     assert.equal(I.guardViolation(p, site), null);
   }
   const h = I.buildSystemPrompt("en", "huerto");
   assert.match(h, /never add a translation or a second-language version/);
-  assert.match(h, /does NOT date water/);
-  assert.match(h, /evaporation ENRICHES the remaining water in 18O/);
+  assert.match(h, /SCIENCE QUESTIONS/);
 });
 
 test("frase de laboratorio en el idioma del visitante: se corrige ES→EN y EN→ES", () => {

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SPICe Lab — demo del chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+:root{--navy:#191f39;--navy-deep:#10162b;--teal:#317286;--teal-deep:#255d6e;--sage:#a8a894;--sage-tint:#e7e7dd;--cream:#fffbdc;--white:#ffffff;--text-secondary:#5a6072;--bg-light:#f5f4ee;}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--navy);background:var(--bg-light);line-height:1.5;}
+header{background:var(--navy-deep);color:var(--cream);padding:14px 24px;display:flex;align-items:center;gap:12px;}
+header img{width:32px;height:32px;}
+header strong{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.15rem;}
+header span{color:var(--sage);font-size:0.85rem;margin-left:auto;}
+main{max-width:720px;margin:0 auto;padding:48px 24px 160px;}
+h1{font-family:Fraunces,Georgia,serif;font-optical-sizing:auto;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:0 0 12px;}
+.kicker{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);margin:0 0 10px;}
+p.lead{font-size:1.1rem;color:var(--text-secondary);max-width:40rem;}
+.cards{display:grid;gap:14px;margin-top:32px;}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr;}}
+article{background:var(--white);border:1px solid var(--sage-tint);border-radius:14px;padding:18px;}
+article h2{font-family:Fraunces,Georgia,serif;font-size:1.15rem;margin:0 0 8px;}
+article p{margin:0;color:var(--text-secondary);font-size:0.95rem;}
+.note{margin-top:36px;padding:16px 18px;background:var(--cream);border-radius:14px;font-size:0.95rem;}
+code{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:0.85em;}
+a{color:var(--teal);}
+.whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;border-radius:50px;padding:12px 20px 12px 14px;text-decoration:none;font-weight:600;font-size:0.88rem;box-shadow:0 4px 16px rgba(37,211,102,0.35);}
+</style>
+</head>
+<body>
+  <header>
+    <img src="https://spicelab.cl/assets/images/isotipo-sin-fondo.png" alt="">
+    <strong>SPICe Lab</strong>
+    <span>demo local del chatbot</span>
+  </header>
+  <main>
+    <p class="kicker">Centro de Isótopos del Pacífico Sur</p>
+    <h1>Geoquímica aplicada, desde el sur de Chile.</h1>
+    <p class="lead">Esta página imita el sitio para previsualizar el widget. El chat habla con <code>/.netlify/functions/chat</code>, nunca con el modelo desde el navegador. El asistente se llama «Víctor» (título del panel y saludo). El botón verde es un WhatsApp de prueba: el launcher teal debe quedar encima, sin taparlo.</p>
+    <div class="cards">
+      <article>
+        <h2>Consultoría</h2>
+        <p>Diseño de proyectos, interpretación y selección de técnicas. No tenemos laboratorio propio; trabajamos con laboratorios colaboradores, y los análisis isotópicos se hacen en la University of Queensland.</p>
+      </article>
+      <article>
+        <h2>Muestras</h2>
+        <p>Escríbenos antes de preparar o enviar material: <a href="https://wa.me/56971540665">WhatsApp +56 9 7154 0665</a>.</p>
+      </article>
+    </div>
+    <p class="note">Sin clave el chat responde con el mensaje «aún no está activo» y deriva a WhatsApp. Para probar respuestas reales, copia <code>.env.example</code> a <code>.env</code> con una clave (proveedor aún por aprobar) y reinicia el demo. Agrega <code>?nowa</code> a la URL para probar sin el botón .whatsapp-float, y <code>?site=huerto</code> (o <code>agro</code>) para simular otro sitio.</p>
+  </main>
+  <a class="whatsapp-float" href="https://wa.me/56971540665" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">WhatsApp</a>
+  <script>if (/[?&]nowa\b/.test(location.search)) { var w = document.querySelector('.whatsapp-float'); if (w) w.remove(); }</script>
+  <script>
+    // ?site=huerto|agro|spicelab simula el sitio (en localhost el servidor acepta la pista).
+    (function () {
+      var m = /[?&]site=(spicelab|agro|huerto)\b/.exec(location.search);
+      var sc = document.createElement("script");
+      sc.src = "/spice-widget.js";
+      if (m) sc.setAttribute("data-site", m[1]);
+      document.body.appendChild(sc);
+    })();
+  </script>
+</body>
+</html>

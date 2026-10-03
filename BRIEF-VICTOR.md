@@ -2,6 +2,8 @@
 
 Para: Victor (dev). Estado: **borrador, no enviado**. Repo spicelab.cl: `msalass/spicelab`; Agro: `msalass/spice-agro`. Dominio: **por confirmar** (spicelab.cl, agro.spicelab.cl o ambos).
 
+**Nombre del bot:** El asistente se llama **«Víctor»** (con tilde, igual en español e inglés), en honor a Victor Goldschmidt, el padre de la geoquímica. Aparece en el título del panel, en el saludo y en el system prompt de los tres sitios. No hay nada que configurar: viene en `public/spice-widget.js` y en `chat.js`.
+
 ## Reglas de trabajo
 
 - Trabaja en una **rama nueva** (p. ej. `feat/spice-chat`) de `msalass/spice-agro` y/o del repo de spicelab.cl, y abre un PR.
@@ -14,7 +16,7 @@ Para: Victor (dev). Estado: **borrador, no enviado**. Repo spicelab.cl: `msalass
 |---|---|
 | `public/spice-widget.js` | carpeta publicada del sitio (`/spice-widget.js`) |
 | `netlify/functions/chat.js` | `netlify/functions/chat.js` |
-| `knowledge/spicelab.md` y `knowledge/huerto.md` | `knowledge/` (raíz, junto a `netlify.toml`) |
+| `knowledge/spicelab.md`, `knowledge/huerto.md` y `knowledge/agro-prices.md` | `knowledge/` (raíz, junto a `netlify.toml`) |
 | `test/`, `scripts/sync-knowledge.js`, `package.json` (scripts) | opcional, para `npm test` |
 
 ## netlify.toml (fusionar, no reemplazar)
@@ -27,7 +29,7 @@ Mantén el `[build]`/`publish` actual del sitio. Solo agrega:
   node_bundler = "esbuild"
 
 [functions.chat]
-  included_files = ["knowledge/spicelab.md", "knowledge/huerto.md"]
+  included_files = ["knowledge/spicelab.md", "knowledge/huerto.md", "knowledge/agro-prices.md"]
 ```
 
 Si el repo ya define otro directorio de funciones, usa ese y deja `chat.js` ahí.
@@ -71,6 +73,10 @@ Con la clave configurada (Deploy Previews incluido), el chat responde de verdad 
 5. `GET https://deploy-preview-N--<sitio>.netlify.app/.netlify/functions/chat` → `{"ok":true,...,"configured":false}`.
 6. Revisa en móvil que no tape el botón de WhatsApp ni el contenido.
 7. Deja el PR abierto con el enlace del preview para que Marcos revise y haga merge.
+
+## Precios en agro.spicelab.cl
+
+El bot de agro ahora puede citar los precios publicados en el sitio (Academia, HR35, HR55, SPICe Partner, invernadero 85 m² opcional, crédito de upgrade; /lista10 solo si preguntan por ese enlace). El análisis de suelo sigue sin precio y va a WhatsApp. Están en un solo bloque en `knowledge/agro-prices.md`: si cambia un precio en el sitio, edita esa línea, corre `npm run sync` y `npm test`, y despliega. spicelab.cl sigue sin precios.
 
 ## Pendientes
 

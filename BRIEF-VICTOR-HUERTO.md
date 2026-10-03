@@ -2,6 +2,8 @@
 
 Para: Victor (dev). Estado: **borrador, no enviado**. Sitio: https://huerto.spicelab.cl. Repo: **`msalass/huerto-app`** (TanStack Start + Nitro → Netlify; `msalass/huerto` está vacío). Confirmar con Marcos que es el repo correcto.
 
+**Nombre del bot:** El asistente se llama **«Víctor»** (con tilde, igual en español e inglés), en honor a Victor Goldschmidt, el padre de la geoquímica. Aparece en el título del panel, en el saludo y en el system prompt de los tres sitios. No hay nada que configurar: viene en `public/spice-widget.js` y en `chat.js`.
+
 ## Reglas de trabajo
 
 - Rama nueva (p. ej. `feat/spice-chat`) en `msalass/huerto-app` y PR. **No hagas merge ni push a `main`**, porque despliega en vivo por Netlify. **Marcos hace el merge.**
@@ -23,7 +25,7 @@ Para: Victor (dev). Estado: **borrador, no enviado**. Sitio: https://huerto.spic
   node_bundler = "esbuild"
 
 [functions.chat]
-  included_files = ["knowledge/spicelab.md", "knowledge/huerto.md"]
+  included_files = ["knowledge/spicelab.md", "knowledge/huerto.md", "knowledge/agro-prices.md"]
 ```
 
 Nitro publica su handler SSR en `.netlify/functions-internal/`; verifica en el deploy que `/.netlify/functions/chat` responda y que el SSR no lo tape.

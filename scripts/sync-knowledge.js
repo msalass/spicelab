@@ -2,6 +2,7 @@
 /* Copia knowledge/*.md dentro de netlify/functions/chat.js (respaldos inline).
  *   FALLBACK_KNOWLEDGE ← knowledge/spicelab.md  (spicelab.cl y agro.spicelab.cl)
  *   FALLBACK_HUERTO    ← knowledge/huerto.md    (huerto.spicelab.cl)
+ *   FALLBACK_AGRO_PRICES ← knowledge/agro-prices.md (solo agro.spicelab.cl; también define la lista blanca del guard)
  * Uso: node scripts/sync-knowledge.js          → reescribe chat.js
  *      node scripts/sync-knowledge.js --check  → exit 1 si algún respaldo no coincide
  */
@@ -9,11 +10,13 @@
 const fs = require("fs");
 const path = require("path");
 
-const ROOT = path.join(__dirname, "..");
+const rootArg = process.argv.find((a) => a.startsWith("--root="));
+const ROOT = rootArg ? path.resolve(rootArg.slice(7)) : path.join(__dirname, "..");
 const JS = path.join(ROOT, "netlify", "functions", "chat.js");
 const MAP = [
   ["FALLBACK_KNOWLEDGE", "spicelab.md"],
   ["FALLBACK_HUERTO", "huerto.md"],
+  ["FALLBACK_AGRO_PRICES", "agro-prices.md"],
 ];
 
 const js = fs.readFileSync(JS, "utf8");
