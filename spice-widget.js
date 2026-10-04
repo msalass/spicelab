@@ -17,6 +17,8 @@
   if (window.__SPICeChatLoaded) return;
   window.__SPICeChatLoaded = true;
 
+  // Bot name (named after Victor Goldschmidt, father of geochemistry). Same in ES and EN.
+  var BOT_NAME = "Víctor";
   var LOGO = "https://spicelab.cl/assets/images/isotipo-sin-fondo.png";
   var WA = "https://wa.me/56971540665";
   var STORE = "spice-chat-v3";
@@ -55,19 +57,19 @@
     es: {
       launcher: "Abrir chat de SPICe Lab",
       close: "Cerrar chat",
-      title: "SPICe",
+      title: BOT_NAME,
       sub: "Consultas de geoquímica",
       welcome:
-        "Hola, soy SPICe. Te oriento sobre SPICe Lab, SPICe Agro y preguntas de geoquímica. Para un proyecto, una cotización o enviar muestras, escríbenos por WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+        "Hola, soy Víctor 👋 ¿En qué te ayudo? Puedo orientarte sobre SPICe Lab y SPICe Agro.",
       chips: [
         "¿Qué servicios ofrecen?",
         "¿Cómo envío muestras?",
-        "¿Qué es un trazador isotópico?",
+        "¿Tienen laboratorio propio?",
       ],
       huerto: {
         sub: "Ayuda con Huerto",
         welcome:
-          "Hola, soy SPICe. Te ayudo con Huerto, la bitácora de tu huerto en el teléfono. Para crear tu cuenta: https://huerto.spicelab.cl/login · ¿Dudas? Escríbenos por WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+          "Hola, soy Víctor 👋 ¿En qué te ayudo con Huerto?",
         chips: [
           "¿Cuánto cuesta Huerto?",
           "¿Cómo funciona la prueba de 7 días?",
@@ -91,19 +93,19 @@
     en: {
       launcher: "Open SPICe Lab chat",
       close: "Close chat",
-      title: "SPICe",
+      title: BOT_NAME,
       sub: "Geochemistry desk",
       welcome:
-        "Hi, I’m SPICe. I can help with SPICe Lab, SPICe Agro and geoscience questions. For a project, a quote or sending samples, message us on WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+        "Hi, I’m Víctor 👋 How can I help? I can point you around SPICe Lab and SPICe Agro.",
       chips: [
         "What services do you offer?",
         "How do I send samples?",
-        "What is an isotopic tracer?",
+        "Do you have your own lab?",
       ],
       huerto: {
         sub: "Huerto help",
         welcome:
-          "Hi, I’m SPICe. I can help with Huerto, your garden logbook on your phone. Create your account: https://huerto.spicelab.cl/login · Questions? Message us on WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+          "Hi, I’m Víctor 👋 How can I help with Huerto?",
         chips: [
           "How much is Huerto?",
           "How does the 7-day trial work?",
@@ -351,7 +353,7 @@
     '<section class="panel" role="dialog" aria-modal="true" aria-labelledby="spice-title" hidden>' +
     "<header>" +
     isoImg("") +
-    '<div class="titles"><h2 id="spice-title">SPICe</h2><p class="sub"></p></div>' +
+    '<div class="titles"><h2 id="spice-title">' + BOT_NAME + '</h2><p class="sub"></p></div>' +
     '<button type="button" class="icon-btn lang"></button>' +
     '<button type="button" class="icon-btn close" aria-label="">' +
     '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>' +
@@ -438,7 +440,7 @@
     div.className = "msg " + (extra || role);
     var who = document.createElement("div");
     who.className = "who";
-    who.textContent = role === "user" ? t().you : "SPICe";
+    who.textContent = role === "user" ? t().you : BOT_NAME;
     div.appendChild(who);
     var body = document.createElement("div");
     body.innerHTML = renderRich(text);
@@ -469,7 +471,7 @@
     typingEl = document.createElement("div");
     typingEl.className = "msg bot";
     typingEl.innerHTML =
-      '<div class="who">SPICe</div><span class="dots" aria-label="' +
+      '<div class="who">' + BOT_NAME + '</div><span class="dots" aria-label="' +
       escapeHtml(t().thinking) +
       '"><i></i><i></i><i></i></span>';
     log.appendChild(typingEl);

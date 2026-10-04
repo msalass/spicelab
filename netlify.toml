@@ -8,4 +8,4 @@
   node_bundler = "esbuild"
 
 [functions.chat]
-  included_files = ["knowledge/spicelab.md", "knowledge/huerto.md"]
+  included_files = ["knowledge/spicelab.md", "knowledge/huerto.md", "knowledge/agro-prices.md"]

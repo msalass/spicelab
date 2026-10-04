@@ -2,11 +2,14 @@
 
 Widget de consultas para los sitios Netlify de [SPICe Lab](https://spicelab.cl), [SPICe Agro](https://agro.spicelab.cl) y [Huerto](https://huerto.spicelab.cl). Un script en el navegador y una función Netlify; la clave del modelo nunca llega al cliente. **Dominio final de spicelab/agro por confirmar.**
 
+**Nombre del bot:** El asistente se llama **«Víctor»** (con tilde, igual en español e inglés), en honor a Victor Goldschmidt, el padre de la geoquímica. Aparece en el título del panel, en el saludo y en el system prompt de los tres sitios.
+
 ## Reglas de negocio (prompt, conocimiento, widget, guard y tests)
 
 1. Laboratorio, frase exacta: «No tenemos laboratorio propio; trabajamos con laboratorios colaboradores, y los análisis isotópicos se hacen en la University of Queensland.» Sin prometer laboratorio propio a futuro.
 2. Precios:
-   - **spicelab.cl y agro.spicelab.cl: ningún precio** (tampoco los de Huerto). Derivan a WhatsApp.
+   - **spicelab.cl: ningún precio** (tampoco los de Huerto). Deriva a WhatsApp.
+   - **agro.spicelab.cl: solo la lista publicada** en `knowledge/agro-prices.md` (Academia $119.000; HR35 $1.690.000 + IVA; HR55 $2.290.000 + IVA; SPICe Partner $2.790.000/año + IVA; invernadero 85 m² + $1.790.000 + IVA; crédito de upgrade $200.000; /lista10 $107.100 solo si preguntan por ese enlace). **El análisis de suelo y «El plano de tu parcela» no tienen precio**: WhatsApp. Para cambiar un precio, edita solo el bloque `PRICES:BEGIN … PRICES:END` y corre `npm run sync` (actualiza el respaldo inline y la lista blanca del guard).
    - **huerto.spicelab.cl: solo la membresía de Huerto**, tal como está publicada: $4.990 CLP/mes o $39.990 CLP/año (Chile y 9 países de Latinoamérica, Mercado Pago); US$5.99/mes o US$59/año en el resto (Lemon Squeezy). Ningún otro monto.
 3. Nunca «sin tarjeta» ni equivalentes. En Huerto la prueba es de 7 días gratis **con tarjeta**.
 4. CTA principal: WhatsApp https://wa.me/56971540665 (+56 9 7154 0665). En Huerto, además, crear cuenta en https://huerto.spicelab.cl/login.
@@ -18,7 +21,7 @@ Widget de consultas para los sitios Netlify de [SPICe Lab](https://spicelab.cl),
 
 > **Obligatorio en deploy previews:** define `SITE_ID` (`spicelab`, `agro` o `huerto`) en el sitio de Netlify. Los previews no tienen el `Origin` de producción, y una petición sin Origin reconocido y sin `SITE_ID` se resuelve como `spicelab` (comportamiento intencional, no se cambia), así que un preview de agro o Huerto respondería con las reglas y precios equivocados.
 
-**Red de seguridad**: `chat.js` revisa cada respuesta. Si hay un monto ($, CLP, UF, USD, €, pesos, «cuesta/precio … número») o frases de tarjeta, la reemplaza por un mensaje seguro con WhatsApp. En Huerto deja pasar solo los 4 montos de la membresía (con variantes como `4.990 CLP`, `39990`, `US$5,99`, `USD 59`) y bloquea «51%». No bloquea notación isotópica (δ18O, 87Sr/86Sr, ‰, ppm, años, m²). También corrige enlaces: un subdominio inexistente de spicelab.cl (p. ej. «huertos.spicelab.cl», visto en la prueba en vivo) se cambia por el inicio del sitio, y cualquier wa.me con otro número se cambia por el oficial. En Huerto bloquea además ofertas de código, cupón o acceso gratis.
+**Red de seguridad**: `chat.js` revisa cada respuesta. Si hay un monto ($, CLP, UF, USD, €, pesos, «cuesta/precio … número») o frases de tarjeta, la reemplaza por un mensaje seguro con WhatsApp. En agro deja pasar exactamente los montos del bloque de precios de `knowledge/agro-prices.md` (y bloquea cualquier monto junto a «análisis de suelo» o «plano de tu parcela»). En Huerto deja pasar solo los 4 montos de la membresía (con variantes como `4.990 CLP`, `39990`, `US$5,99`, `USD 59`) y bloquea «51%». No bloquea notación isotópica (δ18O, 87Sr/86Sr, ‰, ppm, años, m²). También corrige enlaces: un subdominio inexistente de spicelab.cl (p. ej. «huertos.spicelab.cl», visto en la prueba en vivo) se cambia por el inicio del sitio, y cualquier wa.me con otro número se cambia por el oficial. En Huerto bloquea además ofertas de código, cupón o acceso gratis.
 
 ## Archivos
 
@@ -28,7 +31,7 @@ Widget de consultas para los sitios Netlify de [SPICe Lab](https://spicelab.cl),
 | `netlify/functions/chat.js` | `netlify/functions/chat.js` |
 | `knowledge/spicelab.md` | `knowledge/` (raíz del repo) — spicelab y agro |
 | `knowledge/huerto.md` | `knowledge/` — huerto |
-| `netlify.toml` | **fusionar**: solo `[functions]` y `[functions.chat]` (`included_files` con los dos .md). No tocar `publish`. |
+| `netlify.toml` | **fusionar**: solo `[functions]` y `[functions.chat]` (`included_files` con los tres .md). No tocar `publish`. |
 
 Editar hechos: cambia el `.md` y ejecuta `npm run sync` (copia ambos al respaldo inline de `chat.js`; `npm run check` falla si no coinciden). `huerto.md` se armó solo con lo publicado en https://huerto.spicelab.cl/ y /terminos al 2 oct 2026.
 
