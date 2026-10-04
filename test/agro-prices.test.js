@@ -43,7 +43,9 @@ test("agro: prompt (ES/EN) contiene cada precio; el guard de agro los deja pasar
   for (const x of LISTED) {
     for (const r of ["El " + x.what + " cuesta " + x.text + ". Fuente: " + x.src, x.what + ": " + x.amount.replace("$", "") + " CLP", "The " + x.what + " is " + x.text + "."]) {
       assert.equal(I.guardViolation(r, "agro"), null, r);
-      assert.equal(I.guardReply(r, "es", "agro").reply, r);
+      const g = I.guardReply(r, "es", "agro");
+      assert.equal(g.guarded, null, r);
+      assert.ok(g.reply.includes(x.amount.replace("$", "")), r);
     }
   }
   assert.equal(I.guardViolation("Con el enlace de la Lista 10% (https://agro.spicelab.cl/lista10) el curso queda en $107.100.", "agro"), null);
@@ -51,12 +53,15 @@ test("agro: prompt (ES/EN) contiene cada precio; el guard de agro los deja pasar
 
 test("agro: el análisis de suelo (y el plano de tu parcela) no tienen precio: prompt deriva a WhatsApp y el guard bloquea cualquier monto", () => {
   const p = I.buildSystemPrompt("es", "agro");
-  assert.ok(p.includes("«El análisis de suelo se cotiza según tu terreno; escríbenos por WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).»"));
+  assert.match(p, /Soil analysis \(«Análisis de suelo»\) and «El plano de tu parcela» have NO published price/);
+  assert.match(p, /depends on their land[^\n]*offer WhatsApp \(https:\/\/wa\.me\/56971540665\)/);
   for (const r of ["El análisis de suelo cuesta $150.000.", "El análisis de suelo vale $119.000", "Soil analysis costs $200.000.", "El plano de tu parcela: $45.000", "Son $90.000 por el análisis de suelo"]) {
     assert.equal(I.guardViolation(r, "agro"), "price", r);
     assert.equal(I.guardReply(r, "es", "agro").reply, I.SAFE_AGRO_REPLY.es);
   }
-  assert.ok(I.SAFE_AGRO_REPLY.es.includes("El análisis de suelo se cotiza según tu terreno"));
+  assert.match(I.SAFE_AGRO_REPLY.es, /análisis de suelo depende de tu terreno/);
+  assert.match(I.SAFE_AGRO_REPLY.en, /Soil analysis depends on your land/);
+  for (const l of ["es", "en"]) assert.ok(I.SAFE_AGRO_REPLY[l].includes("https://wa.me/56971540665"));
   assert.ok(!/\$\s?\d/.test(I.SAFE_AGRO_REPLY.es + I.SAFE_AGRO_REPLY.en));
   // un programa con precio que INCLUYE análisis de suelo sí pasa
   assert.equal(I.guardViolation("HR55 cuesta $2.290.000 + IVA e incluye análisis de suelo interpretado por SPICe Lab.", "agro"), null);

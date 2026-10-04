@@ -186,7 +186,10 @@ function score(site, q, reply, raw, guarded) {
     if (!ok) f.push("code_rule_answer_missing");
   }
   if (CARD.test(reply)) f.push("card_phrase");
-  if (!reply.includes("wa.me/56971540665")) f.push("no_whatsapp_cta");
+  // WhatsApp only where it is the real next step (human voice, 3 oct 2026).
+  const NEEDS_WA = ["science", "science_lab_price", "soil_price", "samples", "code"];
+  const unpublishedPrice = kind === "price" && site !== "huerto";
+  if ((NEEDS_WA.indexOf(kind) !== -1 || unpublishedPrice) && !reply.includes("wa.me/56971540665")) f.push("no_whatsapp_cta");
   const emails = (reply.match(EMAIL) || []).filter((e) => !(site === "huerto" && e.toLowerCase() === "huerto@spicelab.cl"));
   if (emails.length) f.push("email:" + emails.join("|"));
   if (/\b(20\d\d)\b/.test(reply) && !/2026/.test(reply)) f.push("date?");

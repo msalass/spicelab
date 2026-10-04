@@ -103,12 +103,13 @@ test("todo wa.me del paquete apunta exactamente a wa.me/56971540665", () => {
   assert.deepEqual(bad, []);
 });
 
-test("widget: WhatsApp en bienvenida, errores y footer (ES y EN)", () => {
+test("widget: saludo corto con Víctor; WhatsApp en errores y footer (ES y EN)", () => {
   const w = fs.readFileSync(path.join(ROOT, "spice-widget.js"), "utf8");
   assert.ok(w.includes('var WA = "https://wa.me/56971540665"'));
   const welcomes = w.match(/welcome:\s*\n?\s*"[^"]*"/g);
   assert.equal(welcomes.length, 4); // es, en, es.huerto, en.huerto
-  for (const s of welcomes) assert.ok(s.includes("https://wa.me/56971540665"), s);
+  // Saludos cortos y humanos: el WhatsApp va en el botón y el footer, no en el saludo.
+  for (const s of welcomes) assert.ok(s.includes("Víctor") && s.replace(/^welcome:\s*"/, "").length <= 90, s);
   const errs = w.match(/err(Key|Net|Rate|Generic):\s*\n?\s*"[^"]*"/g);
   assert.equal(errs.length, 8);
   for (const s of errs) assert.ok(s.includes("https://wa.me/56971540665"), s);

@@ -57,7 +57,7 @@ test("ciencia: textos de derivación mencionan a Marcos, PhD UQ y WhatsApp, y pa
   for (const t of [I.TECH_ES, I.TECH_EN]) {
     assert.match(t, /Marcos/);
     assert.match(t, /University of Queensland/);
-    assert.ok(t.includes("https://wa.me/56971540665 (+56 9 7154 0665)"));
+    assert.ok(t.includes("https://wa.me/56971540665"));
     for (const site of SITES) assert.equal(I.guardViolation(t, site), null);
   }
 });
@@ -82,8 +82,8 @@ test("ciencia: spicelab #4, spicelab #9 y huerto #10 quedan cubiertas por la reg
   // spicelab #9 además necesita la frase de laboratorio EN y la línea de precio EN.
   const p9 = I.buildSystemPrompt("en", "spicelab");
   assert.ok(p9.includes(I.LAB_EN));
-  assert.match(p9, /Pricing is discussed directly for each project/);
-  assert.match(p9, /also asks about the lab or analyses, add the lab sentence verbatim; if it asks about price, add the pricing line/);
+  assert.match(p9, /Bring up pricing ONLY when the visitor asks about price/);
+  assert.match(p9, /also asks about the lab or analyses, add the lab sentence verbatim; if it asks about price, handle the price as the price rules say/);
 });
 
 test("ciencia: el set en vivo incluye las 3 preguntas como 'science' (y #9 con lab+precio)", () => {

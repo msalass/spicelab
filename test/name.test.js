@@ -45,8 +45,9 @@ test("nombre: el saludo de cada sitio e idioma presenta a «Víctor»", () => {
     for (const lang of LANGS) {
       const w = widgetCopy(lang, site).welcome;
       assert.ok(w.includes(NAME), site + "/" + lang + ": " + w);
-      assert.ok(w.startsWith(lang === "es" ? "Hola, soy Víctor, el asistente de SPICe." : "Hi, I’m Víctor, SPICe’s assistant."), site + "/" + lang);
-      assert.ok(w.includes("https://wa.me/56971540665"), "sigue el WhatsApp");
+      assert.ok(w.startsWith(lang === "es" ? "Hola, soy Víctor" : "Hi, I’m Víctor"), site + "/" + lang);
+      assert.ok(w.length <= 90, "saludo corto: " + w);
+      assert.match(w, lang === "es" ? /¿En qué te ayudo/ : /How can I help/);
     }
 });
 

@@ -256,7 +256,7 @@ test("widget: detecta huerto por data-site/hostname y envía site", () => {
   assert.match(w, /huerto: "https:\/\/huerto\.spicelab\.cl"/);
   assert.match(w, /siteFrom\(location\.hostname\)/);
   assert.match(w, /site: SITE_ID/);
-  assert.ok(w.includes("https://huerto.spicelab.cl/login"));
+  assert.ok(I.buildSystemPrompt("es", "huerto").includes("https://huerto.spicelab.cl/login"), "el bot sigue ofreciendo crear la cuenta");
 });
 
 // ---------- regla del código de SPICe (Marcos, 2 oct 2026) ----------
@@ -264,7 +264,8 @@ test("widget: detecta huerto por data-site/hostname y envía site", () => {
 test("regla del código en huerto.md y en el prompt de Huerto (ES y EN)", () => {
   assert.match(md, /solo para clientes de SPICe y usuarios beta; ninguna oferta ni promoción lo entrega/);
   assert.match(md, /only for SPICe clients and beta users; no offer or promotion gives it out/);
-  assert.match(md, /El código de SPICe es para clientes de SPICe; escríbenos por WhatsApp: https:\/\/wa\.me\/56971540665/);
+  assert.match(md, /el código de SPICe es solo para clientes de SPICe \(si lo son, WhatsApp: https:\/\/wa\.me\/56971540665\)/);
+  assert.match(md, /prueba estándar de 7 días gratis con tarjeta/);
   assert.ok(!/se pega al armar el huerto/.test(md), "ya no se menciona cómo usar el código");
   for (const lang of ["es", "en"]) {
     const h = I.buildSystemPrompt(lang, "huerto");
@@ -409,7 +410,10 @@ test("guard: HR35/HR55 y 35 m² no son precios; un monto real sí", () => {
 test("prompts: idioma único, línea de precio EN, prueba de Huerto con tarjeta en spicelab/agro, isótopos", () => {
   for (const site of ["spicelab", "agro"]) {
     const p = I.buildSystemPrompt("en", site);
-    if (site === "spicelab") assert.match(p, /Pricing is discussed directly for each project/);
+    if (site === "spicelab") {
+      assert.match(p, /Never state any amount, range, rate/);
+      assert.match(p, /Bring up pricing ONLY when the visitor asks about price, cost or a quote/);
+    }
     else assert.match(p, /You MAY quote the published SPICe Agro prices/);
     assert.match(p, /the only trial is the Huerto app's: 7 days free WITH a card/);
     assert.equal(I.guardViolation(p, site), null);

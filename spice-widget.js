@@ -60,7 +60,7 @@
       title: BOT_NAME,
       sub: "Consultas de geoquímica",
       welcome:
-        "Hola, soy Víctor, el asistente de SPICe. Te oriento sobre SPICe Lab y SPICe Agro. Para un proyecto, una cotización o enviar muestras, escríbenos por WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+        "Hola, soy Víctor 👋 ¿En qué te ayudo? Puedo orientarte sobre SPICe Lab y SPICe Agro.",
       chips: [
         "¿Qué servicios ofrecen?",
         "¿Cómo envío muestras?",
@@ -69,7 +69,7 @@
       huerto: {
         sub: "Ayuda con Huerto",
         welcome:
-          "Hola, soy Víctor, el asistente de SPICe. Te ayudo con Huerto, la bitácora de tu huerto en el teléfono. Para crear tu cuenta: https://huerto.spicelab.cl/login · ¿Dudas? Escríbenos por WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+          "Hola, soy Víctor 👋 ¿En qué te ayudo con Huerto?",
         chips: [
           "¿Cuánto cuesta Huerto?",
           "¿Cómo funciona la prueba de 7 días?",
@@ -96,7 +96,7 @@
       title: BOT_NAME,
       sub: "Geochemistry desk",
       welcome:
-        "Hi, I’m Víctor, SPICe’s assistant. I can help with SPICe Lab and SPICe Agro. For a project, a quote or sending samples, message us on WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+        "Hi, I’m Víctor 👋 How can I help? I can point you around SPICe Lab and SPICe Agro.",
       chips: [
         "What services do you offer?",
         "How do I send samples?",
@@ -105,7 +105,7 @@
       huerto: {
         sub: "Huerto help",
         welcome:
-          "Hi, I’m Víctor, SPICe’s assistant. I can help with Huerto, your garden logbook on your phone. Create your account: https://huerto.spicelab.cl/login · Questions? Message us on WhatsApp: https://wa.me/56971540665 (+56 9 7154 0665).",
+          "Hi, I’m Víctor 👋 How can I help with Huerto?",
         chips: [
           "How much is Huerto?",
           "How does the 7-day trial work?",
